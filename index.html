@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postres Perla</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/assets/styles.css">
+</head>
+
+<body>
+    <nav class="bg-white shadow dark:bg-gray-800 h-22">
+        <div class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300">
+            <a href="#"
+                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">
+                Servicios
+            </a>
+            <a href="#catalog"
+                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">
+                Productos
+            </a>
+            <a href="#"
+                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">
+                Contactos
+            </a>
+            <a href="#about-us"
+                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">
+                Nosotros
+            </a>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <section class="banner relative w-full h-100 overflow-hidden">
+        <div class="relative h-full transition-transform duration-500 ease-in-out" id="slider-container">
+            <div class="absolute w-full h-full bg-cover bg-center overflow-hidden">
+                <div class="flex flex-col h-full items-start justify-center">
+                    <div class="text flex flex-col text-left lg:pl-35 md:pl-35 sm:pl-0 w-90">
+                        <h1
+                            class="banner-slide-title lg:text-7xl md:text-4xl sm:text-xl xs:text-xl text-black uppercase text-wrap">
+                            pasteles personalizados
+                        </h1>
+                        <div class="ingredients-container flex items-center pt-10">
+                            <img class="mix-icon" src="public/icons/mix-icon.png" alt="money icon">
+                            <div class="text-wraper flex text-nowrap pt-4 pl-3">
+                                <ul class="flex flex-row text-nowrap text-2xl text-gray-800">
+                                    <li class="pl-3">Harina de almendras +</li>
+                                    <li class="pl-3">Chocolate belga +</li>
+                                    <li class="pl-3">Frutas de temporada</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="text-2xl text-gray-900 pt-8 text-nowrap flex items-center">
+                            <img class="money-icon lg:mr-5 md::mr-5 sm:mr-5 xs:mr-5" src="public/icons/money-icon.png"
+                                alt="money icon">
+                            RD$1,800 /lib.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute w-full h-full bg-cover bg-center overflow-hidden" style="transform: translateX(100%);">
+                <div class="flex flex-col h-full items-start justify-center">
+                    <div class="text flex flex-col text-left lg:pl-35 md:pl-35 sm:pl-0 w-90">
+                        <h1
+                            class="banner-slide-title lg:text-7xl md:text-4xl sm:text-lg xs:text-lg text-black uppercase text-nowrap">
+                            Jueguetes Sexuales
+                        </h1>
+                        <div class="ingredients-container flex items-center pt-10">
+                            <img class="mix-icon" src="mix-icon.png" alt="money icon">
+                            <div class="text-wraper flex text-nowrap pt-4 pl-3">
+                                <ul class="flex flex-row text-nowrap text-2xl text-gray-800">
+                                    <li class="pl-3">Harina de almendras +</li>
+                                    <li class="pl-3">Chocolate belga +</li>
+                                    <li class="pl-3">Frutas de temporada</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="text-2xl text-gray-900 pt-8 text-nowrap flex items-center">
+                            <img class="money-icon lg:mr-5 md::mr-5 sm:mr-5 xs:mr-5" src="money-icon.png"
+                                alt="money icon">
+                            RD$1,800 /lib.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute w-full h-full bg-cover bg-center overflow-hidden"
+                style=" transform: translateX(200%);">
+                <div class="flex flex-col h-full items-start justify-center">
+                    <div class="text flex flex-col text-left lg:pl-35 md:pl-35 sm:pl-0 w-90">
+                        <h1
+                            class="banner-slide-title lg:text-7xl md:text-4xl sm:text-lg xs:text-lg text-black uppercase text-nowrap">
+                            Vibradores
+                        </h1>
+                        <div class="ingredients-container flex items-center pt-10">
+                            <img class="mix-icon" src="mix-icon.png" alt="money icon">
+                            <div class="text-wraper flex text-nowrap pt-4 pl-3">
+                                <ul class="flex flex-row text-nowrap text-2xl text-gray-800">
+                                    <li class="pl-3">Harina de almendras +</li>
+                                    <li class="pl-3">Chocolate belga +</li>
+                                    <li class="pl-3">Frutas de temporada</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="text-2xl text-gray-900 pt-8 text-nowrap flex items-center">
+                            <img class="money-icon lg:mr-5 md::mr-5 sm:mr-5 xs:mr-5" src="money-icon.png"
+                                alt="money icon">
+                            RD$1,800 /lib.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="catalog flex justify-center items-center">
+        <div class="container">
+            <div class="catalog-text mt-8 mb-8 text-center">
+                <h2 class="text-black-200 uppercase text-4xl md:text-4xl font-semibold">Productos destacados</h2>
+                <p>Explora nuestra deliciosa colección de postres y déjate llevar</p>
+            </div>
+            <div class="gallery grid justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 pt-8 pb-18">
+                <div class="img-box img1 drop-shadow-sm">
+                    <img src="public/images/cake.jpg" alt="Postre 1">
+                    <div class="mt-2 text-center">
+                        <a href="#" class="font-semibold hover:text-indigo-600 transition duration-300">Tarta de
+                            Chocolate</a>
+                        <p class="text-gray-600">$15</p>
+                    </div>
+                </div>
+                <div class="img-box img2 drop-shadow-sm">
+                    <img src="public/images/postre2.jpg" alt="Postre 2">
+                    <div class="mt-2 text-center">
+                        <a href="#" class="font-semibold hover:text-blue-600 transition duration-300">Mousse de
+                            Fresa</a>
+                        <p class="text-gray-600">$12</p>
+                    </div>
+                </div>
+                <div class="img-box img3 drop-shadow-sm">
+                    <img src="public/images/bizc.jpg" alt="Postre 3">
+                    <div class="mt-2 text-center">
+                        <a href="#" class="font-semibold hover:text-blue-600 transition duration-300">Bizcocho de
+                            Vainilla</a>
+                        <p class="text-gray-600">$10</p>
+                    </div>
+                </div>
+                <div class="img-box img4 drop-shadow-sm">
+                    <img src="public/images/postre.jpg" alt="Postre 4">
+                    <div class="mt-2 text-center">
+                        <a href="#" class="font-semibold hover:text-blue-600 transition duration-300">Pastel de
+                            Manzana</a>
+                        <p class="text-gray-600">$14</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative testimonials">
+        <div class="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20">
+            <h2
+                class="text-white mx-auto mb-6 w-full max-w-4xl text-center text-4xl font-semibold md:mb-12 md:text-4xl uppercase">
+                Lo que dicen nuestros clientes
+            </h2>
+            <div
+                class="mb-8 gap-5 py-4 md:mb-12 columns-1 c-col-1 sm:columns-2 c-sm-col-2 md:columns-3 c-md-col-3 lg:mb-16">
+                <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
+                    <p class="mb-4 text-sm text-gray-500">
+                        “Lorem ipsum dolor sit amet, elit ut aliquam, purus sit amet
+                        luctus venenatis elit ut aliquam, purus sit amet luctus venenatis"
+                    </p>
+                    <div class="flex">
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
+                    <p class="mb-4 text-sm text-gray-500">
+                        “Lorem ipsum dolor sit amet, elit ut aliquam, purus sit amet
+                        luctus venenatis elit ut aliquam, purus sit amet luctus venenatis"
+                    </p>
+                    <div class="flex">
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
+                    <p class="mb-4 text-sm text-gray-500">
+                        Eget dolor urna viverra urna rutrum lorem venenatis auctor. Id
+                        vitae egestas cursus iaculis sed sit parturient. Arcu eget
+                        fermentum cursus pretium duis auctor gravida nulla.“Lorem ipsum
+                        dolor sit amet, elit ut aliquam, purus sit amet luctus
+                        venenatis elit ut aliquam, purus sit amet luctus venenatis"
+                    </p>
+                    <div class="flex">
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
+                    <p class="mb-4 text-sm text-gray-500">
+                        “Lorem ipsum dolor sit amet, elit ut aliquam, purus sit amet
+                        luctus venenatis elit ut aliquam, purus sit amet luctus venenatis"
+                    </p>
+                    <div class="flex">
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
+                    <p class="mb-4 text-sm text-gray-500">
+                        Euismod scelerisque in netus sed lacinia. Habitant morbi placerat
+                        tincidunt turpis lacus.
+                    </p>
+                    <div class="flex">
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
+                    <div class="mb-4 flex flex-row">
+                    </div>
+                    <p class="mb-4 text-sm text-gray-500">
+                        “Lorem ipsum dolor sit amet, elit ut aliquam, purus sit amet
+                        luctus venenatis elit ut aliquam, purus sit amet luctus venenatis"
+                    </p>
+                    <div class="flex">
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services" id="services">
+        <div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-8 md:py-20">
+            <h2 class="text-black-200 uppercase text-center text-4xl md:text-4xl font-semibold">
+                Experiencias personalizadas
+            </h2>
+            <p class="mx-auto mb-8 mt-4 max-w-lg text-center text-sm text-gray-500 sm:text-base md:mb-12">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit ut
+                aliquam,purus sit amet luctus magna fringilla urna
+            </p>
+            <ul class="grid gap-5 sm:grid-cols-2 md:grid-cols-4 md:gap-0">
+                <li class="flex flex-col items-center gap-6 md:border-r md:px-8 md:py-4 p-8 md:border-gray-300">
+                    <img src="public/images/cake_ilust.jpg" alt=""
+                        class="drop-shadow-md inline-block  h-48 w-48 rounded-full object-cover" />
+                    <p class="text-xl font-semibold text-center">Elaboración de pasteles</p>
+                    <button
+                        class="service-detail-btn cursor-pointer flex items-center rounded-md bg-slate-800 py-3 px-5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-5 h-5 mr-1.5">
+                            <path fill-rule="evenodd"
+                                d="M3.75 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zM3 10.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V10.5zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V15zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V19.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Ver detalles
+                    </button>
+                </li>
+                <li class="flex flex-col items-center gap-6 md:border-r md:px-8 md:py-4 p-8 md:border-gray-300">
+                    <img src="public/images/sweets.jpg" alt=""
+                        class="drop-shadow-md inline-block  h-48 w-48 rounded-full object-cover" />
+                    <p class="text-xl font-semibold text-center">Mesas de dulces</p>
+                    <button
+                        class="service-detail-btn cursor-pointer flex items-center rounded-md bg-slate-800 py-3 px-5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-5 h-5 mr-1.5">
+                            <path fill-rule="evenodd"
+                                d="M3.75 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zM3 10.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V10.5zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V15zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V19.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Ver detalles
+                    </button>
+                </li>
+                <li class="flex flex-col items-center gap-6 md:border-r md:px-8 md:py-4 p-8 md:border-gray-300">
+                    <img src="public/images/cake_ilust.jpg" alt=""
+                        class="drop-shadow-md inline-block  h-48 w-48 rounded-full object-cover" />
+                    <p class="text-xl font-semibold text-center">Catering</p>
+                    <button
+                        class="service-detail-btn cursor-pointer flex items-center rounded-md bg-slate-800 py-3 px-5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-5 h-5 mr-1.5">
+                            <path fill-rule="evenodd"
+                                d="M3.75 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zM3 10.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V10.5zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V15zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V19.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Ver detalles
+                    </button>
+                </li>
+                <li class="flex flex-col items-center gap-6 md:border-r md:px-8 md:py-4 p-8 md:border-gray-300">
+                    <img src="public/images/cake_ilust.jpg" alt=""
+                        class="drop-shadow-md inline-block  h-48 w-48 rounded-full object-cover" />
+                    <p class="text-xl font-semibold text-center">Bandejas personalizadas</p>
+                    <!-- <p class=" text-center text-sm text-gray-500">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam,
+                        purus sit.
+                    </p> -->
+                    <button
+                        class="service-detail-btn cursor-pointer flex items-center rounded-md bg-slate-800 py-3 px-5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-5 h-5 mr-1.5">
+                            <path fill-rule="evenodd"
+                                d="M3.75 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zM3 10.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V10.5zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V15zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V19.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Ver detalles
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="about-us bg-white">
+        <div class="mx-auto w-full max-w-7xl px-5 py-15 md:px-6 md:py-15 mt-15">
+            <div class="grid gap-12 sm:gap-12 md:grid-cols-2">
+                <div class="flex flex-col items-start gap-3">
+                    <h2 class="mb-6 mt-8 text-4xl md:text-4xl md:mb-8 uppercase font-semibold">
+                        Sobre nosotros
+                    </h2>
+                    <p class="text-md text-gray-500 sm:text-2xl">
+                        Consectetur adipiscing elit duis tristique sollicitudin nibh.
+                        Augue mauris augue neque gravida in fermentum. Sapien pellentesque
+                        habitant morbi tristique pellentesque.
+                    </p>
+                    <p class="text-md text-gray-500 sm:text-2xl">
+                        Consectetur adipiscing elit duis tristique sollicitudin nibh.
+                        Augue mauris augue neque gravida in fermentum. Sapien pellentesque
+                        habitant morbi tristique pellentesque.
+                    </p>
+                    <div class="mb-8 mt-8 h-px w-full bg-black"></div>
+                </div>
+                <div
+                    class="pastry-chef-img min-h-[300px] max-h-[550px] overflow-hidden rounded-md bg-gray-100 mt-8 mb-5">
+                    <img src="public/images/girl_pastry_2.jpg" alt="Girl pastry chef">
+                    <figcaption>Perla Pascual, fundadora y chef.</figcaption>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="create-order" id="create-order-section">
+    </section>
+    <footer class="block shadow dark:bg-gray-800">
+        <div class="py-16 md:py-20 mx-auto w-full max-w-7xl px-5 md:px-10">
+            <div class="flex-col flex items-center">
+                <!-- <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94d6f4e6cf96_Group%2047874-3.png"
+                    alt="Postres Perla logo" class="inline-block max-h-10" /> -->
+                <h4
+                    class="text-white mx-auto mb-6 w-full max-w-3xl text-center text-3xl font-semibold md:mb-12 md:text-4xl">
+                    Postres Perla
+                </h4>
+
+                <div class="text-center font-semibold">
+                    <a href="javascript:void(0);"
+                        class="text-white inline-block px-6 py-2 font-normal text-black transition hover:text-blue-600">
+                        Inicio
+                    </a>
+                    <a href="javascript:void(0);"
+                        class="text-white inline-block px-6 py-2 font-normal text-black transition hover:text-blue-600">
+                        Ordenar
+                    </a>
+                    <a href="javascript:void(0);"
+                        class="text-white inline-block px-6 py-2 font-normal text-black transition hover:text-blue-600">
+                        Servicios
+                    </a>
+                    <a href="javascript:void(0);"
+                        class="text-white inline-block px-6 py-2 font-normal text-black transition hover:text-blue-600">
+                        Contactos
+                    </a>
+                    <a href="javascript:void(0);"
+                        class="text-white inline-block px-6 py-2 font-normal text-black transition hover:text-blue-600">
+                        Nosotros
+                    </a>
+                </div>
+                <div class="mb-8 mt-8 border-b border-gray-300 w-48"></div>
+                <div class="mb-12 grid-cols-4 grid-flow-col grid max-w-52 gap-8 mx-auto">
+                    <a href="javascript:void(0);"
+                        class="mx-auto flex-col flex max-w-6 items-center justify-center text-black">
+                        <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a945b4ae6cf7b_Vector-1.svg"
+                            alt="" class="inline-block" />
+                    </a>
+                    <a href="javascript:void(0);"
+                        class="mx-auto flex-col flex max-w-6 items-center justify-center text-black">
+                        <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a945560e6cf77_Vector.svg"
+                            alt="" class="inline-block" />
+                    </a>
+                    <a href="javascript:void(0);"
+                        class="mx-auto flex-col flex max-w-6 items-center justify-center text-black">
+                        <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a940535e6cf7a_Vector-3.svg"
+                            alt="" class="inline-block" />
+                    </a>
+                    <a href="javascript:void(0);"
+                        class="mx-auto flex-col flex max-w-6 items-center justify-center text-black">
+                        <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a9433a9e6cf88_Vector-2.svg"
+                            alt="" class="inline-block" />
+                    </a>
+                </div>
+                <p class="text-sm sm:text-base text-white">
+                    © Copyright 2025. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="src/scripts/main.js"></script>
+
+</html>
