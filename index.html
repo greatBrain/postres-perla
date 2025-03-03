@@ -8,8 +8,11 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/assets/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="src/assets/styles.css">
+
+    <!-- Agregar Swiper.js -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 </head>
 
 <body>
@@ -66,7 +69,7 @@
                     <div class="text flex flex-col text-left lg:pl-35 md:pl-35 sm:pl-0 w-90">
                         <h1
                             class="banner-slide-title lg:text-7xl md:text-4xl sm:text-lg xs:text-lg text-black uppercase text-nowrap">
-                            Jueguetes Sexuales
+                            Jueguetes
                         </h1>
                         <div class="ingredients-container flex items-center pt-10">
                             <img class="mix-icon" src="mix-icon.png" alt="money icon">
@@ -92,7 +95,7 @@
                     <div class="text flex flex-col text-left lg:pl-35 md:pl-35 sm:pl-0 w-90">
                         <h1
                             class="banner-slide-title lg:text-7xl md:text-4xl sm:text-lg xs:text-lg text-black uppercase text-nowrap">
-                            Vibradores
+                            Instrumentos
                         </h1>
                         <div class="ingredients-container flex items-center pt-10">
                             <img class="mix-icon" src="mix-icon.png" alt="money icon">
@@ -157,20 +160,20 @@
         </div>
     </section>
 
-    <section class="relative testimonials">
-        <div class="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20">
+    <section class="relative testimonials backdrop-blur-md">
+        <div class="absolute inset-0 bg-dark/50 backdrop-blur-sm"></div>
+        <div class=" relative mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20" id="container">
             <h2
-                class="text-white mx-auto mb-6 w-full max-w-4xl text-center text-4xl font-semibold md:mb-12 md:text-4xl uppercase">
+                class="text-white mx-auto mb-8 mt-12 w-full max-w-4xl text-center text-4xl font-semibold md:mb-12 md:text-4xl uppercase">
                 Lo que dicen nuestros clientes
             </h2>
-            <div
-                class="mb-8 gap-5 py-4 md:mb-12 columns-1 c-col-1 sm:columns-2 c-sm-col-2 md:columns-3 c-md-col-3 lg:mb-16">
+            <div class="mb-8 gap-5 py-4 md:mb-12 columns-1 c-col-1 sm:columns-2 c-sm-col-2 md:columns-2  c-md-col-2 lg:mb-16">
                 <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
                     <p class="mb-4 text-sm text-gray-500">
                         “Lorem ipsum dolor sit amet, elit ut aliquam, purus sit amet
                         luctus venenatis elit ut aliquam, purus sit amet luctus venenatis"
                     </p>
-                    <div class="flex">
+                    <div class="flex justify-center">
                         <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
                             alt="" class="mr-1.5 inline-block w-4 flex-none" />
                         <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
@@ -183,35 +186,13 @@
                             alt="" class="mr-1.5 inline-block w-4 flex-none" />
                     </div>
                 </div>
-                <!-- Item -->
-                <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
-                    <p class="mb-4 text-sm text-gray-500">
-                        “Lorem ipsum dolor sit amet, elit ut aliquam, purus sit amet
-                        luctus venenatis elit ut aliquam, purus sit amet luctus venenatis"
-                    </p>
-                    <div class="flex">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
-                    </div>
-                </div>
-                <!-- Item -->
                 <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
                     <p class="mb-4 text-sm text-gray-500">
                         Eget dolor urna viverra urna rutrum lorem venenatis auctor. Id
                         vitae egestas cursus iaculis sed sit parturient. Arcu eget
-                        fermentum cursus pretium duis auctor gravida nulla.“Lorem ipsum
-                        dolor sit amet, elit ut aliquam, purus sit amet luctus
-                        venenatis elit ut aliquam, purus sit amet luctus venenatis"
+                        fermentum cursus.
                     </p>
-                    <div class="flex">
+                    <div class="flex justify-center">
                         <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
                             alt="" class="mr-1.5 inline-block w-4 flex-none" />
                         <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
@@ -224,32 +205,12 @@
                             alt="" class="mr-1.5 inline-block w-4 flex-none" />
                     </div>
                 </div>
-                <!-- Item -->
-                <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
-                    <p class="mb-4 text-sm text-gray-500">
-                        “Lorem ipsum dolor sit amet, elit ut aliquam, purus sit amet
-                        luctus venenatis elit ut aliquam, purus sit amet luctus venenatis"
-                    </p>
-                    <div class="flex">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="" class="mr-1.5 inline-block w-4 flex-none" />
-                    </div>
-                </div>
-                <!-- Item -->
                 <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
                     <p class="mb-4 text-sm text-gray-500">
                         Euismod scelerisque in netus sed lacinia. Habitant morbi placerat
-                        tincidunt turpis lacus.
+                        tincidunt turpis lacus. tincidunt turpis lacus.
                     </p>
-                    <div class="flex">
+                    <div class="flex justify-center">
                         <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
                             alt="" class="mr-1.5 inline-block w-4 flex-none" />
                         <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
@@ -262,15 +223,12 @@
                             alt="" class="mr-1.5 inline-block w-4 flex-none" />
                     </div>
                 </div>
-                <!-- Item -->
                 <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
-                    <div class="mb-4 flex flex-row">
-                    </div>
                     <p class="mb-4 text-sm text-gray-500">
-                        “Lorem ipsum dolor sit amet, elit ut aliquam, purus sit amet
-                        luctus venenatis elit ut aliquam, purus sit amet luctus venenatis"
+                        Euismod scelerisque in netus sed lacinia. Habitant morbi placerat
+                        tincidunt turpis lacus. tincidunt turpis lacus.
                     </p>
-                    <div class="flex">
+                    <div class="flex justify-center">
                         <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
                             alt="" class="mr-1.5 inline-block w-4 flex-none" />
                         <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"

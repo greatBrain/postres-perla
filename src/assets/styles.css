@@ -15,7 +15,7 @@
 
 html {
     scroll-behavior: smooth;
-    scrollbar-width: none;
+    scrollbar-width: thin;
 }
 
 body {
@@ -215,8 +215,8 @@ nav ul li a {
 }
 
 .testimonials {
-    height: auto;
-    background-image: url("../../public/images/pan.jpg");
+    height: 680px;
+    background-image: url("../../public/images/dessert_.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -244,5 +244,9 @@ nav ul li a {
         flex: 0 0 auto;
         width: 250px;
         /* Ajusta según necesites */
+    }
+
+    .testimonials {
+        height: auto;
     }
 }
