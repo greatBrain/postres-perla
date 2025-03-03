@@ -11,7 +11,7 @@ This repository contains the source code for a landing page of a bakery. The cur
 ## Technologies Used
 - **HTML**: For the structure and content of the page.
 - **Tailwind CSS**: For styling and responsive design.
-- **Vanilla JavaScript**: For simple interactivity and dynamic behavior.
+- **JavaScript**: For simple interactivity and dynamic behavior.
 
 ## Project Roadmap
 1. **Current State**: Basic landing page with HTML, Tailwind CSS, and JavaScript.
