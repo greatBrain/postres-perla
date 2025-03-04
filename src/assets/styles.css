@@ -215,13 +215,14 @@ nav ul li a {
 }
 
 .testimonials {
-    height: 680px;
+    height: 750px;
     background-image: url("../../public/images/dessert_.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     backdrop-filter: blur(8px);
+    overflow: hidden;
 }
 
 .testimonials #testimonialas-container>h3 {
@@ -249,4 +250,9 @@ nav ul li a {
     .testimonials {
         height: auto;
     }
+}
+
+/* Footer */
+footer #items a:hover {
+    color: var(--salmon-color);
 }
