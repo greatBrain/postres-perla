@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="src/assets/styles.css">
 </head>
 
@@ -25,7 +27,7 @@
             </a>
             <a href="#"
                 class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">
-                Contactos
+                Contactanos
             </a>
             <a href="#about-us"
                 class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">
@@ -38,24 +40,14 @@
     <section class="banner relative w-full h-100 overflow-hidden">
         <div class="relative h-full transition-transform duration-500 ease-in-out" id="slider-container">
             <div class="absolute w-full h-full bg-cover bg-center overflow-hidden">
-                <div class="flex flex-col h-full items-start justify-center">
-                    <div class="text flex flex-col text-left lg:pl-35 md:pl-35 sm:pl-0 w-90">
-                        <h1
-                            class="banner-slide-title lg:text-7xl md:text-4xl sm:text-xl xs:text-xl text-black uppercase text-nowrap">
-                            POstres Perla
+                <div class="flex h-full justify-between">
+                    <div class="text flex items-center text-left lg:pl-35 md:pl-35 sm:pl-0 w-90">
+                        <h1 class="banner-slide-title lg:text-7xl md:text-4xl sm:text-xl xs:text-xl text-black capitalize text-nowrap">
+                            Postres Perla
                         </h1>
-                        <div class="ingredients-container flex items-center pt-10">
-                            <img class="mix-icon" src="public/icons/mix-icon.png" alt="money icon">
-                            <div class="text-wraper flex text-nowrap pt-4 pl-3">
-                                <ul class="flex flex-row text-nowrap text-2xl text-gray-800">
-                                    <li class="pl-3">Harina de almendras +</li>
-                                    <li class="pl-3">Chocolate belga +</li>
-                                    <li class="pl-3">Frutas de temporada</li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
-                </div>
+                    <!-- <img src="./public/images/cake-no-bg.png" class="product-img-banner" alt="Cake"> -->
+                </div>               
                 <!-- </div>
             <div class="absolute w-full h-full bg-cover bg-center overflow-hidden" style="transform: translateX(100%);">
                 <div class="flex flex-col h-full items-start justify-center">
@@ -109,43 +101,43 @@
                 </div>
             </div> -->
             </div>
+        </div>
     </section>
     <section class="catalog flex justify-center items-center">
         <div class="container">
             <div class="catalog-text mt-8 mb-8 text-center">
-                <h2 class="text-black-200 uppercase text-4xl md:text-4xl font-semibold">Productos destacados</h2>
+                <h2 class="text-black-200 capitalize text-5xl md:text-5xl font-normal title">Productos destacados</h2>
                 <p>Explora nuestra deliciosa colección de postres y déjate llevar</p>
             </div>
             <div class="gallery grid justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 pt-8 pb-18">
                 <div class="img-box img1 drop-shadow-sm">
-                    <img src="public/images/cake.jpg" alt="Postre 1">
+                    <img src="./public/images/cake-light-bg.jpg" alt="Postre 1">
                     <div class="mt-2 text-center">
-                        <a href="#" class="font-semibold hover:text-indigo-600 transition duration-300">Tarta de
-                            Chocolate</a>
-                        <p class="text-gray-600">$15</p>
+                        <a href="#" class="font-semibold hover:text-indigo-600 transition duration-300">
+                            Pastel personalizado
+                        </a>
+                        <p class="text-gray-600">A partir de $15</p>
                     </div>
                 </div>
                 <div class="img-box img2 drop-shadow-sm">
-                    <img src="public/images/postre2.jpg" alt="Postre 2">
+                    <img src="./public/images/mousse-light-bg.jpg" alt="Postre 2">
                     <div class="mt-2 text-center">
                         <a href="#" class="font-semibold hover:text-blue-600 transition duration-300">Mousse de
-                            Fresa</a>
-                        <p class="text-gray-600">$12</p>
+                            fresa / chinola</a>
+                        <p class="text-gray-600">A partir de $12</p>
                     </div>
                 </div>
                 <div class="img-box img3 drop-shadow-sm">
-                    <img src="public/images/bizc.jpg" alt="Postre 3">
+                    <img src="./public/images/pie-light-bg.jpg" alt="Postre 3">
                     <div class="mt-2 text-center">
-                        <a href="#" class="font-semibold hover:text-blue-600 transition duration-300">Bizcocho de
-                            Vainilla</a>
-                        <p class="text-gray-600">$10</p>
+                        <a href="#" class="font-semibold hover:text-blue-600 transition duration-300">Pie de frutas</a>
+                        <p class="text-gray-600">A partir de $10</p>
                     </div>
                 </div>
                 <div class="img-box img4 drop-shadow-sm">
-                    <img src="public/images/postre.jpg" alt="Postre 4">
+                    <img src="./public/images/pudding-light-bg.jpg" alt="Pudin de pan imagen">
                     <div class="mt-2 text-center">
-                        <a href="#" class="font-semibold hover:text-blue-600 transition duration-300">Pastel de
-                            Manzana</a>
+                        <a href="#" class="font-semibold hover:text-blue-600 transition duration-300">Pudding de pan</a>
                         <p class="text-gray-600">$14</p>
                     </div>
                 </div>
@@ -156,8 +148,7 @@
     <section class="relative testimonials backdrop-blur-md">
         <div class="absolute inset-0 bg-dark/50 backdrop-blur-sm"></div>
         <div class=" relative mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20" id="container">
-            <h2
-                class="text-white mx-auto mb-8 mt-12 w-full max-w-4xl text-center text-4xl font-semibold md:mb-12 md:text-4xl uppercase">
+            <h2 class="title text-white mx-auto mb-8 mt-12 w-full max-w-5xl text-center text-5xl font-semibold md:mb-12 md:text-5xl capitalize">
                 Lo que dicen nuestros clientes
             </h2>
             <div
@@ -364,33 +355,38 @@
         <div class="py-16 md:py-20 mx-auto w-full max-w-7xl px-5 md:px-10 relative z-10">
             <div class="flex-col flex items-center" id="items">
                 <h4
-                    class="text-white mx-auto mb-6 w-full max-w-3xl text-center text-4xl font-semibold md:mb-12 md:text-4xl">
+                    class="text-white mx-auto mb-6 w-full max-w-3xl text-center text-4xl font-semibold md:mb-12 md:text-4xl sm:text-4xl xs:text-3xl">
                     Postres Perla
                 </h4>
                 <div class="text-center font-semibold">
-                    <a href="#" class="text-white inline-block px-6 py-2 font-normal transition">Inicio</a>
-                    <a href="#" class="text-white inline-block px-6 py-2 font-normal transition">Servicios</a>
-                    <a href="#" class="text-white inline-block px-6 py-2 font-normal transition">Contactos</a>
-                    <a href="#" class="text-white inline-block px-6 py-2 font-normal transition">Nosotros</a>
+                    <a href="#" class="text-white inline-block px-6 py-2 font-semibold transition">Inicio</a>
+                    <a href="#" class="text-white inline-block px-6 py-2 font-semibold transition">Servicios</a>
+                    <a href="#" class="text-white inline-block px-6 py-2 font-semibold transition">Contactanos</a>
+                    <a href="#" class="text-white inline-block px-6 py-2 font-semibold transition">Nosotros</a>
                 </div>
                 <div class="mb-8 mt-8 border-b border-gray-300 w-48"></div>
-                <div class="mb-12 grid-cols-2 grid-flow-col grid max-w-56 gap-8 mx-auto">
+                <div class="mb-12 grid-cols-3 grid-flow-col grid max-w-56 gap-8 mx-auto">
                     <a href="https://www.instagram.com/postres.perla?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                        class="mx-auto flex-col flex max-w-8 items-center justify-center text-black" target="_blank">
-                        <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a945560e6cf77_Vector.svg"
-                            alt="" class="inline-block" />
+                        class="mx-auto flex-col flex max-w-9 items-center justify-center text-black" target="_blank">
+                        <img src="./public/icons/instagram.svg"
+                            alt="Instagram logo" class="inline-block" />
                     </a>
-                    <a href="#" class="mx-auto flex-col flex max-w-8 items-center justify-center text-black">
-                        <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a945b4ae6cf7b_Vector-1.svg"
-                            alt="" class="inline-block" />
+                    <a href="#" class="mx-auto flex-col flex max-w-9 items-center justify-center text-black">
+                        <img src="./public/icons/facebook.svg"
+                            alt="Facebook logo" class="inline-block" />
+                    </a>
+                     <a href="#" class="mx-auto flex-col flex max-w-9 items-center justify-center text-black">
+                        <img src="./public/icons/whatsapp.svg"
+                            alt="Whatsapp logo" class="inline-block" />
                     </a>
                 </div>
-                <p class="text-sm sm:text-base text-white">© Copyright 2025. Todos los derechos reservados.</p>
+                <p class="text-sm sm:text-base text-white">
+                    © Copyright 2025. Todos los derechos reservados.
+                </p>
             </div>
         </div>
     </footer>
 
 </body>
 <script src="src/scripts/main.js"></script>
-
 </html>
