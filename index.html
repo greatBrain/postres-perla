@@ -15,22 +15,22 @@
 </head>
 
 <body>
-    <nav class="bg-white shadow dark:bg-gray-800 h-22">
+    <nav class="bg-white shadow dark:bg-gray-800 h-22 flex">
         <div class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300">
             <a href="#"
-                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">
+                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6 text-xl">
                 Servicios
             </a>
             <a href="#catalog"
-                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">
+                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6 text-xl">
                 Productos
             </a>
             <a href="#"
-                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">
+                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6 text-xl">
                 Contactanos
             </a>
             <a href="#about-us"
-                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">
+                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6 text-xl">
                 Nosotros
             </a>
         </div>
@@ -42,12 +42,13 @@
             <div class="absolute w-full h-full bg-cover bg-center overflow-hidden">
                 <div class="flex h-full justify-between">
                     <div class="text flex items-center text-left lg:pl-35 md:pl-35 sm:pl-0 w-90">
-                        <h1 class="banner-slide-title lg:text-7xl md:text-4xl sm:text-xl xs:text-xl text-black capitalize text-nowrap">
+                        <h1
+                            class="banner-slide-title lg:text-7xl md:text-4xl sm:text-xl xs:text-xl text-black capitalize text-nowrap">
                             Postres Perla
                         </h1>
                     </div>
                     <!-- <img src="./public/images/cake-no-bg.png" class="product-img-banner" alt="Cake"> -->
-                </div>               
+                </div>
                 <!-- </div>
             <div class="absolute w-full h-full bg-cover bg-center overflow-hidden" style="transform: translateX(100%);">
                 <div class="flex flex-col h-full items-start justify-center">
@@ -107,37 +108,49 @@
         <div class="container">
             <div class="catalog-text mt-8 mb-8 text-center">
                 <h2 class="text-black-200 capitalize text-5xl md:text-5xl font-normal title">Productos destacados</h2>
-                <p>Explora nuestra deliciosa colección de postres y déjate llevar</p>
+                <p class="pt-3">Explora nuestra deliciosa colección de postres y déjate llevar</p>
             </div>
             <div class="gallery grid justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 pt-8 pb-18">
                 <div class="img-box img1 drop-shadow-sm">
-                    <img src="./public/images/cake-light-bg.jpg" alt="Postre 1">
-                    <div class="mt-2 text-center">
-                        <a href="#" class="font-semibold hover:text-indigo-600 transition duration-300">
-                            Pastel personalizado
+                    <div class="img-container">
+                        <img src="./public/images/cake-light-bg.jpg" alt="Postre 1">
+                    </div>
+                    <div class="mt-2 text-center pt-2">
+                        <a href="#" class="font-normal hover:text-indigo-600 transition text-xl duration-300 text-wrap">
+                            Pasteles personalizados
                         </a>
                         <p class="text-gray-600">A partir de $15</p>
                     </div>
                 </div>
                 <div class="img-box img2 drop-shadow-sm">
-                    <img src="./public/images/mousse-light-bg.jpg" alt="Postre 2">
-                    <div class="mt-2 text-center">
-                        <a href="#" class="font-semibold hover:text-blue-600 transition duration-300">Mousse de
-                            fresa / chinola</a>
+                    <div class="img-container">
+                        <img src="./public/images/mousse-light-bg.jpg" alt="Postre 2">
+                    </div>
+                    <div class="mt-2 text-center pt-2">
+                        <a href="#" class="font-normal hover:text-blue-600 text-xl transition duration-300">Mousse de
+                            frutas</a>
                         <p class="text-gray-600">A partir de $12</p>
                     </div>
                 </div>
                 <div class="img-box img3 drop-shadow-sm">
-                    <img src="./public/images/pie-light-bg.jpg" alt="Postre 3">
-                    <div class="mt-2 text-center">
-                        <a href="#" class="font-semibold hover:text-blue-600 transition duration-300">Pie de frutas</a>
+                    <div class="img-container">
+                        <img src="./public/images/pie-light-bg.jpg" alt="Postre 3">
+                    </div>
+                    <div class="mt-2 text-center pt-2">
+                        <a href="#" class="font-normal hover:text-blue-600 text-xl transition duration-300">
+                            Pie de frutas
+                        </a>
                         <p class="text-gray-600">A partir de $10</p>
                     </div>
                 </div>
                 <div class="img-box img4 drop-shadow-sm">
-                    <img src="./public/images/pudding-light-bg.jpg" alt="Pudin de pan imagen">
-                    <div class="mt-2 text-center">
-                        <a href="#" class="font-semibold hover:text-blue-600 transition duration-300">Pudding de pan</a>
+                    <div class="img-container">
+                        <img src="./public/images/pudding-light-bg.jpg" alt="Pudin de pan imagen">
+                    </div>
+                    <div class="mt-2 text-center pt-2">
+                        <a href="#" class="font-normal hover:text-blue-600 transition text-xl duration-300">
+                            Pudding de pan
+                        </a>
                         <p class="text-gray-600">$14</p>
                     </div>
                 </div>
@@ -148,13 +161,13 @@
     <section class="relative testimonials backdrop-blur-md">
         <div class="absolute inset-0 bg-dark/50 backdrop-blur-sm"></div>
         <div class=" relative mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20" id="container">
-            <h2 class="title text-white mx-auto mb-8 mt-12 w-full max-w-5xl text-center text-5xl font-semibold md:mb-12 md:text-5xl capitalize">
+            <h2 class="text-white capitalize text-5xl md:text-5xl font-normal title text-center pb-15">
                 Lo que dicen nuestros clientes
             </h2>
-            <div
-                class="mb-8 gap-5 py-4 md:mb-12 columns-1 c-col-1 sm:columns-2 c-sm-col-2 md:columns-2  c-md-col-2 lg:mb-16">
+            <div class=" mb-8 gap-5 py-4 md:mb-12 columns-1 c-col-1 sm:columns-2 c-sm-col-2 md:columns-2 c-md-col-2
+                lg:mb-16">
                 <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
-                    <p class="mb-4 text-sm text-gray-500">
+                    <p class="mb-4 text-lg text-gray-500">
                         “Lorem ipsum dolor sit amet, elit ut aliquam, purus sit amet
                         luctus venenatis elit ut aliquam, purus sit amet luctus venenatis"
                     </p>
@@ -172,10 +185,9 @@
                     </div>
                 </div>
                 <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
-                    <p class="mb-4 text-sm text-gray-500">
+                    <p class="mb-4 text-lg text-gray-500">
                         Eget dolor urna viverra urna rutrum lorem venenatis auctor. Id
-                        vitae egestas cursus iaculis sed sit parturient. Arcu eget
-                        fermentum cursus.
+                        vitae egestas cursus iaculis sed sit parturient.
                     </p>
                     <div class="flex justify-center">
                         <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
@@ -191,7 +203,7 @@
                     </div>
                 </div>
                 <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
-                    <p class="mb-4 text-sm text-gray-500">
+                    <p class="mb-4 text-lg text-gray-500">
                         Euismod scelerisque in netus sed lacinia. Habitant morbi placerat
                         tincidunt turpis lacus. tincidunt turpis lacus.
                     </p>
@@ -209,7 +221,7 @@
                     </div>
                 </div>
                 <div class="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
-                    <p class="mb-4 text-sm text-gray-500">
+                    <p class="mb-4 text-lg text-gray-500">
                         Euismod scelerisque in netus sed lacinia. Habitant morbi placerat
                         tincidunt turpis lacus. tincidunt turpis lacus.
                     </p>
@@ -233,10 +245,10 @@
 
     <section class="services" id="services">
         <div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-8 md:py-20">
-            <h2 class="text-black-200 uppercase text-center text-4xl md:text-4xl font-semibold">
+            <h2 class="text-black-200 capitalize text-5xl md:text-5xl font-normal title text-center">
                 Experiencias personalizadas
             </h2>
-            <p class="mx-auto mb-8 mt-4 max-w-lg text-center text-sm text-gray-500 sm:text-base md:mb-12">
+            <p class="mx-auto mb-8 mt-4 max-w-lg text-center text-sm text-gray-500 sm:text-base mb-15 mt-5 md:mb-15">
                 Lorem ipsum dolor sit amet consectetur adipiscing elit ut
                 aliquam,purus sit amet luctus magna fringilla urna
             </p>
@@ -318,8 +330,8 @@
         <div class="mx-auto w-full max-w-7xl px-5 py-15 md:px-6 md:py-15 mt-15">
             <div class="grid gap-12 sm:gap-12 md:grid-cols-2">
                 <div class="flex flex-col items-start gap-3">
-                    <h2 class="mb-6 mt-8 text-4xl md:text-4xl md:mb-8 uppercase font-semibold">
-                        Sobre nosotros
+                    <h2 class="mb-6 mt-8 text-7xl text-black-200 capitalize text-7xl md:text-7xl font-normal title ">
+                        Sobre <span class="text-salmon underline"> nosotros </span>
                     </h2>
                     <p class="text-md text-gray-500 sm:text-2xl">
                         Consectetur adipiscing elit duis tristique sollicitudin nibh.
@@ -368,16 +380,13 @@
                 <div class="mb-12 grid-cols-3 grid-flow-col grid max-w-56 gap-8 mx-auto">
                     <a href="https://www.instagram.com/postres.perla?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                         class="mx-auto flex-col flex max-w-9 items-center justify-center text-black" target="_blank">
-                        <img src="./public/icons/instagram.svg"
-                            alt="Instagram logo" class="inline-block" />
+                        <img src="./public/icons/instagram.svg" alt="Instagram logo" class="inline-block" />
                     </a>
                     <a href="#" class="mx-auto flex-col flex max-w-9 items-center justify-center text-black">
-                        <img src="./public/icons/facebook.svg"
-                            alt="Facebook logo" class="inline-block" />
+                        <img src="./public/icons/facebook.svg" alt="Facebook logo" class="inline-block" />
                     </a>
-                     <a href="#" class="mx-auto flex-col flex max-w-9 items-center justify-center text-black">
-                        <img src="./public/icons/whatsapp.svg"
-                            alt="Whatsapp logo" class="inline-block" />
+                    <a href="#" class="mx-auto flex-col flex max-w-9 items-center justify-center text-black">
+                        <img src="./public/icons/whatsapp.svg" alt="Whatsapp logo" class="inline-block" />
                     </a>
                 </div>
                 <p class="text-sm sm:text-base text-white">
@@ -389,4 +398,5 @@
 
 </body>
 <script src="src/scripts/main.js"></script>
+
 </html>

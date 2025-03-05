@@ -6,7 +6,7 @@
     --black-bg: #000;
     --mint-bg: #B4F8C8;
     --light-yellow: #FBE7C6;
-    --salmon-color: #FC8578;    
+    --salmon-color: #FC8578;
 }
 
 .text-salmon {
@@ -101,15 +101,6 @@ nav ul li a {
     transition: 0.2s ease-in;
 }
 
-.banner #btn-order:hover {
-    background-color: var(--mint-bg);
-}
-
-#services {
-    height: auto;
-    background-color: var(--light-yellow);
-}
-
 .catalog {
     background-color: #ffffff;
     height: auto;
@@ -118,7 +109,7 @@ nav ul li a {
     padding: 60px;
 }
 
-.catalog > .title{
+.catalog>.title {
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -131,70 +122,42 @@ nav ul li a {
     color: #444;
 }
 
-.gallery {
+.catalog .gallery {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.img-box {
+.img-box .img-container {
     width: 305px;
     height: 308px;
-    padding: 5px;
-    transition: 0.1s ease-in-out;
+    overflow: hidden;
 }
 
-.img-box::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background: rgba(5, 5, 5, 0.3); */
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-    border-radius: 2px;
-}
-
-.img-box:hover::before {
-    opacity: 1;
-    border-radius: 2px;
-}
-
-/* .img-box:hover img {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.1);
-    transition: 0.4s ease-in-out;
-} */
-
-.shop-button-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.img-box:hover .shop-button-container {
-    opacity: 1;
-    z-index: 100;
-    cursor: pointer;
-}
-
-.img-box img {
+.img-box .img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 2px;
+}
+
+.img-container:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 0.2s ease-in-out;
+}
+
+/* Services section */
+#services {
+    height: auto;
+    background-color: var(--light-yellow);
 }
 
 .service-detail-btn {
     background-color: rgb(252, 133, 120);
 }
 
+/* About us section */
 .pastry-chef-img {
     background-color: transparent;
 }
@@ -214,13 +177,13 @@ nav ul li a {
 }
 
 .testimonials {
-    height: 750px;
+    height: 800px;
     background-image: url("../../public/images/dessert_.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(8.5px);
     overflow: hidden;
 }
 
@@ -256,8 +219,7 @@ nav ul li a {
 }
 
 /* Footer */
-
-footer > h4{
+footer>h4 {
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
