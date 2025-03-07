@@ -7,18 +7,15 @@
     --mint-bg: #B4F8C8;
     --light-yellow: #FBE7C6;
     --salmon-color: #FC8578;
-    --light-pink: #f4d8f8;
+    --light-pink: #f5dff8;
 }
-
 .text-salmon {
     color: var(--salmon-color);
 }
-
 html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
 }
-
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -26,7 +23,6 @@ body {
     background-color: #ffffff;
     color: #333;
 }
-
 header {
     display: flex;
     justify-content: space-between;
@@ -34,7 +30,6 @@ header {
     padding: 20px 30px;
     background-color: rgb(255, 255, 255);
 }
-
 nav ul {
     list-style: none;
     display: flex;
@@ -42,14 +37,12 @@ nav ul {
     padding: 0;
     margin: 0;
 }
-
 nav ul li a {
     text-decoration: none;
     color: black;
     font-weight: bold;
     font-size: 1.2rem;
 }
-
 .banner {
     position: relative;
     height: 100vh;
@@ -150,10 +143,8 @@ nav ul li a {
 
 /* Services section */
 #services {
-    height: auto;
-    background-color: var(--light-yellow);
+    height: auto;    
 }
-
 .service-detail-btn {
     background-color: rgb(252, 133, 120);
 }
@@ -162,21 +153,18 @@ nav ul li a {
 .pastry-chef-img {
     background-color: transparent;
 }
-
 .pastry-chef-img img {
     margin-left: 30px;
-    -webkit-filter: blur(2px);
-    filter: blur(2px);
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 }
-
 .pastry-chef-img:hover img {
     -webkit-filter: blur(0);
     filter: blur(0);
     margin-left: 0;
 }
-
 .testimonials {
     height: 800px;
     background-image: url("../../public/images/dessert_.jpg");
@@ -187,7 +175,6 @@ nav ul li a {
     backdrop-filter: blur(8.5px);
     overflow: hidden;
 }
-
 .testimonials #testimonialas-container>.title {
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
@@ -195,7 +182,6 @@ nav ul li a {
     font-style: normal;
     font-variation-settings: "wdth" 100;
 }
-
 @media(width<=768px) {
     .banner .text h1 {
         font-size: 1.8rem;
@@ -207,13 +193,10 @@ nav ul li a {
         overflow-x: scroll;
         gap: 16px;
     }
-
     .img-box {
         flex: 0 0 auto;
-        width: 250px;
-        /* Ajusta según necesites */
+        width: 250px;        
     }
-
     .testimonials {
         height: auto;
     }
@@ -227,7 +210,6 @@ footer>h4 {
     font-style: normal;
     font-variation-settings: "wdth" 100;
 }
-
 footer #items a:hover {
     color: var(--salmon-color);
 }
