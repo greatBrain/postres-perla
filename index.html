@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -12,99 +12,99 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="src/assets/styles.css">
+    <link rel="shortcut icon" href="./public/icons/hat.png" type="image/x-icon">
 </head>
 
 <body>
-    <nav class="bg-white shadow dark:bg-gray-800 h-22 flex">
-        <div class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300">
-            <a href="#"
-                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6 text-xl">
+    <nav class="fixed z-50 w-full bg-white shadow dark:bg-gray-800 h-20 flex items-center justify-between px-6">
+        <a href="#" class="flex items-center">
+            <img src="https://via.placeholder.com/50" alt="Logo de la pasteleria Postres Perla" class="h-12 w-12">
+        </a>
+        <div class="flex items-center justify-center space-x-6 text-gray-600 capitalize dark:text-gray-300">
+            <a href="#services"
+                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 text-xl">
                 Servicios
             </a>
             <a href="#catalog"
-                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6 text-xl">
+                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 text-xl">
                 Productos
             </a>
             <a href="#"
-                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6 text-xl">
+                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 text-xl">
                 Contactanos
             </a>
             <a href="#about-us"
-                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6 text-xl">
+                class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 text-xl">
                 Nosotros
             </a>
         </div>
+        <a href="#cotizacion"
+            class="relative px-6 py-2 text-white bg-pink-500 rounded-lg shadow-md hover:bg-pink-600 transition">
+            Otra cosa aqui
+            <span class="absolute inset-0 rounded-lg border-2 border-pink-500 animate-pulse"></span>
+        </a>
     </nav>
     <!-- End Navbar -->
 
     <section class="banner relative w-full h-100 overflow-hidden">
         <div class="relative h-full transition-transform duration-500 ease-in-out" id="slider-container">
             <div class="absolute w-full h-full bg-cover bg-center overflow-hidden">
-                <div class="flex h-full justify-between">
-                    <div class="text flex items-center text-left lg:pl-35 md:pl-35 sm:pl-0 w-90">
+                <div class="flex h-full items-center justify-start w-full">
+                    <div class="text w-auto text-left pl-8 max-w-screen-md">
                         <h1
-                            class="banner-slide-title lg:text-7xl md:text-4xl sm:text-xl xs:text-xl text-black capitalize text-nowrap">
-                            Postres Perla
+                            class="banner-slide-title lg:text-6xl md:text-6xl sm:text-3xl xs:text-3xl text-black font-normal whitespace-nowrap">
+                            Endulza tu ocasión especial
                         </h1>
+                        <p class="text-lg text-gray-600 pt-5 text-xl">
+                            Cada momento es más bonito con un buen postre.
+                        </p>
                     </div>
-                    <!-- <img src="./public/images/cake-no-bg.png" class="product-img-banner" alt="Cake"> -->
                 </div>
-                <!-- </div>
+            </div>
             <div class="absolute w-full h-full bg-cover bg-center overflow-hidden" style="transform: translateX(100%);">
                 <div class="flex flex-col h-full items-start justify-center">
-                    <div class="text flex flex-col text-left lg:pl-35 md:pl-35 sm:pl-0 w-90">
-                        <h1
-                            class="banner-slide-title lg:text-7xl md:text-4xl sm:text-lg xs:text-lg text-black uppercase text-nowrap">
-                            Jueguetes
-                        </h1>
-                        <div class="ingredients-container flex items-center pt-10">
-                            <img class="mix-icon" src="mix-icon.png" alt="money icon">
-                            <div class="text-wraper flex text-nowrap pt-4 pl-3">
-                                <ul class="flex flex-row text-nowrap text-2xl text-gray-800">
-                                    <li class="pl-3">Harina de almendras +</li>
-                                    <li class="pl-3">Chocolate belga +</li>
-                                    <li class="pl-3">Frutas de temporada</li>
-                                </ul>
+                    <div class="flex h-full items-center justify-start w-full">
+                        <div class="text w-auto text-left pl-8 max-w-screen-md">
+                            <div
+                                class="banner-slide-title lg:text-5xl md:text-5xl sm:text-3xl xs:text-3xl text-black font-normal flex flex-col">
+                                <h1>El placer de un postre</h1>
+                                <span class="lg:text-7xl md:text-7xl sm:text-4xl xs:text-4xl pt-1">hecho con amor</span>
                             </div>
+                            <p class="text-lg text-gray-600 pt-5 text-xl">
+                                Recién horneado, con ingredientes de verdad.
+                            </p>
                         </div>
-                        <p class="text-2xl text-gray-900 pt-8 text-nowrap flex items-center">
-                            <img class="money-icon lg:mr-5 md::mr-5 sm:mr-5 xs:mr-5" src="money-icon.png"
-                                alt="money icon">
-                            RD$1,800 /lib.
-                        </p>
                     </div>
                 </div>
             </div>
             <div class="absolute w-full h-full bg-cover bg-center overflow-hidden"
                 style=" transform: translateX(200%);">
                 <div class="flex flex-col h-full items-start justify-center">
-                    <div class="text flex flex-col text-left lg:pl-35 md:pl-35 sm:pl-0 w-90">
-                        <h1
-                            class="banner-slide-title lg:text-7xl md:text-4xl sm:text-lg xs:text-lg text-black uppercase text-nowrap">
-                            Instrumentos
-                        </h1>
-                        <div class="ingredients-container flex items-center pt-10">
-                            <img class="mix-icon" src="mix-icon.png" alt="money icon">
-                            <div class="text-wraper flex text-nowrap pt-4 pl-3">
-                                <ul class="flex flex-row text-nowrap text-2xl text-gray-800">
-                                    <li class="pl-3">Harina de almendras +</li>
-                                    <li class="pl-3">Chocolate belga +</li>
-                                    <li class="pl-3">Frutas de temporada</li>
-                                </ul>
-                            </div>
+                    <div class="flex h-full items-center justify-start w-full">
+                        <div class="text w-auto text-left pl-8 max-w-screen-md">
+                            <h1
+                                class="banner-slide-title lg:text-6xl md:text-6xl sm:text-3xl xs:text-3xl text-black font-normal">
+                                Cotiza desde donde estés, fácil y rápido!
+                            </h1>
+                            <p class="text-lg text-gray-600 pt-8 text-xl">
+                                ¿Te antojas de algo delicioso? Con nuestra calculadora en línea, puedes cotizar tu
+                                postre favorito en segundos, sin esperas. Solo elige lo que deseas, recibe la
+                                cotización al instante y ¡listo!.
+                            </p>
+                            <a href="#cotizacion"
+                                class="relative px-6 py-2 mt-4 text-white bg-pink-500 rounded-lg shadow-md hover:bg-pink-600 transition">
+                                Cotiza aquí
+                                <span class="absolute inset-0 rounded-lg border-2 border-pink-500 animate-pulse"></span>
+                            </a>
                         </div>
-                        <p class="text-2xl text-gray-900 pt-8 text-nowrap flex items-center">
-                            <img class="money-icon lg:mr-5 md::mr-5 sm:mr-5 xs:mr-5" src="money-icon.png"
-                                alt="money icon">
-                            RD$1,800 /lib.
-                        </p>
                     </div>
                 </div>
-            </div> -->
             </div>
         </div>
+        </div>
     </section>
-    <section class="catalog flex justify-center items-center">
+
+    <section class="catalog flex justify-center items-center" id="catalog">
         <div class="container">
             <div class="catalog-text mt-8 mb-8 text-center">
                 <h2 class="text-black-200 capitalize text-5xl md:text-5xl font-normal title">Productos destacados</h2>
@@ -158,7 +158,7 @@
         </div>
     </section>
 
-    <section class="relative testimonials backdrop-blur-md">
+    <section class="relative testimonials backdrop-blur-md" id="testimonials">
         <div class="absolute inset-0 bg-dark/50 backdrop-blur-sm"></div>
         <div class=" relative mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20" id="container">
             <h2 class="text-white capitalize text-5xl md:text-5xl font-normal title text-center pb-15">
@@ -257,71 +257,40 @@
                     <img src="public/images/cake_ilust.jpg" alt=""
                         class="drop-shadow-md inline-block  h-48 w-48 rounded-full object-cover" />
                     <p class="text-xl font-semibold text-center">Elaboración de pasteles</p>
-                    <button
-                        class="service-detail-btn cursor-pointer flex items-center rounded-md bg-slate-800 py-3 px-5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                        type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="w-5 h-5 mr-1.5">
-                            <path fill-rule="evenodd"
-                                d="M3.75 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zM3 10.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V10.5zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V15zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V19.5z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        Ver detalles
-                    </button>
                 </li>
                 <li class="flex flex-col items-center gap-6 md:border-r md:px-8 md:py-4 p-8 md:border-gray-300">
                     <img src="public/images/sweets.jpg" alt=""
                         class="drop-shadow-md inline-block  h-48 w-48 rounded-full object-cover" />
                     <p class="text-xl font-semibold text-center">Mesas de dulces</p>
-                    <button
-                        class="service-detail-btn cursor-pointer flex items-center rounded-md bg-slate-800 py-3 px-5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                        type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="w-5 h-5 mr-1.5">
-                            <path fill-rule="evenodd"
-                                d="M3.75 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zM3 10.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V10.5zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V15zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V19.5z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        Ver detalles
-                    </button>
                 </li>
                 <li class="flex flex-col items-center gap-6 md:border-r md:px-8 md:py-4 p-8 md:border-gray-300">
                     <img src="public/images/cake_ilust.jpg" alt=""
                         class="drop-shadow-md inline-block  h-48 w-48 rounded-full object-cover" />
                     <p class="text-xl font-semibold text-center">Catering</p>
-                    <button
-                        class="service-detail-btn cursor-pointer flex items-center rounded-md bg-slate-800 py-3 px-5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                        type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="w-5 h-5 mr-1.5">
-                            <path fill-rule="evenodd"
-                                d="M3.75 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zM3 10.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V10.5zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V15zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V19.5z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        Ver detalles
-                    </button>
                 </li>
                 <li class="flex flex-col items-center gap-6 md:border-r md:px-8 md:py-4 p-8 md:border-gray-300">
                     <img src="public/images/cake_ilust.jpg" alt=""
                         class="drop-shadow-md inline-block  h-48 w-48 rounded-full object-cover" />
                     <p class="text-xl font-semibold text-center">Bandejas personalizadas</p>
-                    <!-- <p class=" text-center text-sm text-gray-500">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam,
-                        purus sit.
-                    </p> -->
-                    <button
-                        class="service-detail-btn cursor-pointer flex items-center rounded-md bg-slate-800 py-3 px-5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                        type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="w-5 h-5 mr-1.5">
-                            <path fill-rule="evenodd"
-                                d="M3.75 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zM3 10.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V10.5zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V15zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V19.5z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        Ver detalles
-                    </button>
                 </li>
             </ul>
+
+            <div class="btn-conatiner container flex justify-center items-center mt-15">
+                <button class="service-detail-btn w-75 cursor-pointer flex justify-center items-center rounded-md 
+                    bg-slate-800 py-3 px-5 border border-transparent text-center text-lg text-semibold text-white 
+                    transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none 
+                    active:bg-slate-700 hover:bg-slate-700 active:shadow-none 
+                    disabled:pointer-events-none disabled:opacity-50 
+                    disabled:shadow-none" type="button">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="w-5 h-5 mr-1.5">
+                        <path fill-rule="evenodd"
+                            d="M3.75 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zM3 10.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V10.5zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V15zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V19.5z"
+                            clip-rule="evenodd" />
+                    </svg> -->
+                    Ver mas detalles
+                </button>
+            </div>
         </div>
     </section>
 
@@ -362,6 +331,16 @@
             </iframe>
         </div>
     </section> -->
+
+    <!-- Bottom-Right Corner fixed-->
+    <div class="fixed bottom-4 right-4 z-50">
+        <button
+            class="flex text-black-300 bg-green-200 hover:bg-green-300 font-bold py-2 px-4 rounded-full shadow-lg transition">
+            <img class="w-9 px-1" src="./public/icons/calculator.png" alt="Calculadora de productos">
+            Cotizar
+        </button>
+    </div>
+
 
     <footer class="relative block shadow dark:bg-gray-800 overflow-hidden py-10">
         <div class="py-16 md:py-20 mx-auto w-full max-w-7xl px-5 md:px-10 relative z-10">
