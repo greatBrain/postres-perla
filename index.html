@@ -23,16 +23,20 @@
             <img src="#" alt="Logo de la pasteleria Postres Perla" class="h-12 w-12">
         </a>
         <div class="hidden md:flex items-center justify-center space-x-6 text-gray-300 capitalize dark:text-gray-400">
-            <a href="#services" class="border-b-2 border-transparent hover:text-white dark:hover:text-gray-200 hover:border-blue-500 text-xl">
+            <a href="#services"
+                class="border-b-2 border-transparent hover:text-white dark:hover:text-gray-200 hover:border-blue-500 text-xl">
                 Servicios
             </a>
-            <a href="#catalog" class="border-b-2 border-transparent hover:text-white dark:hover:text-gray-200 hover:border-blue-500 text-xl">
+            <a href="#catalog"
+                class="border-b-2 border-transparent hover:text-white dark:hover:text-gray-200 hover:border-blue-500 text-xl">
                 Productos
             </a>
-            <a href="#" class="border-b-2 border-transparent hover:text-white dark:hover:text-gray-200 hover:border-blue-500 text-xl">
+            <a href="#"
+                class="border-b-2 border-transparent hover:text-white dark:hover:text-gray-200 hover:border-blue-500 text-xl">
                 Contactanos
             </a>
-            <a href="#about-us" class="border-b-2 border-transparent hover:text-white dark:hover:text-gray-200 hover:border-blue-500 text-xl">
+            <a href="#about-us"
+                class="border-b-2 border-transparent hover:text-white dark:hover:text-gray-200 hover:border-blue-500 text-xl">
                 Nosotros
             </a>
         </div>
@@ -41,28 +45,25 @@
                 class="text-gray-300 dark:text-gray-400 focus:outline-none focus:text-white dark:focus:text-gray-200">
                 <svg x-show="!open" class="h-6 w-6 fill-current" viewBox="0 0 24 24">
                     <path fill-rule="evenodd"
-                          d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2z"
-                          clip-rule="evenodd"/>
+                        d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2z"
+                        clip-rule="evenodd" />
                 </svg>
-                <svg x-show="open" class="h-6 w-6 fill-current" viewBox="0 0 24 24"
-                     xmlns="http://www.w3.org/2000/svg">
-                     <path fill-rule="evenodd" clip-rule="evenodd"
-                           d="M18.707 5.293a1 1 0 010 1.414L13.414 12l5.293 5.293a1 1 0 01-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 01-1.414-1.414L10.586 12 5.293 6.707a1 1 0 011.414-1.414L12 10.586l5.293-5.293a1 1 0 011.414 0z" />
+                <svg x-show="open" class="h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M18.707 5.293a1 1 0 010 1.414L13.414 12l5.293 5.293a1 1 0 01-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 01-1.414-1.414L10.586 12 5.293 6.707a1 1 0 011.414-1.414L12 10.586l5.293-5.293a1 1 0 011.414 0z" />
                 </svg>
             </button>
             <div x-show="open" x-transition:enter="transition ease-out duration-300 transform origin-top"
                 x-transition:enter-start="opacity-0 scale-y-0" x-transition:enter-end="opacity-100 scale-y-100"
                 x-transition:leave="transition ease-in duration-200 transform origin-top"
                 x-transition:leave-start="opacity-100 scale-y-100" x-transition:leave-end="opacity-0 scale-y-0"
-                class="absolute top-0 left-0 w-full bg-gray-800 dark:bg-gray-900 shadow-md"
-                style="height: 100vh;">
+                class="absolute top-0 left-0 w-full bg-gray-800 dark:bg-gray-900 shadow-md" style="height: 100vh;">
                 <div class="flex justify-end p-4">
                     <button @click="open = false"
                         class="text-gray-300 dark:text-gray-400 focus:outline-none focus:text-white dark:focus:text-gray-200">
-                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M18.707 5.293a1 1 0 010 1.414L13.414 12l5.293 5.293a1 1 0 01-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 01-1.414-1.414L10.586 12 5.293 6.707a1 1 0 011.414-1.414L12 10.586l5.293-5.293a1 1 0 011.414 0z" />
+                                d="M18.707 5.293a1 1 0 010 1.414L13.414 12l5.293 5.293a1 1 0 01-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 01-1.414-1.414L10.586 12 5.293 6.707a1 1 0 011.414-1.414L12 10.586l5.293-5.293a1 1 0 011.414 0z" />
                         </svg>
                     </button>
                 </div>
@@ -79,7 +80,7 @@
                     </a>
                     <a href="#about-us" class="hover:text-white dark:hover:text-gray-200 hover:border-blue-500 text-xl">
                         Nosotros
-                    </a>                    
+                    </a>
                 </div>
             </div>
         </div>
@@ -89,9 +90,11 @@
             <div class="absolute w-full h-full bg-cover bg-center overflow-hidden">
                 <div class="flex h-full items-center justify-start w-full">
                     <div class="text w-auto text-left pl-8 max-w-screen-md">
-                        <div class="banner-slide-title lg:text-5xl md:text-5xl sm:text-3xl xs:text-3xl text-black font-normal flex flex-col">
-                            <h1>Endulza tu ocasión especial</h1>
-                            <span class="lg:text-7xl md:text-7xl sm:text-4xl xs:text-4xl pt-1 text-yellow-500">con nosotros</span>
+                        <div
+                            class="banner-slide-title lg:text-5xl md:text-5xl sm:text-3xl xs:text-3xl text-black font-normal flex flex-col">
+                            <h1>Endulzamos tu</h1>
+                            <span class="lg:text-7xl md:text-7xl sm:text-4xl xs:text-4xl pt-1 text-yellow-500">ocasión
+                                especial</span>
                         </div>
                         <p class="text-lg text-gray-600 pt-5 text-xl">
                             Cada momento es más bonito con un buen postre.
@@ -103,9 +106,11 @@
                 <div class="flex flex-col h-full items-start justify-center">
                     <div class="flex h-full items-center justify-start w-full">
                         <div class="text w-auto text-left pl-8 max-w-screen-md">
-                            <div class="banner-slide-title lg:text-5xl md:text-5xl sm:text-3xl xs:text-3xl text-black font-normal flex flex-col">
+                            <div
+                                class="banner-slide-title lg:text-5xl md:text-5xl sm:text-3xl xs:text-3xl text-black font-normal flex flex-col">
                                 <h1>El placer de un postre</h1>
-                                <span class="lg:text-7xl md:text-7xl sm:text-4xl xs:text-4xl pt-1">hecho con amor</span>
+                                <span class="text-pink-300 lg:text-7xl md:text-7xl sm:text-4xl xs:text-4xl pt-1">hecho
+                                    con amor</span>
                             </div>
                             <p class="text-lg text-gray-600 pt-5 text-xl">
                                 Recién horneado, con ingredientes de verdad.
@@ -114,12 +119,12 @@
                     </div>
                 </div>
             </div>
-            <div class="absolute w-full h-full bg-cover bg-center overflow-hidden"
-                style=" transform: translateX(200%);">
+            <div class="absolute w-full h-full bg-cover bg-center overflow-hidden" style="transform: translateX(200%);">
                 <div class="flex flex-col h-full items-start justify-center">
                     <div class="flex h-full items-center justify-start w-full">
                         <div class="text w-auto text-left pl-8 max-w-screen-md">
-                            <h1 class="banner-slide-title lg:text-6xl md:text-6xl sm:text-3xl xs:text-3xl text-black font-normal">
+                            <h1
+                                class="banner-slide-title lg:text-6xl md:text-6xl sm:text-3xl xs:text-3xl text-black font-normal">
                                 Cotiza desde donde estés, fácil y rápido!
                             </h1>
                             <p class="text-lg text-gray-600 pt-8 text-xl">
@@ -130,9 +135,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="flex justify-end items-end w-full h-full image-conatainer">
+                    <img src="./public/images/vectors/budget_calc.png" class="w-140" alt="">
+                </div>
             </div>
         </div>
         </div>
+        <button id="scrollDownBtn" onclick="document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });"
+            class="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-50 
+            bg-gray-700 hover:bg-gray-800 text-white p-4 rounded-full shadow-md
+            animate-bounce transition-all duration-500
+            w-12 h-12">
+        </button>
+
     </section>
     <section class="catalog flex justify-center items-center" id="catalog">
         <div class="container">
@@ -344,7 +359,8 @@
                     </p>
                     <div class="mb-8 mt-8 h-px w-full bg-black"></div>
                 </div>
-                <div class="pastry-chef-img min-h-[300px] max-h-[540px] overflow-hidden rounded-md bg-gray-100 mt-8 mb-5">
+                <div
+                    class="pastry-chef-img min-h-[300px] max-h-[540px] overflow-hidden rounded-md bg-gray-100 mt-8 mb-5">
                     <img src="public/images/girl_pastry_2.jpg" alt="Imagen de Perla, chef de Postres Perla">
                     <figcaption>Perla Pascual, fundadora y repostera</figcaption>
                 </div>
@@ -363,7 +379,8 @@
 
     <!-- Bottom-Right Calculator - corner fixed-->
     <div class="fixed bottom-4 right-4 z-50">
-        <button class="flex text-black-300 bg-yellow-300 hover:bg-yellow-200 font-bold py-2 px-4 rounded-full shadow-lg transition">
+        <button
+            class="flex text-black-300 bg-yellow-300 hover:bg-yellow-200 font-bold py-2 px-4 rounded-full shadow-lg transition">
             <img class="w-9 px-1" src="./public/icons/calculator.png" alt="Calculadora de productos">
             <span class="py-2">Cotizar</span>
         </button>
@@ -404,5 +421,18 @@
 
 </body>
 <script src="src/scripts/main.js"></script>
+<script>
+    const button = document.getElementById('scrollDownBtn');
+    const heroSection = document.getElementById('banner');
+
+    window.addEventListener('scroll', () => {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        if (window.scrollY > heroBottom) {
+            button.style.display = 'none';//Hides button
+        } else {
+            button.style.display = 'block';//Shows button
+        }
+    });
+</script>
 
 </html>
