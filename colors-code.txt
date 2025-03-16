@@ -1,0 +1,12 @@
+Main pink: #e488b9
+
+Yellow-images: #fef7b5
+
+
+Paleta de colores combinacion
+
+Scallop Seashell: #F7E3D9
+pink: #f9c7e4
+
+Celadon (verdesito oliva): #c6d8d5
+crema: #feedcf
