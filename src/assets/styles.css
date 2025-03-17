@@ -101,6 +101,7 @@ nav a {
 
 .catalog {
     background-color: #ffffff;
+    background-image: url("../../public/images/utensils_.png");
     height: 100hv;
     display: flex;
     flex-direction: column;
@@ -144,7 +145,8 @@ nav a {
 
 /* Services section */
 #services {
-    height: auto;
+    height: 100vh;    
+    background-color: #feedcf;
 }
 
 .service-detail-btn {
@@ -215,6 +217,10 @@ nav a {
 
     .testimonials {
         height: auto;
+    }
+
+    #services {
+      height: auto; 
     }
 }
 
