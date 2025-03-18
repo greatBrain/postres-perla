@@ -102,6 +102,9 @@ nav a {
 .catalog {
     background-color: #ffffff;
     background-image: url("../../public/images/utensils_.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     height: 100hv;
     display: flex;
     flex-direction: column;
@@ -145,8 +148,8 @@ nav a {
 
 /* Services section */
 #services {
-    height: 100vh;    
-    background-color: #feedcf;
+    height: 100vh;
+    background-color: #FFF
 }
 
 .service-detail-btn {
@@ -180,13 +183,14 @@ nav a {
 }
 
 .testimonials {
-    height: 800px;
-    background-image: url("../../public/images/dessert_.jpg");
+    height: auto;
+    background-color: #c6d8d5;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
     overflow: hidden;
 }
 
@@ -197,6 +201,10 @@ nav a {
     font-style: normal;
     font-variation-settings: "wdth" 100;
 }
+
+/* #contact {
+    background-color: #feedcf;
+} */
 
 @media(width<=768px) {
     .banner .text h1 {
@@ -220,7 +228,7 @@ nav a {
     }
 
     #services {
-      height: auto; 
+        height: auto;
     }
 }
 
