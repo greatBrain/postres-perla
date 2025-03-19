@@ -1,0 +1,5 @@
+Rotar con Jquery:
+
+$('contenedor').click(function () {
+  $(this).find('.clase o elemento').toggleClass('clase que rota');
+}); 

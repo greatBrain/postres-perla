@@ -149,7 +149,7 @@ nav a {
 /* Services section */
 #services {
     height: 100vh;
-    background-color: #FFF
+    /* background-color: #FFF */
 }
 
 .service-detail-btn {
@@ -202,9 +202,7 @@ nav a {
     font-variation-settings: "wdth" 100;
 }
 
-/* #contact {
-    background-color: #feedcf;
-} */
+/* Carousel */
 
 @media(width<=768px) {
     .banner .text h1 {

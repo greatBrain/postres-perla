@@ -15,10 +15,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="src/assets/styles.css">
     <link rel="shortcut icon" href="./public/icons/P-perla-logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-    <nav class="fixed z-50 w-full bg-pink-300 shadow dark:bg-pink-300 h-20 flex items-center justify-between px-6">
+    <nav class="fixed z-50 w-full bg-pink-400 shadow dark:bg-pink-300 h-20 flex items-center justify-between px-6">
         <a href="#" class="flex items-center py-5" id="brand-logo">
             <img src="./public/icons/P-perla-logo.png" alt="Logo de la pasteleria Postres Perla" class="h-16 w-16">
             <span class="text-white pl-2 text-3xl font-semibold">
@@ -45,7 +47,7 @@
         </div>
         <div class="md:hidden" x-data="{ open: false }">
             <button @click="open = !open"
-                class="text-gray-300 dark:text-gray-400 focus:outline-none focus:text-white dark:focus:text-gray-200">
+                class="text-white dark:text-gray-400 focus:outline-none focus:text-white dark:focus:text-gray-200">
                 <svg x-show="!open" class="h-6 w-6 fill-current" viewBox="0 0 24 24">
                     <path fill-rule="evenodd"
                         d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2z"
@@ -60,7 +62,8 @@
                 x-transition:enter-start="opacity-0 scale-y-0" x-transition:enter-end="opacity-100 scale-y-100"
                 x-transition:leave="transition ease-in duration-200 transform origin-top"
                 x-transition:leave-start="opacity-100 scale-y-100" x-transition:leave-end="opacity-0 scale-y-0"
-                class="absolute top-0 left-0 w-full bg-gray-800 dark:bg-gray-900 shadow-md" style="height: 100vh;">
+                class="absolute top-0 left-0 w-full bg-pink-500 dark:bg-gray-900 shadow-md z-50" 
+                style="height: 100vh;">
                 <div class="flex justify-end p-4">
                     <button @click="open = false"
                         class="text-gray-300 dark:text-gray-400 focus:outline-none focus:text-white dark:focus:text-gray-200">
@@ -155,64 +158,126 @@
             dark:hover:bg-pink-500 dark:focus:ring-pink-200">
             <svg class="rotate-90 w-12 h-12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                 viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M1 5h12m0 0L9 9m4-4L9 1" />
+                <path stroke="currentColor" 
+                      stroke-linecap="round" 
+                      stroke-linejoin="round" 
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 9m4-4L9 1" 
+                />
             </svg>
             <span class="sr-only"> </span>
         </button>
-
     </section>
+    
     <section class="catalog flex justify-center items-center" id="catalog">
         <div class="container">
-            <div class="catalog-text mt-8 mb-8 text-center">
+            <div class="catalog-text mt-3 mb-8 text-center">
                 <h2 class="text-black-100 capitalize text-7xl md:text-5xl font-semibold title">
-                    Productos <span class="text-pink-400">Postres Perla</span>
+                    Productos <span class="text-pink-600">Postres Perla</span>
                 </h2>
-                <p class="pt-3 text-2xl">Explora nuestra deliciosa colección de postres y déjate llevar por el encanto!
+                <p class="pt-3 text-2xl text-black-300">
+                    Explora nuestra deliciosa colección de postres y déjate llevar por el encanto!
                 </p>
             </div>
-            <div class="gallery grid justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 pt-8 pb-18">
-                <div class="img-box img1 drop-shadow-sm">
+            <div class="gallery grid space-between items-center gap-12 sm:grid-cols-1 md:grid-cols-3 pt-8 pb-18">
+                <div class="img-box img1 drop-shadow-lg rounded-md">
                     <div class="img-container">
                         <img src="./public/images/personal-cake.jpg" alt="Postre 1">
                     </div>
-                    <div class="mt-2 text-center pt-2">
-                        <a href="#" class="font-normal hover:text-indigo-600 transition text-xl duration-300 text-wrap">
-                            Pasteles personalizados
+                    <div class="bg-gradient-to-r from-pink-200 to-white text-left p-7 max-w-[295px]">
+                        <a href="#" class="text-pink-600 font-bold hover:text-gray-800 text-xl transition duration-300 text-wrap">
+                            Pasteles
                         </a>
-                        <p class="text-gray-600">Adaptados a tus gustos</p>
+                        <p class="text-black-300 pt-1">
+                           RD$1,800 /lb
+                        </p>
+                        <div class="mt-2 flex">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5 mr-1.5">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5 mr-1.5">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5 mr-1.5">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5 mr-1.5">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5">
+                        </div>
                     </div>
                 </div>
-                <div class="img-box img2 drop-shadow-sm">
+                <div class="img-box img2 drop-shadow-lg">
                     <div class="img-container">
                         <img src="./public/images/mouse-yellow.jpg" alt="Postre 2">
                     </div>
-                    <div class="mt-2 text-center pt-2">
-                        <a href="#" class="font-normal hover:text-blue-600 text-xl transition duration-300">Mousse de
-                            frutas</a>
-                        <p class="text-gray-600">Hechos con lo mas fresco</p>
+                    <div class="bg-gradient-to-r from-pink-200 to-white text-left p-7 max-w-[295px]">
+                        <a href="#" class="text-pink-600 font-bold hover:text-gray-800 text-lg transition duration-300">
+                            Mousse de frutas
+                        </a>
+                        <p class="text-black-300 pt-1">
+                            Doce unidades RD$3,000
+                        </p>
+                        <div class="mt-2 flex">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5 mr-1.5">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5 mr-1.5">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5 mr-1.5">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5 mr-1.5">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5">
+                        </div>
                     </div>
                 </div>
-                <div class="img-box img3 drop-shadow-sm">
+                <div class="img-box img3 drop-shadow-lg">
                     <div class="img-container">
                         <img src="./public/images/pie-yellow.jpg" alt="Postre 3">
                     </div>
-                    <div class="mt-2 text-center pt-2">
-                        <a href="#" class="font-normal hover:text-blue-600 text-xl transition duration-300">
+                    <div class="bg-gradient-to-r from-pink-200 to-white text-left p-7 max-w-[295px]">
+                        <a href="#" class="text-pink-600 font-bold hover:text-gray-800 text-lg transition duration-300">
                             Pie de frutas
                         </a>
-                        <p class="text-gray-600">La fruta que desees, el limite lo pones tu</p>
+                        <p class="text-black-300 pt-1">
+                            A partir de RD$700
+                        </p>
+                        <div class="mt-2 flex">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5 mr-1.5">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5 mr-1.5">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5 mr-1.5">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5 mr-1.5">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5">
+                        </div>
                     </div>
                 </div>
-                <div class="img-box img4 drop-shadow-sm">
+                <div class="img-box img4 drop-shadow-lg">
                     <div class="img-container">
                         <img src="./public/images/pudding-yellow.jpg" alt="Pudin de pan imagen">
                     </div>
-                    <div class="mt-2 text-center pt-2">
-                        <a href="#" class="font-normal hover:text-blue-600 transition text-xl duration-300">
+                    <div class="bg-gradient-to-r from-pink-200 to-white text-left p-7 max-w-[295px]">
+                        <a href="#" class="text-pink-600 font-bold hover:text-gray-800 text-lg transition duration-300">
                             Pudding de pan
                         </a>
-                        <p class="text-gray-600">Elaborado con ingredientes de primera</p>
+                        <p class="text-black-800 pt-1">
+                            A partir de RD$700
+                        </p>
+                        <div class="mt-2 flex">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5 mr-1.5">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5 mr-1.5">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5 mr-1.5">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5 mr-1.5">
+                            <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
+                                alt="star" class="h-5 w-5">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -220,10 +285,38 @@
         <a href="#" class="text-2xl text-pink-300 font-bold underline text-shadow-300">Ver mas</a>
     </section>
 
-    <section class="relative testimonials bg-gradient-to-r from-[#f9c7e4] via-[#feedcf] to-white py-25 px-6 md:px-10"
+    <section class="services w-full bg-yellow-200 flex flex-row" id="services">
+        <div class="max-w-7xl mx-50 pt-40 md:px-8 md:pt-40">
+            <h2 class="w-95 text-black-200 text-normal text-5xl md:text-5xl font-semibold title text-left text-wrap">
+                Servicios personalizados
+            </h2>
+
+            <h2 class="text-black-200 text-normal text-5xl md:text-5xl font-semibold title text-left">
+                para cada <span class="text-white">momento</span>
+            </h2>
+            <div class="descr-text pt-4 max-w-xl text-start">
+                <p class="mb-2 text-lg text-gray-800 sm:text-base mb-2 mt-5 md:mb-2">
+                    Creamos experiencias que perduran en la memoria. 
+                    Cada uno de nuestros postres es más que un dulce; es un recuerdo, una emoción, un instante que se vuelve inolvidable.
+                    Seleccionamos cuidadosamente los ingredientes más frescos y de la más alta calidad para ofrecerte no solo un sabor excepcional, 
+                    sino una experiencia sensorial única.                
+                </p>
+                <p class="mb-2 text-lg text-gray-800 sm:text-base mb-2 mt-5 md:mb-2">
+                    Imagina mesas de postres que cautivan a primera vista, pasteles de boda que narran historias de amor en cada detalle. 
+                    Aquí, cada creación es una obra artesanal, diseñada con pasión y dedicación para endulzar tus momentos más especiales.
+                </p>
+            </div>            
+        </div>
+
+        <div class="slider-carousel">
+            
+        </div>
+    </section>
+
+    <section class="relative testimonials bg-gradient-to-r from-[#f9c7e4] via-[#feedcf] to-white py-30 px-6 md:px-10"
         id="testimonials">
         <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-gray-900 text-5xl font-bold mb-10">
+            <h2 class="text-gray-900 text-5xl font-bold mb-10 pb-10">
                 Lo que dicen nuestros clientes
             </h2>
             <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -240,7 +333,7 @@
                             <p class="text-sm text-gray-500">Cliente satisfecho</p>
                         </div>
                     </div>
-                    <div class="mt-3 flex">
+                    <!-- <div class="mt-3 flex">
                         <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
                             alt="star" class="h-6 w-6 mr-1.5">
                         <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
@@ -251,6 +344,20 @@
                             alt="star" class="h-6 w-6 mr-1.5">
                         <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
                             alt="star" class="h-6 w-6">
+                    </div> -->
+                </div>
+                <div
+                    class="p-6 bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl transition-transform transform hover:scale-105">
+                    <p class="text-lg text-gray-700 italic">
+                        “Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”
+                    </p>
+                    <div class="mt-4 flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="Cliente"
+                            class="w-12 h-12 rounded-full border border-gray-300">
+                        <div class="ml-3">
+                            <h3 class="text-gray-800 font-semibold">Nombre Cliente</h3>
+                            <p class="text-sm text-gray-500">Cliente satisfecho</p>
+                        </div>
                     </div>
                 </div>
                 <div
@@ -266,18 +373,6 @@
                             <p class="text-sm text-gray-500">Cliente satisfecho</p>
                         </div>
                     </div>
-                    <div class="mt-3 flex">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6 mr-1.5">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6 mr-1.5">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6 mr-1.5">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6 mr-1.5">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6">
-                    </div>
                 </div>
                 <div
                     class="p-6 bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl transition-transform transform hover:scale-105">
@@ -292,104 +387,14 @@
                             <p class="text-sm text-gray-500">Cliente satisfecho</p>
                         </div>
                     </div>
-                    <div class="mt-3 flex">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6 mr-1.5">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6 mr-1.5">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6 mr-1.5">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6 mr-1.5">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6">
-                    </div>
                 </div>
-                <div
-                    class="p-6 bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl transition-transform transform hover:scale-105">
-                    <p class="text-lg text-gray-700 italic">
-                        “Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”
-                    </p>
-                    <div class="mt-4 flex items-center">
-                        <img src="https://via.placeholder.com/50" alt="Cliente"
-                            class="w-12 h-12 rounded-full border border-gray-300">
-                        <div class="ml-3">
-                            <h3 class="text-gray-800 font-semibold">Nombre Cliente</h3>
-                            <p class="text-sm text-gray-500">Cliente satisfecho</p>
-                        </div>
-                    </div>
-                    <div class="mt-3 flex">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6 mr-1.5">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6 mr-1.5">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6 mr-1.5">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6 mr-1.5">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="services flex justify-center align-center" id="services">
-        <div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-8 md:py-20">
-            <h2 class="text-black-200 text-normal text-5xl md:text-5xl font-normal title text-center">
-                Experiencias personalizadas
-            </h2>
-            <p class="mx-auto mb-8 mt-4 max-w-lg text-center text-sm text-gray-500 sm:text-base mb-15 mt-5 md:mb-15">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit ut
-                aliquam,purus sit amet luctus magna fringilla urna
-            </p>
-            <ul class="grid gap-5 sm:grid-cols-2 md:grid-cols-4 md:gap-0">
-                <li class="flex flex-col items-center gap-6 md:border-r md:px-8 md:py-4 p-8 md:border-gray-300">
-                    <img src="public/images/cake_ilust.jpg" alt=""
-                        class="drop-shadow-md inline-block  h-48 w-48 rounded-full object-cover" />
-                    <p class="text-xl font-semibold text-center">Elaboración de pasteles</p>
-                </li>
-                <li class="flex flex-col items-center gap-6 md:border-r md:px-8 md:py-4 p-8 md:border-gray-300">
-                    <img src="public/images/sweets.jpg" alt=""
-                        class="drop-shadow-md inline-block  h-48 w-48 rounded-full object-cover" />
-                    <p class="text-xl font-semibold text-center">Mesas de dulces</p>
-                </li>
-                <li class="flex flex-col items-center gap-6 md:border-r md:px-8 md:py-4 p-8 md:border-gray-300">
-                    <img src="public/images/cake_ilust.jpg" alt=""
-                        class="drop-shadow-md inline-block  h-48 w-48 rounded-full object-cover" />
-                    <p class="text-xl font-semibold text-center">Catering</p>
-                </li>
-                <li class="flex flex-col items-center gap-6 md:border-r md:px-8 md:py-4 p-8 md:border-gray-300">
-                    <img src="public/images/cake_ilust.jpg" alt=""
-                        class="drop-shadow-md inline-block  h-48 w-48 rounded-full object-cover" />
-                    <p class="text-xl font-semibold text-center">Bandejas personalizadas</p>
-                </li>
-            </ul>
-
-            <div class="btn-conatiner container flex justify-center items-center mt-15">
-                <button class="service-detail-btn w-75 cursor-pointer flex justify-center items-center rounded-md 
-                    bg-slate-800 py-3 px-5 border border-transparent text-center text-lg text-semibold text-white 
-                    transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none 
-                    active:bg-slate-700 hover:bg-slate-700 active:shadow-none 
-                    disabled:pointer-events-none disabled:opacity-50 
-                    disabled:shadow-none" type="button">
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="w-5 h-5 mr-1.5">
-                        <path fill-rule="evenodd"
-                            d="M3.75 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zm0 4.5h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5zM3 10.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V10.5zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V15zm0 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75V19.5z"
-                            clip-rule="evenodd" />
-                    </svg> -->
-                    Ver mas detalles
-                </button>
             </div>
         </div>
     </section>
     <section class="bg-white dark:bg-gray-900 py-25 h-full
     bg-gradient-to-r from-yellow-100 via-yellow-50 to-white dark:from-yellow-800 dark:via-yellow-900 dark:to-black
     " id="contact">
-        <div class="container px-6 mx-auto">
+        <div class="container px-6 py-15 mx-auto">
             <div class="text-center">
                 <h2 class="text-5xl font-semibold text-gray-800 dark:text-white">
                     Contáctanos
@@ -493,28 +498,32 @@
     <div class="fixed top-1/2 right-1 transform -translate-y-1/2 z-50 md:block hidden">
         <div class="relative group">
             <button
-                class="flex items-center justify-center w-16 h-16 rounded-full bg-yellow-300 hover:bg-yellow-200 shadow-lg">
+                class="flex items-center justify-center w-16 h-16 rounded-full bg-pink-500 hover:bg-pink-400 shadow-lg">
                 <img class="w-9" src="./public/icons/calculator.png" alt="Calculadora de productos">
             </button>
             <!-- Tooltip -->
-            <div
-                class="absolute right-full top-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg px-4 py-2 text-lg text-black font-semibold whitespace-nowrap opacity-0 transition-opacity duration-200 group-hover:opacity-100 pointer-events-auto">
-                Obten tu cotización
+            <div class="absolute right-full top-1/2 -translate-y-1/2 
+                 bg-white rounded-lg shadow-xl px-4 py-8 text-lg text-black 
+                 font-semibold whitespace-nowrap opacity-0 transition-opacity 
+                 duration-200 
+                 group-hover:opacity-100 
+                 pointer-events-auto">
+                 Obten tu cotización
                 <div class="absolute left-full top-1/2 -translate-y-1/2 w-3 h-3 bg-white rotate-45 shadow-md"></div>
             </div>
         </div>
     </div>
     <!-- Movil button -->
-    <div class="fixed bottom-4 left-4 right-4 z-50 md:hidden">
+    <div class="fixed bottom-4 left-4 right-4 z-10 md:hidden">
         <button
-            class="w-full py-4 bg-yellow-300 hover:bg-yellow-200 text-black text-lg font-semibold rounded-lg shadow-lg flex items-center justify-center">
+            class="w-full py-4 bg-pink-300 hover:bg-yellow-200 text-black text-lg font-semibold rounded-lg shadow-lg flex items-center justify-center">
             <img class="w-6 h-6 mr-2" src="./public/icons/calculator.png" alt="Calculadora de productos">
             Obten tu cotización
         </button>
     </div>
     <!-- End movil button -->
 
-    <footer class="relative block shadow bg-pink-300 dark:bg-pink-300 overflow-hidden py-10">
+    <footer class="relative block shadow bg-pink-400 dark:bg-pink-300 overflow-hidden py-10">
         <div class="py-16 md:py-20 mx-auto w-full max-w-7xl px-5 md:px-10 relative z-10">
             <div class="flex-col flex items-center" id="items">
                 <div class="brand-logo flex justify-center items-center pb-5">
@@ -565,5 +574,4 @@
         }
     });
 </script>
-
 </html>

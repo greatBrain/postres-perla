@@ -1,6 +1,6 @@
 Main pink: #e488b9
 
-Yellow-images: #fef7b5
+YYellow-images: #fef7b5
 
 
 Paleta de colores combinacion
