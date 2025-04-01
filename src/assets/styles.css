@@ -183,7 +183,7 @@ nav a {
 
 .testimonials {
     height: auto;
-    background-color: #c6d8d5;
+    background-color: #8cffda;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -208,11 +208,19 @@ nav a {
         font-size: 1.8rem;
     }
 
-    .gallery {
+    .catalog .gallery {
         display: flex;
+        flex-direction: row;
+        justify-content: center;
         flex-wrap: nowrap;
         overflow-x: scroll;
-        gap: 16px;
+    }
+
+    .img-box .img-container {
+        width: 255px;
+        height: 292px;
+        overflow: hidden;
+        margin-right: 8px;
     }
 
     .img-box {

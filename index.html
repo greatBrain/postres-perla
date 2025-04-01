@@ -99,7 +99,8 @@
             <div class="absolute w-full h-full overflow-hidden">
                 <div class="flex h-full items-center justify-start w-full">
                     <div class="text w-auto text-left pl-8 max-w-screen-md">
-                        <div class="banner-slide-title lg:text-5xl md:text-5xl sm:text-3xl xs:text-3xl text-black font-normal flex flex-col">
+                        <div
+                            class="banner-slide-title lg:text-5xl md:text-5xl sm:text-3xl xs:text-3xl text-black font-normal flex flex-col">
                             <h1>Convertimos tus momentos en</h1>
                             <span class="lg:text-7xl md:text-7xl sm:text-4xl xs:text-4xl pt-1 text-yellow-500">
                                 sabores inolvidables.
@@ -144,7 +145,7 @@
                     <div class="img-container">
                         <img src="./public/images/personal-cake.jpg" alt="Postre 1">
                     </div>
-                    <div class="bg-gradient-to-r from-pink-200 to-white text-left p-7 max-w-[295px]">
+                    <div class="bg-gradient-to-r from-pink-200 to-white text-left p-7 min-w-[255px] max-w-[295px]">
                         <a href="#"
                             class="text-pink-600 font-bold hover:text-gray-800 text-xl transition duration-300 text-wrap">
                             Pasteles
@@ -170,7 +171,7 @@
                     <div class="img-container">
                         <img src="./public/images/mouse-yellow.jpg" alt="Postre 2">
                     </div>
-                    <div class="bg-gradient-to-r from-pink-200 to-white text-left p-7 max-w-[295px]">
+                    <div class="bg-gradient-to-r from-pink-200 to-white text-left p-7 min-w-[255px] max-w-[295px]">
                         <a href="#" class="text-pink-600 font-bold hover:text-gray-800 text-lg transition duration-300">
                             Mousse de frutas
                         </a>
@@ -195,7 +196,7 @@
                     <div class="img-container">
                         <img src="./public/images/pie-yellow.jpg" alt="Postre 3">
                     </div>
-                    <div class="bg-gradient-to-r from-pink-200 to-white text-left p-7 max-w-[295px]">
+                    <div class="bg-gradient-to-r from-pink-200 to-white text-left p-7 min-w-[255px] max-w-[295px]">
                         <a href="#" class="text-pink-600 font-bold hover:text-gray-800 text-lg transition duration-300">
                             Pie de frutas
                         </a>
@@ -220,7 +221,7 @@
                     <div class="img-container">
                         <img src="./public/images/pudding-yellow.jpg" alt="Pudin de pan imagen">
                     </div>
-                    <div class="bg-gradient-to-r from-pink-200 to-white text-left p-7 max-w-[295px]">
+                    <div class="bg-gradient-to-r from-pink-200 to-white text-left p-7 min-w-[255px] max-w-[295px]">
                         <a href="#" class="text-pink-600 font-bold hover:text-gray-800 text-lg transition duration-300">
                             Pudding de pan
                         </a>
@@ -248,7 +249,7 @@
 
     <section class="services w-full bg-yellow-100 flex flex-row" id="services">
         <div class="max-w-7xl mx-50 pt-40 pb-20 md:px-8 md:pt-40">
-            <h2 class="w-95 text-black-200 text-normal text-5xl md:text-5xl font-semibold title text-left text-wrap">
+            <h2 class="w-65 text-black-200 text-normal text-5xl md:text-5xl font-semibold title text-left text-wrap">
                 Servicios personalizados
             </h2>
             <h2 class="text-black-200 text-normal text-5xl md:text-5xl font-semibold title text-left">
@@ -271,43 +272,40 @@
                 </p>
             </div>
         </div>
-
         <!-- Rounded images services -->
         <div class="services-container w-full pt-40 md:px-8 md:pt-40 bg-white">
-            <div class="services-container w-full pt-40 md:px-8 md:pt-40 bg-white flex flex-wrap justify-center gap-6">
-                <div class="relative w-60 h-60 md:w-58 md:h-58 rounded-full overflow-hidden group">
-                    <img src="public/images/cake_ilust.jpg" alt="Service 1" class="w-full h-full object-cover">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span class="text-white text-lg font-semibold">Servicio 1</span>
+            <div
+                class="services-container w-full pt-20 md:px-8 md:pt-20 bg-white flex flex-col flex-wrap justify-around items-start gap-6">
+                <div class="row flex flex-row flex-wrap justify-around gap-18">
+                    <div class="relative w-60 h-60 md:w-58 md:h-58 rounded-full overflow-hidden group">
+                        <img src="public/images/cake_ilust.jpg" alt="Service 1" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="text-white text-lg font-semibold">Servicio 1</span>
+                        </div>
+                    </div>
+                    <div class="relative w-60 h-60 md:w-48 md:h-48 rounded-full overflow-hidden group">
+                        <img src="public/images/cake_ilust.jpg" alt="Service 2" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="text-white text-lg font-semibold">Servicio 2</span>
+                        </div>
                     </div>
                 </div>
-                <div class="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden group">
-                    <img src="public/images/cake_ilust.jpg" alt="Service 2" class="w-full h-full object-cover">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span class="text-white text-lg font-semibold">Servicio 2</span>
+                <div class="row w-full flex flex-row flex-wrap justify-center">
+                    <div class="relative w-60 h-60 md:w-48 md:h-48 rounded-full overflow-hidden group">
+                        <img src="public/images/cake_ilust.jpg" alt="Service 3" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="text-white text-lg font-semibold">Servicio 3</span>
+                        </div>
                     </div>
-                </div>
-                <div class="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden group">
-                    <img src="public/images/cake_ilust.jpg" alt="Service 3" class="w-full h-full object-cover">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span class="text-white text-lg font-semibold">Servicio 3</span>
-                    </div>
-                </div>
-                <div class="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden group">
-                    <img src="public/images/cake_ilust.jpg" alt="Service 4" class="w-full h-full object-cover">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span class="text-white text-lg font-semibold">Servicio 4</span>
-                    </div>
-                </div>
-                <div class="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden group">
-                    <img src="public/images/cake_ilust.jpg" alt="Service 5" class="w-full h-full object-cover">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span class="text-white text-lg font-semibold">Servicio 5</span>
+                    <div class="relative w-60 h-60 md:w-48 md:h-48 rounded-full overflow-hidden group">
+                        <img src="public/images/cake_ilust.jpg" alt="Service 4" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="text-white text-lg font-semibold">Servicio 4</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -402,57 +400,40 @@
                     Para tus pedidos, consultas o sugerencias, ¡estamos aquí para ayudarte!
                 </p>
             </div>
-
-            <div class="grid grid-cols-1 gap-12 mt-12 lg:grid-cols-3">
-                <div class="space-y-8">
-                    <div class="flex items-center space-x-4">
-                        <div class="p-3 bg-blue-100 dark:bg-gray-800 text-blue-500 rounded-full">
-                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-medium text-gray-800 dark:text-white">Email</h3>
-                            <p class="text-gray-500 dark:text-gray-400">Estamos atentos para responderte.</p>
-                            <p class="text-blue-500 dark:text-blue-400 font-medium">
-                                <a href="postresperla@gmail.com">postresperla@gmail.com</a>
-                            </p>
-                        </div>
+            <div class="flex flex-row justify-evenly items-center mt-12">
+                <div class="flex items-center space-x-1 w-full md:w-auto">
+                    <div class="p-1 bg-yellow-200 dark:bg-gray-800 text-blue-500 rounded-full">
+                        <img class="w-16 h-16" src="public/icons/phone.svg" alt="Telefono icono">
                     </div>
-
-                    <div class="flex items-center space-x-4">
-                        <div class="p-3 bg-blue-100 dark:bg-gray-800 text-blue-500 rounded-full">
-                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-medium text-gray-800 dark:text-white">Local</h3>
-                            <p class="text-blue-500 dark:text-blue-400 font-medium">100 Smith Street, Collingwood VIC
-                                3066,
-                                AU</p>
-                        </div>
+                    <div>
+                        <h3 class="text-xl font-large text-pink-600">Teléfono / Whatsapp</h3>
+                        <p class="text-black font-medium">(829)-646-9680</p>
                     </div>
-
-                    <div class="flex items-center space-x-4">
-                        <div class="p-3 bg-blue-100 dark:bg-gray-800 text-blue-500 rounded-full">
-                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-medium text-gray-800 dark:text-white">Teléfono / Whatsapp</h3>
-                            <p class="text-gray-500 dark:text-gray-400">Llámanos de lunes a viernes de 8am a 5pm.</p>
-                            <p class="text-blue-500 dark:text-blue-400 font-medium">(829)-646-9680</p>
-                        </div>
+                </div>
+                <div class="flex items-center space-x-1 w-full md:w-auto">
+                    <div class="p-1 bg-yellow-200 dark:bg-gray-800 text-blue-500 rounded-full">
+                        <img class="w-16 h-16" src="public/icons/instagram-contact.svg" alt="Instagram icono">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium text-pink-600">@Postres.perla</h3>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-1 w-full md:w-auto">
+                    <div class="p-1 bg-yellow-200 dark:bg-gray-800 text-blue-500 rounded-full">
+                        <img class="w-16 h-16" src="public/icons/facebook.svg" alt="Facebook icono">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium text-pink-600">Postres.perla</h3>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-1 w-full md:w-auto">
+                    <div class="p-1 bg-yellow-200 dark:bg-gray-800 text-blue-500 rounded-full">
+                        <img class="w-16 h-16" src="public/icons/email.svg" alt="Icono email">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium text-pink-600">
+                            <a href="mailto:postresperla@gmail.com">postresperla@gmail.com</a>
+                        </h3>
                     </div>
                 </div>
             </div>
