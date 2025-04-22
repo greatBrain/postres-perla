@@ -1,4 +1,4 @@
-# Bakery Landing Page
+# PAtry Landing Page
 
 This repository contains the source code for a landing page of a bakery. The current version is built with HTML, Tailwind CSS, and Vanilla JavaScript. This project is designed to validate the concept of the bakery's online presence.
 
