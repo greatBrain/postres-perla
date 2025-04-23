@@ -107,14 +107,12 @@
                                 a tus momentos
                             </span>
                         </div>
-                        <!-- <p class="text-lg text-gray-600 pt-5 text-xl">
-                        </p> -->
                     </div>
                 </div>
             </div>
         </div>
         </div>
-        <button type="button" id="scrollDownBtn"
+        <!-- <button type="button" id="scrollDownBtn"
             onclick="document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });" class="animate-bounce transition-all duration-500
             w-12 h-12 fixed bottom-10 left-1/2 transform -translate-x-1/2 z-50  
             text-gray-800 bg-pink-400 hover:bg-pink-500 
@@ -128,7 +126,7 @@
                     d="M1 5h12m0 0L9 9m4-4L9 1" />
             </svg>
             <span class="sr-only"> </span>
-        </button>
+        </button> -->
     </section>
 
     <section class="catalog flex justify-center items-center" id="catalog">
@@ -385,7 +383,8 @@
         <div class="services-container w-full md:w-7/12 pt-20 md:px-8 md:pt-10">
             <div class="flex flex-col flex-wrap justify-center items-center gap-12">
                 <div class="row flex flex-col md:flex-row flex-wrap justify-center gap-10 md:gap-24">
-                    <div class="drop-shadow-lg relative w-full md:w-48 lg:w-64 h-48 md:h-48 lg:h-64 rounded-full overflow-hidden group">
+                    <div
+                        class="drop-shadow-lg relative w-full md:w-48 lg:w-64 h-48 md:h-48 lg:h-64 rounded-full overflow-hidden group">
                         <img src="public/images/cake-example.jpeg" alt="Service 1" class="w-full h-full object-cover">
                         <div
                             class="absolute inset-0 bg-green-200 bg-opacity-80 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition-opacity">
@@ -393,7 +392,8 @@
                             <a href="#" class="text-pink-500 font-bold">Ver mas detalles</a>
                         </div>
                     </div>
-                    <div class="drop-shadow-lg relative w-full md:w-48 lg:w-64 h-48 md:h-48 lg:h-64 rounded-full overflow-hidden group">
+                    <div
+                        class="drop-shadow-lg relative w-full md:w-48 lg:w-64 h-48 md:h-48 lg:h-64 rounded-full overflow-hidden group">
                         <img src="public/images/table-sweets.jpg" alt="Service 2" class="w-full h-full object-cover">
                         <div
                             class="absolute inset-0 bg-green-200 bg-opacity-80 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition-opacity">
@@ -402,8 +402,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="row pt-5 w-full flex flex-col md:flex-row flex-wrap justify-center md:justify-center md:-ml-40 gap-8 md:gap-24">
-                    <div class="drop-shadow-lg relative w-full md:w-48 lg:w-64 h-48 md:h-48 lg:h-64 rounded-full overflow-hidden group">
+                <div
+                    class="row pt-5 w-full flex flex-col md:flex-row flex-wrap justify-center md:justify-center md:-ml-40 gap-8 md:gap-24">
+                    <div
+                        class="drop-shadow-lg relative w-full md:w-48 lg:w-64 h-48 md:h-48 lg:h-64 rounded-full overflow-hidden group">
                         <img src="public/images/desserts.jpg" alt="Service 3" class="w-full h-full object-cover">
                         <div
                             class="absolute inset-0 bg-green-200 bg-opacity-80 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition-opacity">
@@ -411,7 +413,8 @@
                             <a href="#" class="text-pink-500 font-bold">Ver mas detalles</a>
                         </div>
                     </div>
-                    <div class="drop-shadow-lg relative w-full md:w-48 lg:w-64 h-48 md:h-48 lg:h-64 rounded-full overflow-hidden group">
+                    <div
+                        class="drop-shadow-lg relative w-full md:w-48 lg:w-64 h-48 md:h-48 lg:h-64 rounded-full overflow-hidden group">
                         <img src="public/images/sweets.jpg" alt="Service 4" class="w-full h-full object-cover">
                         <div
                             class="absolute inset-0 bg-green-200 bg-opacity-80 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition-opacity">
@@ -420,20 +423,19 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
     <section class="about-us bg-white">
-        <div class="mx-auto w-full max-w-7xl px-5 py-15 md:px-6 md:py-15 mt-15">
-            <div class="grid gap-12 sm:gap-12 md:grid-cols-2 items-center">
-                <div class="pastry-chef-img min-h-[300px] max-h-[540px] overflow-hidden rounded-md bg-gray-100 mt-8 mb-5">
-                    <img src="public/images/girl_pastry_2.jpg" alt="Imagen de Perla, chef de Postres Perla">
-                    <figcaption>Perla Pascual, fundadora y repostera</figcaption>
+        <div class="mx-auto w-full max-w-full">
+            <div class="grid gap-10 sm:gap-12 md:grid-cols-2 items-center">
+                <div class="side-car-img min-h-[100%] max-h-[100%] overflow-hidden">
+                    <img src="public/images/car.jpg" alt="Imagen de Perla, chef de Postres Perla">
                 </div>
-                <div class="flex flex-col items-start gap-3">
+                <div class="flex flex-col items-start gap-3 w-full">
                     <h2 class="text-black-200 text-5xl font-semibold title">
-                        Postres Perla, un <span class="text-pink-300">rincón de dulzura</span>
+                        <span class="text-pink-400">Postres Perla:</span> cuando la calidad y el ingenio se cruzan
                     </h2>
                     <p class="text-md text-gray-500 sm:text-2xl">
                         Consectetur adipiscing elit duis tristique sollicitudin nibh.
@@ -445,8 +447,8 @@
                         Augue mauris augue neque gravida in fermentum. Sapien pellentesque
                         habitant morbi tristique pellentesque.
                     </p>
-                </div>                
-            </div>            
+                </div>
+            </div>
         </div>
     </section>
 
@@ -584,7 +586,7 @@
             </div>
         </div>
     </section>
-    
+
 
 
     <!-- Buttons desktop for calculation-->
