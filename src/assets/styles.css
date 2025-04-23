@@ -50,9 +50,12 @@ nav a {
 .banner {
     position: relative;
     height: 100vh;
-    background-color: var(--white-bone);
     opacity: 1;
     transition: opacity 0.1s linear;
+    background-image: url("../../public/images/cupcakes-bg.jpg");
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .banner-slide-title {
@@ -63,12 +66,6 @@ nav a {
     font-variation-settings: "wdth" 100;
 }
 
-/* 
-.banner .text{
-    background-image: url("../../public/images/vectors/bubble-banner-bg.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
 
 .banner.fade-out {
     opacity: 0;
