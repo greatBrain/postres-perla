@@ -91,14 +91,22 @@
             </div>
         </div>
     </nav>
-    <section class="banner relative w-full h-100 overflow-hidden bg-gradient-to-r from-pink-100 via-pink-300 to-pink-400">
+    <section
+        class="banner relative w-full h-100 overflow-hidden bg-gradient-to-r from-pink-100 via-pink-300 to-pink-400">
         <div class="relative h-full transition-transform duration-500 ease-in-out " id="slider-container">
             <div class="absolute w-full h-full overflow-hidden">
                 <div class="flex h-full items-center justify-between w-full pl-25">
                     <div class="text w-auto text-leftpl-8 max-w-screen-md">
-                        <div class="banner-slide-title lg:text-6xl md:text-5xl sm:text-3xl xs:text-3xl text-black font-normal flex flex-col">
-                            <h1>Endulza tu vida con nosotros</h1>
+                        <div class="pb-10">
+                            <h1
+                                class="banner-slide-title lg:text-6xl md:text-5xl sm:text-3xl xs:text-3xl text-yellow-400 font-normal flex flex-col text-shadow-2xs">
+                                Endulza tu vida con nosotros</h1>
+                            <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
+                        <button
+                            class="bg-yellow-300 hover:bg-yellow-400 text-gray-800 font-semibold py-3 px-6 rounded-full shadow-md transition duration-300 ease-in-out">
+                            Ordena ahora
+                        </button>
                     </div>
                 </div>
             </div>
@@ -109,29 +117,32 @@
     <section class="catalog flex justify-center items-center" id="catalog">
         <div class="container">
             <div class="catalog-text mt-3 mb-8 text-center">
-                <h2 class="text-black-100 capitalize text-7xl md:text-5xl font-semibold title">
-                    Productos <span class="text-pink-600">Postres Perla</span>
+                <h2 class="text-black-100 capitalize text-5xl md:text-5xl font-semibold title">
+                    Productos <span class="text-pink-400">Postres Perla</span>
                 </h2>
-                <p class="pt-5 text-xl text-black-300">
-                    Explora nuestras delicias y déjate llevar por el encanto!
+                <p class="pt-5 text-2xl text-black-300">
+                    Déjate llevar por el encanto!
                 </p>
             </div>
+
             <div class="relative overflow-hidden">
                 <div class="slider-container flex transition-transform duration-500 ease-in-out items-center">
-                    <div class="slide flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 flex justify-center">
-                        <div class="img-box img1 drop-shadow-lg rounded-lg">
-                            <div class="img-container">
-                                <img src="./public/images/personal-cake.jpg" alt="Postre 1">
+                    <div class="slide flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3 flex justify-center">
+                        <div
+                            class="img-box img1 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden max-w-[295px]">
+                            <div class="img-container overflow-hidden rounded-t-2xl">
+                                <img src="./public/images/personal-cake.jpg" alt="Postre 1"
+                                    class="object-cover w-full h-48 transition-transform duration-300 hover:scale-105">
                             </div>
-                            <div class="bg-gradient-to-r from-pink-200 to-white text-left p-7 min-w-[255px] max-w-[295px]">
+                            <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left">
                                 <a href="#"
-                                    class="text-pink-600 font-bold hover:text-gray-800 text-xl transition duration-300 text-wrap">
+                                    class="text-pink-600 font-bold hover:text-gray-800 text-xl transition duration-300 block mb-1">
                                     Pasteles
                                 </a>
-                                <p class="text-black-300 pt-1">
+                                <p class="text-black-400 text-base mb-2">
                                     RD$1,800 /lb
                                 </p>
-                                <div class="mt-2 flex">
+                                <div class="flex items-center">
                                     <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
                                         alt="star" class="h-5 w-5 mr-1.5">
                                     <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
@@ -146,195 +157,76 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="slide flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 flex justify-center">
-                        <div class="img-box img2 drop-shadow-lg">
-                            <div class="img-container">
-                                <img src="./public/images/mouse-yellow.jpg" alt="Postre 2">
+                        <div
+                            class="img-box img2 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden max-w-[295px]">
+                            <div class="img-container overflow-hidden rounded-t-2xl">
+                                <img src="./public/images/mouse-yellow.jpg" alt="Postre 2"
+                                    class="object-cover w-full h-48 transition-transform duration-300 hover:scale-105">
                             </div>
-                            <div
-                                class="bg-gradient-to-r from-pink-200 to-white text-left p-7 min-w-[255px] max-w-[295px]">
+                            <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left">
                                 <a href="#"
-                                    class="text-pink-600 font-bold hover:text-gray-800 text-lg transition duration-300">
+                                    class="text-pink-600 font-bold hover:text-gray-800 text-lg transition duration-300 block mb-1">
                                     Mousse de frutas
                                 </a>
-                                <p class="text-black-300 pt-1">
+                                <p class="text-black-400 text-base mb-2">
                                     Doce unidades RD$3,000
                                 </p>
-                                <div class="mt-2 flex">
-                                    <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                                        alt="star" class="h-5 w-5 mr-1.5">
-                                    <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                                        alt="star" class="h-5 w-5 mr-1.5">
-                                    <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                                        alt="star" class="h-5 w-5 mr-1.5">
-                                    <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                                        alt="star" class="h-5 w-5 mr-1.5">
-                                    <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                                        alt="star" class="h-5 w-5">
+                                <div class="flex items-center">
+                                    <!-- estrellitas -->
+                                    ...
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="slide flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 flex justify-center">
-                        <div class="img-box img3 drop-shadow-lg">
-                            <div class="img-container">
-                                <img src="./public/images/pie-yellow.jpg" alt="Postre 3">
+                        <div
+                            class="img-box img2 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden max-w-[295px]">
+                            <div class="img-container overflow-hidden rounded-t-2xl">
+                                <img src="./public/images/mouse-yellow.jpg" alt="Postre 2"
+                                    class="object-cover w-full h-48 transition-transform duration-300 hover:scale-105">
                             </div>
-                            <div
-                                class="bg-gradient-to-r from-pink-200 to-white text-left p-7 min-w-[255px] max-w-[295px]">
+                            <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left">
                                 <a href="#"
-                                    class="text-pink-600 font-bold hover:text-gray-800 text-lg transition duration-300">
-                                    Pie de frutas
+                                    class="text-pink-600 font-bold hover:text-gray-800 text-lg transition duration-300 block mb-1">
+                                    Mousse de frutas
                                 </a>
-                                <p class="text-black-300 pt-1">
-                                    A partir de RD$700
+                                <p class="text-black-400 text-base mb-2">
+                                    Doce unidades RD$3,000
                                 </p>
-                                <div class="mt-2 flex">
-                                    <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                                        alt="star" class="h-5 w-5 mr-1.5">
-                                    <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                                        alt="star" class="h-5 w-5 mr-1.5">
-                                    <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                                        alt="star" class="h-5 w-5 mr-1.5">
-                                    <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                                        alt="star" class="h-5 w-5 mr-1.5">
-                                    <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                                        alt="star" class="h-5 w-5">
+                                <div class="flex items-center">
+                                    <!-- estrellitas -->
+                                    ...
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="slide flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 flex justify-center">
-                        <div class="img-box img4 drop-shadow-lg">
-                            <div class="img-container">
-                                <img src="./public/images/pudding-yellow.jpg" alt="Pudin de pan imagen">
+                        <div
+                            class="img-box img2 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden max-w-[295px]">
+                            <div class="img-container overflow-hidden rounded-t-2xl">
+                                <img src="./public/images/mouse-yellow.jpg" alt="Postre 2"
+                                    class="object-cover w-full h-48 transition-transform duration-300 hover:scale-105">
                             </div>
-                            <div
-                                class="bg-gradient-to-r from-pink-200 to-white text-left p-7 min-w-[255px] max-w-[295px]">
+                            <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left">
                                 <a href="#"
-                                    class="text-pink-600 font-bold hover:text-gray-800 text-lg transition duration-300">
-                                    Pudding de pan
+                                    class="text-pink-600 font-bold hover:text-gray-800 text-lg transition duration-300 block mb-1">
+                                    Mousse de frutas
                                 </a>
-                                <p class="text-black-800 pt-1">
-                                    A partir de RD$700
+                                <p class="text-black-400 text-base mb-2">
+                                    Doce unidades RD$3,000
                                 </p>
-                                <div class="mt-2 flex">
-                                    <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                                        alt="star" class="h-5 w-5 mr-1.5">
-                                    <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                                        alt="star" class="h-5 w-5 mr-1.5">
-                                    <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                                        alt="star" class="h-5 w-5 mr-1.5">
-                                    <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                                        alt="star" class="h-5 w-5 mr-1.5">
-                                    <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                                        alt="star" class="h-5 w-5">
+                                <div class="flex items-center">
+                                    <!-- estrellitas -->
+                                    ...
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button
-                    class="slider-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 opacity-50 hover:opacity-75 cursor-pointer bg-green-100"
-                    aria-label="Previous Slide">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="w-6 h-6 text-gray-800">
-                        <path fill-rule="evenodd"
-                            d="M12.796 7.53a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L11.186 10 7.486 6.31a.75.75 0 011.06-1.06l4.25 4.25z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </button>
-                <button
-                    class="slider-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 opacity-50 hover:opacity-75 cursor-pointer bg-green-100"
-                    aria-label="Next Slide">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                        class="w-6 h-6 text-gray-800">
-                        <path fill-rule="evenodd"
-                            d="M7.204 12.47a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L8.814 10l3.76 3.69a.75.75 0 01-1.06 1.06l-4.25-4.25z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </button>
             </div>
-            <a href="#" class="text-2xl text-pink-300 font-bold underline text-shadow-300">Ver mas</a>
         </div>
     </section>
-
-    <script>
-        const sliderContainer = document.querySelector('.slider-container');
-        const sliderPrevBtn = document.querySelector('.slider-prev');
-        const sliderNextBtn = document.querySelector('.slider-next');
-        const slides = document.querySelectorAll('.slide');
-        const slideCount = slides.length;
-        let slideIndex = 0;
-
-        function showSlide(index) {
-            if (index < 0) {
-                slideIndex = slideCount - 1;
-            } else if (index >= slideCount) {
-                slideIndex = 0;
-            }
-
-            const newTransformValue = -slideIndex * 100 + '%';
-            sliderContainer.style.transform = `translateX(${newTransformValue})`;
-        }
-
-        function prevSlide() {
-            slideIndex--;
-            showSlide(slideIndex);
-        }
-
-        function nextSlide() {
-            slideIndex++;
-            showSlide(slideIndex);
-        }
-
-        sliderPrevBtn.addEventListener('click', prevSlide);
-        sliderNextBtn.addEventListener('click', nextSlide);
-
-        // Initial call
-        showSlide(slideIndex);
-    </script>
-
-
-    <script>
-        const sliderContainer = document.querySelector('.slider-container');
-        const sliderPrevBtn = document.querySelector('.slider-prev');
-        const sliderNextBtn = document.querySelector('.slider-next');
-        const slides = document.querySelectorAll('.slide');
-        const slideCount = slides.length;
-        let slideIndex = 0;
-
-        function showSlide(index) {
-            if (index < 0) {
-                slideIndex = slideCount - 1;
-            } else if (index >= slideCount) {
-                slideIndex = 0;
-            }
-
-            const newTransformValue = -slideIndex * 100 + '%';
-            sliderContainer.style.transform = `translateX(${newTransformValue})`;
-        }
-
-        function prevSlide() {
-            slideIndex--;
-            showSlide(slideIndex);
-        }
-
-        function nextSlide() {
-            slideIndex++;
-            showSlide(slideIndex);
-        }
-
-        sliderPrevBtn.addEventListener('click', prevSlide);
-        sliderNextBtn.addEventListener('click', nextSlide);
-
-        // Initial call
-        showSlide(slideIndex);
-    </script>
-
     <section class="services w-full flex flex-row" id="services">
         <div class="w-full md:w-5/12 pt-20 pb-20 px-5 md:px-8">
             <div class="max-w-2xl text-left">
@@ -428,7 +320,7 @@
         </div>
     </section>
 
-    <section class="relative testimonials bg-white py-30 px-6 md:px-10" id="testimonials">
+    <section class="relative testimonials bg-pink-200 py-30 px-6 md:px-10" id="testimonials">
         <div class="max-w-7xl mx-auto text-center">
             <h2 class="text-gray-900 text-5xl font-bold mb-10 pb-10">
                 Lo que dicen nuestros clientes
@@ -447,18 +339,6 @@
                             <p class="text-sm text-gray-500">Cliente satisfecho</p>
                         </div>
                     </div>
-                    <!-- <div class="mt-3 flex">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6 mr-1.5">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6 mr-1.5">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6 mr-1.5">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6 mr-1.5">
-                        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63904f663019b0ce62f8d5ba_Vector.svg"
-                            alt="star" class="h-6 w-6">
-                    </div> -->
                 </div>
                 <div
                     class="p-6 bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl transition-transform transform hover:scale-105">
@@ -506,7 +386,7 @@
         </div>
     </section>
 
-    <section class="bg-white dark:bg-gray-900 py-25 h-full dark:to-black" id="contact">
+    <section class="bg-yellow-300 dark:bg-gray-900 py-25 h-full dark:to-black" id="contact">
         <div class="container px-6 py-15 mx-auto">
             <div class="text-start">
                 <h2 class="text-5xl font-semibold text-gray-800 dark:text-white">
