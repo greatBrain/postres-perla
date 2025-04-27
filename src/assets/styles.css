@@ -5,7 +5,7 @@
 :root {
     --white-bg: #fff;
     --black-bg: #000;
-    --mint-bg: #B4F8C8;
+    --perla-soft-green: #e7f8cc;
     --light-yellow: #FBE7C6;
     --salmon-color: #FC8578;
     --light-pink: #f5dff8;
@@ -106,10 +106,6 @@ nav a {
 
 .catalog {
     background-color: var(--perla-yellow);
-    /* background-image: url("../../public/images/utensils_.png");
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed; */
     height: 100hv;
     display: flex;
     flex-direction: column;
@@ -130,6 +126,11 @@ nav a {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+/*Products cards sliders*/
+.slide {
+    padding-bottom: 70px;
 }
 
 .img-box .img-container {
@@ -155,11 +156,6 @@ nav a {
 #services {
     width: 100%;
     height: auto;
-    padding: 70px;
-    background-image: url("../../public/images/desserts-patterns.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .service-detail-btn {
