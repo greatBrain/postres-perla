@@ -240,52 +240,60 @@
   </section>
 
   <section class="services w-full flex flex-col md:flex-row items-center md:items-start" id="services">
-      <!-- Parte izquierda: Título y descripción -->
-      <div class="w-full md:w-5/12 py-20 px-5 md:px-8 flex flex-col justify-center">
-        <div class="max-w-full text-left">
-          <h2 class="text-black-800 text-4xl md:text-5xl font-semibold mb-6">
-            Nuestros servicios
-          </h2>
-          <p class="text-gray-700 text-lg leading-relaxed">
-            Seleccionamos cuidadosamente los ingredientes de la más alta calidad para ofrecerte una experiencia única.
-          </p>
-        </div>
+    <!-- Parte izquierda: Título y descripción -->
+    <div class="w-full md:w-5/12 py-20 px-5 md:px-8 flex flex-col justify-center">
+      <div class="max-w-full text-left">
+        <h2 class="text-black-800 text-4xl md:text-5xl font-semibold mb-6">
+          Nuestros servicios
+        </h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Seleccionamos cuidadosamente los ingredientes de la más alta calidad para ofrecerte una experiencia única.
+        </p>
       </div>
-      <!-- Parte derecha: Cards dentro de fondo amarillo -->
-      <div class="w-full md:w-7/12 bg-yellow-200 px-5 py-16 flex flex-wrap justify-center items-center gap-6">
-        <!-- Card 1 -->
-        <div class="bg-white rounded-full w-52 h-52 sm:w-56 sm:h-56 flex flex-col justify-center items-center p-6 shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
-          <img src="public/icons/sweet-table-service.svg" alt="Mesas de Dulces" class="w-22 h-22 mb-3">
-          <h3 class="text-pink-400 text-lg font-bold mb-1">Mesas de Dulces</h3>
-          <p class="text-gray-600 text-xs text-center px-2">
-            Mesas artesanales decoradas con dulces selectos.
-          </p>
-        </div>
-        <!-- Card 2 -->
-        <div class="bg-white rounded-full w-52 h-52 sm:w-56 sm:h-56 flex flex-col justify-center items-center p-6 shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
-          <img src="public/icons/whole-cake-service.svg" alt="Pastelería para Eventos" class="w-22 h-22 mb-3">
-          <h3 class="text-pink-400 text-lg font-bold mb-1">Pastelería Eventos</h3>
-          <p class="text-gray-600 text-xs text-center px-2">
-            Tortas y postres personalizados para cada ocasión.
-          </p>
-        </div>
-        <!-- Card 3 -->
-        <div class="bg-white rounded-full w-52 h-52 sm:w-56 sm:h-56 flex flex-col justify-center items-center p-6 shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
-          <img src="public/icons/cookie-service.svg" alt="Unidades Móviles" class="w-22 h-22 mb-3">
-          <h3 class="text-pink-400 text-lg font-bold mb-1">Postres</h3>
-          <p class="text-gray-600 text-xs text-center px-2">
-            Llevamos la dulzura a donde estés.
-          </p>
-        </div>
-        <!-- Card 4 -->
-        <div class="bg-white rounded-full w-52 h-52 sm:w-56 sm:h-56 flex flex-col justify-center items-center p-6 shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
-          <img src="public/icons/car-service.svg" alt="Unidades Móviles" class="w-22 h-22 mb-3">
-          <h3 class="text-pink-400 text-lg font-bold mb-1">Unidades Móviles</h3>
-          <p class="text-gray-600 text-xs text-center px-2">
-            Llevamos la dulzura a donde estés.
-          </p>
-        </div>
+    </div>
+    <!-- Parte derecha: Cards dentro de fondo amarillo -->
+    <div class="w-full md:w-7/12 bg-yellow-200 px-5 py-16 flex flex-wrap justify-center items-center gap-6">
+      <!-- Card 1 -->
+      <div
+        class="bg-white border-4 border-pink-400 rounded-full w-52 h-52 sm:w-56 sm:h-56 flex flex-col justify-center items-center p-6 shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
+        <img src="public/icons/sweet-table-service.svg" alt="Mesas de Dulces" class="w-22 h-22 mb-3">
+        <h3 class="text-pink-400 text-xl font-bold mb-1 text-center">Mesas de Dulces</h3>
+        <button
+          class="w-25 h-8 bg-yellow-300 hover:bg-yellow-400 text-black-800 font-semibold rounded-full transition duration-200 ease-in-out bg-gray-300">Ver
+          más
+        </button>
       </div>
+      <!-- Card 2 -->
+      <div
+        class="bg-white border-4 border-pink-400 rounded-full w-52 h-52 sm:w-56 sm:h-56 flex flex-col justify-center items-center p-6 shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
+        <img src="public/icons/whole-cake-service.svg" alt="Pastelería para Eventos" class="w-22 h-22 mb-3">
+        <h3 class="text-pink-400 text-xl font-bold mb-1 text-center">Pasteles personalizados</h3>
+        <button
+          class="w-25 h-8 bg-yellow-300 hover:bg-yellow-400 text-black-800 font-semibold rounded-full transition duration-200 ease-in-out bg-gray-300">Ver
+          más
+        </button>
+      </div>
+      <!-- Card 3 -->
+      <div
+        class="bg-white border-4 border-pink-400 rounded-full w-52 h-52 sm:w-56 sm:h-56 flex flex-col justify-center items-center p-6 shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
+        <img src="public/icons/cookie-service.svg" alt="Unidades Móviles" class="w-22 h-22 mb-3">
+        <h3 class="text-pink-400 text-xl font-bold mb-1 text-center">Postres</h3>
+        <button
+          class="w-25 h-8 bg-yellow-300 hover:bg-yellow-400 text-black-800 font-semibold rounded-full transition duration-200 ease-in-out bg-gray-300">Ver
+          más
+        </button>
+      </div>
+      <!-- Card 4 -->
+      <div
+        class="bg-white border-4 border-pink-400 rounded-full w-52 h-52 sm:w-56 sm:h-56 flex flex-col justify-center items-center p-6 shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
+        <img src="public/icons/car-service.svg" alt="Unidades Móviles" class="w-22 h-22 mb-3">
+        <h3 class="text-pink-400 text-xl font-bold mb-1 text-center">Unidades Móviles</h3>
+        <button
+          class="w-25 h-8 bg-yellow-300 hover:bg-yellow-400 text-black-800 font-semibold rounded-full transition duration-200 ease-in-out bg-gray-300">Ver
+          más
+        </button>
+      </div>
+    </div>
   </section>
 
 
