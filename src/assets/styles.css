@@ -106,7 +106,7 @@ nav a {
 
 .catalog {
     background-color: var(--perla-yellow);
-    height: 100hv;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     padding-top: 130px;
@@ -164,17 +164,6 @@ nav a {
 
 .pastry-chef-img {
     background-color: transparent;
-}
-
-.testimonials {
-    height: auto;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    backdrop-filter: blur(8.5px);
-    -webkit-backdrop-filter: blur(8.5px);
-    overflow: hidden;
 }
 
 .testimonials #testimonialas-container>.title {
