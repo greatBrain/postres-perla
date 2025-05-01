@@ -35,27 +35,34 @@
       </span>
     </a>
     <div class="hidden md:flex items-center justify-center space-x-6 text-gray-300 capitalize dark:text-gray-400">
-        <a href="#services" class="border-b-2 text-white border-transparent hover:text-black dark:hover:text-gray-200 hover:border-yellow-500 text-xl">
-          Servicios
-        </a>
-        <a href="#catalog" class="border-b-2 text-white border-transparent hover:text-blackdark:hover:text-gray-200 hover:border-yellow-500 text-xl">
-          Productos
-        </a>
-        <a href="#" class="border-b-2 text-white border-transparent hover:text-black dark:hover:text-gray-200 hover:border-yellow-500 text-xl">
-          Contactanos
-        </a>
-        <a href="#about-us" class="border-b-2 text-white border-transparent hover:text-black dark:hover:text-gray-200 hover:border-yellow-400 text-xl">
-          Nosotros
-        </a>
+      <a href="#services"
+        class="border-b-2 text-white border-transparent hover:text-black dark:hover:text-gray-200 hover:border-yellow-500 text-xl">
+        Servicios
+      </a>
+      <a href="#catalog"
+        class="border-b-2 text-white border-transparent hover:text-blackdark:hover:text-gray-200 hover:border-yellow-500 text-xl">
+        Productos
+      </a>
+      <a href="#"
+        class="border-b-2 text-white border-transparent hover:text-black dark:hover:text-gray-200 hover:border-yellow-500 text-xl">
+        Contactanos
+      </a>
+      <a href="#about-us"
+        class="border-b-2 text-white border-transparent hover:text-black dark:hover:text-gray-200 hover:border-yellow-400 text-xl">
+        Nosotros
+      </a>
     </div>
     <div class="md:hidden" x-data="{ open: false }">
-      <button @click="open = !open" class="text-white dark:text-gray-400 focus:outline-none focus:text-white dark:focus:text-gray-200">
+      <button @click="open = !open"
+        class="text-white dark:text-gray-400 focus:outline-none focus:text-white dark:focus:text-gray-200">
         <svg x-show="!open" class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-          <path fill-rule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2z"
+          <path fill-rule="evenodd"
+            d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2z"
             clip-rule="evenodd" />
         </svg>
         <svg x-show="open" class="h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M18.707 5.293a1 1 0 010 1.414L13.414 12l5.293 5.293a1 1 0 01-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 01-1.414-1.414L10.586 12 5.293 6.707a1 1 0 011.414-1.414L12 10.586l5.293-5.293a1 1 0 011.414 0z" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M18.707 5.293a1 1 0 010 1.414L13.414 12l5.293 5.293a1 1 0 01-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 01-1.414-1.414L10.586 12 5.293 6.707a1 1 0 011.414-1.414L12 10.586l5.293-5.293a1 1 0 011.414 0z" />
         </svg>
       </button>
       <div x-show="open" x-transition:enter="transition ease-out duration-300 transform origin-top"
@@ -231,55 +238,78 @@
       </div>
     </div>
   </section>
-  <section class="services w-full flex flex-col md:flex-row items-center md:items-start relative overflow-hidden" id="services">
-    <div class="w-full md:w-5/12 py-40 px-5 md:px-8 flex flex-col justify-center z-10 bg-[url('public/images/circle-scatter-filled.svg')] bg-no-repeat bg-center-center bg-cover">
+  <section class="services w-full flex flex-col md:flex-row items-center md:items-start relative overflow-hidden"
+    id="services">
+    <div
+      class="w-full md:w-5/12 py-40 px-5 md:px-8 flex flex-col justify-center z-10 bg-[url('public/images/circle-scatter-filled.svg')] bg-no-repeat bg-center-center bg-cover">
       <div class="max-w-full text-left space-y-6">
         <h2 class="text-black-800 text-4xl md:text-5xl font-semibold leading-snug">
           Nuestros servicios
         </h2>
         <div class="max-w-xl text-left">
           <p class="text-gray-700 text-lg leading-relaxed">
-            Ofrecemos experiencias dulces personalizadas. Desde pasteles únicos hasta estaciones móviles, todo hecho con amor.
+            Ofrecemos experiencias dulces personalizadas. Desde pasteles únicos hasta estaciones móviles, todo hecho con
+            amor.
           </p>
         </div>
       </div>
     </div>
-    <div class="w-full md:w-7/12 bg-yellow-200 px-5 py-40 flex flex-wrap justify-center items-center gap-6">      
-      <div class="bg-white border-pink-400 rounded-xl w-52 sm:w-56 flex flex-col justify-between items-center p-5 shadow-md hover:shadow-xl transform hover:scale-100 transition duration-300 text-center">
+    <div class="w-full md:w-7/12 bg-yellow-200 px-5 py-40 flex flex-wrap justify-center items-center gap-6">
+      <div
+        class="bg-white border-pink-400 rounded-xl w-52 sm:w-56 flex flex-col justify-between items-center p-5 shadow-md hover:shadow-xl transform hover:scale-100 transition duration-300 text-center">
         <img src="public/icons/sweet-table-service.svg" alt="Mesas de Dulces" class="w-20 h-20 mb-3">
         <p class="text-pink-400 text-xl font-semibold">Mesas de Dulces</p>
-        <button class="mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10.293 15.707a1 1 0 001.414 0L17 10.414a1 1 0 00-1.414-1.414L11 13.586V3a1 1 0 10-2 0v10.586L4.414 9a1 1 0 00-1.414 1.414l5.293 5.293z"/></svg>
+        <button
+          class="mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M10.293 15.707a1 1 0 001.414 0L17 10.414a1 1 0 00-1.414-1.414L11 13.586V3a1 1 0 10-2 0v10.586L4.414 9a1 1 0 00-1.414 1.414l5.293 5.293z" />
+          </svg>
           Ver más
         </button>
       </div>
-  
+
       <!-- Repite para cada servicio (Pasteles, Postres, Móviles) -->
-      <div class="bg-white border-pink-400 rounded-xl w-52 sm:w-56 flex flex-col justify-between items-center p-5 shadow-md hover:shadow-xl transform hover:scale-100 transition duration-300 text-center">
+      <div
+        class="bg-white border-pink-400 rounded-xl w-52 sm:w-56 flex flex-col justify-between items-center p-5 shadow-md hover:shadow-xl transform hover:scale-100 transition duration-300 text-center">
         <img src="public/icons/whole-cake-service.svg" alt="Pasteles personalizados" class="w-20 h-20 mb-3">
         <p class="text-pink-400 text-xl font-semibold">Pasteleria</p>
-        <button class="mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10.293 15.707a1 1 0 001.414 0L17 10.414a1 1 0 00-1.414-1.414L11 13.586V3a1 1 0 10-2 0v10.586L4.414 9a1 1 0 00-1.414 1.414l5.293 5.293z"/></svg>
+        <button
+          class="mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M10.293 15.707a1 1 0 001.414 0L17 10.414a1 1 0 00-1.414-1.414L11 13.586V3a1 1 0 10-2 0v10.586L4.414 9a1 1 0 00-1.414 1.414l5.293 5.293z" />
+          </svg>
           Ver más
         </button>
       </div>
-  
+
       <!-- Postres -->
-      <div class="bg-white border-pink-400 rounded-xl w-52 sm:w-56 flex flex-col justify-between items-center p-5 shadow-md hover:shadow-xl transform hover:scale-100 transition duration-300 text-center">
+      <div
+        class="bg-white border-pink-400 rounded-xl w-52 sm:w-56 flex flex-col justify-between items-center p-5 shadow-md hover:shadow-xl transform hover:scale-100 transition duration-300 text-center">
         <img src="public/icons/cookie-service.svg" alt="Postres" class="w-20 h-20 mb-3">
         <p class="text-pink-400 text-xl font-semibold">Postres</p>
-        <button class="mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10.293 15.707a1 1 0 001.414 0L17 10.414a1 1 0 00-1.414-1.414L11 13.586V3a1 1 0 10-2 0v10.586L4.414 9a1 1 0 00-1.414 1.414l5.293 5.293z"/></svg>
+        <button
+          class="mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M10.293 15.707a1 1 0 001.414 0L17 10.414a1 1 0 00-1.414-1.414L11 13.586V3a1 1 0 10-2 0v10.586L4.414 9a1 1 0 00-1.414 1.414l5.293 5.293z" />
+          </svg>
           Ver más
         </button>
       </div>
-  
+
       <!-- Unidades Móviles -->
-      <div class="bg-white border-pink-400 rounded-xl w-52 sm:w-56 flex flex-col justify-between items-center p-5 shadow-md hover:shadow-xl transform hover:scale-100 transition duration-300 text-center">
+      <div
+        class="bg-white border-pink-400 rounded-xl w-52 sm:w-56 flex flex-col justify-between items-center p-5 shadow-md hover:shadow-xl transform hover:scale-100 transition duration-300 text-center">
         <img src="public/icons/car-service.svg" alt="Unidades Móviles" class="w-20 h-20 mb-3">
         <p class="text-pink-400 text-xl font-semibold">Unidad Móvil</p>
-        <button class="mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10.293 15.707a1 1 0 001.414 0L17 10.414a1 1 0 00-1.414-1.414L11 13.586V3a1 1 0 10-2 0v10.586L4.414 9a1 1 0 00-1.414 1.414l5.293 5.293z"/></svg>
+        <button
+          class="mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M10.293 15.707a1 1 0 001.414 0L17 10.414a1 1 0 00-1.414-1.414L11 13.586V3a1 1 0 10-2 0v10.586L4.414 9a1 1 0 00-1.414 1.414l5.293 5.293z" />
+          </svg>
           Ver más
         </button>
       </div>
@@ -288,32 +318,35 @@
   <section class="about-us bg-[#e7f8cc] py-30 px-5 bg-[url('public/images/desserts-patterns.png')]">
     <div class="mx-auto max-w-7xl">
       <div class="grid gap-10 sm:gap-12 md:grid-cols-2 items-center">
-        <div class="overflow-hidden rounded-xl shadow-xl transform transition-all duration-500 ease-in-out hover:scale-95 animate-fadeIn">
+        <div
+          class="overflow-hidden rounded-xl shadow-xl transform transition-all duration-500 ease-in-out hover:scale-95 animate-fadeIn">
           <img src="public/images/pastry-car.jpeg" alt="Carro para ventas moviles"
             class="object-cover w-full h-full max-h-[420px]">
         </div>
         <div class="flex flex-col items-start gap-5 w-full">
-            <h2 class="text-4xl md:text-5xl font-semibold text-pink-400 leading-tight">
-              Postres Perla sobre ruedas
-            </h2>
-            <p class="text-lg text-gray-600 leading-relaxed">
-              Vamos directamente a donde estés. Ya sea un cumpleaños, feria o evento especial,
-              llegamos con todo el sabor y la presentación que nos distingue.
-            </p>
-            <p class="text-lg text-gray-600 leading-relaxed">
-              Nuestra unidad móvil no es solo un medio de transporte, es una experiencia sobre ruedas que combina diseño,
-              creatividad,
-              calidad y ese toque artesanal que nos hace únicos.
-            </p>
-            <button
-              class="bg-green-300 hover:bg-yellow-300 text-gray-800 font-semibold py-2 px-6 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105">
-              Ver más
-            </button>
+          <h2 class="text-4xl md:text-5xl font-semibold text-pink-400 leading-tight">
+            Postres Perla sobre ruedas
+          </h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Vamos directamente a donde estés. Ya sea un cumpleaños, feria o evento especial,
+            llegamos con todo el sabor y la presentación que nos distingue.
+          </p>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Nuestra unidad móvil no es solo un medio de transporte, es una experiencia sobre ruedas que combina diseño,
+            creatividad,
+            calidad y ese toque artesanal que nos hace únicos.
+          </p>
+          <button
+            class="bg-green-300 hover:bg-yellow-300 text-gray-800 font-semibold py-2 px-6 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+            Ver más
+          </button>
         </div>
       </div>
     </div>
   </section>
-  <section class="relative testimonials bg-top bg-no-repeat bg-[length:100%] bg-[url('public/images/soft-green-wave.svg')] py-20 px-6 md:px-10" id="testimonials">
+  <section
+    class="relative testimonials bg-top bg-no-repeat bg-[length:100%] bg-[url('public/images/soft-green-wave.svg')] py-20 px-6 md:px-10"
+    id="testimonials">
     <div class="max-w-5xl mx-auto flex flex-col justify-center items-center text-center space-y-10 pt-5">
       <div>
         <h2 class="text-gray-700 text-4xl md:text-5xl font-bold">Lo que dicen nuestros clientes</h2>
@@ -321,17 +354,19 @@
           Historias reales que reflejan la calidad y el amor que ponemos en cada proyecto.
         </p>
       </div>
-      
+
       <div class="relative overflow-hidden w-full">
         <div id="testimonial-carousel" class="flex transition-transform duration-700 ease-in-out w-full">
           <!-- Testimonio 1 -->
           <div class="min-w-full flex justify-center px-4">
-            <div class="p-8 bg-pink-100/80 backdrop-blur-sm rounded-xl shadow-md border border-pink-200 hover:shadow-lg transition-all max-w-md">
+            <div
+              class="p-8 bg-pink-100/80 backdrop-blur-sm rounded-xl shadow-md border border-pink-200 hover:shadow-lg transition-all max-w-md">
               <p class="text-lg text-gray-800 italic mb-4">
                 “Gracias a esta experiencia, logré mejorar mi presencia profesional y atraer más clientes.”
               </p>
               <div class="flex items-center justify-center">
-                <img src="public/images/thumnail/man-face.jpg" alt="Cliente" class="w-12 h-12 rounded-full border border-gray-300">
+                <img src="public/images/thumnail/man-face.jpg" alt="Cliente"
+                  class="w-12 h-12 rounded-full border border-gray-300">
                 <div class="ml-3 text-left">
                   <h3 class="text-gray-900 font-semibold">Ana Castillo</h3>
                   <p class="text-sm text-gray-500">Diseñadora Gráfica</p>
@@ -339,15 +374,17 @@
               </div>
             </div>
           </div>
-  
+
           <!-- Testimonio 2 -->
           <div class="min-w-full flex justify-center px-4">
-            <div class="p-8 bg-purple-100/80 backdrop-blur-sm rounded-xl shadow-md border border-purple-200 hover:shadow-lg transition-all max-w-md">
+            <div
+              class="p-8 bg-purple-100/80 backdrop-blur-sm rounded-xl shadow-md border border-purple-200 hover:shadow-lg transition-all max-w-md">
               <p class="text-lg text-gray-800 italic mb-4">
                 “Un servicio impecable, comunicación constante y resultados concretos. ¡Recomendado!”
               </p>
               <div class="flex items-center justify-center">
-                <img src="public/images/thumnail/man-face.jpg" alt="Cliente" class="w-12 h-12 rounded-full border border-gray-300">
+                <img src="public/images/thumnail/man-face.jpg" alt="Cliente"
+                  class="w-12 h-12 rounded-full border border-gray-300">
                 <div class="ml-3 text-left">
                   <h3 class="text-gray-900 font-semibold">Carlos Mejía</h3>
                   <p class="text-sm text-gray-500">Emprendedor</p>
@@ -355,15 +392,17 @@
               </div>
             </div>
           </div>
-  
+
           <!-- Testimonio 3 -->
           <div class="min-w-full flex justify-center px-4">
-            <div class="p-8 bg-green-100/80 backdrop-blur-sm rounded-xl shadow-md border border-green-200 hover:shadow-lg transition-all max-w-md">
+            <div
+              class="p-8 bg-green-100/80 backdrop-blur-sm rounded-xl shadow-md border border-green-200 hover:shadow-lg transition-all max-w-md">
               <p class="text-lg text-gray-800 italic mb-4">
                 “Atención al detalle, calidad visual y un trato cercano. ¡Volvería a trabajar con ellos sin duda!”
               </p>
               <div class="flex items-center justify-center">
-                <img src="public/images/thumnail/man-face.jpg" alt="Cliente" class="w-12 h-12 rounded-full border border-gray-300">
+                <img src="public/images/thumnail/man-face.jpg" alt="Cliente"
+                  class="w-12 h-12 rounded-full border border-gray-300">
                 <div class="ml-3 text-left">
                   <h3 class="text-gray-900 font-semibold">Laura Sánchez</h3>
                   <p class="text-sm text-gray-500">Coach Personal</p>
@@ -372,7 +411,7 @@
             </div>
           </div>
         </div>
-  
+
         <!-- Controles -->
         <div class="mt-6 flex justify-center space-x-3">
           <button aria-label="Testimonio 1" class="w-4 h-4 bg-gray-400 rounded-full" onclick="goToSlide(0)"></button>
@@ -381,12 +420,12 @@
         </div>
       </div>
     </div>
-  
+
     <script>
       let currentSlide = 0;
       const carousel = document.getElementById('testimonial-carousel');
       const bullets = document.querySelectorAll('button[aria-label^="Testimonio"]');
-  
+
       function goToSlide(slideIndex) {
         currentSlide = slideIndex;
         const offset = -slideIndex * 100;
@@ -396,63 +435,69 @@
           b.classList.toggle('bg-gray-300', i !== slideIndex);
         });
       }
-  
+
       setInterval(() => {
         currentSlide = (currentSlide + 1) % 3;
         goToSlide(currentSlide);
       }, 7000);
     </script>
   </section>
-  <section id="contact" class="py-20 bg-gradient-to-br from-pink-300 via-pink-200 to-white dark:bg-gray-900">
+  <section id="contact" class="py-20 bg-gradient-to-r from-pink-400 via-pink-200 to-white/100 dark:bg-gray-900">
     <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
-          <h2 class="text-5xl font-bold text-white drop-shadow-md">Contáctanos</h2>
-          <p class="mt-4 text-lg text-white/90">
-            Para tus pedidos, consultas o sugerencias, ¡estamos aquí para ayudarte!
-          </p>
+      <div class="text-center mb-12">
+        <h2 class="text-5xl font-semibold text-black-700 drop-shadow-md">Contáctanos</h2>
+        <p class="mt-4 text-lg text-black-700">
+          Para tus pedidos, consultas o sugerencias, ¡estamos aquí para ayudarte!
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div class="flex items-center p-6 bg-white/90 rounded-2xl shadow-md space-x-4">
+          <div class="p-3 bg-yellow-100 rounded-full">
+            <img class="w-10 h-10" src="public/icons/whatsapp.png" alt="Teléfono icono">
+          </div>
+          <div>
+            <a href="#" class="hover:underline">
+              <h3 class="text-xl font-semibold text-black-400">(829)-646-9680</h3>
+            </a>
+          </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          <div class="flex items-center p-6 bg-white/90 rounded-2xl shadow-md space-x-4">
-            <div class="p-3 bg-yellow-100 rounded-full">
-              <img class="w-10 h-10" src="public/icons/phone.svg" alt="Teléfono icono">
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-pink-600">Teléfono / Whatsapp</h3>
-              <p class="text-gray-700 font-medium">(829)-646-9680</p>
-            </div>
+        <div class="flex items-center p-6 bg-white/90 rounded-2xl shadow-md space-x-4">
+          <div class="p-3 bg-yellow-100 rounded-full  ">
+            <img class="w-10 h-10" src="public/icons/instagram.png" alt="Instagram icono">
           </div>
-          <div class="flex items-center p-6 bg-white/90 rounded-2xl shadow-md space-x-4">
-            <div class="p-3 bg-yellow-100 rounded-full">
-              <img class="w-10 h-10" src="public/icons/instagram-contact.svg" alt="Instagram icono">
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-pink-600">@Postres.perla</h3>
-            </div>
+          <div>
+            <a href="#" class="hover:underline">
+              <h3 class="text-xl font-semibold text-black-400">Postres.perla</h3>
+            </a>
           </div>
-          <div class="flex items-center p-6 bg-white/90 rounded-2xl shadow-md space-x-4">
-            <div class="p-3 bg-yellow-100 rounded-full">
-              <img class="w-10 h-10" src="public/icons/facebook.svg" alt="Facebook icono">
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-pink-600">Postres.perla</h3>
-            </div>
-          </div>
-          <div class="flex items-center p-6 bg-white/90 rounded-2xl shadow-md space-x-4">
-            <div class="p-3 bg-yellow-100 rounded-full">
-              <img class="w-10 h-10" src="public/icons/email.svg" alt="Email icono">
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-pink-600">
-                <a href="mailto:postresperla@gmail.com" class="hover:underline">postresperla@gmail.com</a>
-              </h3>
-            </div>
-          </div>  
         </div>
+        <div class="flex items-center p-6 bg-white/90 rounded-2xl shadow-md space-x-4">
+          <div class="p-3 bg-yellow-100 rounded-full  ">
+            <img class="w-10 h-10" src="public/icons/facebook.png" alt="Facebook icono">
+          </div>
+          <div>
+            <a href="#" class="hover:underline">
+              <h3 class="text-xl font-semibold text-black-400">Postres.perla</h3>
+            </a>
+          </div>
+        </div>
+        <div class="flex items-center p-6 bg-white/90 rounded-2xl shadow-md space-x-4">
+          <div class="p-3 bg-yellow-100 rounded-full  ">
+            <img class="w-10 h-10" src="public/icons/email.png" alt="Email icono">
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-black-400">
+              <a href="mailto:postresperla@gmail.com" class="hover:underline">postresperla@gmail.com</a>
+            </h3>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <div class="fixed top-1/2 right-1 transform -translate-y-1/2 z-50">
     <div class="relative group">
-      <button class="flex items-center justify-center w-18 h-18 rounded-full bg-yellow-200 hover:bg-[#7ee87e] shadow-lg shadow-[#7ee87e]/40 transition-all duration-300">
+      <button
+        class="flex items-center justify-center w-18 h-18 rounded-full bg-yellow-200 hover:bg-[#7ee87e] shadow-lg shadow-[#7ee87e]/40 transition-all duration-300">
         <img src="./public/icons/whatsapp.png" alt="Whatsapp de la empresa" class="w-8 h-8">
       </button>
     </div>
@@ -557,4 +602,5 @@
     });
   });
 </script>
+
 </html>
