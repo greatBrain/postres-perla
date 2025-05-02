@@ -29,21 +29,12 @@ body {
     background-color: #ffffff;
     color: #333;
 }
-
-header {
+.brand-logo{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-    background-color: rgb(255, 255, 255);
-}
-
-nav>#brand-logo {
     font-family: "Caveat Brush", cursive;
     font-weight: 400;
     font-style: normal;
 }
-
 nav a {
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
@@ -58,15 +49,6 @@ nav a {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-.banner-slide-title {
-    font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
-
 .catalog {
     background-color: var(--perla-yellow);
     display: flex;
@@ -89,31 +71,26 @@ nav a {
     justify-content: center;
     flex-wrap: wrap;
 }
-
 /*Products cards sliders*/
 .slide {
     padding-bottom: 70px;
 }
-
 .img-box .img-container {
     width: 295px;
     height: 325px;
     overflow: hidden;
     margin-right: 8px;
 }
-
 .img-box .img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 .img-container:hover img {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
     transition: 0.2s ease-in-out;
 }
-
 .testimonials #testimonialas-container>.title {
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
@@ -121,14 +98,11 @@ nav a {
     font-style: normal;
     font-variation-settings: "wdth" 100;
 }
-
 /* Carousel */
-
 @media(width<=768px) {
     .banner .text h1 {
         font-size: 1.8rem;
     }
-
     .catalog .gallery {
         display: flex;
         flex-direction: row;
@@ -136,37 +110,20 @@ nav a {
         flex-wrap: nowrap;
         overflow-x: scroll;
     }
-
     .img-box .img-container {
         width: 255px;
         height: 292px;
         overflow: hidden;
         margin-right: 8px;
     }
-
     .img-box {
         flex: 0 0 auto;
         width: 250px;
     }
-
     .testimonials {
         height: auto;
     }
-
     #services {
         height: auto;
     }
-}
-
-/* Footer */
-footer>h4 {
-    font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
-
-footer #items a:hover {
-    color: var(--salmon-color);
 }
