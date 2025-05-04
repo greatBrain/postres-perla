@@ -14,8 +14,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="src/assets/styles.css">
+  <link rel="stylesheet" href="src/assets/fonts.css">
   <link rel="shortcut icon" href="./public/icons/P-perla-logo.png" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
   <!-- AOS Animate On Scroll -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -101,15 +102,19 @@
     <div class="relative h-full transition-transform duration-500 ease-in-out " id="slider-container">
       <div class="absolute w-full h-full overflow-hidden">
         <div class="flex h-full items-center justify-between w-full pl-25">
-          <div class="text w-auto text-left p-10 max-w-screen-md"> <!--bg-[url('public/images/vectors/blob.svg')] bg-cover bg-no-repeat bg-center-->
+          <div class="text w-auto text-left p-10 max-w-screen-md">
             <div class="pb-10 relative z-10">
-              <h1 class="banner-slide-title lg:text-6xl md:text-5xl sm:text-3xl xs:text-xl text-black-400 font-normal flex flex-col text-shadow-2xs">
-                 Endulza tu vida con nosotros
+              <h1 class="banner-slide-title lg:text-8xl md:text-6xl sm:text-4xl xs:text-2xl 
+                  text-gray-700 font-semibold 
+                  flex flex-col text-shadow-2xs
+                  font-amatic">
+                Endulza tu vida con nosotros
               </h1>
-              <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p class="text-2xl lato-regular ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
             </div>
-            <button
-              class="relative bg-yellow-300 overflow-hidden text-gray-800 font-semibold py-3 px-6
+            <button class="relative bg-yellow-300 overflow-hidden text-gray-800 font-semibold py-3 px-6
               rounded-full shadow-md shadow-2xl transition duration-500 ease-in-out
               before:content-[''] before:absolute before:top-0 before:left-0 
               before:w-0 before:h-full before:bg-white/50 before:transition-all 
@@ -125,11 +130,11 @@
   </section>
   <section class="catalog flex justify-center items-center" id="catalog">
     <div class="container">
-      <div class="catalog-text mt-3 mb-12 text-center">
-        <h2 class="text-black-100 capitalize text-6xl md:text-5xl font-semibold title">
-          Productos <span class="text-pink-400">Postres Perla</span>
+      <div class="catalog-text mb-12 text-center">
+        <h2 class="text-gray-700 text-6xl md:text-5xl sm:text-xl xs:text-lg ubuntu-font-regular title">
+          Productos <span class="text-pink-400">destacados</span>
         </h2>
-        <p class="pt-5 text-2xl text-black-300">
+        <p class="pt-5 text-2xl text-gray-700 lato-regular">
           Te ofrecemos lo mejor, con lo mejor para que te dejes llevar por el encanto!
         </p>
       </div>
@@ -146,7 +151,7 @@
               </div>
               <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left">
                 <a href="#"
-                  class="text-pink-600 font-bold hover:text-gray-800 text-xl transition duration-300 block mb-1">
+                  class="text-pink-600 font-bold hover:text-gray-800 text-xl transition duration-300 block mb-1 ubuntu-font-bold">
                   Pasteles
                 </a>
                 <p class="text-black-400 text-base mb-3">Personalizados / porciones</p>
@@ -170,8 +175,9 @@
               </div>
               <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left">
                 <a href="#"
-                  class="text-pink-600 font-bold hover:text-gray-800 text-xl transition duration-300 block mb-1">Pie de
-                  frutas</a>
+                  class="text-pink-600 font-bold hover:text-gray-800 text-xl transition duration-300 block mb-1 ubuntu-font-bold">
+                  Pie de frutas
+                </a>
                 <p class="text-black-400 text-base mb-2">Fresas / pina / manzanas</p>
                 <button
                   class="shadow-2xl  mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
@@ -193,8 +199,9 @@
               </div>
               <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left">
                 <a href="#"
-                  class="text-pink-600 font-bold hover:text-gray-800 text-xl transition duration-300 block mb-1">Pie de
-                  frutas</a>
+                  class="text-pink-600 font-bold hover:text-gray-800 text-xl transition duration-300 block mb-1 ubuntu-font-bold">
+                  Pie de frutas
+                </a>
                 <p class="text-black-400 text-base mb-2">Fresas / pina / manzanas</p>
                 <button
                   class="shadow-2xl  mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
@@ -216,8 +223,9 @@
               </div>
               <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left">
                 <a href="#"
-                  class="text-pink-600 font-bold hover:text-gray-800 text-xl transition duration-300 block mb-1">Mousse
-                  de frutas</a>
+                  class="text-pink-600 font-bold hover:text-gray-800 text-xl transition duration-300 block mb-1 ubuntu-font-bold">
+                  Mousse de frutas
+                </a>
                 <p class="text-black-400 text-base mb-2">Fresas / chinola / manzanas</p>
                 <button
                   class="shadow-2xl  mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
@@ -230,7 +238,6 @@
               </div>
             </div>
           </div>
-
         </div>
 
         <!-- Flechas -->
@@ -245,11 +252,11 @@
 
         <!-- Bullets -->
         <div class="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-          <button class="carousel-bullet w-3 h-3 bg-pink-300 rounded-full opacity-60 hover:opacity-100 transition"
+          <button class="carousel-bullet w-4 h-4 bg-pink-300 rounded-full opacity-60 hover:opacity-100 transition"
             data-index="0"></button>
-          <button class="carousel-bullet w-3 h-3 bg-pink-300 rounded-full opacity-60 hover:opacity-100 transition"
+          <button class="carousel-bullet w-4 h-4 bg-pink-300 rounded-full opacity-60 hover:opacity-100 transition"
             data-index="1"></button>
-          <button class="carousel-bullet w-3 h-3 bg-pink-300 rounded-full opacity-60 hover:opacity-100 transition"
+          <button class="carousel-bullet w-4 h-4 bg-pink-300 rounded-full opacity-60 hover:opacity-100 transition"
             data-index="2"></button>
         </div>
       </div>
@@ -260,10 +267,10 @@
     <div
       class="w-full md:w-5/12 px-5 md:px-8 flex flex-col justify-center items-start z-10 bg-[url('public/images/circle-scatter-filled.svg')] bg-no-repeat bg-center-center bg-cover min-h-[50vh]">
       <div class="w-full max-w-lg text-left space-y-6 mx-auto">
-        <h2 class="text-black-800 text-4xl md:text-5xl font-semibold leading-snug">
+        <h2 class="text-gray-700 text-4xl md:text-5xl leading-snug ubuntu-font-regular">
           Nuestros servicios
         </h2>
-        <p class="text-gray-700 text-lg leading-relaxed">
+        <p class="text-gray-700 text-xl lato-regular">
           Ofrecemos experiencias dulces personalizadas. Desde pasteles únicos hasta estaciones móviles, todo hecho con
           amor.
         </p>
@@ -275,9 +282,11 @@
       <div
         class="bg-white border-pink-400 rounded-xl w-52 sm:w-56 flex flex-col justify-between items-center p-5 shadow-md hover:shadow-xl transition duration-300 text-center">
         <img src="public/icons/sweet-table-service.svg" alt="Mesas de Dulces" class="w-20 h-20 mb-3">
-        <p class="text-pink-400 text-xl font-semibold">Mesas de Dulces</p>
+        <p class="text-pink-400 text-xl ubuntu-font-bold">
+          Mesas de Dulces
+        </p>
         <button
-          class="mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full flex items-center gap-1">
+          class="mt-3 bg-pink-300 hover:bg-pink-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full flex items-center gap-1">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
             <path
               d="M10.293 15.707a1 1 0 001.414 0L17 10.414a1 1 0 00-1.414-1.414L11 13.586V3a1 1 0 10-2 0v10.586L4.414 9a1 1 0 00-1.414 1.414l5.293 5.293z" />
@@ -290,9 +299,9 @@
       <div
         class="bg-white border-pink-400 rounded-xl w-52 sm:w-56 flex flex-col justify-between items-center p-5 shadow-md hover:shadow-xl transition duration-300 text-center">
         <img src="public/icons/whole-cake-service.svg" alt="Pasteles personalizados" class="w-20 h-20 mb-3">
-        <p class="text-pink-400 text-xl font-semibold">Pastelería</p>
+        <p class="text-pink-400 text-xl ubuntu-font-bold">Pastelería</p>
         <button
-          class="mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full flex items-center gap-1">
+          class="mt-3 bg-pink-300 hover:bg-pink-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full flex items-center gap-1">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
             <path
               d="M10.293 15.707a1 1 0 001.414 0L17 10.414a1 1 0 00-1.414-1.414L11 13.586V3a1 1 0 10-2 0v10.586L4.414 9a1 1 0 00-1.414 1.414l5.293 5.293z" />
@@ -305,9 +314,9 @@
       <div
         class="bg-white border-pink-400 rounded-xl w-52 sm:w-56 flex flex-col justify-between items-center p-5 shadow-md hover:shadow-xl transition duration-300 text-center">
         <img src="public/icons/cookie-service.svg" alt="Postres" class="w-20 h-20 mb-3">
-        <p class="text-pink-400 text-xl font-semibold">Postres</p>
+        <p class="text-pink-400 text-xl ubuntu-font-bold">Postres</p>
         <button
-          class="mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full flex items-center gap-1">
+          class="mt-3 bg-pink-300 hover:bg-pink-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full flex items-center gap-1">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
             <path
               d="M10.293 15.707a1 1 0 001.414 0L17 10.414a1 1 0 00-1.414-1.414L11 13.586V3a1 1 0 10-2 0v10.586L4.414 9a1 1 0 00-1.414 1.414l5.293 5.293z" />
@@ -320,9 +329,9 @@
       <div
         class="bg-white border-pink-400 rounded-xl w-52 sm:w-56 flex flex-col justify-between items-center p-5 shadow-md hover:shadow-xl transition duration-300 text-center">
         <img src="public/icons/car-service.svg" alt="Unidades Móviles" class="w-20 h-20 mb-3">
-        <p class="text-pink-400 text-xl font-semibold">Unidad Móvil</p>
+        <p class="text-pink-400 text-xl ubuntu-font-bold">Unidad Móvil</p>
         <button
-          class="mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full flex items-center gap-1">
+          class="mt-3 bg-pink-300 hover:bg-pink-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full flex items-center gap-1">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
             <path
               d="M10.293 15.707a1 1 0 001.414 0L17 10.414a1 1 0 00-1.414-1.414L11 13.586V3a1 1 0 10-2 0v10.586L4.414 9a1 1 0 00-1.414 1.414l5.293 5.293z" />
@@ -343,9 +352,9 @@
             class="object-cover w-full h-full max-h-[420px]">
         </div>
         <div class="flex flex-col items-start gap-5 w-full">
-          <h2 class="text-4xl md:text-5xl font-semibold text-pink-400 leading-tight">
+          <h3 class="text-4xl md:text-5xl text-gray-700 leading-tight ubuntu-font-regular">
             Postres Perla sobre ruedas
-          </h2>
+          </h3>
           <p class="text-lg text-gray-600 leading-relaxed">
             Vamos directamente a donde estés. Ya sea un cumpleaños, feria o evento especial,
             llegamos con todo el sabor y la presentación que nos distingue.
@@ -356,8 +365,8 @@
             calidad y ese toque artesanal que nos hace únicos.
           </p>
           <button
-            class="bg-green-300 hover:bg-yellow-300 text-gray-800 font-semibold py-2 px-6 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105">
-            Ver más
+            class="xs:w-full bg-white hover:bg-yellow-200 text-gray-800 font-semibold py-3 px-6 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+            Ver nuestras rutas
           </button>
         </div>
       </div>
@@ -368,61 +377,61 @@
     id="testimonials">
     <div class="max-w-5xl mx-auto flex flex-col justify-center items-center text-center space-y-10 pt-5">
       <div>
-        <h2 class="text-gray-700 text-4xl md:text-5xl font-bold">Lo que dicen nuestros clientes</h2>
+        <h3 class="text-[#C84C7E] text-4xl md:text-5xl ubuntu-font-regular">Que dicen nuestros clientes?</h3>
         <p class="text-gray-500 mt-4 text-lg max-w-xl mx-auto">
           Historias reales que reflejan la calidad y el amor que ponemos en cada proyecto.
         </p>
       </div>
-
       <div class="relative overflow-hidden w-full">
-          <div id="testimonial-carousel" class="flex transition-transform duration-700 ease-in-out w-full">          
-              <div class="min-w-full flex justify-center px-4">
-                <div class="p-10 bg-yellow-100/90 backdrop-blur-sm rounded-xl shadow-md border border-pink-200 hover:shadow-lg transition-all max-w-md">
-                  <p class="text-lg text-gray-800 italic mb-4">
-                      “Gracias a esta experiencia, logré mejorar mi presencia profesional y atraer más clientes.”
-                  </p>
-                  <div class="flex items-center justify-center">
-                    <img src="public/images/thumnail/man-face.jpg" alt="Cliente"
-                      class="w-12 h-12 rounded-full border border-gray-300">
-                    <div class="ml-3 text-left">
-                      <h3 class="text-gray-900 font-semibold">Ana Castillo</h3>
-                      <p class="text-sm text-gray-500">Diseñadora Gráfica</p>
-                    </div>
-                  </div>
-                </div>
-              </div>          
-            <div class="min-w-full flex justify-center px-4">
-              <div
-                class="p-8 bg-purple-100/80 backdrop-blur-sm rounded-xl shadow-md border border-purple-200 hover:shadow-lg transition-all max-w-md">
-                <p class="text-lg text-gray-800 italic mb-4">
-                  “Un servicio impecable, comunicación constante y resultados concretos. ¡Recomendado!”
-                </p>
-                <div class="flex items-center justify-center">
-                  <img src="public/images/thumnail/man-face.jpg" alt="Cliente"
-                    class="w-12 h-12 rounded-full border border-gray-300">
-                  <div class="ml-3 text-left">
-                    <h3 class="text-gray-900 font-semibold">Carlos Mejía</h3>
-                    <p class="text-sm text-gray-500">Emprendedor</p>
-                  </div>
-                </div>
-              </div>
-            </div>          
-            <div class="min-w-full flex justify-center px-4">
-              <div
-                class="p-8 bg-green-100/80 backdrop-blur-sm rounded-xl shadow-md border border-green-200 hover:shadow-lg transition-all max-w-md">
-                <p class="text-lg text-gray-800 italic mb-4">
-                  “Atención al detalle, calidad visual y un trato cercano. ¡Volvería a trabajar con ellos sin duda!”
-                </p>
-                <div class="flex items-center justify-center">
-                  <img src="public/images/thumnail/man-face.jpg" alt="Cliente"
-                    class="w-12 h-12 rounded-full border border-gray-300">
-                  <div class="ml-3 text-left">
-                    <h3 class="text-gray-900 font-semibold">Laura Sánchez</h3>
-                    <p class="text-sm text-gray-500">Coach Personal</p>
-                  </div>
+        <div id="testimonial-carousel" class="flex transition-transform duration-700 ease-in-out w-full">
+          <div class="min-w-full flex justify-center px-4">
+            <div
+              class="p-10 bg-yellow-100/90 backdrop-blur-sm rounded-xl shadow-md border border-pink-200 hover:shadow-lg transition-all max-w-md">
+              <p class="text-lg text-gray-800 italic mb-4">
+                “Gracias a esta experiencia, logré mejorar mi presencia profesional y atraer más clientes.”
+              </p>
+              <div class="flex items-center justify-center">
+                <img src="public/images/thumnail/man-face.jpg" alt="Cliente"
+                  class="w-12 h-12 rounded-full border border-gray-300">
+                <div class="ml-3 text-left">
+                  <h3 class="text-gray-900 font-semibold">Ana Castillo</h3>
+                  <p class="text-sm text-gray-500">Diseñadora Gráfica</p>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="min-w-full flex justify-center px-4">
+            <div
+              class="p-8 bg-purple-100/80 backdrop-blur-sm rounded-xl shadow-md border border-purple-200 hover:shadow-lg transition-all max-w-md">
+              <p class="text-lg text-gray-800 italic mb-4">
+                “Un servicio impecable, comunicación constante y resultados concretos. ¡Recomendado!”
+              </p>
+              <div class="flex items-center justify-center">
+                <img src="public/images/thumnail/man-face.jpg" alt="Cliente"
+                  class="w-12 h-12 rounded-full border border-gray-300">
+                <div class="ml-3 text-left">
+                  <h3 class="text-gray-900 font-semibold">Carlos Mejía</h3>
+                  <p class="text-sm text-gray-500">Emprendedor</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="min-w-full flex justify-center px-4">
+            <div
+              class="p-8 bg-green-100/80 backdrop-blur-sm rounded-xl shadow-md border border-green-200 hover:shadow-lg transition-all max-w-md">
+              <p class="text-lg text-gray-800 italic mb-4">
+                “Atención al detalle, calidad visual y un trato cercano. ¡Volvería a trabajar con ellos sin duda!”
+              </p>
+              <div class="flex items-center justify-center">
+                <img src="public/images/thumnail/man-face.jpg" alt="Cliente"
+                  class="w-12 h-12 rounded-full border border-gray-300">
+                <div class="ml-3 text-left">
+                  <h3 class="text-gray-900 font-semibold">Laura Sánchez</h3>
+                  <p class="text-sm text-gray-500">Coach Personal</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- Controles -->
         <div class="mt-6 flex justify-center space-x-3">
@@ -454,16 +463,17 @@
       }, 7000);
     </script>
   </section>
-  <section id="contact" class="py-20 bg-gradient-to-r from-pink-400 via-pink-200 to-white/100 dark:bg-gray-900">
+  <section id="contact" class="py-40 bg-[#fefae9]">
     <div class="container mx-auto px-6">
-      <div class="text-center mb-12">
-        <h2 class="text-5xl font-semibold text-black-700 drop-shadow-md">Contáctanos</h2>
+      <div class="text-left mb-12">
+        <h4 class="text-4xl text-gray-700 drop-shadow-md ubuntu-font-regular ">Contáctanos</h4>
         <p class="mt-4 text-lg text-black-700">
           Para tus pedidos, consultas o sugerencias, ¡estamos aquí para ayudarte!
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-        <div class="flex items-center p-6 bg-white/80 rounded-2xl shadow-md space-x-4">
+        <div
+          class="flex items-center p-6 bg-white/80 rounded-2xl shadow-md space-x-4 hover:shadow-xl transition duration-400">
           <div class="p-3 bg-yellow-100 rounded-full">
             <img class="w-10 h-10" src="public/icons/whatsapp.png" alt="Teléfono icono">
           </div>
@@ -473,7 +483,8 @@
             </a>
           </div>
         </div>
-        <div class="flex items-center p-6 bg-white/80 rounded-2xl shadow-md space-x-4">
+        <div
+          class="flex items-center p-6 bg-white/80 rounded-2xl shadow-md space-x-4 hover:shadow-xl transition duration-400">
           <div class="p-3 bg-yellow-100 rounded-full">
             <img class="w-10 h-10" src="public/icons/instagram.png" alt="Instagram icono">
           </div>
@@ -483,7 +494,8 @@
             </a>
           </div>
         </div>
-        <div class="flex items-center p-6 bg-white/80 rounded-2xl shadow-md space-x-4">
+        <div
+          class="flex items-center p-6 bg-white/80 rounded-2xl shadow-md space-x-4 hover:shadow-xl transition duration-400">
           <div class="p-3 bg-yellow-100 rounded-full">
             <img class="w-10 h-10" src="public/icons/facebook.png" alt="Facebook icono">
           </div>
@@ -493,7 +505,8 @@
             </a>
           </div>
         </div>
-        <div class="flex items-center p-6 bg-white/80 rounded-2xl shadow-md space-x-4">
+        <div
+          class="flex items-center p-6 bg-white/80 rounded-2xl shadow-md space-x-4 hover:shadow-xl transition duration-400">
           <div class="p-3 bg-yellow-100 rounded-full">
             <img class="w-10 h-10" src="public/icons/email.png" alt="Email icono">
           </div>
@@ -507,34 +520,34 @@
     </div>
   </section>
   <div class="fixed top-1/2 right-1 transform -translate-y-1/2 z-50">
-    <div class="relative group">
-      <button class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-pink-200 hover:bg-pink-300 rounded-full 
-              flex items-center justify-center shadow-lg shadow-pink-300/50 
-              transition-all duration-300 ease-in-out 
-              hover:animate-pulse hover:ring-4 hover:ring-pink-400/30">
-        <img src="./public/icons/whatsapp.png" alt="Whatsapp de la empresa" class="w-7 h-7" />
-      </button>
+    <div class="relative group w-20 h-20 cursor-pointer transition-all duration-300 ease-out">
+      <a href="https://wa.me/8296469680" target="_blank" aria-label="Chatea con nosotros por WhatsApp" class="absolute bottom-1 right-1 bg-green-500 w-14 h-14 rounded-full 
+                flex items-center justify-center shadow-md ring-2 ring-white 
+                transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+        <img src="./public/icons/whatsapp.png" alt="WhatsApp" class="w-10 h-10" />
+      </a>
     </div>
   </div>
-  <footer class="relative block bg-[#FFE4E2] text-gray-700 overflow-hidden py-16"> <<!--bg-[#FFE4E1]-->
+  <footer
+    class="bg-[url('public/images/desserts-patterns.png')] relative block bg-[#FFD9C4] text-gray-700 overflow-hidden py-16">
     <div class="mx-auto max-w-7xl px-5 md:px-10">
       <div class="flex flex-col items-center gap-5">
         <div class="flex items-center gap-4">
           <a href="#" class="brand-logo flex items-center py-5">
             <img src="./public/icons/P-perla-logo.png" alt="Logo de la pasteleria Postres Perla"
               class="h-16 w-16 drop-shadow-xl">
-            <span class="text-pink-400 pl-2 text-3xl font-semibold">
+            <span class="text-[#C84C7E] pl-2 text-4xl font-semibold">
               Postres Perla
             </span>
           </a>
         </div>
-        <nav class="flex flex-wrap justify-center gap-6 mt-6 text-lg font-large text-pink-400">
-          <a href="#" class="hover:text-[#FF6F61] transition-colors">Inicio</a>
-          <a href="#" class="hover:text-[#FF6F61] transition-colors">Servicios</a>
-          <a href="#" class="hover:text-[#FF6F61] transition-colors">Contáctanos</a>
-          <a href="#" class="hover:text-[#FF6F61] transition-colors">Nosotros</a>
+        <nav class="flex flex-wrap justify-center gap-6 mt-6 text-lg font-large text-[#C84C7E]">
+          <a href="#" class="hover:text-gray-700 transition-colors">Inicio</a>
+          <a href="#" class="hover:text-gray-700 transition-colors">Servicios</a>
+          <a href="#" class="hover:text-gray-700 transition-colors">Contáctanos</a>
+          <a href="#" class="hover:text-gray-700 transition-colors">Nosotros</a>
         </nav>
-        <div class="my-10 border-t border-gray-300 w-24"></div>
+        <div class="my-10 border-t border-white w-28"></div>
         <div class="flex gap-8">
           <a href="https://www.instagram.com/postres.perla?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             target="_blank" class="hover:scale-110 transition-transform">
@@ -547,12 +560,13 @@
             <img src="./public/icons/whatsapp.png" alt="Whatsapp logo" class="w-12 h-12">
           </a>
         </div>
-        <p class="text-sm sm:text-base text-gray-600 mt-10 text-center">
+        <p class="text-sm sm:text-base text-[#C84C7E] mt-10 text-center">
           © 2025 Postres Perla. Todos los derechos reservados.
         </p>
       </div>
     </div>
   </footer>
+
 </body>
 <script src="src/scripts/main.js"></script>
 <script>
