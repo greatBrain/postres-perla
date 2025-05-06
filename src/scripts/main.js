@@ -9,20 +9,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-/* Fade banner section on scroll*/
-window.addEventListener('scroll', () => {
-    const banner = document.querySelector('.banner');
-    const scrollPosition = window.scrollY;
-    const bannerHeight = banner.offsetHeight;
-    const opacity = 1 - (scrollPosition / bannerHeight);
-
-    if (opacity >= 0) {
-        banner.style.opacity = opacity;
-    } else {
-        banner.style.opacity = 0;
-    }
-});
-
 /*Lazy load banner text */
 window.addEventListener('DOMContentLoaded', () => {
     const elements = document.querySelectorAll('.fade-in-element');
