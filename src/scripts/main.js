@@ -19,6 +19,56 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//Products cards
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".slider-container");
+    const bullets = document.querySelectorAll(".carousel-bullet");
+    const slides = document.querySelectorAll(".slide");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    let index = 0;
+    const total = slides.length;
+    let slideWidth = slides[0].offsetWidth + 24;
+
+    const goToSlide = (i) => {
+      index = i;
+      slider.style.transform = `translateX(-${i * slideWidth}px)`;
+      bullets.forEach(b => b.classList.remove("opacity-100"));
+      if (bullets[i]) bullets[i].classList.add("opacity-100");
+    };
+
+    bullets.forEach((bullet, i) => bullet.addEventListener("click", () => goToSlide(i)));
+
+    prevBtn.addEventListener("click", () => {
+      index = (index - 1 + total) % total;
+      goToSlide(index);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      index = (index + 1) % total;
+      goToSlide(index);
+    });
+
+    // Swipe mobile
+    let startX = 0;
+    slider.addEventListener("touchstart", (e) => startX = e.touches[0].clientX);
+    slider.addEventListener("touchend", (e) => {
+      const endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) nextBtn.click();
+      else if (endX - startX > 50) prevBtn.click();
+    });
+
+    // Init
+    goToSlide(0);
+    window.addEventListener("resize", () => {
+      slideWidth = slides[0].offsetWidth + 24;
+      goToSlide(index);
+    });
+  });
+//End products
+
+//Testimonials
 document.addEventListener('DOMContentLoaded', function () {
     const carouselItems = document.getElementById('carousel-items');
     const prevButton = document.getElementById('carousel-prev');
@@ -60,7 +110,6 @@ document.addEventListener('DOMContentLoaded', function () {
         itemWidth = items[0].offsetWidth;
         updateCarousel();
     }
-
     window.addEventListener('resize', handleResize);
     handleResize(); // Inicializa el tamaño
 
@@ -69,3 +118,4 @@ document.addEventListener('DOMContentLoaded', function () {
     carouselItems.addEventListener('mouseleave', startAutoSlide);
 
 });
+//End Testimonials

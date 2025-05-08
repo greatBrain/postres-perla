@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,19 +20,14 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script>AOS.init();</script>
 </head>
 
 <body>
   <nav class="fixed z-50 w-full bg-pink-400 shadow dark:bg-pink-300 h-20 flex items-center justify-between px-6">
     <a href="#" class="brand-logo items-center py-5">
-      <img src="./public/icons/P-perla-logo.png" alt="Logo de la pasteleria Postres Perla"
-        class="h-16 w-16 drop-shadow-xl">
-      <span class="text-white pl-2 text-3xl font-semibold">
-        Postres Perla
-      </span>
+      <img src="./public/icons/P-perla-logo.png" alt="Logo de la pasteleria Postres Perla" class="h-16 w-16 drop-shadow-2xl">
+      <span class="text-white pl-2 text-3xl font-semibold">Postres Perla</span>
     </a>
     <div class="hidden md:flex items-center justify-center space-x-6 text-gray-300 capitalize dark:text-gray-400">
       <a href="#services"
@@ -204,15 +198,15 @@
             <div
               class="img-box bg-yellow-50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden max-w-[295px]">
               <div class="img-container overflow-hidden rounded-t-2xl">
-                <img src="./public/images/pie.jpg" alt="Postre 2"
+                <img src="./public/images/brownies.jpg" alt="Postre 2"
                   class="object-cover w-full h-48 transition-transform duration-300 hover:scale-105">
               </div>
               <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left">
                 <a href="#"
                   class="text-pink-600 font-bold hover:text-gray-800 text-xl transition duration-300 block mb-1 ubuntu-font-bold">
-                  Pie de frutas
+                 Brownies de Chocolate
                 </a>
-                <p class="text-black-400 text-base mb-2">Fresas / pina / manzanas</p>
+                <p class="text-black-400 text-base mb-2">Chocolate con chispas</p>
                 <button
                   class="shadow-2xl  mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -224,11 +218,37 @@
               </div>
             </div>
           </div>
+
+          <div class="slide flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3 flex justify-center">
+            <div
+              class="img-box bg-yellow-50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden max-w-[295px]">
+              <div class="img-container overflow-hidden rounded-t-2xl">
+                <img src="./public/images/pudding.jpg" alt="Postre 2"
+                  class="object-cover w-full h-48 transition-transform duration-300 hover:scale-105">
+              </div>
+              <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left">
+                <a href="#"
+                  class="text-pink-600 font-bold hover:text-gray-800 text-xl transition duration-300 block mb-1 ubuntu-font-bold">
+                 Pudin de pan
+                </a>
+                <p class="text-black-400 text-base mb-2">Pan batido</p>
+                <button
+                  class="shadow-2xl  mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10.293 15.707a1 1 0 001.414 0L17 10.414a1 1 0 00-1.414-1.414L11 13.586V3a1 1 0 10-2 0v10.586L4.414 9a1 1 0 00-1.414 1.414l5.293 5.293z" />
+                  </svg>
+                  Ver más
+                </button>
+              </div>
+            </div>
+          </div>
+
           <div class="slide flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3 flex justify-center">
             <div
               class="img-box bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden max-w-[295px]">
               <div class="img-container overflow-hidden rounded-t-2xl">
-                <img src="./public/images/pie.jpg" alt="Postre 3"
+                <img src="./public/images/mousse.jpg" alt="Postre 3"
                   class="object-cover w-full h-48 transition-transform duration-300 hover:scale-105">
               </div>
               <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left">
@@ -532,7 +552,7 @@
       </div>
     </div>
   </section>
-  <div class="fixed bottom-1/2 right-1 transform-translate-y-1/2 z-50" id="floating-btn">
+  <div class="fixed flex flex-col justify-center items-center bottom-1/2 right-1 transform-translate-y-1/2 z-50" id="floating-btn">
     <div class="relative bg-white rounded-full text-center shadow-3xl">
       <p class="px-2 py-2 text-lg text-gray-600 font-semibold mr-2">¡Hola! <span class="text-2xl">&#128522;</span>
       </p>
@@ -544,31 +564,22 @@
         <img src="./public/icons/whatsapp-white.png" alt="WhatsApp" class="w-8 h-8" />
       </a>
     </div>
-  </div>
-  <footer
-    class="bg-[url('public/images/desserts-patterns.png')] relative block bg-[#FFD9C4] text-gray-700 overflow-hidden py-16">
-    <div class="mx-auto max-w-7xl px-5 md:px-10">
-      <div class="flex flex-col items-center gap-5">
-        <div class="flex items-center gap-4">
-          <a href="#" class="brand-logo flex items-center py-5">
+</div>
+<footer class="bg-[#FFD9C4] bg-[url('public/images/desserts-patterns.png')] bg-cover bg-center bg-no-repeat">
+  <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">      
+      <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
+        <div href="#" class="brand-logo flex items-center py-5">
             <img src="./public/icons/P-perla-logo.png" alt="Logo de la pasteleria Postres Perla"
               class="h-16 w-16 drop-shadow-xl">
             <span class="text-[#C84C7E] pl-2 text-4xl font-semibold">
               Postres Perla
             </span>
-          </a>
         </div>
-        <nav class="flex flex-wrap justify-center gap-6 mt-6 text-lg font-large text-[#C84C7E]">
-          <a href="#" class="hover:text-gray-700 transition-colors">Inicio</a>
-          <a href="#" class="hover:text-gray-700 transition-colors">Servicios</a>
-          <a href="#" class="hover:text-gray-700 transition-colors">Contáctanos</a>
-          <a href="#" class="hover:text-gray-700 transition-colors">Nosotros</a>
-        </nav>
-        <div class="my-10 border-t border-white w-28"></div>
-        <div class="flex gap-8">
+        <div class="flex space-x-6">
           <a href="https://www.instagram.com/postres.perla?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-            target="_blank" class="hover:scale-110 transition-transform">
-            <img src="./public/icons/instagram.png" alt="Instagram logo" class="w-11 h-11">
+             target="_blank" class="hover:scale-110 transition-transform">
+             <img src="./public/icons/instagram.png" alt="Instagram logo" class="w-11 h-11">
           </a>
           <a href="#" class="hover:scale-110 transition-transform">
             <img src="./public/icons/facebook.png" alt="Facebook logo" class="w-11 h-11">
@@ -577,75 +588,57 @@
             <img src="./public/icons/whatsapp.png" alt="Whatsapp logo" class="w-12 h-12">
           </a>
         </div>
-        <p class="text-sm sm:text-base text-[#C84C7E] mt-10 text-center">
-          © 2025 Postres Perla. Todos los derechos reservados.
-        </p>
+      </div>
+      <div class="text-center sm:text-left">
+        <p class="text-lg font-medium text-[#C84C7E]">Nosotros</p>
+        <div class="mt-8 flex flex-col sm:flex-row items-center sm:items-start gap-4">
+          <img src="public/images/chef.webp" alt="Chef fundadora de Postres Perla" class="w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover">
+          <p class="text-sm text-white leading-relaxed max-w-xs text-center sm:text-left">
+            Postres Perla nació del sueño de nuestra fundadora, la chef Ana Perla, una apasionada pastelera con más de
+            15 años de experiencia. Su amor por la repostería artesanal y su formación en cocina internacional le han
+            permitido transformar recetas tradicionales en verdaderas obras de arte. Hoy, lidera un equipo que mezcla
+            técnica, corazón y creatividad en cada postre.
+          </p>
+        </div>
+        <nav class="mt-6">
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a class="text-white transition hover:text-white/75" href="/">
+                Conoce nuestra historia
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="text-center sm:text-left">
+        <p class="text-lg font-medium text-white">Contáctanos</p>
+        <ul class="mt-8 space-y-4 text-sm">
+          <li>
+            <a class="text-white transition hover:text-white/75" href="tel:+18296469680">
+              +1 (829) 646 9680
+            </a>
+          </li>
+          <li>
+            <a class="text-white transition hover:text-white/75" href="mailto:pedidos@postresperla.com">
+              pedidos@postresperla.com
+            </a>
+          </li>
+          <li>
+            <address class="not-italic text-white">
+              Santo Domingo, República Dominicana
+            </address>
+          </li>
+        </ul>
       </div>
     </div>
-  </footer>
-
+    <!-- Línea inferior -->
+    <div class="mt-12 border-t border-[#C84C7E] pt-8">
+      <p class="text-center text-xs text-white">
+        &copy; 2025 Postres Perla. Todos los derechos reservados.
+      </p>
+    </div>
+  </div>
+</footer>
 </body>
 <script src="src/scripts/main.js"></script>
-<script>
-  const button = document.getElementById('scrollDownBtn');
-  const heroSection = document.getElementById('banner');
-
-  window.addEventListener('scroll', () => {
-    const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-    if (window.scrollY > heroBottom) {
-      button.style.display = 'none';
-    } else {
-      button.style.display = 'block';
-    }
-  });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const slider = document.querySelector(".slider-container");
-    const bullets = document.querySelectorAll(".carousel-bullet");
-    const slides = document.querySelectorAll(".slide");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-
-    let index = 0;
-    const total = slides.length;
-    let slideWidth = slides[0].offsetWidth + 24;
-
-    const goToSlide = (i) => {
-      index = i;
-      slider.style.transform = `translateX(-${i * slideWidth}px)`;
-      bullets.forEach(b => b.classList.remove("opacity-100"));
-      if (bullets[i]) bullets[i].classList.add("opacity-100");
-    };
-
-    bullets.forEach((bullet, i) => bullet.addEventListener("click", () => goToSlide(i)));
-
-    prevBtn.addEventListener("click", () => {
-      index = (index - 1 + total) % total;
-      goToSlide(index);
-    });
-
-    nextBtn.addEventListener("click", () => {
-      index = (index + 1) % total;
-      goToSlide(index);
-    });
-
-    // Swipe mobile
-    let startX = 0;
-    slider.addEventListener("touchstart", (e) => startX = e.touches[0].clientX);
-    slider.addEventListener("touchend", (e) => {
-      const endX = e.changedTouches[0].clientX;
-      if (startX - endX > 50) nextBtn.click();
-      else if (endX - startX > 50) prevBtn.click();
-    });
-
-    // Init
-    goToSlide(0);
-    window.addEventListener("resize", () => {
-      slideWidth = slides[0].offsetWidth + 24;
-      goToSlide(index);
-    });
-  });
-</script>
-
 </html>
