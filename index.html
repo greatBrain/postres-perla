@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,23 +27,25 @@
 <body>
   <nav class="fixed z-50 w-full bg-pink-400 shadow dark:bg-pink-300 h-20 flex items-center justify-between px-6">
     <a href="#" class="brand-logo items-center py-5">
-      <img src="./public/icons/P-perla-logo.png" alt="Logo de la pasteleria Postres Perla" class="h-16 w-16 drop-shadow-2xl">
+      <img src="./public/icons/P-perla-logo.png" alt="Logo de la pasteleria Postres Perla"
+        class="h-16 w-16 drop-shadow-2xl">
       <span class="text-white pl-2 text-3xl font-semibold">Postres Perla</span>
     </a>
-    <div class="hidden md:flex items-center justify-center space-x-6 text-gray-300 capitalize dark:text-gray-400">
+    <div
+      class="hidden md:flex items-center justify-center space-x-6 text-gray-300 capitalize dark:text-gray-400 ubuntu-font-regular">
       <a href="#services"
         class="border-b-2 text-white border-transparent hover:text-black dark:hover:text-gray-200 hover:border-yellow-500 text-xl">
         Servicios
       </a>
       <a href="#catalog"
-        class="border-b-2 text-white border-transparent hover:text-blackdark:hover:text-gray-200 hover:border-yellow-500 text-xl">
+        class="border-b-2 text-white border-transparent hover:text-black dark:hover:text-gray-200 hover:border-yellow-500 text-xl">
         Productos
       </a>
-      <a href="#"
+      <a href="#contact"
         class="border-b-2 text-white border-transparent hover:text-black dark:hover:text-gray-200 hover:border-yellow-500 text-xl">
         Contactanos
       </a>
-      <a href="#about-us"
+      <a href="#about-me"
         class="border-b-2 text-white border-transparent hover:text-black dark:hover:text-gray-200 hover:border-yellow-400 text-xl">
         Nosotros
       </a>
@@ -138,13 +141,9 @@
         <h2 class="text-gray-800 text-2xl md:text-4xl sm:text-xl xs:text-lg ubuntu-font-regular title">
           Explora nuestra selección de productos
         </h2>
-        <!-- <p class="pt-5 text-xl text-gray-700 lato-regular">
-          Te ofrecemos lo mejor, con lo mejor para que te dejes llevar por el encanto!
-        </p> -->
       </div>
       <!-- Carousel Wrapper -->
       <div class="relative overflow-hidden flex justify-center items-center ">
-        <!-- Slides container -->
         <div class="slider-container flex transition-transform duration-500 ease-in-out w-full">
           <div class="slide flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3 flex justify-center">
             <div
@@ -204,7 +203,7 @@
               <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left">
                 <a href="#"
                   class="text-pink-600 font-bold hover:text-gray-800 text-xl transition duration-300 block mb-1 ubuntu-font-bold">
-                 Brownies de Chocolate
+                  Brownies de Chocolate
                 </a>
                 <p class="text-black-400 text-base mb-2">Chocolate con chispas</p>
                 <button
@@ -229,7 +228,7 @@
               <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left">
                 <a href="#"
                   class="text-pink-600 font-bold hover:text-gray-800 text-xl transition duration-300 block mb-1 ubuntu-font-bold">
-                 Pudin de pan
+                  Pudin de pan
                 </a>
                 <p class="text-black-400 text-base mb-2">Pan batido</p>
                 <button
@@ -552,7 +551,49 @@
       </div>
     </div>
   </section>
-  <div class="fixed flex flex-col justify-center items-center bottom-1/2 right-1 transform-translate-y-1/2 z-50" id="floating-btn">
+  <section id="about-me" class="relative py-20 bg-pink-50 overflow-hidden">
+    <!-- Formas de fondo -->
+    <div class="absolute top-10 left-10 w-72 h-72 bg-pink-200 opacity-30 rounded-full blur-3xl z-0"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-pink-100 opacity-30 rounded-full blur-2xl z-0"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-4xl font-bold text-pink-500 mb-2">
+          Conócenos
+        </h2>
+        <div class="flex items-center justify-center gap-4">
+          <div class="w-20 h-0.5 bg-pink-300"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-pink-400" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
+              4.42 3 7.5 3c1.74 0 3.41 0.81 
+              4.5 2.09C13.09 3.81 14.76 3 
+              16.5 3 19.58 3 22 5.42 22 
+              8.5c0 3.78-3.4 6.86-8.55 
+              11.54L12 21.35z" />
+          </svg>
+          <div class="w-20 h-0.5 bg-pink-300"></div>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row items-center md:items-center gap-8">
+        <img src="public/images/chef.webp" alt="Chef fundadora de Postres Perla"
+          class="w-52 h-52 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-2 border-pink-400 shadow-xl object-cover" />
+        <p class="text-lg md:text-xl text-gray-700 font-medium leading-relaxed text-center md:text-left">
+          <span class="block mb-4">
+            <strong>Postres Perla</strong> nació del sueño de su fundadora, <strong>Perla Pascual</strong>. Su amor por
+            la
+            repostería y su formación en cocina internacional le han permitido transformar recetas tradicionales en
+            verdadero
+            arte.
+          </span>
+          Hoy, lidera un equipo que mezcla técnica, corazón y creatividad en cada postre. Cada creación cuenta una
+          historia y
+          lleva consigo un pedacito de pasión y dedicación.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Boton flotante -->
+  <div class="fixed flex flex-col justify-center items-center bottom-1/2 right-1 transform-translate-y-1/2 z-50"
+    id="floating-btn">
     <div class="relative bg-white rounded-full text-center shadow-3xl">
       <p class="px-2 py-2 text-lg text-gray-600 font-semibold mr-2">¡Hola! <span class="text-2xl">&#128522;</span>
       </p>
@@ -564,81 +605,45 @@
         <img src="./public/icons/whatsapp-white.png" alt="WhatsApp" class="w-8 h-8" />
       </a>
     </div>
-</div>
-<footer class="bg-[#FFD9C4] bg-[url('public/images/desserts-patterns.png')] bg-cover bg-center bg-no-repeat">
-  <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">      
-      <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
-        <div href="#" class="brand-logo flex items-center py-5">
+  </div>
+  <footer class="bg-[#FFD9C4] bg-[url('public/images/desserts-patterns.png')] bg-cover bg-center bg-no-repeat">
+    <div class="mx-auto max-w-screen-xl px-4 py-14 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-2 lg:grid-cols-1">
+        <div class="flex flex-col items-center text-center lg:items-center lg:text-center">
+          <div href="#" class="brand-logo flex items-center py-5">
             <img src="./public/icons/P-perla-logo.png" alt="Logo de la pasteleria Postres Perla"
-              class="h-16 w-16 drop-shadow-xl">
+              class="h-18 w-18 drop-shadow-xl">
             <span class="text-[#C84C7E] pl-2 text-4xl font-semibold">
               Postres Perla
             </span>
-        </div>
-        <div class="flex space-x-6">
-          <a href="https://www.instagram.com/postres.perla?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-             target="_blank" class="hover:scale-110 transition-transform">
-             <img src="./public/icons/instagram.png" alt="Instagram logo" class="w-11 h-11">
-          </a>
-          <a href="#" class="hover:scale-110 transition-transform">
-            <img src="./public/icons/facebook.png" alt="Facebook logo" class="w-11 h-11">
-          </a>
-          <a href="#" class="hover:scale-110 transition-transform">
-            <img src="./public/icons/whatsapp.png" alt="Whatsapp logo" class="w-12 h-12">
-          </a>
-        </div>
-      </div>
-      <div class="text-center sm:text-left">
-        <p class="text-lg font-medium text-[#C84C7E]">Nosotros</p>
-        <div class="mt-8 flex flex-col sm:flex-row items-center sm:items-start gap-4">
-          <img src="public/images/chef.webp" alt="Chef fundadora de Postres Perla" class="w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover">
-          <p class="text-sm text-white leading-relaxed max-w-xs text-center sm:text-left">
-            Postres Perla nació del sueño de nuestra fundadora, la chef Ana Perla, una apasionada pastelera con más de
-            15 años de experiencia. Su amor por la repostería artesanal y su formación en cocina internacional le han
-            permitido transformar recetas tradicionales en verdaderas obras de arte. Hoy, lidera un equipo que mezcla
-            técnica, corazón y creatividad en cada postre.
+          </div>
+          <p class="text-gray-700 max-w-lg pb-4">
+            Siguenos en nuestros perfiles sociales, para mantenerte conectado y actualizado con nuestras ofertas y
+            promociones.
           </p>
+          <div class="flex justify-between items-center space-x-3">
+            <a href="https://www.instagram.com/postres.perla?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank" class="hover:scale-110 transition-transform">
+              <img src="./public/icons/instagram.png" alt="Instagram logo" class="w-9 h-9">
+            </a>
+            <a href="#" class="hover:scale-110 transition-transform">
+              <img src="./public/icons/facebook.png" alt="Facebook logo" class="w-9 h-9">
+            </a>
+            <a href="#" class="hover:scale-110 transition-transform">
+              <img src="./public/icons/pinterest.png" alt="Pinterest logo" class="w-8 h-8">
+            </a>
+          </div>
         </div>
-        <nav class="mt-6">
-          <ul class="space-y-4 text-sm">
-            <li>
-              <a class="text-white transition hover:text-white/75" href="/">
-                Conoce nuestra historia
-              </a>
-            </li>
-          </ul>
-        </nav>
       </div>
-      <div class="text-center sm:text-left">
-        <p class="text-lg font-medium text-white">Contáctanos</p>
-        <ul class="mt-8 space-y-4 text-sm">
-          <li>
-            <a class="text-white transition hover:text-white/75" href="tel:+18296469680">
-              +1 (829) 646 9680
-            </a>
-          </li>
-          <li>
-            <a class="text-white transition hover:text-white/75" href="mailto:pedidos@postresperla.com">
-              pedidos@postresperla.com
-            </a>
-          </li>
-          <li>
-            <address class="not-italic text-white">
-              Santo Domingo, República Dominicana
-            </address>
-          </li>
-        </ul>
+      <!-- Línea inferior -->
+      <div class="mt-12 border-t border-[#C84C7E] pt-8">
+        <p class="text-center text-md text-black">
+          &copy; 2025 Postres Perla. Todos los derechos reservados.
+        </p>
       </div>
     </div>
-    <!-- Línea inferior -->
-    <div class="mt-12 border-t border-[#C84C7E] pt-8">
-      <p class="text-center text-xs text-white">
-        &copy; 2025 Postres Perla. Todos los derechos reservados.
-      </p>
-    </div>
-  </div>
-</footer>
+  </footer>
 </body>
 <script src="src/scripts/main.js"></script>
+
 </html>
