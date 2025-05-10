@@ -29,43 +29,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let index = 0;
     const total = slides.length;
-    let slideWidth = slides[0].offsetWidth + 24;
+    let slideWidth = slides[0].offsetWidth;
 
     const goToSlide = (i) => {
-      index = i;
-      slider.style.transform = `translateX(-${i * slideWidth}px)`;
-      bullets.forEach(b => b.classList.remove("opacity-100"));
-      if (bullets[i]) bullets[i].classList.add("opacity-100");
+        index = i;
+        slider.style.transform = `translateX(-${i * slideWidth}px)`;
+        bullets.forEach(b => b.classList.remove("opacity-100"));
+        if (bullets[i]) bullets[i].classList.add("opacity-100");
     };
 
     bullets.forEach((bullet, i) => bullet.addEventListener("click", () => goToSlide(i)));
 
     prevBtn.addEventListener("click", () => {
-      index = (index - 1 + total) % total;
-      goToSlide(index);
+        index = (index - 1 + total) % total;
+        goToSlide(index);
     });
 
     nextBtn.addEventListener("click", () => {
-      index = (index + 1) % total;
-      goToSlide(index);
+        index = (index + 1) % total;
+        goToSlide(index);
     });
 
     // Swipe mobile
     let startX = 0;
     slider.addEventListener("touchstart", (e) => startX = e.touches[0].clientX);
     slider.addEventListener("touchend", (e) => {
-      const endX = e.changedTouches[0].clientX;
-      if (startX - endX > 50) nextBtn.click();
-      else if (endX - startX > 50) prevBtn.click();
+        const endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) nextBtn.click();
+        else if (endX - startX > 50) prevBtn.click();
     });
 
     // Init
     goToSlide(0);
     window.addEventListener("resize", () => {
-      slideWidth = slides[0].offsetWidth + 24;
-      goToSlide(index);
+        slideWidth = slides[0].offsetWidth;
+        goToSlide(index);
     });
-  });
+});
 //End products
 
 //Testimonials
