@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "productName": "string",
+      "productDescription": "string",
+      "productIngredients": [
+        "string",
+        "string",
+      ],
+      "productPrice": "number (float)",
+      "productImageURL": "string (URL)",
+      "productCategory": "string",
+  ]   "isAvailable": "boolean"
+}
