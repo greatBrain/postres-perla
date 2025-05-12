@@ -612,65 +612,60 @@
     </div>
   </div>
   <!-- Modal -->
-  <dialog id="products-modal" class="w-full max-w-6xl rounded-xl p-0 z-50 backdrop:bg-black/70" 
-  onclose="document.body.classList.remove('overflow-hidden')">
-    <form method="dialog" class="w-full">
-      <div class="flex justify-center items-center">
-        <div class="bg-white w-full rounded-xl shadow-lg py-20 px-10 relative flex flex-col md:flex-row
-             overflow-hidden">
-
-          <!-- Botón de cerrar -->
-          <button type="submit"
-            class="absolute top-1 right-4 text-3xl font-bold text-gray-600 hover:text-pink-400 transition duration-300 ease-in-out">
-            &times;
-          </button>
-
-          <!-- Lado izquierdo -->
-          <div class="w-full md:w-1/2 mb-6 md:mb-0 pr-6">
-            <h2 class="text-3xl lg:text-3xl md:text-3xl sm:text-2xl xs:text-2xl font-bold lato-bold mb-2 text-wrap">
-              Pasteles personalizados
-            </h2>
-            <div class="w-80 h-1 bg-pink-400 mb-4"></div>
-            <p class="mb-2 lato-bold text-lg text-wrap">Descripción del producto:</p>
-            <p class="text-gray-700 mb-4">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam, purus.
-            </p>
-            <p class="mb-2 text-lg lato-bold">Ingredientes:</p>
-            <ul class="list-disc list-inside text-gray-700 mb-5">
-              <li>Lorem ipsum dolor sit amet consectetur</li>
-              <li>dipiscing elit ut aliquam, purus</li>
-            </ul>
-            <p class="mb-1 font-bold text-4xl lato-black">RD$500.00</p>
-            <p class="mb-6 text-semibold">*Los precios pueden variar según el pedido.</p>
-            <button type="button" class="flex text-gray-800 text-md lato-bold hover:text-white 
-                        border border-gray-700 hover:bg-green-600 hover:border-green-600
-                        focus:ring-5 focus:outline-none focus:ring-green-300 
-                        font-bold rounded-lg px-5 py-2.5 
-                        text-center me-2 mb-2 transition duration-200 ease-in-out 
-                        dark:border-green-500 dark:text-green-500 
-                        dark:hover:text-white dark:hover:bg-green-600 
-                        dark:focus:ring-green-700">
-              <svg class="w-5 h-5 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                viewBox="0 0 18 21">
-                <path
-                  d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" />
-              </svg>
-              Pídelo por Whatsapp
+  <dialog id="products-modal" class="w-full max-w-6xl rounded-xl p-0 z-50 backdrop:bg-black/70 animate-fade-in animate-shake-on-open"
+    onclose="document.body.classList.remove('overflow-hidden')">
+    <div class="flex justify-center items-center">
+      <form method="dialog" class="w-full">
+        <div class="flex justify-center items-center">
+          <div class="bg-white w-full rounded-xl shadow-lg py-20 px-10 relative flex flex-col md:flex-row
+               overflow-hidden">
+            <button type="submit"
+              class="absolute top-1 right-4 text-3xl font-bold text-gray-600 hover:text-pink-400 transition duration-300 ease-in-out">
+              &times;
             </button>
-          </div>
-
-          <!-- Imagen -->
-          <div class="w-full md:w-1/2 flex items-center justify-center">
-            <div class="w-[485px] h-[420px] bg-white rounded-xl flex items-center justify-center overflow-hidden">
-              <img src="public/images/mousse.jpg" alt="Pastel" class="w-full h-full object-cover rounded-lg 
-              transition-transform duration-500 ease-in-out hover:scale-105" />
+            <div class="w-full md:w-1/2 mb-6 md:mb-0 pr-6">
+              <h2 class="text-3xl lg:text-3xl md:text-3xl sm:text-2xl xs:text-2xl font-bold lato-bold mb-2 text-wrap">
+                Pasteles personalizados
+              </h2>
+              <div class="w-80 h-1 bg-pink-400 mb-4"></div>
+              <p class="mb-2 lato-bold text-lg text-wrap">Descripción del producto:</p>
+              <p class="text-gray-700 mb-4">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam, purus.
+              </p>
+              <p class="mb-2 text-lg lato-bold">Ingredientes:</p>
+              <ul class="list-disc list-inside text-gray-700 mb-5">
+                <li>Lorem ipsum dolor sit amet consectetur</li>
+                <li>dipiscing elit ut aliquam, purus</li>
+              </ul>
+              <p class="mb-1 font-bold text-4xl lato-black bg-yellow-300 p-2 w-55">RD$500.00</p>
+              <p class="mb-6 text-semibold">*Los precios pueden variar según el pedido.</p>
+              <button type="button" class="flex text-gray-800 text-md lato-bold hover:text-white
+                          border border-gray-700 hover:bg-green-600 hover:border-green-600
+                          focus:ring-5 focus:outline-none focus:ring-green-300
+                          font-bold rounded-lg px-5 py-2.5
+                          text-center me-2 mb-2 transition duration-200 ease-in-out
+                          dark:border-green-500 dark:text-green-500
+                          dark:hover:text-white dark:hover:bg-green-600
+                          dark:focus:ring-green-700">
+                <svg class="w-5 h-5 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 18 21">
+                  <path
+                    d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" />
+                </svg>
+                Pídelo por Whatsapp
+              </button>
+            </div>
+            <div class="w-full md:w-1/2 flex items-center justify-center">
+              <div class="w-[485px] h-[420px] bg-white rounded-xl flex items-center justify-center overflow-hidden">
+                <img src="public/images/mousse.jpg" alt="Pastel" class="w-full h-full object-cover rounded-lg
+                transition-transform duration-500 ease-in-out hover:scale-105" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </dialog>
-
   <!--End modal  -->
   <!-- End boton whatsapp -->
   <footer class="bg-[#FFD9C4] bg-[url('public/images/desserts-patterns.png')] bg-cover bg-center bg-no-repeat">
