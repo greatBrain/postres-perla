@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Postres Perla - un toque de dulzura</title>
+  <title>Postres Perla | Pastelería artesanal en Santo Domingo, Rep. Dominicana</title>
+  <meta name="description" content="Postres Perla: endulza tus días con nosotros, cada pedido realizado con amor en Santo Domingo. Pasteles, dulces y más. ¡Haz tu pedido!">
+  <meta name="keywords" content="pastelería, postres, postres artesanales, dulces, Santo Domingo, repostería, tortas, bizcochos, pasteles, pudding, flan">
+  <meta name="author" content="Postres Perla">
+  <!-- Open Graph para compartir en redes -->
+  <meta property="og:title" content="Postres Perla | Un toque de dulzura">
+  <meta property="og:description" content="Delicias hechas con amor. Mira nuestro catálogo.">
+  <meta property="og:image" content="https://tusitio.com/public/images/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tusitio.com">  
+  <link rel="icon" href="./public/icons/P-perla-logo.png" type="image/x-icon">
+  <!-- Tailwind -->
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Alpine.js -->
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="src/assets/styles.css">
   <link rel="stylesheet" href="src/assets/fonts.css">
-  <link rel="shortcut icon" href="./public/icons/P-perla-logo.png" type="image/x-icon">
+  <!-- Swiper.js -->
   <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- AOS Animate On Scroll -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>AOS.init();</script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <!-- Inicializar AOS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ once: true });
+    });
+  </script>
 </head>
-
 <body>
   <nav class="fixed z-50 w-full bg-pink-400 shadow dark:bg-pink-300 h-20 flex items-center justify-between px-6">
     <a href="#" class="brand-logo items-center py-5">
