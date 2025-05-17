@@ -70,20 +70,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Testimonials
 let currentSlide = 0;
-    const carousel = document.getElementById('testimonial-carousel');
-    const bullets = document.querySelectorAll('button[aria-label^="Ver testimonio"]');
+const carousel = document.getElementById('testimonial-carousel');
+const bullets = document.querySelectorAll('button[aria-label^="Ver testimonio"]');
 
-    function goToSlide(slideIndex) {
-      currentSlide = slideIndex;
-      const offset = -slideIndex * 100;
-      carousel.style.transform = `translateX(${offset}%)`;
-      bullets.forEach((b, i) => {
+function goToSlide(slideIndex) {
+    currentSlide = slideIndex;
+    const offset = -slideIndex * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+    bullets.forEach((b, i) => {
         b.classList.toggle('bg-gray-400', i === slideIndex);
         b.classList.toggle('bg-gray-300', i !== slideIndex);
-      });
-    }
-    setInterval(() => {
-      currentSlide = (currentSlide + 1) % 3;
-      goToSlide(currentSlide);
-    }, 7000);
+    });
+}
+setInterval(() => {
+    currentSlide = (currentSlide + 1) % 3;
+    goToSlide(currentSlide);
+}, 7000);
 //End Testimonials
