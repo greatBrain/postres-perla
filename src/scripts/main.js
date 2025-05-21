@@ -1,89 +1,161 @@
-/*Smooth scroll behavior */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+(function () {
+    'use strict';
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+    document.addEventListener('DOMContentLoaded', function () {
+        initSmoothScroll();
+        initProductCarousel();
+        initTestimonialCarousel();
+    });
+
+    function initSmoothScroll() {
+        const anchors = document.querySelectorAll('a[href^="#"]');
+
+        function scrollToElement(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+        anchors.forEach(anchor => {
+            anchor.addEventListener('click', scrollToElement);
         });
-    });
-});
+    }
 
-/*Lazy load banner text */
-window.addEventListener('DOMContentLoaded', () => {
-    const elements = document.querySelectorAll('.fade-in-element');
-    elements.forEach(element => {
-        setTimeout(() => {
-            element.classList.add('show');
-        }, element.classList.contains('delay-1') ? 500 : element.classList.contains('delay-2') ? 1000 : element.classList.contains('delay-button') ? 1550 : 0);
-    });
-});
+    function initProductCarousel() {
+        const elements = {
+            slider: document.querySelector(".slider-container"),
+            bullets: document.querySelectorAll(".carousel-bullet"),
+            slides: document.querySelectorAll(".slide"),
+            prevBtn: document.getElementById("prevBtn"),
+            nextBtn: document.getElementById("nextBtn")
+        };
+        if (!elements.slider || !elements.slides.length) {
+            console.warn('Product carousel elements not found');
+            return;
+        }
+        const state = {
+            currentIndex: 0,
+            totalSlides: elements.slides.length,
+            slideWidth: elements.slides[0].offsetWidth,
+            touchStartX: 0
+        };
+        /**  Navigate to a specific slide 
+         *@param {number} index 
+        - The slide index to navigate to*/
+        function goToSlide(index) {
+            state.currentIndex = index;
+            elements.slider.style.transform = `translateX(-${index * state.slideWidth}px)`;
 
-//Products cards
-document.addEventListener("DOMContentLoaded", function () {
-    const slider = document.querySelector(".slider-container");
-    const bullets = document.querySelectorAll(".carousel-bullet");
-    const slides = document.querySelectorAll(".slide");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
+            elements.bullets.forEach((bullet, i) => {
+                bullet.classList.toggle("opacity-100", i === index);
+            });
+        }
+        function goToPrevSlide() {
+            const newIndex = (state.currentIndex - 1 + state.totalSlides) % state.totalSlides;
+            goToSlide(newIndex);
+        }
+        function goToNextSlide() {
+            const newIndex = (state.currentIndex + 1) % state.totalSlides;
+            goToSlide(newIndex);
+        }
+        /** Handle touch start event
+         * @param {TouchEvent} e - The touch event
+         */
+        function handleTouchStart(e) {
+            state.touchStartX = e.touches[0].clientX;
+        }
 
-    let index = 0;
-    const total = slides.length;
-    let slideWidth = slides[0].offsetWidth;
+        /**
+         * Handle touch end event
+         * @param {TouchEvent} e - The touch event
+         */
+        function handleTouchEnd(e) {
+            const endX = e.changedTouches[0].clientX;
+            const diffX = state.touchStartX - endX;
+            if (diffX > 50) { goToNextSlide(); } else if (diffX < -50) { goToPrevSlide(); }
+        }
+        function handleResize() {
+            state.slideWidth = elements.slides[0].offsetWidth;
+            goToSlide(state.currentIndex);
+        }
+        function attachEventListeners() {
+            elements.bullets.forEach((bullet, i) => {
+                bullet.addEventListener("click", () => goToSlide(i));
+            });
+            if (elements.prevBtn) { elements.prevBtn.addEventListener("click", goToPrevSlide); }
+            if (elements.nextBtn) { elements.nextBtn.addEventListener("click", goToNextSlide); }
+            elements.slider.addEventListener("touchstart", handleTouchStart, { passive: true });
+            elements.slider.addEventListener("touchend", handleTouchEnd, { passive: true });
+            window.addEventListener("resize", handleResize);
+        }
+        function initialize() {
+            attachEventListeners();
+            goToSlide(0);
+        }
+        initialize();
+    }
 
-    const goToSlide = (i) => {
-        index = i;
-        slider.style.transform = `translateX(-${i * slideWidth}px)`;
-        bullets.forEach(b => b.classList.remove("opacity-100"));
-        if (bullets[i]) bullets[i].classList.add("opacity-100");
-    };
+    function initTestimonialCarousel() {
+        const elements = {
+            carousel: document.getElementById('testimonial-carousel'),
+            bullets: document.querySelectorAll('button[aria-label^="Ver testimonio"]')
+        };
+        if (!elements.carousel || !elements.bullets.length) {
+            console.warn('Testimonial carousel elements not found');
+            return;
+        }
+        const state = {
+            currentSlide: 0,
+            totalSlides: elements.bullets.length,
+            autoplayInterval: null,
+            autoplayDelay: 7000
+        };
 
-    bullets.forEach((bullet, i) => bullet.addEventListener("click", () => goToSlide(i)));
-
-    prevBtn.addEventListener("click", () => {
-        index = (index - 1 + total) % total;
-        goToSlide(index);
-    });
-
-    nextBtn.addEventListener("click", () => {
-        index = (index + 1) % total;
-        goToSlide(index);
-    });
-
-    // Swipe mobile
-    let startX = 0;
-    slider.addEventListener("touchstart", (e) => startX = e.touches[0].clientX);
-    slider.addEventListener("touchend", (e) => {
-        const endX = e.changedTouches[0].clientX;
-        if (startX - endX > 50) nextBtn.click();
-        else if (endX - startX > 50) prevBtn.click();
-    });
-
-    // Init
-    goToSlide(0);
-    window.addEventListener("resize", () => {
-        slideWidth = slides[0].offsetWidth;
-        goToSlide(index);
-    });
-});
-//End products
-
-//Testimonials
-let currentSlide = 0;
-const carousel = document.getElementById('testimonial-carousel');
-const bullets = document.querySelectorAll('button[aria-label^="Ver testimonio"]');
-
-function goToSlide(slideIndex) {
-    currentSlide = slideIndex;
-    const offset = -slideIndex * 100;
-    carousel.style.transform = `translateX(${offset}%)`;
-    bullets.forEach((b, i) => {
-        b.classList.toggle('bg-gray-400', i === slideIndex);
-        b.classList.toggle('bg-gray-300', i !== slideIndex);
-    });
-}
-setInterval(() => {
-    currentSlide = (currentSlide + 1) % 3;
-    goToSlide(currentSlide);
-}, 7000);
-//End Testimonials
+        /**
+         * Navigate to a specific testimonial slide
+         * @param {number} slideIndex - The slide index to navigate to
+         */
+        function goToTestimonialSlide(slideIndex) {
+            state.currentSlide = slideIndex;
+            const offset = -slideIndex * 100;
+            elements.carousel.style.transform = `translateX(${offset}%)`;
+            elements.bullets.forEach((bullet, i) => {
+                bullet.classList.toggle('bg-gray-400', i === slideIndex);
+                bullet.classList.toggle('bg-gray-300', i !== slideIndex);
+            });
+        }
+        function startAutoplay() {
+            state.autoplayInterval = setInterval(() => {
+                const nextSlide = (state.currentSlide + 1) % state.totalSlides;
+                goToTestimonialSlide(nextSlide);
+            }, state.autoplayDelay);
+        }
+        function stopAutoplay() {
+            if (state.autoplayInterval) {
+                clearInterval(state.autoplayInterval);
+            }
+        }
+        function attachEventListeners() {
+            elements.bullets.forEach((bullet, i) => {
+                bullet.addEventListener('click', () => {
+                    goToTestimonialSlide(i);
+                    stopAutoplay();
+                    startAutoplay();
+                });
+            });
+            elements.carousel.addEventListener('mouseenter', stopAutoplay);
+            elements.carousel.addEventListener('mouseleave', startAutoplay);
+        }
+        function initialize() {
+            attachEventListeners();
+            goToTestimonialSlide(0);
+            startAutoplay();
+        }
+        initialize();
+    }
+})();
