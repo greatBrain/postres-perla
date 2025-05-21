@@ -1,49 +1,46 @@
-function getProducts() {
-    const products = [
-        {
+const ALL_PRODUCTS = [
+      {
             title: "Pasteles",
             description: "Personalizados / porciones",
             image: "./public/images/personal-cake.jpg",
             alt: "Postre 1",
             href: "#"
-        },
-        {
+      },
+      {
             title: "Pie de frutas",
-            description: "Surtidos y deliciosos",
+            description: "Fresas, moras",
             image: "./public/images/pie.jpg",
             alt: "Postre 2",
             href: "#"
-        },
-        {
+      },
+      {
             title: "Brownies",
             description: "Surtidos y deliciosos",
             image: "./public/images/brownies.jpg",
             alt: "Postre 2",
             href: "#"
-        },
-        {
+      },
+      {
             title: "Pudding de pan",
             description: "Surtidos y deliciosos",
             image: "./public/images/pudding.jpg",
             alt: "Postre 2",
             href: "#"
-        },
-        {
+      },
+      {
             title: "Mousse de frutas",
             description: "Surtidos y deliciosos",
             image: "./public/images/mousse.jpg",
             alt: "Postre 2",
             href: "#"
-        }
-    ];
-    return products;
+      }
+];
+function getProducts() {
+    return ALL_PRODUCTS;
 }
-/**
- * @param {string}
- */
 function renderProductCards(sliderContainerSelector) {
     const sliderContainer = document.querySelector(sliderContainerSelector);
-    if (!sliderContainer) {
+    if (!sliderContainer){
         console.error(`Slider container not found: ${sliderContainerSelector}`);
         return;
     }
@@ -58,11 +55,10 @@ function renderProductCards(sliderContainerSelector) {
         if (!sliderContainer.classList.contains(className)) { sliderContainer.classList.add(className); }
     });
     const products = getProducts();
-    if (!Array.isArray(products) || products.length === 0) { console.warn('No products found or invalid products data'); return; }
-    /**
-     * @param {Object}
-     * @returns {HTMLElement}
-     */
+    if (!Array.isArray(products) || products.length === 0) { 
+        console.warn('No products found or invalid products data'); return; 
+    }
+   
     function createProductCard(product) {
         const slide = document.createElement('div');
         slide.className = 'slide flex-shrink-0 w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-3 flex justify-center';
@@ -85,9 +81,8 @@ function renderProductCards(sliderContainerSelector) {
         description.textContent = product.description;
         const button = document.createElement('button');
         button.className = 'shadow-2xl mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1';
-        button.onclick = function () {
-            const modal = document.getElementById('products-modal');
-            if (modal) { modal.showModal(); document.body.classList.add('overflow-hidden'); }
+        button.onclick = function () { const modal = document.getElementById('products-modal'); 
+          if (modal) { modal.showModal(); document.body.classList.add('overflow-hidden'); }
         };
         const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         svg.setAttribute('class', 'w-4 h-4');
@@ -96,7 +91,6 @@ function renderProductCards(sliderContainerSelector) {
         const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         path.setAttribute('d', 'M10.293 15.707a1 1 0 001.414 0L17 10.414a1 1 0 00-1.414-1.414L11 13.586V3a1 1 0 10-2 0v10.586L4.414 9a1 1 0 00-1.414 1.414l5.293 5.293z');
         const buttonText = document.createTextNode('Ver mas');
-
         svg.appendChild(path);
         button.appendChild(svg);
         button.appendChild(buttonText);
@@ -129,3 +123,4 @@ document.addEventListener('DOMContentLoaded', function () {
     const productCardsManager = renderProductCards('.slider-container');
     window.productCardsManager = productCardsManager;
 });
+//
