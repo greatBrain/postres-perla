@@ -1,6 +1,6 @@
 const ALL_PRODUCTS = [
       {
-            title: "Pasteles personalizados",
+            title: "Pastel dulce de leche",
             description: "Personalizados / porciones",
             image: "./public/images/personal-cake.jpg",
             alt: "Postre 1",
@@ -18,7 +18,7 @@ const ALL_PRODUCTS = [
             ingredients: ["Frutas frescas", "Masa quebrada", "Crema pastelera"]
       },
       {
-            title: "Brownies",
+            title: "Brownie de chocolate",
             description: "Surtidos y deliciosos",
             image: "./public/images/brownies.jpg",
             alt: "Postre 2",
@@ -99,8 +99,9 @@ function renderProductCards(sliderContainerSelector) {
         svg.setAttribute('fill', 'currentColor');
         svg.setAttribute('viewBox', '0 0 20 20');
         const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        path.setAttribute('d', 'M10.293 15.707a1 1 0 001.414 0L17 10.414a1 1 0 00-1.414-1.414L11 13.586V3a1 1 0 10-2 0v10.586L4.414 9a1 1 0 00-1.414 1.414l5.293 5.293z');
-        const buttonText = document.createTextNode('Ver mas');
+        path.setAttribute('d', 'M5 15a1 1 0 001.707.707L15 7.414V13a1 1 0 102 0V5a1 1 0 00-1-1h-8a1 1 0 100 2h5.586L5.707 14.293A1 1 0 005 15z');
+        svg.appendChild(path);
+        const buttonText = document.createTextNode('Ver detalles');
         svg.appendChild(path);
         button.appendChild(svg);
         button.appendChild(buttonText);
