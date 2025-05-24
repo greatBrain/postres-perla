@@ -6,7 +6,6 @@
         initProductCarousel();
         initTestimonialCarousel();
     });
-
     function initSmoothScroll() {
         const anchors = document.querySelectorAll('a[href^="#"]');
 
@@ -25,7 +24,6 @@
             anchor.addEventListener('click', scrollToElement);
         });
     }
-
     function initProductCarousel() {
         const elements = {
             slider: document.querySelector(".slider-container"),
@@ -44,9 +42,6 @@
             slideWidth: elements.slides[0].offsetWidth,
             touchStartX: 0
         };
-        /**  Navigate to a specific slide 
-         *@param {number} index 
-        - The slide index to navigate to*/
         function goToSlide(index) {
             state.currentIndex = index;
             elements.slider.style.transform = `translateX(-${index * state.slideWidth}px)`;
@@ -63,17 +58,9 @@
             const newIndex = (state.currentIndex + 1) % state.totalSlides;
             goToSlide(newIndex);
         }
-        /** Handle touch start event
-         * @param {TouchEvent} e - The touch event
-         */
         function handleTouchStart(e) {
             state.touchStartX = e.touches[0].clientX;
         }
-
-        /**
-         * Handle touch end event
-         * @param {TouchEvent} e - The touch event
-         */
         function handleTouchEnd(e) {
             const endX = e.changedTouches[0].clientX;
             const diffX = state.touchStartX - endX;
@@ -99,7 +86,6 @@
         }
         initialize();
     }
-
     function initTestimonialCarousel() {
         const elements = {
             carousel: document.getElementById('testimonial-carousel'),
@@ -115,11 +101,6 @@
             autoplayInterval: null,
             autoplayDelay: 7000
         };
-
-        /**
-         * Navigate to a specific testimonial slide
-         * @param {number} slideIndex - The slide index to navigate to
-         */
         function goToTestimonialSlide(slideIndex) {
             state.currentSlide = slideIndex;
             const offset = -slideIndex * 100;
