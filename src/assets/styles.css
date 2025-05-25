@@ -1,192 +1,246 @@
 :root {
-    --white-bg: #fff;
-    --black-bg: #000;
-    --perla-soft-green: #e7f8cc;
-    --light-yellow: #FBE7C6;
-    --salmon-color: #FC8578;
-    --light-pink: #f5dff8;
-    --white-bone: #fffbf4;
-    --perla-yellow: #fefae9;
+	--white-bg: #fff;
+	--black-bg: #000;
+	--perla-soft-green: #e7f8cc;
+	--light-yellow: #FBE7C6;
+	--salmon-color: #FC8578;
+	--light-pink: #f5dff8;
+	--white-bone: #fffbf4;
+	--perla-yellow: #fefae9;
 }
 html {
-    scroll-behavior: smooth;
-    scrollbar-width: thin;
+	scroll-behavior: smooth;
+	scrollbar-width: thin;
 }
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    color: #333;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+	color: #333;
 }
 nav a {
-    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+	text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 .brand-logo {
-    display: flex;
-    font-family: "Caveat Brush", cursive;
-    font-weight: 400;
-    font-style: normal;
+	display: flex;
+	font-family: "Caveat Brush", cursive;
+	font-weight: 400;
+	font-style: normal;
 }
 /*Cupcake banner falling*/
 @keyframes dropBounce {
-    0% {
-        transform: translateY(-160px);
-        opacity: 0;
-    }
+	0% {
+		transform: translateY(-160px);
+		opacity: 0;
+	}
 
-    20% {
-        transform: translateY(-90px);
-        opacity: 0;
-    }
+	20% {
+		transform: translateY(-90px);
+		opacity: 0;
+	}
 
-    60% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+	60% {
+		transform: translateY(0);
+		opacity: 1;
+	}
 
-    75% {
-        transform: translateY(-14px);
-    }
+	75% {
+		transform: translateY(-14px);
+	}
 
-    90% {
-        transform: translateY(8px);
-    }
+	90% {
+		transform: translateY(8px);
+	}
 
-    100% {
-        transform: translateY(0);
-    }
+	100% {
+		transform: translateY(0);
+	}
 }
 .animate-drop-bounce {
-    animation: dropBounce 1.1s ease-out 1;
+	animation: dropBounce 1.1s ease-out 1;
 }
 /*End Cupcake banner falling*/
 /*Products cards sliders*/
 .catalog {
-    background-color: var(--perla-yellow);
-    display: flex;
-    flex-direction: column;
-    padding-top: 95px;
-    padding-bottom: 100px;
+	background-color: var(--perla-yellow);
+	display: flex;
+	flex-direction: column;
+	padding-top: 95px;
+	padding-bottom: 100px;
 }
 .catalog>.title {
-    font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
+	font-family: "Noto Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
 }
 .catalog .gallery {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 .slide {
-    padding-bottom: 70px;
+	padding-bottom: 70px;
 }
 .img-box .img-container {
-    width: 295px;
-    height: 325px;
-    overflow: hidden;
-    margin-right: 8px;
+	width: 295px;
+	height: 325px;
+	overflow: hidden;
+	margin-right: 8px;
 }
 .img-box .img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 .img-container:hover img {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    transition: 0.2s ease-in-out;
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: 0.2s ease-in-out;
 }
 /* Carousel */
 @media(width >=769px) and (width <=992px) {
-    .catalog .gallery {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-    }
-
-    .img-box .img-container {
-        width: 300px;
-        height: 292px;
-        overflow: hidden;
-        margin-right: 8px;
-    }
-
-    .img-box {
-        flex: 0 0 auto;
-        max-width: 300px;
-    }
+	.catalog .gallery {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: nowrap;
+		overflow-x: scroll;
+	}
+	.img-box .img-container {
+		width: 300px;
+		height: 292px;
+		overflow: hidden;
+		margin-right: 8px;
+	}
+	.img-box {
+		flex: 0 0 auto;
+		max-width: 300px;
+	}
 }
 @media(width<=768px) {
-    .catalog .gallery {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-    }
-    .img-box .img-container {
-        width: 300px;
-        height: 292px;
-        overflow: hidden;
-        margin-right: 8px;
-    }
-    .img-box {
-        flex: 0 0 auto;
-        max-width: 300px;
-    }
-    .testimonials {
-        height: auto;
-    }
-    #services {
-        height: auto;
-    }
+	.catalog .gallery {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: nowrap;
+		overflow-x: scroll;
+	}
+
+	.img-box .img-container {
+		width: 300px;
+		height: 292px;
+		overflow: hidden;
+		margin-right: 8px;
+	}
+
+	.img-box {
+		flex: 0 0 auto;
+		max-width: 300px;
+	}
+
+	.testimonials {
+		height: auto;
+	}
+
+	#services {
+		height: auto;
+	}
 }
 /*End Products cards sliders*/
 .testimonials #testimonialas-container>.title {
-    font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
+	font-family: "Noto Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
 }
 /* Modal animation */
 @keyframes shake {
-    0% {
-        transform: translateX(0);
-        opacity: 0;
-    }
-    25% {
-        transform: translateX(-20px);
-    }
-    50% {
-        transform: translateX(20px);
-    }
-    75% {
-        transform: translateX(-25px);
-    }
-    100% {
-        transform: translateX(0);
-    }
+	0% {
+		transform: translateX(0);
+		opacity: 0;
+	}
+
+	25% {
+		transform: translateX(-20px);
+	}
+
+	50% {
+		transform: translateX(20px);
+	}
+
+	75% {
+		transform: translateX(-25px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
 }
 .animate-shake-on-open[open] {
-    animation: shake 0.5s ease-in-out;
+	animation: shake 0.5s ease-in-out;
 }
 @keyframes fade-in {
-    from{
-        opacity: 1;
-    }to{
-        opacity: 0;
-    }
+	from {
+		opacity: 1;
+	} to {
+		opacity: 0;
+	}
 }
 .animate-fade-in:not([open]) {
-    animation: fade-in 0.11s ease-out forwards;
+	animation: fade-in 0.11s ease-out forwards;
 }
-
 /* End modal animation */
+/* En tu archivo CSS global o dentro de una etiqueta <style> */
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
+}
+.scrollbar-hide {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.scrollbar-show::-webkit-scrollbar {
+	height: 8px;
+}
+.scrollbar-show::-webkit-scrollbar-thumb {
+	background-color: #ec4899;
+	border-radius: 9999px;
+}
+#services-cards-father-container {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+	scrollbar-width: thin;
+	scrollbar-color: #ec4899 #fce7f3;
+	scroll-snap-type: x mandatory;
+}
+#services-cards-father-container::-webkit-scrollbar {
+	height: 8px;
+	transition: opacity 0.3s ease-in-out;
+}
+#services-cards-father-container::-webkit-scrollbar-track {
+	background: #fce7f3;
+	border-radius: 4px;
+}
+#services-cards-father-container::-webkit-scrollbar-thumb {
+	background-color: #ec4899;
+	border-radius: 4px;
+	border: 2px solid #fce7f3;
+}
+@media (max-width: 992px) {
+  #services-cards-father-container::-webkit-scrollbar {
+    display: none;
+  }
+ #services-cards-father-container {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
