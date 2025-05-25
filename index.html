@@ -100,13 +100,14 @@
             </div>
          </div>
       </nav>
-      <section class="banner relative w-full h-screen bg-[url('public/images/banner-bg-movil.jpg')]
-         xl:bg-[url('public/images/banner-bg.jpg')]
-         lg:bg-[url('public/images/banner-bg.jpg')]
-         md:bg-[url('public/images/banner-bg.jpg')]
-         sm:bg-[url('public/images/banner-bg-movil.jpg')]
-         xs:bg-[url('public/images/banner-bg-movil.jpg')]
-         bg-bottom bg-cover bg-no-repeat overflow-hidden">
+      <section class="banner relative w-full h-screen parallax-bg
+            bg-[url('public/images/banner-bg-movil.jpg')]
+            xl:bg-[url('public/images/banner-bg.jpg')]
+            lg:bg-[url('public/images/banner-bg.jpg')]
+            md:bg-[url('public/images/banner-bg.jpg')]
+            sm:bg-[url('public/images/banner-bg-movil.jpg')]
+            xs:bg-[url('public/images/banner-bg-movil.jpg')]
+            bg-bottom bg-cover bg-no-repeat overflow-hidden">
          <div class="relative h-full transition-transform duration-500 ease-in-out" id="slider-container">
             <div class="absolute w-full h-full overflow-hidden">
                <div class="flex h-full items-center justify-center md:justify-start w-full px-4 md:px-20">
@@ -177,7 +178,7 @@
                   <h2 class="text-gray-700 text-4xl sm:text-5xl md:text-6xl leading-tight ubuntu-font-bold pb-8 text-center md:text-left">
                   Tus ideas, nuestras manos
                   <h2>
-                  <p class="text-gray-700 text-xl sm:text-2xl md:text-3xl leading-relaxed ubuntu-font-regular">
+                  <p class="text-gray-700 text-xl sm:text-xl md:text-2xl ubuntu-font-regular">
                      Nos especializamos en hacer de tus celebraciones algo único.
                      <br class="hidden sm:inline">
                      Todo lo que ofrecemos está pensado para acompañar tus momentos importantes con estilo, sabor y dedicación.
@@ -198,8 +199,8 @@
                group-hover:ring-4 group-hover:ring-pink-400 group-hover:ring-offset-2
                transition-all duration-300 ease-in-out transform hover:scale-105
                flex-shrink-0">
-               <div class="absolute inset-0 bg-black/75 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-20 rounded-2xl flex items-center justify-center p-4">
-                  <p class="text-white/100 text-base ubuntu-font">Descubre nuestras mesas decoradas con dulces únicos para tus celebraciones especiales.</p>
+               <div class="absolute inset-0 bg-white/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-20 rounded-2xl flex items-center justify-center p-4">
+                  <p class="text-pink-500 text-base ubuntu-font-bold">Descubre nuestras mesas decoradas con dulces únicos para tus celebraciones especiales.</p>
                </div>
                <img src="public/icons/sweet-table-service.svg" alt="Mesas de Dulces"
                   class="w-20 sm:w-28 h-20 sm:h-28 mb-4 filter drop-shadow-md group-hover:opacity-0 transition-opacity duration-300 z-10">
@@ -218,8 +219,8 @@
                group-hover:ring-4 group-hover:ring-pink-400 group-hover:ring-offset-2
                transition-all duration-300 ease-in-out transform hover:scale-105
                flex-shrink-0">
-               <div class="absolute inset-0 bg-black/75 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-20 rounded-2xl flex items-center justify-center p-4">
-                  <p class="text-white/100 text-base ubuntu-font">Ofrecemos experiencias personalizadas para todo tipo de eventos con un toque dulce y único.</p>
+               <div class="absolute inset-0 bg-white/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-20 rounded-2xl flex items-center justify-center p-4">
+                  <p class="text-pink-500 text-base ubuntu-font-bold">Ofrecemos experiencias personalizadas para todo tipo de eventos con un toque dulce y único.</p>
                </div>
                <img src="public/icons/whole-cake-service.svg" alt="Pastelería"
                   class="w-20 sm:w-28 h-20 sm:h-28 mb-4 filter drop-shadow-md group-hover:opacity-0 transition-opacity duration-300 z-10">
@@ -238,8 +239,8 @@
                group-hover:ring-4 group-hover:ring-pink-400 group-hover:ring-offset-2
                transition-all duration-300 ease-in-out transform hover:scale-105
                flex-shrink-0">
-               <div class="absolute inset-0 bg-black/75 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-20 rounded-2xl flex items-center justify-center p-4">
-                  <p class="text-white/100 text-base ubuntu-font">Deléitate con postres artesanales perfectos para cualquier ocasión o evento especial.</p>
+               <div class="absolute inset-0 bg-white/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-20 rounded-2xl flex items-center justify-center p-4">
+                  <p class="text-pink-500 text-base ubuntu-font-bold">Deléitate con postres artesanales perfectos para cualquier ocasión o evento especial.</p>
                </div>
                <img src="public/icons/desserts-service.svg" alt="Postres"
                   class="w-20 sm:w-28 h-20 sm:h-28 mb-4 filter drop-shadow-md group-hover:opacity-0 transition-opacity duration-300 z-10">
@@ -258,13 +259,21 @@
                group-hover:ring-4 group-hover:ring-pink-400 group-hover:ring-offset-2
                transition-all duration-300 ease-in-out transform hover:scale-105
                flex-shrink-0">
-               <div class="absolute inset-0 bg-black/75 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-20 rounded-2xl flex items-center justify-center p-4">
-                  <p class="text-white/100 text-base ubuntu-font">
-                     <a href="#mobile-shop" class="text-yellow-300">Ver información detallada debajo</a>
-                  </p>
+               <div class="absolute inset-0 bg-white/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-20 rounded-2xl flex items-center justify-center p-4">
+                   <a href="#mobile-shop">
+                       <button class="relative bg-pink-300 text-gray-800 text-sm font-semibold py-1.5 px-4 sm:py-2 sm:px-6
+                               rounded-full shadow-md transition duration-500 ease-in-out
+                               hover:scale-95 before:ease-in-out hover:before:w-full
+                               hover:text-gray-900 hover:shadow-3xl">
+                          <svg class="w-3.5 h-3.5 inline-block ml-1 relative z-10" fill="none"
+                             stroke="currentColor" viewBox="0 0 24 24">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
+                          </svg>
+                          <span class="relative z-10">Ver detalles aqui</span>
+                       </button>
+                   </a>
                </div>
-               <img src="public/icons/candy-shop.svg" alt="Unidad Móvil"
-                  class="w-20 sm:w-28 h-20 sm:h-28 mb-4 filter drop-shadow-md group-hover:opacity-0 transition-opacity duration-300 z-10">
+               <img src="public/icons/candy-shop.svg" alt="Unidad Móvil" class="w-20 sm:w-28 h-20 sm:h-28 mb-4 filter drop-shadow-md group-hover:opacity-0 transition-opacity duration-300 z-10">
                <p class="text-pink-500 text-xl sm:text-xl ubuntu-font-bold group-hover:opacity-0 transition-opacity duration-300 z-10">
                   Pastelería móvil
                </p>
@@ -283,31 +292,18 @@
                   <h2 class="text-gray-700 text-4xl sm:text-5xl md:text-6xl leading-tight ubuntu-font-bold pb-8 text-start text-nowrap md:text-left">
                   Postres sobre ruedas
                   <h2>
-                  <p class="text-xl text-gray-700 leading-relaxed">
+                  <p class="text-xl sm:text-xl md:text-2xl ubuntu-font-regular">
                      Hemos decidido ir más allá de lo convencional: tu no solo viene a nosotros,
                      <strong>¡nosotros vamos también vamos donde estas!</strong>
                   </p>
-                  <p class="text-xl text-gray-700 leading-relaxed">
+                  <br>
+                  <p class="text-lg sm:text-xl md:text-xl ubuntu-font-regular">
                      ¡Llevamos lo mejor de nuestro catálogo a donde estés, incluyendo tus eventos! Podemos hacer
                      presencia en esa actividad
                      tan especial para ti y que disfrutes de una experiencia deliciosa que combina diseño,
                      creatividad, calidad y ese toque
                      artesanal que nos hace únicos. Escríbenos vía WhatsApp y agendemos la fecha.
                   </p>
-                  <!-- <button class="group relative mt-5 bg-green-500 text-white font-semibold py-2 px-5 sm:py-3 sm:px-8
-                     rounded-full shadow-md shadow-2xl transition-all duration-300 ease-in-out
-                     hover:translate-y-[-2px] hover:shadow-xl
-                     focus:outline-none overflow-hidden">
-                     <div class="flex items-center relative z-10">
-                         <img src="public/icons/location.png" class="w-6 h-6 mr-2" alt="Icono ubicación">
-                         <span><a href="#">Ver ubicaciones</a></span>
-                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
-                             class="h-5 w-5 text-white ml-2">
-                             <path fill-rule="evenodd" clip-rule="evenodd"
-                                 d="M8.293 15.707a1 1 0 0 1 0-1.414L13.586 9H9a1 1 0 1 1 0-2h7a1 1 0 0 1 1 1v7a1 1 0 1 1-2 0v-4.586l-5.293 5.293a1 1 0 0 1-1.414 0z" />
-                         </svg>
-                     </div>
-                     </button> -->
                </div>
             </div>
          </div>
@@ -319,7 +315,7 @@
                <h2 id="testimonials-title" class="text-[#C84C7E] text-5xl md:text-5xl ubuntu-font-bold">
                   ¿Qué opinan quienes confian en nosotros?
                </h2>
-               <p class="text-gray-800 mt-4 text-xl max-w-xl mx-auto">
+               <p class="text-gray-800 mt-4 max-w-xl mx-auto text-lg sm:text-xl md:text-xl ubuntu-font-regular">
                   Testimonios auténticos que destacan el compromiso, la calidad y el impacto de nuestro trabajo en
                   nuestros
                   clientes.
@@ -397,7 +393,7 @@
          <div class="container mx-auto px-6">
             <div class="text-left mb-12">
                <h2 class="text-center md:text-left text-3xl md:text-5xl text-gray-700 drop-shadow-md ubuntu-font-bold">Contáctanos</h2>
-               <p class="mt-4 text-xl text-black-700">
+               <p class="mt-4 text-gray-700 text-lg sm:text-xl md:text-2xl ubuntu-font-regular">
                   ¿Tienes un antojo, una consulta o una idea? ¡Estamos listos para escucharte!
                </p>
             </div>
@@ -613,4 +609,14 @@
    <script src="src/scripts/main.js"></script>
    <script src="src/scripts/products.js"></script>
    <script src="src/scripts/services.js"></script>
+   <script>
+      document.addEventListener('scroll', function () {
+        const scrolled = window.scrollY;
+        const mainBanner = document.querySelector('.parallax-bg');
+        if (mainBanner) {
+          // Mantenemos la alineación X en center, modificamos solo Y
+          mainBanner.style.backgroundPosition = `center calc(100% + ${scrolled * 0.4}px)`;
+        }
+      });
+   </script>
 </html>
