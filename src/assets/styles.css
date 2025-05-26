@@ -129,23 +129,19 @@ nav a {
 		flex-wrap: nowrap;
 		overflow-x: scroll;
 	}
-
 	.img-box .img-container {
 		width: 300px;
 		height: 292px;
 		overflow: hidden;
 		margin-right: 8px;
 	}
-
 	.img-box {
 		flex: 0 0 auto;
 		max-width: 300px;
 	}
-
 	.testimonials {
 		height: auto;
 	}
-
 	#services {
 		height: auto;
 	}
@@ -190,12 +186,10 @@ nav a {
 	} to {
 		opacity: 0;
 	}
-}
-.animate-fade-in:not([open]) {
+}.animate-fade-in:not([open]) {
 	animation: fade-in 0.11s ease-out forwards;
 }
 /* End modal animation */
-/* En tu archivo CSS global o dentro de una etiqueta <style> */
 .scrollbar-hide::-webkit-scrollbar {
 	display: none;
 }
@@ -246,7 +240,7 @@ nav a {
     display: none;
   }
  #services-cards-father-container {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
