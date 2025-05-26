@@ -72,7 +72,6 @@ function renderProductCards(sliderContainerSelector) {
     console.warn('No products found or invalid products data');
     return;
   }
-
   function createProductCard(product) {
     const slide = document.createElement('div');
     slide.className = 'slide flex-shrink-0 w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-3 flex justify-center';
@@ -118,7 +117,6 @@ function renderProductCards(sliderContainerSelector) {
     slide.appendChild(card);
     return slide;
   }
-
   function renderCards() {
     sliderContainer.innerHTML = '';
     const fragment = document.createDocumentFragment();
@@ -137,7 +135,6 @@ function renderProductCards(sliderContainerSelector) {
     }
   };
 }
-
 // --- 4. Nueva Función para Actualizar y Mostrar el Modal ---
 function showProductModal(productData) {
   const modal = document.getElementById('products-modal');
@@ -145,14 +142,12 @@ function showProductModal(productData) {
     console.error('Modal element not found.');
     return;
   }
-
   // Obtener referencias a los elementos dentro del modal
   const modalTitle = document.getElementById('modal-product-title');
   const modalDescription = document.getElementById('modal-product-description');
   const modalIngredients = document.getElementById('modal-product-ingredients');
   const modalPrice = document.getElementById('modal-product-price');
   const modalImage = document.getElementById('modal-product-image');
-
   // Rellenar el modal con la información del producto
   if (modalTitle) modalTitle.textContent = productData.title || 'Información no disponible';
   if (modalDescription) modalDescription.textContent = productData.description || 'Descripción no disponible.';
@@ -161,10 +156,8 @@ function showProductModal(productData) {
     modalImage.src = productData.image || '';
     modalImage.alt = productData.alt || productData.title || 'Imagen del producto';
   }
-
-  // Manejar los ingredientes (si existen)
   if (modalIngredients) {
-    modalIngredients.innerHTML = ''; // Limpiar cualquier ingrediente anterior
+    modalIngredients.innerHTML = '';
     if (productData.ingredients && Array.isArray(productData.ingredients) && productData.ingredients.length > 0) {
       productData.ingredients.forEach(ingredient => {
         const li = document.createElement('li');
@@ -172,9 +165,8 @@ function showProductModal(productData) {
         modalIngredients.appendChild(li);
       });
     } else {
-      // Opcional: mostrar un mensaje si no hay ingredientes
       const li = document.createElement('li');
-      li.textContent = 'No se listan ingredientes específicos.';
+      li.textContent = 'Sin ingredientes específicos.';
       modalIngredients.appendChild(li);
     }
   }
@@ -196,7 +188,6 @@ function renderProductCarousel() {
     console.error('Missing required DOM elements for product carousel rendering.');
     return;
   }
-
   sliderContainer.innerHTML = '';
   bulletContainer.innerHTML = '';
 
@@ -213,7 +204,6 @@ function renderProductCarousel() {
     bullet.dataset.index = index;
     bulletContainer.appendChild(bullet);
   });
-
   initProductCarousel(sliderContainer, slides, bulletContainer, prevBtn, nextBtn);
 }
 
