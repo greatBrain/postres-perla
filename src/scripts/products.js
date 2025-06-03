@@ -1,11 +1,21 @@
-const ALL_PRODUCTS = [{
-    title: "Pastel dulce de leche",
-    description: "Personalizados / porciones",
+const ALL_PRODUCTS = [
+  {
+    title: "Pasteles personalizados",
+    description: "A tu gusto y estilo",
     image: "./public/images/personal-cake.jpg",
-    alt: "Postre 1",
+    alt: "Pasteles personalizados",
     href: "#",
-    price: "RD$350.00",
-    ingredients: ["Frutas frescas", "Masa quebrada", "Crema pastelera"]
+    price: "RD$1,000.00",
+    ingredients: ["Vainilla", "Chocolate", "Dulce de leche"]
+  },
+  {
+    title: "Pasteles por porciones",
+    description: "Partes individuales",
+    image: "./public/images/portion-cake.jpg",
+    alt: "Pasteles por porciones",
+    href: "#",
+    price: "RD$250.00",
+    ingredients: ["Vainilla", "Chocolate", "Dulce de leche"]
   },
   {
     title: "Pie de frutas",
@@ -26,7 +36,7 @@ const ALL_PRODUCTS = [{
     ingredients: ["Frutas frescas", "Masa quebrada", "Crema pastelera"]
   },
   {
-    title: "Pudding de pan",
+    title: "Pudín de pan",
     description: "Surtidos y deliciosos",
     image: "./public/images/pudding.jpg",
     alt: "Postre 2",
@@ -48,7 +58,6 @@ const ALL_PRODUCTS = [{
 function getProducts() {
   return ALL_PRODUCTS;
 }
-
 function renderProductCards(sliderContainerSelector) {
   const sliderContainer = document.querySelector(sliderContainerSelector);
   if (!sliderContainer) {

@@ -8,7 +8,7 @@
       <meta name="keywords" content="pastelería, postres, postres artesanales, dulces, Santo Domingo, repostería, tortas, bizcochos, pasteles, pudding, flan">
       <meta name="author" content="Postres Perla">
       <!-- Open Graph para compartir en redes -->
-      <meta property="og:title" content="Postres Perla | Un toque de dulzura">
+      <meta property="og:title" content="Postres Perla | Un toque de dulzura | Pasteleria artesanal">
       <meta property="og:description" content="Delicias hechas con amor. Mira nuestro catálogo.">
       <meta property="og:image" content="https://tusitio.com/public/images/og-image.jpg">
       <meta property="og:type" content="website">
@@ -139,21 +139,25 @@
          </div>
       </section>
       <section class="catalog flex justify-center items-center" id="catalog">
-         <div class="container py-8">
-            <div class="catalog-text mb-12 text-center">
+         <div class="container py-5">
+            <div class="catalog-text mb-20 text-center">
                <h2	class="text-gray-700 text-4xl md:text-6xl sm:text-5xl xs:text-3xl lg:text-5xl xl:text-5xl ubuntu-font-bold title">
                   Explora nuestra selección
                </h2>
             </div>
+            <!--
+            <div class="catalog-text mb-15 text-center">
+                <h3 class="text-gray-700 text-3xl md:text-3xl sm:text-3xl xs:text-3xl lg:text-3xl xl:text-3xl ubuntu-font-bold">
+                    Pasteles
+                </h3>
+            </div>-->
             <div class="relative overflow-hidden flex justify-center items-center ">
                <div class="slider-container flex transition-transform duration-500 ease-in-out w-full">
                </div>
-               <button id="prevBtn"
-                  class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center hover:bg-yellow-100 z-10">
+               <button id="prevBtn" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center hover:bg-yellow-100 z-10">
                &#10094;
                </button>
-               <button id="nextBtn"
-                  class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center hover:bg-yellow-100 z-10">
+               <button id="nextBtn" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center hover:bg-yellow-100 z-10">
                &#10095;
                </button>
                <div id="carousel-bullets-container"
@@ -526,14 +530,20 @@
                <div class="w-full sm:w-80 h-1 bg-pink-400 mb-4"></div>
                <p class="mb-2 lato-bold text-lg text-wrap">Descripción del producto:</p>
                <p id="modal-product-description" class="text-gray-700 mb-4"></p>
-               <p class="mb-2 text-lg lato-bold">Ingredientes:</p>
+               <p class="mb-2 text-lg lato-bold">Posibles ingredientes :</p>
                <ul id="modal-product-ingredients" class="list-disc list-inside text-gray-700 mb-5">
                </ul>
+<<<<<<< HEAD
+               <p class="mb-2 font-bold text-lg">Precios a partir de:</p>
+               <p id="modal-product-price" class="mb-1 font-bold text-3xl sm:text-4xl lato-black bg-yellow-300 p-2 inline-block mb-6"></p>
+               <button type="button" class="flex text-gray-800 text-md lato-bold hover:text-white
+=======
                <p id="modal-product-price"
                   class="mb-1 font-bold text-3xl sm:text-4xl lato-black bg-yellow-300 p-2 inline-block"></p>
                <p class="mb-6 text-semibold">*Los precios pueden variar según el pedido.</p>
                <a id="whatsapp-link" target="_blank">
                   <button type="button" id="whatsapp-button" class="flex text-gray-800 text-md lato-bold hover:text-white
+>>>>>>> be33a53f5184b5b9191ff503bcdcb7a543b04ed6
                                   border border-gray-700 hover:bg-green-600 hover:border-green-600
                                   focus:ring-5 focus:outline-none focus:ring-green-300
                                   font-bold rounded-lg px-4 py-2.5
