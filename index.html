@@ -390,7 +390,7 @@
             </div>
          </div>
       </section>
-      <section id="contact" class="py-18 md:py-30  bg-yellow-200">
+      <section id="contact" class="py-18 md:py-30 bg-yellow-200 bg-[url('public/images/many-sweets.png')] bg-contain">
          <div class="container mx-auto px-6">
             <div class="text-left mb-12">
                <h2 class="text-center md:text-left text-3xl md:text-5xl text-gray-700 drop-shadow-md ubuntu-font-bold">Contáctanos</h2>
@@ -525,17 +525,25 @@
                &times;
                </button>
             </form>
-            <div class="w-full md:w-1/2 mb-6 md:mb-0 md:pr-6">
-               <h2 id="modal-product-title" class="text-2xl sm:text-3xl font-bold lato-bold mb-2 text-wrap"></h2>
+            <div class="w-full md:w-1/2 mb-6 md:mb-0 md:pr-6 max-h-[435px] overflow-y-auto">
+               <h2 id="modal-product-title" class="text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-bold lato-bold mb-2 text-wrap"></h2>
                <div class="w-full sm:w-80 h-1 bg-pink-400 mb-4"></div>
                <p class="mb-2 lato-bold text-lg text-wrap">Descripción del producto:</p>
                <p id="modal-product-description" class="text-gray-700 mb-4"></p>
                <p class="mb-2 text-lg lato-bold">Posibles ingredientes :</p>
                <ul id="modal-product-ingredients" class="list-disc list-inside text-gray-700 mb-5">
                </ul>
+<<<<<<< HEAD
                <p class="mb-2 font-bold text-lg">Precios a partir de:</p>
                <p id="modal-product-price" class="mb-1 font-bold text-3xl sm:text-4xl lato-black bg-yellow-300 p-2 inline-block mb-6"></p>
                <button type="button" class="flex text-gray-800 text-md lato-bold hover:text-white
+=======
+               <p id="modal-product-price"
+                  class="mb-1 font-bold text-3xl sm:text-4xl lato-black bg-yellow-300 p-2 inline-block"></p>
+               <p class="mb-6 text-semibold">*Los precios pueden variar según el pedido.</p>
+               <a href="https://wa.me/8496236350?text=HOLA" target="_blank">
+                  <button type="button" class="flex text-gray-800 text-md lato-bold hover:text-white
+>>>>>>> be33a53f5184b5b9191ff503bcdcb7a543b04ed6
                   border border-gray-700 hover:bg-green-600 hover:border-green-600
                   focus:ring-5 focus:outline-none focus:ring-green-300
                   font-bold rounded-lg px-4 py-2.5
@@ -543,19 +551,16 @@
                   dark:border-green-500 dark:text-green-500
                   dark:hover:text-white dark:hover:bg-green-600
                   dark:focus:ring-green-700">
-                  <svg class="w-5 h-5 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                     viewBox="0 0 18 21">
-                     <path
-                        d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 3 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" />
+                  <svg class="w-5 h-5 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 21">
+                     <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 3 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" />
                   </svg>
                   Pídelo por Whatsapp
                </button>
+               </a>
             </div>
             <div class="w-full md:w-1/2 flex items-center justify-center mt-6 md:mt-0">
-               <div
-                  class="w-full max-w-[485px] h-[300px] sm:h-[360px] md:h-[420px] bg-white rounded-xl flex items-center justify-center overflow-hidden">
-                  <img id="modal-product-image" src="" alt="Producto"
-                     class="w-full h-full object-cover rounded-lg transition transform duration-400 ease-in-out hover:scale-110" />
+               <div class="w-full max-w-[485px] h-[300px] sm:h-[360px] md:h-[420px] bg-white rounded-xl flex items-center justify-center overflow-hidden">
+                  <img id="modal-product-image" src="" alt="Producto" class="w-full h-full object-cover rounded-lg transition transform duration-400 ease-in-out hover:scale-110" />
                </div>
             </div>
          </div>
