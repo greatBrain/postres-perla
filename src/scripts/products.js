@@ -144,27 +144,33 @@ function renderProductCards(sliderContainerSelector) {
     }
   };
 }
-// --- 4. Nueva Función para Actualizar y Mostrar el Modal ---
+
 function showProductModal(productData) {
   const modal = document.getElementById('products-modal');
-  if (!modal) {
-    console.error('Modal element not found.');
-    return;
+  if (!modal){
+     console.error('Modal element not found.');
+     return;
   }
-  // Obtener referencias a los elementos dentro del modal
   const modalTitle = document.getElementById('modal-product-title');
   const modalDescription = document.getElementById('modal-product-description');
   const modalIngredients = document.getElementById('modal-product-ingredients');
   const modalPrice = document.getElementById('modal-product-price');
   const modalImage = document.getElementById('modal-product-image');
-  // Rellenar el modal con la información del producto
-  if (modalTitle) modalTitle.textContent = productData.title || 'Información no disponible';
-  if (modalDescription) modalDescription.textContent = productData.description || 'Descripción no disponible.';
-  if (modalPrice) modalPrice.textContent = productData.price || 'Precio no disponible';
-  if (modalImage) {
-    modalImage.src = productData.image || '';
-    modalImage.alt = productData.alt || productData.title || 'Imagen del producto';
+  const whatsappOrderLink = document.getElementById('whatsapp-link');
+
+  const title = productData.title || 'Información no disponible';
+  const description = productData.description || 'Descripción no disponible.';
+  const price = productData.price || 'Precio no disponible';
+  const imageUrl = productData.image || '';
+
+  if (modalTitle) modalTitle.textContent = title;
+  if (modalDescription) modalDescription.textContent = description;
+  if (modalPrice) modalPrice.textContent = price;
+  if (modalImage){
+    modalImage.src = imageUrl;
+    modalImage.alt = productData.alt || title || 'Imagen del producto';
   }
+
   if (modalIngredients) {
     modalIngredients.innerHTML = '';
     if (productData.ingredients && Array.isArray(productData.ingredients) && productData.ingredients.length > 0) {
@@ -179,15 +185,28 @@ function showProductModal(productData) {
       modalIngredients.appendChild(li);
     }
   }
-  // Mostrar el modal y deshabilitar el scroll del body
-  modal.showModal();
-  document.body.classList.add('overflow-hidden');
-}
-// --- 5. Función Principal para Renderizar y Activar el Carrusel ---
-// Mantenemos esta función igual, ya que su propósito es orquestar la renderización.
-function renderProductCarousel() {
-  const products = getProducts();
+  const WHATSAPPURL = sendWhatsappMessage(title, price, imageUrl);
 
+  // Actualizar el link del botón
+  if (whatsappOrderLink){
+     whatsappOrderLink.href = WHATSAPPURL;
+  } else {
+    console.warn('No se encontró el enlace de WhatsApp.');
+  }  
+  modal.showModal();
+  document.body.classList.add('overflow-hidden');//bloquea el scroll del body
+}
+
+function sendWhatsappMessage(title, price, imageUrl){
+  const PHONENUMBER = '8296469680';
+  const BASEMESSAGE = `Hola Postres Perla 😊, me interesa este producto:\n\n*${title}*\n${price}\n${imageUrl}`;
+  const ENCODEDMESSAGE = encodeURIComponent(BASEMESSAGE);
+  const WHATSAPPURL = `https://wa.me/${PHONENUMBER}?text=${ENCODEDMESSAGE}`;  
+  return WHATSAPPURL;
+}
+
+function renderProductCarousel(){
+  const products = getProducts();
   const sliderContainer = document.getElementById('product-slider-container');
   const bulletContainer = document.getElementById('carousel-bullets-container');
   const prevBtn = document.getElementById('prevBtn');
@@ -215,7 +234,6 @@ function renderProductCarousel() {
   });
   initProductCarousel(sliderContainer, slides, bulletContainer, prevBtn, nextBtn);
 }
-
 document.addEventListener('DOMContentLoaded', function () {
   const productCardsManager = renderProductCards('.slider-container');
   window.productCardsManager = productCardsManager;
