@@ -1,5 +1,6 @@
 const ALL_PRODUCTS = [
   {
+    category:"pasteles",
     title: "Pasteles personalizados",
     description: "A tu gusto y estilo",
     image: "./public/images/personal-cake.jpg",
@@ -9,6 +10,7 @@ const ALL_PRODUCTS = [
     ingredients: ["Vainilla", "Chocolate", "Dulce de leche"]
   },
   {
+    category:"pasteles",
     title: "Pasteles por porciones",
     description: "Partes individuales",
     image: "./public/images/portion-cake.jpg",
@@ -18,7 +20,18 @@ const ALL_PRODUCTS = [
     ingredients: ["Vainilla", "Chocolate", "Dulce de leche"]
   },
   {
-    title: "Pie de frutas",
+    category:"pies-frutas",
+    title: "Pie de pina",
+    description: "Pina",
+    image: "./public/images/pie.jpg",
+    alt: "Postre 2",
+    href: "#",
+    price: "RD$350.00",
+    ingredients: ["Frutas frescas", "Masa quebrada", "Crema pastelera"]
+  },
+  {
+    category:"pies-frutas",
+    title: "Pie frutos del bosque",
     description: "Fresas, moras",
     image: "./public/images/pie.jpg",
     alt: "Postre 2",
@@ -27,15 +40,7 @@ const ALL_PRODUCTS = [
     ingredients: ["Frutas frescas", "Masa quebrada", "Crema pastelera"]
   },
   {
-    title: "Brownie de chocolate",
-    description: "Surtidos y deliciosos",
-    image: "./public/images/brownies.jpg",
-    alt: "Postre 2",
-    href: "#",
-    price: "RD$350.00",
-    ingredients: ["Frutas frescas", "Masa quebrada", "Crema pastelera"]
-  },
-  {
+    category:"especialidades al horno",
     title: "Pudín de pan",
     description: "Surtidos y deliciosos",
     image: "./public/images/pudding.jpg",
@@ -45,7 +50,28 @@ const ALL_PRODUCTS = [
     ingredients: ["Frutas frescas", "Masa quebrada", "Crema pastelera"]
   },
   {
-    title: "Mousse de frutas",
+    category:"especialidades al horno",
+    title: "Brownie de chocolate",
+    description: "Surtidos y deliciosos",
+    image: "./public/images/brownies.jpg",
+    alt: "Postre 2",
+    href: "#",
+    price: "RD$350.00",
+    ingredients: ["Frutas frescas", "Masa quebrada", "Crema pastelera"]
+  },
+  {
+    category:"mousses",
+    title: "Mousse de fresas",
+    description: "Surtidos y deliciosos",
+    image: "./public/images/mousse.jpg",
+    alt: "Postre 2",
+    href: "#",
+    price: "RD$350.00",
+    ingredients: ["Frutas frescas", "Masa quebrada", "Crema pastelera"]
+  },
+  {
+    category:"mousses",
+    title: "Mousse de chinola",
     description: "Surtidos y deliciosos",
     image: "./public/images/mousse.jpg",
     alt: "Postre 2",
@@ -118,7 +144,7 @@ function renderProductCards(sliderContainerSelector) {
     button.appendChild(svg);
     button.appendChild(buttonText);
     content.appendChild(titleLink);
-    content.appendChild(description);
+    //content.appendChild(description);
     content.appendChild(button);
     imgContainer.appendChild(img);
     card.appendChild(imgContainer);
@@ -192,7 +218,7 @@ function showProductModal(productData) {
      whatsappOrderLink.href = WHATSAPPURL;
   } else {
     console.warn('No se encontró el enlace de WhatsApp.');
-  }  
+  }
   modal.showModal();
   document.body.classList.add('overflow-hidden');//bloquea el scroll del body
 }
@@ -201,7 +227,7 @@ function sendWhatsappMessage(title, price, imageUrl){
   const PHONENUMBER = '8296469680';
   const BASEMESSAGE = `Hola Postres Perla 😊, me interesa este producto:\n\n*${title}*\n${price}\n${imageUrl}`;
   const ENCODEDMESSAGE = encodeURIComponent(BASEMESSAGE);
-  const WHATSAPPURL = `https://wa.me/${PHONENUMBER}?text=${ENCODEDMESSAGE}`;  
+  const WHATSAPPURL = `https://wa.me/${PHONENUMBER}?text=${ENCODEDMESSAGE}`;
   return WHATSAPPURL;
 }
 
