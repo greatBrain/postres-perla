@@ -167,35 +167,33 @@
       <section class="catalog flex justify-center items-center" id="catalog">
          <div class="container py-5">
             <div class="catalog-text mb-20 text-center">
-               <h2	class="text-gray-700 text-4xl md:text-6xl sm:text-5xl xs:text-3xl lg:text-5xl xl:text-5xl ubuntu-font-bold title">
+               <h2	class="text-gray-700 text-5xl md:text-5xl sm:text-5xl xs:text-3xl lg:text-5xl xl:text-5xl ubuntu-font-bold title">
                   Explora nuestra selección
                </h2>
             </div>
             <!-- tabs -->
-            <div class="flex justify-center items-center border-b border-gray-200 dark:border-gray-700 pb-10">
-               <ul class="flex flex-nowrap overflow-x-auto -mb-px text-lg font-semibold text-center text-gray-700 dark:text-gray-400">
-                  <li class="me-2">
-                     <a href="#" class="text-nowrap inline-flex items-center justify-center p-4 border-b-2 border-transparent rounded-t-lg active hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
-                        Pasteles
-                     </a>
-                  </li>
-                  <li class="me-2">
-                     <a href="#" class="text-nowrap inline-flex items-center justify-center p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg dark:text-blue-500 dark:border-blue-500 group" aria-current="page">
-                        Pies
-                     </a>
-                  </li>
-                  <li class="me-2">
-                     <a href="#" class="text-nowrap inline-flex items-center justify-center p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
-                        Postres frios
-                     </a>
-                  </li>
-                  <li class="me-2">
-                     <a href="#" class="text-nowrap inline-flex items-center justify-center p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
-                        Postres al horno
-                     </a>
-                  </li>
+            <div class="w-full border-b border-gray-200 dark:border-gray-700 pb-6">
+               <ul class="flex justify-center items-center overflow-x-auto scroll-smooth snap-x snap-mandatory px-4 gap-2 pb-8 font-semibold text-center text-gray-800 dark:text-gray-400 scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-600">
+                 <li class="snap-start shrink-0">
+                   <a href="#" class="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row items-center gap-2 p-2 rounded-lg transition-all duration-300 hover:bg-white/90 hover:border-b hover:border-black">
+                     <img class="w-7 h-7 mb-1" src="public/icons/tabs/cold-desserts.png" alt="Icono de postres fríos">
+                     <p class="text-base sm:text-lg whitespace-nowrap">Postres fríos</p>
+                   </a>
+                 </li>
+                 <li class="snap-start shrink-0">
+                   <a href="#" class="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row items-center gap-2 p-2 rounded-lg transition-all duration-300 hover:bg-[#E0F7F4]">
+                     <img class="w-7 h-7 mb-1" src="public/icons/tabs/horn-desserts.png" alt="Icono de postres al horno">
+                     <p class="text-base sm:text-lg whitespace-nowrap">Postres al horno</p>
+                   </a>
+                 </li>
+                 <li class="snap-start shrink-0">
+                  <a href="#" class="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row items-center gap-2 p-2 rounded-lg transition-all duration-300 hover:bg-[#E0F7F4]">
+                    <img class="w-7 h-7 mb-1" src="public/icons/tabs/cakes.png" alt="Icono de pasteles">
+                    <p class="text-base sm:text-lg whitespace-nowrap">Pasteles</p>
+                  </a>
+                </li>
                </ul>
-            </div>
+             </div>
             <!-- end tabs -->
             <div class="relative overflow-hidden flex justify-center items-center ">
                <div class="slider-container flex transition-transform duration-500 ease-in-out w-full">
