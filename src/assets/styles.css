@@ -207,7 +207,7 @@ nav a {
 #services-cards-father-container {
 	display: flex;
 	flex-wrap: nowrap;
-	justify-content: flex-start;
+	justify-content: space-evenly;
 	align-items: center;
 	overflow-x: auto;
 	overflow-y: hidden;
