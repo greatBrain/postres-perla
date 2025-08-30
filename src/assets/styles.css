@@ -7,6 +7,12 @@
 	--light-pink: #f5dff8;
 	--white-bone: #fffbf4;
 	--perla-yellow: #fefae9;
+
+	--autumn-amber: #D97706;
+    --autumn-orange: #EA580C;
+    --autumn-red: #DC2626;
+    --autumn-brown: #92400E;
+    --autumn-dark: #1C1917;
 }
 html {
 	scroll-behavior: smooth;

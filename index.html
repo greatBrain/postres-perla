@@ -78,11 +78,11 @@
                   </button>
                </div>
                <div class="flex flex-col items-center justify-center space-y-4 py-24 text-white capitalize font-bold ubuntu-font">
-                  <a href="#services" @click="open = false" class="hover:text-gray-100 text-xl">Servicios</a>
-                  <a href="#testimonials" @click="open = false" class="hover:text-gray-100 text-xl">Testimonios</a>
-                  <a href="#catalog" @click="open = false" class="hover:text-gray-100 text-xl">Productos</a>
-                  <a href="#contact" @click="open = false" class="hover:text-gray-100 text-xl">Contáctanos</a>
-                  <a href="#mobile-shop" @click="open = false" class="hover:text-gray-100 text-xl">Conócenos</a>
+                  <a href="#services" @click="open = false" class="hover:text-gray-100 text-lg">Servicios</a>
+                  <a href="#testimonials" @click="open = false" class="hover:text-gray-100 text-lg">Testimonios</a>
+                  <a href="#catalog" @click="open = false" class="hover:text-gray-100 text-lg">Productos</a>
+                  <a href="#contact" @click="open = false" class="hover:text-gray-100 text-lg">Contáctanos</a>
+                  <a href="#mobile-shop" @click="open = false" class="hover:text-gray-100 text-lg">Conócenos</a>
                </div>
             </div>
             <div x-show="open" @click="open = false" x-transition:enter="transition ease-out duration-300"
@@ -129,7 +129,18 @@
                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
                                     d="M9 5l7 7-7 7"></path>
                               </svg>
-                              <span class="relative z-10">Ver qué se te antoja</span>
+                              <span class="relative z-10">Explora el catalogo</span>
+                           </button>
+                        </a>
+                        <a href="#season-desserts">
+                           <button class="mt-5 overflow-hidden relative bg-gray-900 text-yellow-300 font-semibold py-2 px-5 sm:py-3 sm:px-8
+                              rounded-full shadow-md shadow-2xl transition duration-500 ease-in-out
+                              before:content-[''] before:absolute before:top-0 before:left-0
+                              before:w-0 before:h-full before:bg-amber-900/80 before:transition-all
+                              before:duration-300 hover:scale-105 before:ease-in-out hover:before:w-full
+                              hover:text-white hover:shadow-3xl">
+                              🍂
+                              <span class="relative z-10">Ver especial de otoño</span>
                            </button>
                         </a>
                      </div>
@@ -138,6 +149,196 @@
             </div>
          </div>
       </section>
+
+      <!-- Postres de temporada banner seccion-->
+      <section class="relative min-h-[100%] w-full bg-amber-900 overflow-hidden" id="season-desserts">
+          <div class="absolute inset-0 pointer-events-none">
+              <svg class="absolute top-8 left-8 w-16 h-16 text-[#D97706] opacity-30 transform rotate-12" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
+              </svg>
+              <svg class="absolute top-12 right-12 w-20 h-20 text-[#EA580C] opacity-25 transform -rotate-45" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
+              </svg>
+              <svg class="absolute top-1/2 left-4 w-12 h-12 text-[#DC2626] opacity-40 transform rotate-90" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
+              </svg>
+              <svg class="absolute bottom-16 right-8 w-24 h-24 text-[#92400E] opacity-20 transform rotate-180" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
+              </svg>
+              <svg class="absolute top-1/4 right-1/4 w-8 h-8 text-amber-600 opacity-30 transform rotate-45" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
+              </svg>
+              <svg class="absolute bottom-1/3 left-1/3 w-10 h-10 text-red-800 opacity-25 transform -rotate-30" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
+              </svg>
+          </div>
+          <div class="relative z-10 h-full w-full px-6 py-16">
+              <div class="max-w-7xl mx-auto h-full">
+                  <div class="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between gap-12 h-full">
+                      <div class="flex-1 lg:max-w-lg space-y-6">
+                          <h2 class="text-4xl lg:text-5xl font-bold text-amber-100 leading-tight">
+                              Sabores de Otoño
+                              <span class="block text-[#D97706]">Edición Especial</span>
+                          </h2>
+                          <p class="text-lg text-[#D97706] leading-relaxed">
+                              Descubre nuestra colección exclusiva de postres inspirados en los sabores cálidos del otoño.
+                              Cada creación captura la esencia de la temporada con especias aromáticas, frutas de estación
+                              y texturas reconfortantes que despiertan los sentidos.
+                          </p>
+                          <div class="flex items-center gap-3 text-amber-200">
+                              <svg class="w-5 h-5 text-[#EA580C]" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                              </svg>
+                              <span class="text-sm font-medium">Disponible por tiempo limitado</span>
+                          </div>
+                      </div>
+                      <div class="flex-1 lg:max-w-md w-full">
+                          <div class="hidden lg:block h-96 overflow-y-auto scrollbar-thin scrollbar-thumb-[#D97706] scrollbar-track-stone-800">
+                              <div class="grid grid-cols-2 gap-4 pr-2">
+                                  <div class="dessert-card group relative bg-[url('public/images/season/pumpkin-spice-tart-autumn-dessert.webp')] bg-cover bg-center bg-stone-800  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                      <div class="aspect-square bg-gradient-to-br from-amber-600 to-orange-700 flex items-center justify-center">
+                                      </div>
+                                      <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center">
+                                          <h4 class="text-white font-bold text-sm mb-2">Tarta de Calabaza Especiada</h4>
+                                          <p class="text-amber-200 text-xs mb-3 leading-relaxed">Cremosa tarta con especias de otoño y base de galleta</p>
+                                          <button class="bg-[#D97706] hover:bg-[#EA580C] text-white px-3 py-1 rounded-full text-xs font-medium transition-colors">
+                                              Ver más
+                                          </button>
+                                      </div>
+                                  </div>
+                                  <div class="dessert-card group relative bg-[url('public/images/season/caramel-cheesecake-autumn-dessert.webp')] bg-cover bg-center  bg-stone-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                      <div class="aspect-square bg-gradient-to-br from-orange-600 to-red-700 flex items-center justify-center">
+                                      </div>
+                                      <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center">
+                                          <h4 class="text-white font-bold text-sm mb-2">Cheesecake de Caramelo</h4>
+                                          <p class="text-amber-200 text-xs mb-3 leading-relaxed">Suave cheesecake con salsa de caramelo salado</p>
+                                          <button class="bg-[#D97706] hover:bg-[#EA580C] text-white px-3 py-1 rounded-full text-xs font-medium transition-colors">
+                                              Ver más
+                                          </button>
+                                      </div>
+                                  </div>
+                                  <div class="dessert-card group relative bg-[url('public/images/season/cinnamon-muffins-autumn-pastry.webp')] bg-cover bg-center bg-stone-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                      <div class="aspect-square bg-gradient-to-br from-amber-700 to-yellow-600 flex items-center justify-center">
+                                      </div>
+                                      <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center">
+                                          <h4 class="text-white font-bold text-sm mb-2">Muffins de Canela</h4>
+                                          <p class="text-amber-200 text-xs mb-3 leading-relaxed">Esponjosos muffins con canela y nueces</p>
+                                          <button class="bg-[#D97706] hover:bg-[#EA580C] text-white px-3 py-1 rounded-full text-xs font-medium transition-colors">
+                                              Ver más
+                                          </button>
+                                      </div>
+                                  </div>
+                                  <div class="dessert-card group relative bg-[url('public/images/season/classic-apple-pie-autumn-dessert.webp')] bg-cover bg-center bg-stone-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                      <div class="aspect-square bg-gradient-to-br from-red-700 to-amber-800 flex items-center justify-center">
+                                      </div>
+                                      <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center">
+                                          <h4 class="text-white font-bold text-sm mb-2">Pie de Manzana Clásico</h4>
+                                          <p class="text-amber-200 text-xs mb-3 leading-relaxed">Tradicional pie con manzanas y masa crujiente</p>
+                                          <button class="bg-[#D97706] hover:bg-[#EA580C] text-white px-3 py-1 rounded-full text-xs font-medium transition-colors">
+                                              Ver más
+                                          </button>
+                                      </div>
+                                  </div>
+                                  <div class="dessert-card group relative bg-[url('public/images/season/spiced-chocolate-brownies-autumn.webp')] bg-cover bg-center bg-stone-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                      <div class="aspect-square bg-gradient-to-br from-amber-800 to-orange-900 flex items-center justify-center">
+                                      </div>
+                                      <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center">
+                                          <h4 class="text-white font-bold text-sm mb-2">Brownies Especiados</h4>
+                                          <p class="text-amber-200 text-xs mb-3 leading-relaxed">Intensos brownies con chocolate y especias</p>
+                                          <button class="bg-[#D97706] hover:bg-[#EA580C] text-white px-3 py-1 rounded-full text-xs font-medium transition-colors">
+                                              Ver más
+                                          </button>
+                                      </div>
+                                  </div>
+                                  <div class="dessert-card group relative bg-[url('public/images/season/ginger-cookies-autumn-spiced.webp')] bg-cover bg-center bg-stone-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                      <div class="aspect-square bg-gradient-to-br from-yellow-700 to-amber-700 flex items-center justify-center">
+                                      </div>
+                                      <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center">
+                                          <h4 class="text-white font-bold text-sm mb-2">Galletas de Jengibre</h4>
+                                          <p class="text-amber-200 text-xs mb-3 leading-relaxed">Crujientes galletas con jengibre y miel</p>
+                                          <button class="bg-[#D97706] hover:bg-[#EA580C] text-white px-3 py-1 rounded-full text-xs font-medium transition-colors">
+                                              Ver más
+                                          </button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="lg:hidden space-y-4">
+                              <div class="dessert-card group relative bg-[url('public/images/season/pumpkin-spice-tart-autumn-dessert.webp')] bg-cover bg-center bg-stone-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                  <div class="h-48 bg-gradient-to-br from-amber-600 to-orange-700 flex items-center justify-center">
+                                      <span class="text-white text-sm font-medium">Imagen del postre</span>
+                                  </div>
+                                  <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-center">
+                                      <h4 class="text-white font-bold text-lg mb-3">Tarta de Calabaza Especiada</h4>
+                                      <p class="text-amber-200 text-sm mb-4 leading-relaxed">Cremosa tarta con especias de otoño y base de galleta crujiente</p>
+                                      <button class="bg-[#D97706] hover:bg-[#EA580C] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors">
+                                          Ver más
+                                      </button>
+                                  </div>
+                              </div>
+                              <div class="dessert-card group relative bg-[url('public/images/season/caramel-cheesecake-autumn-dessert.webp')] bg-cover bg-center bg-stone-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                  <div class="h-48 bg-gradient-to-br from-orange-600 to-red-700 flex items-center justify-center">
+                                      <span class="text-white text-sm font-medium">Imagen del postre</span>
+                                  </div>
+
+                                  <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-center">
+                                      <h4 class="text-white font-bold text-lg mb-3">Cheesecake de Caramelo</h4>
+                                      <p class="text-amber-200 text-sm mb-4 leading-relaxed">Suave cheesecake con salsa de caramelo salado</p>
+                                      <button class="bg-[#D97706] hover:bg-[#EA580C] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors">
+                                          Ver más
+                                      </button>
+                                  </div>
+                              </div>
+                              <div class="dessert-card group relative bg-[url('public/images/season/cinnamon-muffins-autumn-pastry.webp')] bg-cover bg-center bg-stone-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                  <div class="h-48 bg-gradient-to-br from-amber-700 to-yellow-600 flex items-center justify-center">
+                                      <span class="text-white text-sm font-medium">Imagen del postre</span>
+                                  </div>
+
+                                  <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-center">
+                                      <h4 class="text-white font-bold text-lg mb-3">Muffins de Canela</h4>
+                                      <p class="text-amber-200 text-sm mb-4 leading-relaxed">Esponjosos muffins con canela y nueces</p>
+                                      <button class="bg-[#D97706] hover:bg-[#EA580C] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors">
+                                          Ver más
+                                      </button>
+                                  </div>
+                              </div>
+                              <div class="dessert-card group relative bg-[url('public/images/season/classic-apple-pie-autumn-dessert.webp')] bg-cover bg-center bg-stone-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                  <div class="h-48 bg-gradient-to-br from-red-700 to-amber-800 flex items-center justify-center">
+                                      <span class="text-white text-sm font-medium">Imagen del postre</span>
+                                  </div>
+
+                                  <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-center">
+                                      <h4 class="text-white font-bold text-lg mb-3">Pie de Manzana Clásico</h4>
+                                      <p class="text-amber-200 text-sm mb-4 leading-relaxed">Tradicional pie con manzanas y masa crujiente</p>
+                                      <button class="bg-[#D97706] hover:bg-[#EA580C] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors">
+                                          Ver más
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <style>
+              .scrollbar-thin::-webkit-scrollbar {
+                  width: 6px;
+              }
+              .scrollbar-thin::-webkit-scrollbar-track {
+                  background: #292524;
+                  border-radius: 3px;
+              }
+              .scrollbar-thin::-webkit-scrollbar-thumb {
+                  background: #D97706;
+                  border-radius: 3px;
+              }
+              .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+                  background: #EA580C;
+              }
+          </style>
+      </section>
+      <!-- Postres de temporada banner seccion-->
+
       <section class="catalog flex justify-center items-center" id="catalog">
          <div class="container py-5">
             <div class="catalog-text mb-20 text-center">
@@ -222,7 +423,7 @@
                </p>
             </div>
             <div class="group relative bg-white rounded-2xl
-               w-[75%] sm:w-[75%] md:w-[55%] lg:w-56 xl:w-56 2xl:w-60
+               w-[75%] sm:w-[75%] md:w-[55%] lg:w-[45%] xl:w-56 2xl:w-60
                min-h-[240px] sm:min-h-[280px]
                flex flex-col justify-evenly items-center p-6 text-center
                border border-pink-300
