@@ -48,7 +48,7 @@
          <div class="hidden md:flex items-center space-x-6 text-white capitalize font-bold ubuntu-font">
             <a href="#catalog" class="border-b-2 border-transparent hover:border-yellow-500 hover:text-black dark:hover:text-gray-200 text-xl">Productos</a>
             <a href="#services" class="border-b-2 border-transparent hover:border-yellow-500 hover:text-black dark:hover:text-gray-200 text-xl">Servicios</a>
-            <a href="#mobile-shop" class="border-b-2 border-transparent hover:border-yellow-500 hover:text-black dark:hover:text-gray-200 text-xl">Sobre ruedas</a>
+            <a href="#testimonials" class="border-b-2 border-transparent hover:border-yellow-500 hover:text-black dark:hover:text-gray-200 text-xl">Testimonios</a>
             <a href="#contact" class="border-b-2 border-transparent hover:border-yellow-500 hover:text-black dark:hover:text-gray-200 text-xl">Contáctanos</a>
             <a href="#about-me" class="border-b-2 border-transparent hover:border-yellow-400 hover:text-black dark:hover:text-gray-200 text-xl">Conócenos</a>
          </div>
@@ -79,7 +79,7 @@
                </div>
                <div class="flex flex-col items-center justify-center space-y-4 py-24 text-white capitalize font-bold ubuntu-font">
                   <a href="#services" @click="open = false" class="hover:text-gray-100 text-xl">Servicios</a>
-                  <a href="#mobile-shop" @click="open = false" class="hover:text-gray-100 text-xl">Sobre ruedas</a>
+                  <a href="#testimonials" @click="open = false" class="hover:text-gray-100 text-xl">Testimonios</a>
                   <a href="#catalog" @click="open = false" class="hover:text-gray-100 text-xl">Productos</a>
                   <a href="#contact" @click="open = false" class="hover:text-gray-100 text-xl">Contáctanos</a>
                   <a href="#mobile-shop" @click="open = false" class="hover:text-gray-100 text-xl">Conócenos</a>
@@ -146,12 +146,12 @@
                </h2>
             </div>
             <div class="relative overflow-hidden flex justify-center items-center ">
-               <div class="slider-container flex transition-transform duration-500 ease-in-out w-full">
+               <div class="slider-container flex transition-transform lg:flex-wrap md:flex-wrap lg:transition-none md:transition-none duration-500 ease-in-out w-full">
                </div>
-               <button id="prevBtn" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center hover:bg-yellow-100 z-10">
+               <button id="prevBtn" class="lg:hidden md:hidden absolute top-1/2 left-2 transform -translate-y-1/2 bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center hover:bg-yellow-100 z-10">
                &#10094;
                </button>
-               <button id="nextBtn" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center hover:bg-yellow-100 z-10">
+               <button id="nextBtn" class="lg:hidden md:hidden absolute top-1/2 right-2 transform -translate-y-1/2 bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center hover:bg-yellow-100 z-10">
                &#10095;
                </button>
                <div id="carousel-bullets-container"
@@ -182,7 +182,7 @@
          <div class="bg-[url('public/images/desserts-patterns.png')] bg-repeat w-full lg:w-10/12 bg-[#E0F7F4] px-5 py-4 gap-6 min-h-[30vh] relative z-10"
             id="services-cards-father-container">
             <div class="group relative bg-white rounded-2xl
-               w-[52%] sm:w-[70%] md:w-55 lg:w-56 xl:w-56 2xl:w-60
+               w-[75%] sm:w-[75%] md:w-[55%] lg:w-56 xl:w-56 2xl:w-60
                min-h-[240px] sm:min-h-[280px]
                flex flex-col justify-evenly items-center p-6 text-center
                border border-pink-300
@@ -202,7 +202,7 @@
                </p>
             </div>
             <div class="group relative bg-white rounded-2xl
-               w-[52%] sm:w-[70%] md:w-55 lg:w-56 xl:w-56 2xl:w-60
+               w-[75%] sm:w-[75%] md:w-[55%] lg:w-56 xl:w-56 2xl:w-60
                min-h-[240px] sm:min-h-[280px]
                flex flex-col justify-evenly items-center p-6 text-center
                border border-pink-300
@@ -222,7 +222,7 @@
                </p>
             </div>
             <div class="group relative bg-white rounded-2xl
-               w-[52%] sm:w-[70%] md:w-55 lg:w-56 xl:w-56 2xl:w-60
+               w-[75%] sm:w-[75%] md:w-[55%] lg:w-56 xl:w-56 2xl:w-60
                min-h-[240px] sm:min-h-[280px]
                flex flex-col justify-evenly items-center p-6 text-center
                border border-pink-300
@@ -241,68 +241,8 @@
                   Catering y bandejas personalizadas
                </p>
             </div>
-            <!-- <div class="group relative bg-white rounded-2xl
-               w-[52%] sm:w-[70%] md:w-55 lg:w-56 xl:w-56 2xl:w-60
-               min-h-[240px] sm:min-h-[280px]
-               flex flex-col justify-evenly items-center p-6 text-center
-               border border-pink-300
-               shadow-lg shadow-pink-200/50
-               hover:shadow-2xl hover:shadow-pink-300/70
-               ring-2 ring-transparent
-               group-hover:ring-4 group-hover:ring-pink-400 group-hover:ring-offset-2
-               transition-all duration-300 ease-in-out transform hover:scale-105
-               flex-shrink-0">
-               <div class="absolute inset-0 bg-white/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-20 rounded-2xl flex items-center justify-center p-4">
-                   <a href="#mobile-shop">
-                       <button class="relative bg-pink-300 text-gray-800 text-sm font-semibold py-1.5 px-4 sm:py-2 sm:px-6
-                               rounded-full shadow-md transition duration-500 ease-in-out
-                               hover:scale-95 before:ease-in-out hover:before:w-full
-                               hover:text-gray-900 hover:shadow-3xl">
-                          <svg class="w-3.5 h-3.5 inline-block ml-1 relative z-10" fill="none"
-                             stroke="currentColor" viewBox="0 0 24 24">
-                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
-                          </svg>
-                          <span class="relative z-10">Ver detalles aqui</span>
-                       </button>
-                   </a>
-               </div>
-               <img src="public/icons/candy-shop.svg" alt="Unidad Móvil" class="w-20 sm:w-28 h-20 sm:h-28 mb-4 filter drop-shadow-md group-hover:opacity-0 transition-opacity duration-300 z-10">
-               <p class="text-pink-500 text-xl sm:text-xl ubuntu-font-bold group-hover:opacity-0 transition-opacity duration-300 z-10">
-                  Pastelería móvil
-               </p>
-            </div> -->
          </div>
       </section>
-      <!-- <section class="mobile-shop bg-[#e7f8cc] py-30 px-5" id="mobile-shop">
-         <div class="mx-auto max-w-7xl">
-            <div class="grid gap-10 sm:gap-12 md:grid-cols-2">
-               <div class="overflow-hidden rounded-2xl shadow-xl animate-fadeInUp">
-                  <img src="public/images/pastry-car.jpeg" alt="Carro para ventas móviles" class="object-cover object-center w-full h-full
-                     max-h-[420px] sm:max-h-[320px] md:max-h-full lg:max-h-[420px] xl:max-h-[420px] 2xl:max-h-[420px] transition
-                     transform duration-400 hover:scale-105">
-               </div>
-               <div class="flex flex-col items-start gap-5 w-full">
-                  <h2 class="text-gray-700 text-4xl sm:text-5xl md:text-6xl leading-tight ubuntu-font-bold pb-8 text-start text-nowrap md:text-left">
-                     Postres sobre ruedas
-                  <h2>
-                  <p class="text-xl sm:text-xl md:text-2xl ubuntu-font-regular">
-                     Hemos decidido ir más allá de lo convencional: tu no solo viene a nosotros,
-                     <strong>¡nosotros vamos también vamos donde estas!</strong>
-                  </p>
-                  <br>
-                  <p class="text-lg sm:text-xl md:text-xl ubuntu-font-regular">
-                     ¡Llevamos lo mejor de nuestro catálogo a donde estés, incluyendo tus eventos! Podemos hacer
-                     presencia en esa actividad
-                     tan especial para ti y que disfrutes de una experiencia deliciosa que combina diseño,
-                     creatividad, calidad y ese toque
-                     artesanal que nos hace únicos.
-                     <br><br>
-                     <strong><i>¡Escríbenos vía WhatsApp y agendemos la fecha!</i></strong>
-                  </p>
-               </div>
-            </div>
-         </div>
-      </section> -->
       <section class="relative testimonials bg-top bg-no-repeat bg-[length:100%] bg-[url('public/images/soft-green-wave.svg')] py-20 px-6 md:px-10"
          id="testimonials" aria-labelledby="testimonials-title">
          <div class="max-w-5xl mx-auto flex flex-col justify-center items-center text-center space-y-10 pt-5">
