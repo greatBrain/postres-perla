@@ -83,7 +83,7 @@ function renderProductCards(sliderContainerSelector) {
   }
   function createProductCard(product) {
     const slide = document.createElement('div');
-    slide.className = 'slide flex-shrink-0 w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-3 flex justify-center';
+    slide.className = 'slide w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-3 flex justify-center';
     const card = document.createElement('div');
     card.className = 'img-box bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden max-w-[295px]';
     const imgContainer = document.createElement('div');
@@ -192,7 +192,7 @@ function showProductModal(productData) {
      whatsappOrderLink.href = WHATSAPPURL;
   } else {
     console.warn('No se encontró el enlace de WhatsApp.');
-  }  
+  }
   modal.showModal();
   document.body.classList.add('overflow-hidden');//bloquea el scroll del body
 }
@@ -201,7 +201,7 @@ function sendWhatsappMessage(title, price, imageUrl){
   const PHONENUMBER = '8296469680';
   const BASEMESSAGE = `Hola Postres Perla 😊, me interesa este producto:\n\n*${title}*\n${price}\n${imageUrl}`;
   const ENCODEDMESSAGE = encodeURIComponent(BASEMESSAGE);
-  const WHATSAPPURL = `https://wa.me/${PHONENUMBER}?text=${ENCODEDMESSAGE}`;  
+  const WHATSAPPURL = `https://wa.me/${PHONENUMBER}?text=${ENCODEDMESSAGE}`;
   return WHATSAPPURL;
 }
 
