@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
+   <!-- https://codepen.io/siddharth-nalwaya/pen/wvXZqbq -->
+
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,11 +45,23 @@
          <a href="#" class="brand-logo flex items-center py-5">
          <img src="./public/icons/P-perla-logo.png" alt="Logo de la pastelería Postres Perla"
             class="h-12 w-12 md:h-12 md:w-12 drop-shadow-xl rounded-full border-4" />
-         <span class="text-white pl-2 text-3xl font-semibold">Postres Perla</span>
+         <span class="text-white pl-2 text-3xl font-normal">Postres Perla</span>
          </a>
          <!-- Desktop Menu -->
          <div class="hidden md:flex items-center space-x-4 text-white capitalize font-semibold ubuntu-font">
-            <a href="#season-desserts" class="border-b-2 border-transparent hover:border-yellow-500 hover:text-black dark:hover:text-gray-200 text-lg">Navidad</a>
+            <a href="#season-desserts">
+               <button class="overflow-hidden flex relative bg-green-900 justify-center items-center text-white font-semibold py-2 px-4 sm:py-2 sm:px-6
+                     rounded-full shadow-md shadow-2xl transition
+                     hover:text-yellow-400 hover:shadow-3xl">
+                     <svg width="30" height="30" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="100,20 160,120 40,120" fill="white" stroke="white" stroke-width="2"/>
+                        <polygon points="100,80 170,190 30,190" fill="white" stroke="white" stroke-width="2"/>
+                        <polygon points="100,150 180,260 20,260" fill="white" stroke="white" stroke-width="2"/>
+                        <rect x="85" y="260" width="30" height="40" fill="#8B4513"/> 
+                     </svg>
+                  <span class="relative z-10">Navidad</span>
+               </button>               
+            </a>
             <a href="#catalog" class="border-b-2 border-transparent hover:border-yellow-500 hover:text-black dark:hover:text-gray-200 text-lg">Productos</a>
             <a href="#services" class="border-b-2 border-transparent hover:border-yellow-500 hover:text-black dark:hover:text-gray-200 text-lg">Servicios</a>
             <a href="#testimonials" class="border-b-2 border-transparent hover:border-yellow-500 hover:text-black dark:hover:text-gray-200 text-lg">Testimonios</a>
@@ -79,6 +94,19 @@
                   </button>
                </div>
                <div class="flex flex-col items-center justify-center space-y-4 py-24 text-white capitalize font-bold ubuntu-font">
+                  <a href="#season-desserts">
+                     <button class="overflow-hidden flex relative bg-green-900 justify-center items-center text-white font-semibold py-2 px-4 sm:py-2 sm:px-6
+                           rounded-full shadow-md shadow-2xl transition
+                           hover:text-yellow-400 hover:shadow-3xl">
+                           <svg width="30" height="30" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+                              <polygon points="100,20 160,120 40,120" fill="white" stroke="white" stroke-width="2"/>
+                              <polygon points="100,80 170,190 30,190" fill="white" stroke="white" stroke-width="2"/>
+                              <polygon points="100,150 180,260 20,260" fill="white" stroke="white" stroke-width="2"/>
+                              <rect x="85" y="260" width="30" height="40" fill="#8B4513"/> 
+                           </svg>
+                        <span class="relative z-10">Navidad</span>
+                     </button>               
+                  </a>
                   <a href="#services" @click="open = false" class="hover:text-gray-100 text-lg">Servicios</a>
                   <a href="#testimonials" @click="open = false" class="hover:text-gray-100 text-lg">Testimonios</a>
                   <a href="#catalog" @click="open = false" class="hover:text-gray-100 text-lg">Productos</a>
@@ -101,8 +129,11 @@
             sm:bg-[url('public/images/cookie.webp')]
             xs:bg-[url('public/images/cookie.webp')]
             bg-bottom bg-cover bg-no-repeat overflow-hidden">
-         <div class="relative h-full transition-transform duration-500 ease-in-out" id="slider-container">
-            <div class="absolute w-full h-full overflow-hidden">
+         <div class="relative h-full transition-transform duration-500 ease-in-out" id="slider-container">            
+            <!-- <div class="container season-decoration-img h-[80px] w-full fixed z-100">
+               <img src="public/images/season/guinarld.png" class="max-h-[200px]">
+            </div>   -->
+            <div class="absolute w-full h-full overflow-hidden">               
                <div class="flex h-full items-center justify-center md:justify-start w-full px-4 md:px-20">
                   <div class="relative flex flex-col sm:flex-row items-center md:items-start gap-4 sm:gap-6 py-6 px-4 sm:p-10 max-w-4xl
                      lg:max-w-4xl md:max-w-6xl sm:max-w-6xl
@@ -155,14 +186,14 @@
           <div class="absolute inset-0 opacity-10">
               <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23F472B6" fill-opacity="0.3"%3E%3Cpath d="M30 30l15-15v30l-15-15zm-15 0l15 15V15l-15 15z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] bg-repeat"></div>
           </div>
-          <div class="relative z-10 h-auto w-full px-6 py-18  md:py-20 lg:py-20">
-              <div class="mt-8 lg:mt-16 md:mt-16 w-[90%] mx-auto h-full">
+          <div class="relative z-10 h-auto w-full px-6 py-5  md:py-20 lg:py-20">
+              <div class="mt-8 w-full lg:mt-16 md:mt-16 lg:w-[90%] md:w-[90%] mx-auto h-full">
                   <div class="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between gap-8 md:gap-12 h-full">
                       <div class="flex-1 lg:max-w-xl space-y-6 md:space-y-6 p-4">
-                          <h2 class="text-3xl md:text-6xl lg:text-8xl font-bold text-amber-400/90 text-shadow-sm leading-tight drop-shadow-sm">
+                          <h2 class="text-5xl md:text-6xl lg:text-8xl font-bold text-amber-400/90 text-shadow-sm leading-tight drop-shadow-sm">
                               Sabores navideños
                           </h2>
-                          <p class="text-base lg:md:text-2xl md:text-2xl sm:text-xl md:text-xl mt-3 text-white lato-regular">
+                          <p class="text-base lg:md:text-2xl md:text-2xl sm:text-2xl md:text-2xl mt-3 text-white lato-regular">
                               Descubre nuestra colección exclusiva de ponches inspirados en los sabores cálidos de la Navidad y
                               captura la esencia de esta hermosa temporada.
                           </p>
@@ -324,8 +355,7 @@
             </div>
          </div>
       </section>
-      <section class="bg-[url('public/images/desserts-patterns.png')] bg-repeat
-         bg-[#E0F7F4] w-full flex flex-col lg:flex-row items-stretch relative overflow-hidden min-h-[60vh]" id="services">
+      <section class="bg-[url('public/images/desserts-patterns.png')] bg-repeat bg-[#E0F7F4] w-full flex flex-col lg:flex-row items-stretch relative overflow-hidden min-h-[60vh]" id="services">
          <div class="relative w-full lg:w-7/12 px-6 sm:px-10 py-5 sm:py-5 flex flex-col justify-start items-center sm:justify-start sm:items-center
              md:justify-start md:items-center lg:justify-start lg:items-start xl:justify-start xl:items-start
              z-10 min-h-[40vh] overflow-hidden shadow-md">
@@ -346,7 +376,7 @@
          <div class="bg-[url('public/images/desserts-patterns.png')] bg-repeat w-full lg:w-10/12 bg-[#E0F7F4] px-5 py-4 gap-6 min-h-[30vh] relative z-10"
             id="services-cards-father-container">
             <div class="group relative bg-white rounded-2xl
-               w-[75%] sm:w-[75%] md:w-[55%] lg:w-56 xl:w-56 2xl:w-60
+               w-[85%] sm:w-[75%] md:w-[55%] lg:w-56 xl:w-56 2xl:w-60
                min-h-[240px] sm:min-h-[280px]
                flex flex-col justify-evenly items-center p-6 text-center
                border border-pink-300
@@ -366,7 +396,7 @@
                </p>
             </div>
             <div class="group relative bg-white rounded-2xl
-               w-[75%] sm:w-[75%] md:w-[55%] lg:w-56 xl:w-56 2xl:w-60
+               w-[85%] sm:w-[75%] md:w-[55%] lg:w-56 xl:w-56 2xl:w-60
                min-h-[240px] sm:min-h-[280px]
                flex flex-col justify-evenly items-center p-6 text-center
                border border-pink-300
@@ -386,7 +416,7 @@
                </p>
             </div>
             <div class="group relative bg-white rounded-2xl
-               w-[75%] sm:w-[75%] md:w-[55%] lg:w-[45%] xl:w-56 2xl:w-60
+               w-[85%] sm:w-[75%] md:w-[55%] lg:w-[45%] xl:w-56 2xl:w-60
                min-h-[240px] sm:min-h-[280px]
                flex flex-col justify-evenly items-center p-6 text-center
                border border-pink-300
@@ -415,9 +445,7 @@
                   ¿Qué opinan quienes confian en nosotros?
                </h2>
                <p class="text-gray-800 mt-4 max-w-xl mx-auto text-lg sm:text-xl md:text-xl ubuntu-font-regular">
-                  Testimonios auténticos que destacan el compromiso, la calidad y el impacto de nuestro trabajo en
-                  nuestros
-                  clientes.
+                  Testimonios auténticos que destacan el compromiso, la calidad y el impacto de nuestro trabajo en nuestros clientes.
                </p>
             </div>
             <div class="relative overflow-hidden w-full" role="region" aria-label="Carrusel de testimonios">
@@ -428,11 +456,6 @@
                         <p class="text-lg text-gray-800 italic mb-4">
                            “Pedí un bizcocho para el cumpleaños de mi hijo y fue justo lo que esperaba: sencillo, fresco y con muy buen sabor.”
                         </p>
-                        <!-- <div class="flex items-center justify-center">
-                           <div class="ml-3 text-left">
-                              <h3 class="text-gray-900 font-semibold">Ana Castillo</h3>
-                           </div>
-                        </div> -->
                      </div>
                   </div>
                   <div class="min-w-full flex justify-center px-4">
