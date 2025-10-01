@@ -1,11 +1,11 @@
 const ALL_PRODUCTS = [
   {
-    title: "Pasteles personalizados",
-    description: "A tu gusto y estilo",
+    title: "Pastel personalizado",
+    description: "A tu gusto, diseño y estilo",
     image: "./public/images/personal-cake.jpg",
     alt: "Pasteles personalizados",
     href: "#",
-    price: "RD$1,000.00",
+    price: "RD$1,800.00",
     ingredients: ["Vainilla", "Chocolate", "Dulce de leche"]
   },
   {
@@ -199,7 +199,7 @@ function showProductModal(productData) {
 
 function sendWhatsappMessage(title, price, imageUrl){
   const PHONENUMBER = '8296469680';
-  const BASEMESSAGE = `Hola Postres Perla 😊, me interesa este producto:\n\n*${title}*\n${price}\n${imageUrl}`;
+  const BASEMESSAGE = `Hola Perla, me interesa hablar de este producto:\n*${title}*\n${imageUrl}`;
   const ENCODEDMESSAGE = encodeURIComponent(BASEMESSAGE);
   const WHATSAPPURL = `https://wa.me/${PHONENUMBER}?text=${ENCODEDMESSAGE}`;
   return WHATSAPPURL;
