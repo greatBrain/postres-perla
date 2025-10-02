@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-
-   <!-- https://codepen.io/siddharth-nalwaya/pen/wvXZqbq -->
-
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -122,30 +119,31 @@
          </div>
       </nav>
       <section class="banner relative w-full h-screen parallax-bg
-            bg-[url('public/images/cookie.jpg')]
-            xl:bg-[url('public/images/cookie.jpg')]
+            bg-[url('public/images/cookie-mobile.jpg')]
             lg:bg-[url('public/images/cookie.jpg')]
+            xl:bg-[url('public/images/cookie.jpg')]            
             md:bg-[url('public/images/cookie.jpg')]
-            sm:bg-[url('public/images/cookie-movile.jpg')]
-            xs:bg-[url('public/images/cookie-movile.jpg')]
+            sm:bg-[url('public/images/cookie.jpg')]
+            xs:bg-[url('public/images/cookie-mobile.jpg')]
             bg-bottom bg-cover bg-no-repeat overflow-hidden">    
          <div class="initial-snow snow-area" id="snow-container"></div>        
          <div class="relative h-full transition-transform duration-500 ease-in-out" id="slider-container">                     
             <div class="absolute w-full h-full overflow-hidden">               
                <div class="flex h-full items-center justify-center md:justify-start w-full px-4 md:px-20">
-                  <div class="relative flex flex-col sm:flex-row items-center md:items-start gap-4 sm:gap-6 py-6 px-4 sm:p-10 max-w-4xl
+                  <div class="relative flex flex-col sm:flex-row items-center md:items-start gap-4 sm:gap-6 py-6 px-4 sm:p-10 max-w-4xl                     
                      lg:max-w-4xl md:max-w-6xl sm:max-w-6xl
-                     bg-[url('public/images/vectors/blob-bg.png')] bg-no-repeat bg-contain bg-center
+                     lg:bg-[url('public/images/vectors/blob-bg.png')] md:bg-[url('public/images/vectors/blob-bg.png')] bg-no-repeat bg-contain bg-center
                      sm:scale-100 scale-95">
                      <img src="public/images/vectors/cupcake.svg"
                         class="animate-drop-bounce w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 mt-2 md:mt-0 shrink-0 drop-shadow-xl"
                         alt="Cupcake vector imagen" />
-                     <div class="text-center sm:text-left">
-                         <h1 class="banner-slide-title text-gray-700 ubuntu-font-bold font-semibold text-shadow-2xs text-5xl sm:text-6xl md:text-6xl lg:text-7xl xs:text-8xl leading-tight">
-                             ¿Listo para enamorarte de un nuevo sabor?
+                     <div class="text-center sm:text-left bg-white/70 backdrop-blur-xs rounded-lg p-4 
+                                 lg:bg-transparent md:bg-transparent lg:backdrop-blur-none md:backdrop-blur-none lg:p-0 md:p-0">
+                         <h1 class="banner-slide-title text-gray-900 sm:text-shadow-xl lg:text-gray-700 md:text-gray-700 ubuntu-font-bold font-semibold text-shadow-2xs text-5xl sm:text-6xl md:text-6xl lg:text-7xl xs:text-8xl leading-tight">
+                             ¿Con antojo de algo rico?
                          </h1>
-                        <p class="text-base lg:md:text-2xl md:text-2xl sm:text-xl md:text-xl mt-3 text-gray-800 lato-regular mb-3">
-                           ¡Prueba hoy nuestros productos 100% artesanales y con ingredientes frescos!
+                        <p class="text-base text-gray-900 text-xl lg:text-gray-700 md:text-gray-700 lg:md:text-2xl md:text-2xl sm:text-xl md:text-xl mt-3 lato-regular mb-3">
+                           ¡Prueba hoy nuestros productos 100% artesanales, elaborados con ingredientes frescos y llenos de sabor!
                         </p>
                         <a href="#catalog">
                            <button class="mt-5 overflow-hidden relative bg-yellow-300 text-gray-800 font-semibold py-2 px-5 sm:py-3 sm:px-8
@@ -180,21 +178,22 @@
          </div>
       </section>
       <!-- Postres de temporada de navidad banner seccion-->       
-      <section class="relative parallax-bg min-h-screen w-full bg-white/80 bg-[url('public/images/season/green.jpg')] bg-cover bg-top overflow-hidden" id="season-desserts"> <!--bg-gradient-to-br from-green-800 via-green-700 to-green-600 -->          
+      <section class="relative parallax-bg min-h-screen w-full bg-white/80 bg-[url('public/images/season/green-mobile.jpg')] md:bg-[url('public/images/season/green-mobile.jpg')] lg:bg-[url('public/images/season/green.jpg')] lg:bg-no-repeat bg-top overflow-hidden" id="season-desserts"> <!--bg-gradient-to-br from-green-800 via-green-700 to-green-600 -->          
          <div class="initial-snow snow-area"></div> 
          <div class="absolute inset-0 opacity-10">
               <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23F472B6" fill-opacity="0.3"%3E%3Cpath d="M30 30l15-15v30l-15-15zm-15 0l15 15V15l-15 15z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] bg-repeat"></div>
           </div>
           <div class="relative z-10 h-auto w-full px-6 py-5  md:py-20 lg:py-20">
               <div class="mt-8 w-full lg:mt-16 md:mt-16 lg:w-[90%] md:w-[90%] mx-auto h-full">
-                  <div class="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between gap-8 md:gap-12 h-full">
+                  <div class="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-sapace gap-8 md:gap-12 h-full">
                       <div class="flex-1 lg:max-w-xl space-y-6 md:space-y-6 p-4">
                           <h2 class="text-5xl md:text-6xl lg:text-8xl font-bold text-amber-400/90 text-shadow-sm leading-tight drop-shadow-sm">
-                              Sabores navideños
+                              Saborea el encanto de la Navidad
                           </h2>
                           <p class="text-base lg:md:text-2xl md:text-2xl sm:text-2xl md:text-2xl mt-3 text-white lato-regular">
-                              Descubre nuestra colección exclusiva de ponches inspirados en los sabores cálidos de la Navidad y
-                              captura la esencia de esta hermosa temporada.
+                              Disfruta de nuestra colección de ponches artesanales <span class="bg-white/80 backdrop-blur-sm text-red-700 font-semibold px-1 py-1">con y sin alcohol</span> exclusiva de la temporada. 
+                              Cada sabor captura la calidez navideña en un sorbo lleno de tradición, alegría y encanto.
+                              <a href="tel:+8296469680" class="text-yellow-500">Pidelo ahora!</a>
                           </p>
                           <div class="flex items-center gap-3">
                               <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
@@ -205,23 +204,20 @@
                       </div>
                       <div class="flex-1 max-w-3xl lg:max-w-6xl w-full">
                           <div class="hidden lg:block h-[550px] overflow-y-auto scrollbar-thin scrollbar-thumb-pink-400 scrollbar-track-pink-100" id="ponches-items-container">
-                              <div class="grid grid-cols-3 gap-6 pr-2 h-full">
+                              <div class="grid grid-cols-4 gap-4 pr-2 h-full">
                                   <div class="dessert-card group relative bg-gradient-to-br from-pink-200 to-pink-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer h-full">
                                       <div class="h-full bg-[url('public/images/season/ponche-2.jpg')] bg-cover bg-center flex items-center justify-center">
                                       </div>
                                       <div class="absolute inset-0 opacity-0 bg-red-800 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-center">
-                                          <h4 class="text-white font-bold text-lg mb-3">Tarta de Calabaza Especiada</h4>
-                                          <p class="text-pink-100 text-sm mb-4 leading-relaxed">Cremosa tarta con especias navideñas y base de galleta</p>
-                                          <!-- <button class="bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-4 py-2 rounded-full text-sm font-bold transition-colors shadow-lg">
-                                              Ver más
-                                          </button> -->
+                                          <h4 class="text-white font-bold text-lg mb-3">Dulce de leche</h4>
+                                          <p class="text-pink-100 text-sm mb-4 leading-relaxed">Cremosa tarta con especias navideñas y base de galleta</p>                                          
                                       </div>
                                   </div>
                                   <div class="dessert-card group relative bg-gradient-to-br from-green-200 to-green-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer h-full">
                                       <div class="h-full bg-[url('public/images/season/ponche-2.jpg')] bg-cover bg-center flex items-center justify-center">
                                       </div>
                                       <div class="absolute inset-0 bg-red-800 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-center">
-                                          <h4 class="text-white font-bold text-lg mb-3">Cheesecake de Caramelo</h4>
+                                          <h4 class="text-white font-bold text-lg mb-3">Café</h4>
                                           <p class="text-green-100 text-sm mb-4 leading-relaxed">Suave cheesecake con salsa de caramelo salado</p>                                          
                                       </div>
                                   </div>
@@ -229,10 +225,18 @@
                                       <div class="h-full bg-[url('public/images/season/ponche-2.jpg')] bg-cover bg-center flex items-center justify-center">
                                       </div>
                                       <div class="absolute inset-0 bg-red-800 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-center">
-                                          <h4 class="text-white font-bold text-lg mb-3">Muffins de Canela</h4>
+                                          <h4 class="text-white font-bold text-lg mb-3">Pistacho</h4>
                                           <p class="text-yellow-100 text-sm mb-4 leading-relaxed">Esponjosos muffins con canela y nueces</p>                                          
                                       </div>
-                                  </div>                                 
+                                  </div>     
+                                  <div class="dessert-card group relative bg-gradient-to-br from-yellow-200 to-yellow-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer h-full">
+                                      <div class="h-full bg-[url('public/images/season/ponche-2.jpg')] bg-cover bg-center flex items-center justify-center">
+                                      </div>
+                                      <div class="absolute inset-0 bg-red-800 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-center">
+                                          <h4 class="text-white font-bold text-lg mb-3">Ciruela</h4>
+                                          <p class="text-yellow-100 text-sm mb-4 leading-relaxed">Esponjosos muffins con canela y nueces</p>                                          
+                                      </div>
+                                  </div>                            
                               </div>
                           </div>
                            <!--Tablet -->
@@ -241,7 +245,7 @@
                                   <div class="dessert-card group relative bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
                                       <div class="aspect-square bg-[url('public/images/season/ponche-2.jpg')] bg-cover bg-center flex items-center justify-center">
                                       </div>
-                                      <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center">
+                                      <div class="absolute inset-0 opacity-0 bg-red-800 group-hover:opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center">
                                           <h4 class="text-white font-bold text-sm mb-2">Tarta de Calabaza Especiada</h4>
                                           <p class="text-pink-100 text-xs mb-3 leading-relaxed">Cremosa tarta con especias navideñas</p>
                                           <button class="bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-3 py-1 rounded-full text-xs font-bold transition-colors">
@@ -254,10 +258,7 @@
                                       </div>
                                       <div class="absolute inset-0 bg-gradient-to-t from-green-900/90 via-green-800/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center">
                                           <h4 class="text-white font-bold text-sm mb-2">Cheesecake de Caramelo</h4>
-                                          <p class="text-green-100 text-xs mb-3 leading-relaxed">Suave cheesecake con caramelo salado</p>
-                                          <button class="bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-3 py-1 rounded-full text-xs font-bold transition-colors">
-                                              Ver más
-                                          </button>
+                                          <p class="text-green-100 text-xs mb-3 leading-relaxed">Suave cheesecake con caramelo salado</p>                                         
                                       </div>
                                   </div>
                                   <div class="dessert-card group relative bg-gradient-to-br from-yellow-200 to-yellow-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
@@ -265,55 +266,69 @@
                                       </div>
                                       <div class="absolute inset-0 bg-gradient-to-t from-yellow-900/90 via-yellow-800/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center">
                                           <h4 class="text-white font-bold text-sm mb-2">Muffins de Canela</h4>
-                                          <p class="text-yellow-100 text-xs mb-3 leading-relaxed">Esponjosos muffins con canela</p>
-                                          <button class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold transition-colors">
-                                              Ver más
-                                          </button>
+                                          <p class="text-yellow-100 text-xs mb-3 leading-relaxed">Esponjosos muffins con canela</p>                                          
                                       </div>
                                   </div>                                  
                               </div>
                           </div>
                           <!--Mobile Stack-->
-                          <div class="md:hidden space-y-4">
-                              <div class="dessert-card group relative bg-gradient-to-br from-pink-200 to-pink-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                  <div class="h-48 bg-[url('public/images/season/ponche-2.jpg')] bg-cover bg-center flex items-center justify-center">
-                                  </div>
-                                  <div class="absolute inset-0 bg-gradient-to-t from-pink-900/90 via-pink-800/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-center">
-                                      <h4 class="text-white font-bold text-lg mb-3">Tarta de Calabaza Especiada</h4>
-                                      <p class="text-pink-100 text-sm mb-4 leading-relaxed">Cremosa tarta con especias navideñas y base de galleta crujiente</p>
-                                      <button class="bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-6 py-2 rounded-full text-sm font-bold transition-colors shadow-lg">
-                                          Ver más
-                                      </button>
-                                  </div>
+                          <div class="md:hidden grid grid-cols-1 gap-4">
+                              <div class="dessert-card group relative 
+                                          bg-gradient-to-br from-pink-200 to-pink-300 
+                                          rounded-xl overflow-hidden shadow-lg hover:shadow-2xl 
+                                          transition-all duration-300 cursor-pointer 
+                                          col-span-1">
+                                 <div class="h-96 bg-[url('public/images/season/ponche-2.jpg')] bg-cover bg-center flex items-center justify-center">
+                                 </div>
+                                 <div class="absolute inset-0 bg-gradient-to-t 
+                                             from-pink-900/90 via-pink-800/70 to-transparent 
+                                             opacity-0 group-hover:opacity-100 transition-opacity duration-300 
+                                             flex flex-col justify-end items-center p-6 text-center">
+                                       <h4 class="text-white font-bold text-lg mb-3">Tarta de Calabaza Especiada</h4>
+                                       <p class="text-pink-100 text-sm mb-4 leading-relaxed max-w-sm">
+                                          Cremosa tarta con especias navideñas y base de galleta crujiente
+                                       </p>
+                                 </div>
+                              </div>                              
+                              <div class="dessert-card group relative bg-gray-700 
+                                          from-green-200 to-green-300 rounded-xl overflow-hidden 
+                                          shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer
+                                          col-span-1">
+                                 <div class="h-96 bg-[url('public/images/season/ponche-2.jpg')] bg-cover bg-center flex items-center justify-center">
+                                 </div>
+                                 <div class="absolute inset-0 bg-gradient-to-t 
+                                             from-green-900/90 via-green-800/70 to-transparent 
+                                             opacity-0 group-hover:opacity-100 transition-opacity duration-300 
+                                             flex flex-col justify-end items-center p-6 text-center">
+                                       <h4 class="text-white font-bold text-lg mb-3">Cheesecake de Caramelo</h4>
+                                       <p class="text-green-100 text-sm mb-4 leading-relaxed max-w-sm">
+                                          Suave cheesecake con salsa de caramelo salado
+                                       </p>
+                                 </div>
                               </div>
-                              <div class="dessert-card group relative bg-gray-700 from-green-200 to-green-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                  <div class="h-48 bg-[url('public/images/season/ponche-2.jpg')] bg-cover bg-center flex items-center justify-center">
-                                  </div>
-                                  <div class="absolute inset-0 bg-gradient-to-t from-green-900/90 via-green-800/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-center">
-                                      <h4 class="text-white font-bold text-lg mb-3">Cheesecake de Caramelo</h4>
-                                      <p class="text-green-100 text-sm mb-4 leading-relaxed">Suave cheesecake con salsa de caramelo salado</p>
-                                      <button class="bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-6 py-2 rounded-full text-sm font-bold transition-colors shadow-lg">
-                                          Ver más
-                                      </button>
-                                  </div>
-                              </div>
-                              <div class="dessert-card group relative bg-gradient-to-br from-yellow-200 to-yellow-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                  <div class="h-48 bg-[url('public/images/season/ponche-2.jpg')] bg-cover bg-center flex items-center justify-center">
-                                  </div>
-                                  <div class="absolute inset-0 bg-gradient-to-t from-yellow-900/90 via-yellow-800/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-center">
-                                      <h4 class="text-white font-bold text-lg mb-3">Muffins de Canela</h4>
-                                      <p class="text-yellow-100 text-sm mb-4 leading-relaxed">Esponjosos muffins con canela y nueces</p>
-                                      <button class="bg-pink-400 hover:bg-pink-500 text-white px-6 py-2 rounded-full text-sm font-bold transition-colors shadow-lg">
-                                          Ver más
-                                      </button>
-                                  </div>
-                              </div>
+                              <div class="dessert-card group relative 
+                                          bg-gradient-to-br from-yellow-200 to-yellow-300 
+                                          rounded-xl overflow-hidden shadow-lg hover:shadow-2xl 
+                                          transition-all duration-300 cursor-pointer 
+                                          col-span-1">
+                                 <div class="h-96 bg-[url('public/images/season/ponche-2.jpg')] bg-cover bg-center flex items-center justify-center">
+                                 </div>                                 
+                                 <div class="absolute inset-0 bg-gradient-to-t 
+                                             from-yellow-900/90 via-yellow-800/70 to-transparent 
+                                             opacity-0 group-hover:opacity-100 transition-opacity duration-300 
+                                             flex flex-col justify-end items-center p-6 text-center">
+                                       <h4 class="text-white font-bold text-lg mb-3">Muffins de Canela</h4>
+                                       <p class="text-yellow-100 text-sm mb-4 leading-relaxed max-w-sm">
+                                          Esponjosos muffins con canela y nueces
+                                       </p>
+                                 </div>
+                              </div>                  
                           </div>
+                          <!--Mobile Stack-->
                       </div>
                   </div>
               </div>
           </div>
-
           <style>
               .scrollbar-thin::-webkit-scrollbar {
                   width: 6px;
@@ -479,7 +494,7 @@
             </div>
          </div>
       </section>
-      <section id="contact" class="py-18 md:py-30 bg-yellow-200 bg-[url('public/images/many-sweets.png')] bg-contain">
+      <section id="contact" class="parallax-bg py-18 md:py-30 bg-yellow-200 bg-[url('public/images/many-sweets.png')] bg-contain">
          <div class="container mx-auto px-6">
             <div class="text-left mb-12">
                <h2 class="text-center md:text-left text-3xl md:text-4xl text-gray-700 drop-shadow-md ubuntu-font-bold">Contáctanos</h2>
@@ -698,12 +713,14 @@
    <script src="src/scripts/snow-generator.js"></script>
    <script>
       document.addEventListener('scroll', function () {
-        const scrolled = window.scrollY;
-        const mainBanner = document.querySelector('.parallax-bg');
-        if (mainBanner) {
-          // Mantenemos la alineación X en center, modificamos solo Y
-          mainBanner.style.backgroundPosition = `center calc(100% + ${scrolled * 0.4}px)`;
-        }
+         const scrolled = window.scrollY;      
+         const parallaxElements = document.querySelectorAll('.parallax-bg');      
+         if (parallaxElements.length > 0) {                  
+            parallaxElements.forEach(element => {
+               // Mantenemos la alineación X en center, modificamos solo Y
+               element.style.backgroundPosition = `center calc(100% + ${scrolled * 0.4}px)`;
+            });
+         }
       });
    </script>
 </html>
