@@ -37,27 +37,27 @@
          document.addEventListener('DOMContentLoaded', () => { AOS.init({ once: true }); });
       </script>
    </head>
-   <body>     
+   <body>
       <nav class="fixed z-50 w-full bg-pink-500 shadow dark:bg-pink-300 h-16 flex items-center justify-between px-6">
-         <a href="#" class="brand-logo flex items-center py-5">
+         <a href="#" class="brand-logo flex flex-no-wrap items-center py-5">
          <img src="./public/icons/P-perla-logo.png" alt="Logo de la pastelería Postres Perla"
             class="h-12 w-12 md:h-12 md:w-12 drop-shadow-xl rounded-full border-4" />
-         <span class="text-white pl-2 text-3xl font-normal">Postres Perla</span>
+         <span class="text-white pl-2 text-xl lg:text-3xl md:text-3xl font-normal">Postres Perla</span>
          </a>
          <!-- Desktop Menu -->
-         <div class="hidden md:flex items-center space-x-4 text-white capitalize font-semibold ubuntu-font">
+         <div class="hidden md:flex items-center space-x-4 text-white capitalize font-semibold ubuntu-font overflow-x-hidden">
             <a href="#season-desserts">
                <button class="overflow-hidden flex relative bg-green-900 justify-center items-center text-white font-semibold py-2 px-4 sm:py-2 sm:px-6
                      rounded-full shadow-md shadow-2xl transition
                      hover:text-yellow-400 hover:shadow-3xl">
-                     <svg width="30" height="30" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+                     <svg width="30" height="20" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
                         <polygon points="100,20 160,120 40,120" fill="white" stroke="white" stroke-width="2"/>
                         <polygon points="100,80 170,190 30,190" fill="white" stroke="white" stroke-width="2"/>
                         <polygon points="100,150 180,260 20,260" fill="white" stroke="white" stroke-width="2"/>
-                        <rect x="85" y="260" width="30" height="40" fill="#8B4513"/> 
+                        <rect x="85" y="260" width="30" height="30" fill="#8B4513"/>
                      </svg>
                   <span class="relative z-10">Navidad</span>
-               </button>               
+               </button>
             </a>
             <a href="#catalog" class="border-b-2 border-transparent hover:border-yellow-500 hover:text-black dark:hover:text-gray-200 text-lg">Productos</a>
             <a href="#services" class="border-b-2 border-transparent hover:border-yellow-500 hover:text-black dark:hover:text-gray-200 text-lg">Servicios</a>
@@ -99,10 +99,10 @@
                               <polygon points="100,20 160,120 40,120" fill="white" stroke="white" stroke-width="2"/>
                               <polygon points="100,80 170,190 30,190" fill="white" stroke="white" stroke-width="2"/>
                               <polygon points="100,150 180,260 20,260" fill="white" stroke="white" stroke-width="2"/>
-                              <rect x="85" y="260" width="30" height="40" fill="#8B4513"/> 
+                              <rect x="85" y="260" width="30" height="40" fill="#8B4513"/>
                            </svg>
                         <span class="relative z-10">Navidad</span>
-                     </button>               
+                     </button>
                   </a>
                   <a href="#services" @click="open = false" class="hover:text-gray-100 text-lg">Servicios</a>
                   <a href="#testimonials" @click="open = false" class="hover:text-gray-100 text-lg">Testimonios</a>
@@ -121,23 +121,23 @@
       <section class="banner relative w-full h-screen parallax-bg
             bg-[url('public/images/cookie-mobile.jpg')]
             lg:bg-[url('public/images/cookie.jpg')]
-            xl:bg-[url('public/images/cookie.jpg')]            
+            xl:bg-[url('public/images/cookie.jpg')]
             md:bg-[url('public/images/cookie.jpg')]
             sm:bg-[url('public/images/cookie.jpg')]
             xs:bg-[url('public/images/cookie-mobile.jpg')]
-            bg-bottom bg-cover bg-no-repeat overflow-hidden">    
-         <div class="initial-snow snow-area" id="snow-container"></div>        
-         <div class="relative h-full transition-transform duration-500 ease-in-out" id="slider-container">                     
-            <div class="absolute w-full h-full overflow-hidden">               
+            bg-bottom bg-cover bg-no-repeat overflow-hidden">
+         <div class="initial-snow snow-area" id="snow-container"></div>
+         <div class="relative h-full transition-transform duration-500 ease-in-out" id="slider-container">
+            <div class="absolute w-full h-full overflow-hidden">
                <div class="flex h-full items-center justify-center md:justify-start w-full px-4 md:px-20">
-                  <div class="relative flex flex-col sm:flex-row items-center md:items-start gap-4 sm:gap-6 py-6 px-4 sm:p-10 max-w-4xl                     
+                  <div class="relative flex flex-col sm:flex-row items-center md:items-start gap-4 sm:gap-6 py-6 px-4 sm:p-10 max-w-4xl
                      lg:max-w-4xl md:max-w-6xl sm:max-w-6xl
                      lg:bg-[url('public/images/vectors/blob-bg.png')] md:bg-[url('public/images/vectors/blob-bg.png')] bg-no-repeat bg-contain bg-center
                      sm:scale-100 scale-95">
                      <img src="public/images/vectors/cupcake.svg"
                         class="animate-drop-bounce w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 mt-2 md:mt-0 shrink-0 drop-shadow-xl"
                         alt="Cupcake vector imagen" />
-                     <div class="text-center sm:text-left bg-white/70 backdrop-blur-xs rounded-lg p-4 
+                     <div class="text-center sm:text-left bg-white/70 backdrop-blur-xs rounded-lg p-4
                                  lg:bg-transparent md:bg-transparent lg:backdrop-blur-none md:backdrop-blur-none lg:p-0 md:p-0">
                          <h1 class="banner-slide-title text-gray-900 sm:text-shadow-xl lg:text-gray-700 md:text-gray-700 ubuntu-font-bold font-semibold text-shadow-2xs text-5xl sm:text-6xl md:text-6xl lg:text-7xl xs:text-8xl leading-tight">
                              ¿Con antojo de algo rico?
@@ -177,27 +177,28 @@
             </div>
          </div>
       </section>
-      <!-- Postres de temporada de navidad banner seccion-->       
-      <section class="relative parallax-bg min-h-screen w-full bg-white/80 
-         bg-[url('public/images/season/green-mobile.jpg')] md:bg-[url('public/images/season/green-mobile.jpg')] lg:bg-[url('public/images/season/green.jpg')] 
-         lg:bg-no-repeat bg-top overflow-hidden" id="season-desserts">       
-         <div class="initial-snow snow-area"></div> 
+      <!-- Postres de temporada de navidad banner seccion-->
+      <section class="relative parallax-bg min-h-screen w-full bg-white/80
+         bg-[url('public/images/season/green-mobile.jpg')] md:bg-[url('public/images/season/green-mobile.jpg')] lg:bg-[url('public/images/season/green.jpg')]
+         lg:bg-no-repeat bg-top overflow-hidden" id="season-desserts">
+         <div class="initial-snow snow-area"></div>
          <div class="absolute inset-0 opacity-10">
               <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23F472B6" fill-opacity="0.3"%3E%3Cpath d="M30 30l15-15v30l-15-15zm-15 0l15 15V15l-15 15z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] bg-repeat"></div>
           </div>
           <div class="relative z-10 h-auto w-full px-6 py-5  md:py-20 lg:py-20">
               <div class="mt-8 w-full lg:mt-16 md:mt-16 lg:w-[90%] md:w-[90%] mx-auto h-full">
-                  <div class="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-evenly gap-4 md:gap-12 h-full">
+                  <div class="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-center gap-4 md:gap-6 h-full">
                      <div class="flex-1 lg:max-w-xl space-y-6 md:space-y-6 p-4">
                            <h2 class="text-5xl md:text-6xl lg:text-8xl font-bold text-amber-400/90 text-shadow-sm leading-tight drop-shadow-sm">
                               Saborea el encanto de la Navidad
                            </h2>
                            <p class="text-base lg:md:text-2xl md:text-2xl sm:text-2xl md:text-2xl mt-3 text-white lato-regular">
-                              Disfruta de nuestra colección de ponches artesanales <span class="text-yellow-500 font-semibold px-1 py-1">con y sin alcohol</span> exclusiva de la temporada. 
-                              Cada sabor captura la calidez navideña en un sorbo lleno de tradición, alegría y encanto.                              
+                              Disfruta de nuestra colección de ponches artesanales <span class="text-yellow-500 font-semibold px-1 py-1">con y sin alcohol</span> exclusiva de la temporada.
+                              Cada sabor captura la calidez navideña en un sorbo lleno de tradición, alegría y encanto.
                            </p>
                            <a href="tel:+8296469680">
-                                 <button class="flex items-center mt-5 overflow-hidden relative bg-red-600 text-white font-semibold py-2 px-5 sm:py-3 sm:px-8
+                                 <button class="flex justify-center items-center md:justify-start lg:justify-start mt-5 overflow-hidden relative bg-red-600 text-white font-semibold
+                                 w-[100%] sm:[60%] xs:[100%] lg:w-[38%] md:w-[30%] py-2 px-5 sm:py-3 sm:px-8
                                  rounded-full shadow-md shadow-2xl transition duration-500 ease-in-out
                                  before:content-[''] before:absolute before:top-0 before:left-0
                                  before:w-0 before:h-full before:bg-red-800/40 before:transition-all
@@ -206,10 +207,10 @@
                                  <svg fill="#FFF" width="34px" height="34px" viewBox="-5.44 -5.44 42.88 42.88" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00032">
                                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                       <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                      <g id="SVGRepo_iconCarrier"> 
-                                        <title>whatsapp</title> 
-                                        <path d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732 0.737 5.291 2.022 7.491l-0.038-0.070-2.109 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809h0.006c8.209-0.003 14.862-6.659 14.862-14.868 0-4.103-1.662-7.817-4.349-10.507l0 0zM16.062 28.228h-0.005c-0 0-0.001 0-0.001 0-2.319 0-4.489-0.64-6.342-1.753l0.056 0.031-0.451-0.267-4.675 1.227 1.247-4.559-0.294-0.467c-1.185-1.862-1.889-4.131-1.889-6.565 0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353h-0zM22.838 18.977c-0.371-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.185-0.837 0.187-0.246 0.371-0.958 1.207-1.175 1.455-0.216 0.249-0.434 0.279-0.805 0.094-1.15-0.466-2.138-1.087-2.997-1.852l0.010 0.009c-0.799-0.74-1.484-1.587-2.037-2.521l-0.028-0.052c-0.216-0.371-0.023-0.572 0.162-0.757 0.167-0.166 0.372-0.434 0.557-0.65 0.146-0.179 0.271-0.384 0.366-0.604l0.006-0.017c0.043-0.087 0.068-0.188 0.068-0.296 0-0.131-0.037-0.253-0.101-0.357l0.002 0.003c-0.094-0.186-0.836-2.014-1.145-2.758-0.302-0.724-0.609-0.625-0.836-0.637-0.216-0.010-0.464-0.012-0.712-0.012-0.395 0.010-0.746 0.188-0.988 0.463l-0.001 0.002c-0.802 0.761-1.3 1.834-1.3 3.023 0 0.026 0 0.053 0.001 0.079l-0-0.004c0.131 1.467 0.681 2.784 1.527 3.857l-0.012-0.015c1.604 2.379 3.742 4.282 6.251 5.564l0.094 0.043c0.548 0.248 1.25 0.513 1.968 0.74l0.149 0.041c0.442 0.14 0.951 0.221 1.479 0.221 0.303 0 0.601-0.027 0.889-0.078l-0.031 0.004c1.069-0.223 1.956-0.868 2.497-1.749l0.009-0.017c0.165-0.366 0.261-0.793 0.261-1.242 0-0.185-0.016-0.366-0.047-0.542l0.003 0.019c-0.092-0.155-0.34-0.247-0.712-0.434z">                                          
-                                        </path> 
+                                      <g id="SVGRepo_iconCarrier">
+                                        <title>whatsapp</title>
+                                        <path d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732 0.737 5.291 2.022 7.491l-0.038-0.070-2.109 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809h0.006c8.209-0.003 14.862-6.659 14.862-14.868 0-4.103-1.662-7.817-4.349-10.507l0 0zM16.062 28.228h-0.005c-0 0-0.001 0-0.001 0-2.319 0-4.489-0.64-6.342-1.753l0.056 0.031-0.451-0.267-4.675 1.227 1.247-4.559-0.294-0.467c-1.185-1.862-1.889-4.131-1.889-6.565 0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353h-0zM22.838 18.977c-0.371-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.185-0.837 0.187-0.246 0.371-0.958 1.207-1.175 1.455-0.216 0.249-0.434 0.279-0.805 0.094-1.15-0.466-2.138-1.087-2.997-1.852l0.010 0.009c-0.799-0.74-1.484-1.587-2.037-2.521l-0.028-0.052c-0.216-0.371-0.023-0.572 0.162-0.757 0.167-0.166 0.372-0.434 0.557-0.65 0.146-0.179 0.271-0.384 0.366-0.604l0.006-0.017c0.043-0.087 0.068-0.188 0.068-0.296 0-0.131-0.037-0.253-0.101-0.357l0.002 0.003c-0.094-0.186-0.836-2.014-1.145-2.758-0.302-0.724-0.609-0.625-0.836-0.637-0.216-0.010-0.464-0.012-0.712-0.012-0.395 0.010-0.746 0.188-0.988 0.463l-0.001 0.002c-0.802 0.761-1.3 1.834-1.3 3.023 0 0.026 0 0.053 0.001 0.079l-0-0.004c0.131 1.467 0.681 2.784 1.527 3.857l-0.012-0.015c1.604 2.379 3.742 4.282 6.251 5.564l0.094 0.043c0.548 0.248 1.25 0.513 1.968 0.74l0.149 0.041c0.442 0.14 0.951 0.221 1.479 0.221 0.303 0 0.601-0.027 0.889-0.078l-0.031 0.004c1.069-0.223 1.956-0.868 2.497-1.749l0.009-0.017c0.165-0.366 0.261-0.793 0.261-1.242 0-0.185-0.016-0.366-0.047-0.542l0.003 0.019c-0.092-0.155-0.34-0.247-0.712-0.434z">
+                                        </path>
                                       </g>
                                  </svg>
                                  <span class="relative z-10">Pídelo ahora</span>
@@ -219,18 +220,37 @@
                               <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
                                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                               </svg>
-                              <span class="text-md italic font-semibold text-white ">Disponible hasta el 31 de diciembre del 2025.</span>
+                              <span class="text-md italic font-semibold text-white">Disponible hasta el 31 de diciembre del 2025.</span>
                            </div>
                      </div>
-                     <div class="flex-1 w-full max-w-2xl">                        
-                        <div class="h-[500px] lg:h-[800px] xl:h-[800px] md:h-[750px]" id="ponches-items-container">
-                           <div class="grid grid-cols-2 gap-4 pr-2 h-full">
-                              <div class="dessert-card group relative rounded-xl h-full max-w-[400px]">
-                                 <div class="h-full bg-[url('public/images/season/bottle-no-bg.png')] bg-cover bg-center flex items-center justify-center">
+                     <div class="flex-1 max-w-3xl">
+                         <div class="h-full lg:h-[820px] xl:h-[820px] md:h-[780px] flex justify-center" id="ponches-items-container">
+                             <div class="flex flex-col items-center justify-center gap-4 rounded-lg px-6 py-3"
+                                  style="background: radial-gradient(circle at center, rgba(255, 255, 255, 0.9) 0%, rgba(255, 243, 227, 0.4) 60%, transparent 100%);">
+                                 <div class="dessert-card group relative h-[78%] w-full max-w-[330px] flex justify-center items-center">
+                                     <img src="public/images/season/bottle-no-bg.png" class="drop-shadow-xl w-full h-full object-contain">
                                  </div>
-                              </div>                           
-                           </div>
-                        </div> 
+                                 <div class="punch-flavors w-full flex flex-col items-center text-center px-1">
+                                     <ul class="grid w-[100%] grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-x-4 lg:gap-x-8 md:gap-x-8 p-2 rounded-lg">
+                                         <li class="flex justify-center items-center text-white font-semibold text-lg badge">
+                                             <img src="public/images/season/milk.svg" class="w-5 mr-1">Dulce de leche
+                                         </li>
+                                         <li class="flex justify-center items-center font-semibold text-white text-lg badge">
+                                             <img src="public/images/season/coffee-beans-filled.svg" class="w-5 mr-1">Cafe
+                                         </li>
+                                         <li class="flex justify-center items-center font-semibold text-white text-lg badge">
+                                             <img src="public/images/season/pistachio.svg" class="w-3 mr-3">Pistacho
+                                         </li>
+                                         <li class="flex justify-center items-center font-semibold text-white text-lg badge">
+                                             <img src="public/images/season/plum.svg" class="w-5 mr-1">Ciruela
+                                         </li>
+                                     </ul>
+                                 </div>
+                                 <span>
+                                     <p class="text-white italic text-lg">Puedes elegir si contiene alcohol o no.</p>
+                                 </span>
+                             </div>
+                         </div>
                      </div>
                   </div>
               </div>
@@ -257,11 +277,11 @@
          <div class="relative w-full lg:w-7/12 px-6 sm:px-10 py-5 sm:py-5 flex flex-col justify-start items-center sm:justify-start sm:items-center
              md:justify-start md:items-center lg:justify-start lg:items-start xl:justify-start xl:items-start
              z-10 min-h-[40vh] overflow-hidden shadow-md">
-            <div class="w-full max-w-3xl text-left space-y-3 pt-25">
+            <div class="w-full max-w-3xl text-left space-y-3 pt-20">
                <div class="max-w-md md:max-w-full sm:max-w-lg lg:max-w-lg xl:max-w-md 2xl:max-w-lg mx-auto px-2 sm:px-4">
                   <h2 class="text-gray-700 text-4xl text-center text-wrap sm:text-center sm:text-5xl lg:text-left lg:text-wrap xl:text-left
-                      md:text-center md:text-nowrap md:text-4xl ubuntu-font-bold pb-8">
-                  Tus ideas, nuestras manos
+                      md:text-center md:text-nowrap md:text-5xl ubuntu-font-bold pb-8">
+                      Tus ideas, nuestras manos
                   <h2>
                   <p class="text-gray-700 text-xl sm:text-xl md:text-2xl ubuntu-font-regular">
                      Nos especializamos en hacer de tus celebraciones algo único.
@@ -274,7 +294,7 @@
          <div class="bg-[url('public/images/desserts-patterns.png')] bg-repeat w-full lg:w-10/12 bg-[#E0F7F4] px-5 py-4 gap-6 min-h-[30vh] relative z-10"
             id="services-cards-father-container">
             <div class="group relative bg-white rounded-2xl
-               w-[85%] sm:w-[75%] md:w-[55%] lg:w-56 xl:w-56 2xl:w-60
+               w-[85%] sm:w-[75%] md:w-[55%] lg:w-56 xl:w-56 2xl:w-80
                min-h-[240px] sm:min-h-[280px]
                flex flex-col justify-evenly items-center p-6 text-center
                border border-pink-300
@@ -294,7 +314,7 @@
                </p>
             </div>
             <div class="group relative bg-white rounded-2xl
-               w-[85%] sm:w-[75%] md:w-[55%] lg:w-56 xl:w-56 2xl:w-60
+               w-[85%] sm:w-[75%] md:w-[55%] lg:w-56 xl:w-56 2xl:w-80
                min-h-[240px] sm:min-h-[280px]
                flex flex-col justify-evenly items-center p-6 text-center
                border border-pink-300
@@ -314,7 +334,7 @@
                </p>
             </div>
             <div class="group relative bg-white rounded-2xl
-               w-[85%] sm:w-[75%] md:w-[55%] lg:w-[45%] xl:w-56 2xl:w-60
+               w-[85%] sm:w-[75%] md:w-[55%] lg:w-[45%] xl:w-56 2xl:w-80
                min-h-[240px] sm:min-h-[280px]
                flex flex-col justify-evenly items-center p-6 text-center
                border border-pink-300
@@ -519,7 +539,7 @@
                &times;
                </button>
             </form>
-            <div class="w-full md:w-1/2 mb-6 md:mb-0 md:pr-6 max-h-[435px] overflow-y-auto">
+            <div class="w-full md:w-1/2 mb-6 md:mb-0 md:pr-6 max-h-[800px] overflow-y-auto">
                <h2 id="modal-product-title" class="text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-bold lato-bold mb-2 text-wrap"></h2>
                <div class="w-full sm:w-80 h-1 bg-pink-400 mb-4"></div>
                <p class="mb-2 lato-bold text-lg text-wrap">Descripción del producto:</p>
@@ -603,9 +623,9 @@
    <script src="src/scripts/snow-generator.js"></script>
    <script>
       document.addEventListener('scroll', function () {
-         const scrolled = window.scrollY;      
-         const parallaxElements = document.querySelectorAll('.parallax-bg');      
-         if (parallaxElements.length > 0) {                  
+         const scrolled = window.scrollY;
+         const parallaxElements = document.querySelectorAll('.parallax-bg');
+         if (parallaxElements.length > 0) {
             parallaxElements.forEach(element => {
                // Mantenemos la alineación X en center, modificamos solo Y
                element.style.backgroundPosition = `center calc(100% + ${scrolled * 0.4}px)`;

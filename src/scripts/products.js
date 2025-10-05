@@ -1,15 +1,15 @@
 const ALL_PRODUCTS = [
   {
     title: "Pastel personalizado",
-    description: "A tu gusto, diseño y estilo",
+    description: "Elaboramos cualquier pastel que desees para tus celebraciones, a tu gusto, diseño y con tu estilo",
     image: "./public/images/personal-cake.jpg",
-    alt: "Pasteles personalizados",
+    alt: "Pastel personalizado",
     href: "#",
     price: "RD$1,800.00",
     ingredients: ["Vainilla", "Chocolate", "Dulce de leche"]
   },
   {
-    title: "Pasteles por porciones",
+    title: "Pastel en porción",
     description: "Partes individuales",
     image: "./public/images/portion-cake.jpg",
     alt: "Pasteles por porciones",
@@ -36,7 +36,7 @@ const ALL_PRODUCTS = [
     ingredients: ["Frutas frescas", "Masa quebrada", "Crema pastelera"]
   },
   {
-    title: "Pudín de pan",
+    title: "Pudín de pan (completo y en porciones)",
     description: "Surtidos y deliciosos",
     image: "./public/images/pudding.jpg",
     alt: "Postre 2",
@@ -54,7 +54,6 @@ const ALL_PRODUCTS = [
     ingredients: ["Frutas frescas", "Masa quebrada", "Crema pastelera"]
   }
 ];
-
 function getProducts() {
   return ALL_PRODUCTS;
 }
@@ -144,7 +143,6 @@ function renderProductCards(sliderContainerSelector) {
     }
   };
 }
-
 function showProductModal(productData) {
   const modal = document.getElementById('products-modal');
   if (!modal){
@@ -196,15 +194,13 @@ function showProductModal(productData) {
   modal.showModal();
   document.body.classList.add('overflow-hidden');//bloquea el scroll del body
 }
-
 function sendWhatsappMessage(title, price, imageUrl){
   const PHONENUMBER = '8296469680';
-  const BASEMESSAGE = `Hola Perla, me interesa hablar de este producto:\n*${title}*\n${imageUrl}`;
+  const BASEMESSAGE = `Hola Perla, me interesa hablar sobre este producto:\n${title}`;//\n${imageUrl}
   const ENCODEDMESSAGE = encodeURIComponent(BASEMESSAGE);
   const WHATSAPPURL = `https://wa.me/${PHONENUMBER}?text=${ENCODEDMESSAGE}`;
   return WHATSAPPURL;
 }
-
 function renderProductCarousel(){
   const products = getProducts();
   const sliderContainer = document.getElementById('product-slider-container');
