@@ -152,3 +152,54 @@
       initialize();
    }
 })();
+
+//Toogle de las categorias de productos
+(function(){
+   document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.category-btn');
+      const contentAreas = document.querySelectorAll('.category-content');      
+      
+      const defaultCategory = 'pasteles-bizcochos';
+      /**
+       * Función para alternar las clases de activo/inactivo y mostrar el contenido.
+       * @param {string} targetCategory - El valor 'data-category' del botón clicado.
+       */
+      const toggleCategory = (targetCategory) => {
+         // 1. Manejo de Botones (Clases de Estilo)
+         buttons.forEach(btn => {
+               if (btn.dataset.category === targetCategory) {
+                  // Activar: Fondo amarillo, texto oscuro y sombra fuerte
+                  btn.classList.add('bg-yellow-300', 'shadow-xl', 'text-gray-800');
+                  btn.classList.remove('bg-white', 'hover:bg-gray-100', 'shadow-md', 'text-gray-700');
+               } else {
+                  // Desactivar: Fondo blanco, texto gris y sombra normal
+                  btn.classList.add('bg-white', 'hover:bg-gray-100', 'shadow-md', 'text-gray-700');
+                  btn.classList.remove('bg-yellow-300', 'shadow-xl', 'text-gray-800');
+               }
+         });
+         // 2. Manejo de Contenido (Mostrar/Ocultar Divs)
+         contentAreas.forEach(contentDiv => {
+               const contentId = contentDiv.id.replace('-content', '');
+               
+               if (contentId === targetCategory) {
+                  contentDiv.classList.remove('hidden');
+                  // Opcional: Desplazar la vista al contenido
+                  contentDiv.scrollIntoView({ behavior: 'smooth' }); 
+               } else {
+                  contentDiv.classList.add('hidden');
+               }
+         });
+      };
+
+      // 3. Establecer la categoría por defecto al cargar la página
+      toggleCategory(defaultCategory);
+
+      // 4. Añadir Listeners a los botones
+      buttons.forEach(button => {
+         button.addEventListener('click', () => {
+               const category = button.dataset.category;
+               toggleCategory(category);
+         });
+      });
+   });
+})();

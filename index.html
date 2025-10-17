@@ -259,11 +259,55 @@
       <!-- End postres de temporada de navidad banner seccion-->
       <section class="catalog flex justify-center items-center" id="catalog">
          <div class="container py-5">
-            <div class="catalog-text mb-20 text-center">
+            <div class="catalog-text mb-15 text-center">
                <h2 class="text-gray-700 text-4xl md:text-4xl sm:text-3xl xs:text-3xl lg:text-5xl xl:text-5xl ubuntu-font-bold title">
                   Explora nuestra selección de productos
                </h2>
             </div>
+            <div class="w-full mx-auto py-4 mb-8">
+               <div id="category-selector" 
+                     class="flex flex-row space-x-5 justify-center 
+                           sm:overflow-x-visible overflow-x-auto pb-2 
+                           max-w-full">
+                  <button id="btn-pasteles-bizcochos" 
+                           data-category="pasteles-bizcochos"
+                           class="category-btn flex justify-center items-center px-4 py-2 
+                                 rounded-full shadow-md                                  
+                                 bg-white text-gray-600 font-semibold 
+                                 hover:bg-gray-100 transition duration-200 
+                                 whitespace-nowrap                                
+                                 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-80">
+                        <img src="public/icons/cake-for-filter.svg" class="w-6 h-6 pr-1" alt="">
+                        Pasteles y Bizcochos
+                  </button>
+                  <button id="btn-postres" 
+                           data-category="postres"
+                           class="category-btn flex items-center px-4 py-2 
+                                 rounded-full shadow-md 
+                                 bg-white text-gray-600 font-semibold 
+                                 hover:bg-gray-100 transition duration-200 
+                                 whitespace-nowrap
+                                 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-80">
+                        <img src="public/icons/dessert-for-filter.svg" class="w-6 h-6 pr-1" alt="">
+                        Postres
+                  </button>
+                  <button id="btn-mesa-dulces" 
+                           data-category="mesa-dulces"
+                           class="category-btn flex items-center px-4 py-2 
+                                 rounded-full shadow-md 
+                                 bg-white text-gray-600 font-semibold 
+                                 hover:bg-gray-100 transition duration-200 
+                                 whitespace-nowrap 
+                                 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-80">
+                        <img src="public/icons/birdthday-for-filter.svg" class="w-6 h-6 pr-1" alt="">
+                        Mesa de Dulces
+                  </button>
+               </div>
+            </div>
+            <div id="pasteles-bizcochos-content" class="category-content p-4 border rounded-lg hidden">Contenido de Pasteles y Bizcochos</div>
+            <div id="postres-content" class="category-content p-4 border rounded-lg hidden">Contenido de Postres</div>
+            <div id="mesa-dulces-content" class="category-content p-4 border rounded-lg hidden">Contenido de Mesa de Dulces</div>
+
             <div class="relative overflow-x-auto flex justify-center items-center ">
                <div class="slider-container flex transition-transform lg:flex-wrap md:flex-wrap lg:transition-none md:transition-none duration-500 ease-in-out w-full">
                </div>
