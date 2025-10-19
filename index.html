@@ -120,11 +120,11 @@
       </nav>
       <section class="banner relative w-full h-screen parallax-bg
             bg-[url('public/images/cookie-mobile.jpg')]
-            lg:bg-[url('public/images/cookie.jpg')]
-            xl:bg-[url('public/images/cookie.jpg')]
-            md:bg-[url('public/images/cookie.jpg')]
-            sm:bg-[url('public/images/cookie.jpg')]
-            xs:bg-[url('public/images/cookie-mobile.jpg')]
+            lg:bg-[url('public/images/cookie.webp')]
+            xl:bg-[url('public/images/cookie.webp')]
+            md:bg-[url('public/images/cookie.webp')]
+            sm:bg-[url('public/images/cookie.webp')]
+            xs:bg-[url('public/images/cookie-mobile.webp')]
             bg-bottom bg-cover bg-no-repeat overflow-hidden">
          <div class="initial-snow snow-area" id="snow-container"></div>
          <div class="relative h-full transition-transform duration-500 ease-in-out" id="slider-container">
@@ -179,7 +179,7 @@
       </section>
       <!-- Postres de temporada de navidad banner seccion-->
       <section class="relative parallax-bg min-h-screen w-full bg-white/80
-         bg-[url('public/images/season/green-mobile.jpg')] md:bg-[url('public/images/season/green-mobile.jpg')] lg:bg-[url('public/images/season/green.jpg')]
+         bg-[url('public/images/season/green-mobile.jpg')] md:bg-[url('public/images/season/green-mobile.webp')] lg:bg-[url('public/images/season/green.webp')]
          lg:bg-no-repeat bg-top overflow-hidden" id="season-desserts">
          <div class="initial-snow snow-area"></div>
          <div class="absolute inset-0 opacity-10">
@@ -258,64 +258,175 @@
       </section>
       <!-- End postres de temporada de navidad banner seccion-->
       <section class="catalog flex justify-center items-center" id="catalog">
-         <div class="container py-5">
-            <div class="catalog-text mb-15 text-center">
-               <h2 class="text-gray-700 text-4xl md:text-4xl sm:text-3xl xs:text-3xl lg:text-5xl xl:text-5xl ubuntu-font-bold title">
-                  Explora nuestra selección de productos
-               </h2>
-            </div>
-            <div class="w-full mx-auto py-4 mb-8">
-               <div id="category-selector" 
-                     class="flex flex-row space-x-5 justify-center 
-                           sm:overflow-x-visible overflow-x-auto pb-2 
-                           max-w-full">
-                  <button id="btn-pasteles-bizcochos" 
-                           data-category="pasteles-bizcochos"
-                           class="category-btn flex justify-center items-center px-4 py-2 
-                                 rounded-full shadow-md                                  
-                                 bg-white text-gray-600 font-semibold 
-                                 hover:bg-gray-100 transition duration-200 
-                                 whitespace-nowrap                                
-                                 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-80">
-                        <img src="public/icons/cake-for-filter.svg" class="w-6 h-6 pr-1" alt="">
-                        Pasteles y Bizcochos
-                  </button>
-                  <button id="btn-postres" 
-                           data-category="postres"
-                           class="category-btn flex items-center px-4 py-2 
-                                 rounded-full shadow-md 
-                                 bg-white text-gray-600 font-semibold 
-                                 hover:bg-gray-100 transition duration-200 
-                                 whitespace-nowrap
-                                 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-80">
-                        <img src="public/icons/dessert-for-filter.svg" class="w-6 h-6 pr-1" alt="">
-                        Postres
-                  </button>
-                  <button id="btn-mesa-dulces" 
-                           data-category="mesa-dulces"
-                           class="category-btn flex items-center px-4 py-2 
-                                 rounded-full shadow-md 
-                                 bg-white text-gray-600 font-semibold 
-                                 hover:bg-gray-100 transition duration-200 
-                                 whitespace-nowrap 
-                                 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-80">
-                        <img src="public/icons/birdthday-for-filter.svg" class="w-6 h-6 pr-1" alt="">
-                        Mesa de Dulces
-                  </button>
-               </div>
-            </div>
-            <div id="pasteles-bizcochos-content" class="category-content p-4 border rounded-lg hidden">Contenido de Pasteles y Bizcochos</div>
-            <div id="postres-content" class="category-content p-4 border rounded-lg hidden">Contenido de Postres</div>
-            <div id="mesa-dulces-content" class="category-content p-4 border rounded-lg hidden">Contenido de Mesa de Dulces</div>
+          <div class="container py-5">
+              <div class="catalog-text mb-10 text-center">
+                 <h2 class="text-gray-700 text-4xl md:text-4xl sm:text-3xl xs:text-3xl lg:text-5xl xl:text-5xl ubuntu-font-bold title">
+                      Explora nuestra selección de productos
+                 </h2>
+              </div>
 
-            <div class="relative overflow-x-auto flex justify-center items-center ">
-               <div class="slider-container flex transition-transform lg:flex-wrap md:flex-wrap lg:transition-none md:transition-none duration-500 ease-in-out w-full">
-               </div>
-               <div id="carousel-bullets-container"
-                  class="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex justify-center space-x-2 z-10">
-               </div>
-            </div>
-         </div>
+              <div class="w-full mx-auto py-4"
+                   x-data="{
+                      activeCategory: 'pasteles', // Categoría inicial: 'pasteles'
+                      products: ALL_PRODUCTS, // Carga el array global
+                      modalData: {},
+                      isModalOpen: false, // Variable para la animación (se debe usar para x-show)
+
+                      get filteredProducts() {
+                          // Si el array de productos aún no está cargado, devuelve un array vacío
+                          return this.products ? this.products.filter(product => product.category === this.activeCategory) : [];
+                      },
+                      isContentVisible: false, // Inicia en falso para que esté oculto
+                      // Función para mostrar el contenido después de un breve retraso
+                      initContent() {
+                         setTimeout(() => {
+                            this.isContentVisible = true;
+                         }, 100);
+                      },
+                      showProductModalAlpine(product) {
+                          this.modalData = product;
+                          // 1. Genera el URL de WhatsApp (usa la función del JS externo)
+                          const WHATSAPPURL = sendWhatsappMessage ? sendWhatsappMessage(product.title, product.price, product.image) : '#';
+                          document.getElementById('whatsapp-link').href = WHATSAPPURL;
+
+                          // 2. Controla el estado para la animación y muestra el modal
+                          this.isModalOpen = true;
+                          this.$refs.productsModal.showModal(); // Método nativo para mostrar
+                          document.body.classList.add('overflow-hidden');
+                      },
+                      closeModal() {
+                          this.$refs.productsModal.close();
+                          this.isModalOpen = false; // Restablece el estado para la próxima animación
+                          document.body.classList.remove('overflow-hidden');
+                      }
+                  }"x-init="initContent()">
+
+                  <div id="category-selector"
+                       class="flex flex-row gap-0 justify-center
+                              sm:overflow-x-visible overflow-x-auto p-3
+                              max-w-fit mx-auto
+                              bg-gray-100 rounded-full shadow-lg mb-10">
+
+                      <button data-category="pasteles"
+                              @click="activeCategory = 'pasteles'"
+                              :class="{
+                                  'bg-white text-gray-900 font-extrabold shadow-xl': activeCategory === 'pasteles',
+                                  'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'pasteles'
+                              }"
+                              class="category-btn flex justify-center items-center px-6 py-2 rounded-full whitespace-nowrap
+                                     transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-80">
+                          <img src="public/icons/cake-for-filter.svg" class="w-6 h-6 pr-2" alt="">
+                          Pasteles
+                      </button>
+
+                      <button data-category="postres"
+                              @click="activeCategory = 'postres'"
+                              :class="{
+                                  'bg-white text-gray-900 font-extrabold shadow-xl': activeCategory === 'postres',
+                                  'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'postres'
+                              }"
+                              class="category-btn flex items-center px-6 py-2 rounded-full whitespace-nowrap
+                                     transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-80">
+                          <img src="public/icons/dessert-for-filter.svg" class="w-6 h-6 pr-2" alt="">
+                          Postres
+                      </button>
+                      <button data-category="mesa-dulces"
+                              @click="activeCategory = 'mesa-dulces'"
+                              :class="{
+                                  'bg-white text-gray-900 font-extrabold shadow-xl': activeCategory === 'mesa-dulces',
+                                  'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'mesa-dulces'
+                              }"
+                              class="category-btn flex items-center px-6 py-2 rounded-full whitespace-nowrap
+                                     transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-80">
+                          <img src="public/icons/birdthday-for-filter.svg" class="w-6 h-6 pr-2" alt="">
+                          Mesa de Dulces
+                      </button>
+                  </div>
+                  <div id="product-slider-container"
+                       class="slider-container ransition-transform slide-in flex lg:flex-wrap md:flex-wrap w-full overflow-x-auto"
+                       x-show="isContentVisible"
+                       x-transition:enter="transition ease-in-out duration-500"
+                       x-transition:enter-start="opacity-0 translate-y-10"
+                       x-transition:enter-end="opacity-100 translate-y-0"
+                       style="display: none !important;">
+                      <template x-for="product in filteredProducts" :key="product.title">
+                          <div class="w-full mt-3 mb-3 sm:w-1/2 md:w-1/2 lg:w-1/4 px-3 flex justify-center">
+                              <div class="img-box bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden max-w-[295px]">
+                                  <div class="img-container overflow-hidden rounded-t-2xl">
+                                      <img :src="product.image" :alt="product.alt || product.title"
+                                           class="object-cover w-full h-48 transition-transform duration-300 hover:scale-105">
+                                  </div>
+                                  <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left">
+                                      <p class="lower-case text-pink-600 font-bold text-xl transition duration-300 block mb-1 ubuntu-font-bold text"
+                                         x-text="product.title">
+                                      </p>
+                                      <button @click="showProductModalAlpine(product)"
+                                              class="shadow-2xl mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
+                                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                              <path d="M5 15a1 1 0 001.707.707L15 7.414V13a1 1 0 102 0V5a1 1 0 00-1-1h-8a1 1 0 100 2h5.586L5.707 14.293A1 1 0 005 15z"></path>
+                                          </svg>
+                                          Ver detalles
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </template>
+                      <div x-show="filteredProducts.length === 0" class="w-full text-center py-10 text-gray-700 text-2xl">
+                          No hay productos disponibles en esta categoría.
+                      </div>
+                  </div>
+                  <dialog id="products-modal" x-ref="productsModal"
+                          class="p-0 rounded-2xl shadow-3xl backdrop:bg-black/80 w-11/12 md:w-2/3 lg:w-1/2 max-w-5xl !m-auto"
+                          @click.outside="closeModal()"
+                          x-show="isModalOpen"
+                          x-transition:enter="ease-in-out duration-200"
+                          x-transition:enter-start="opacity-0 scale-90"
+                          x-transition:enter-end="opacity-100 scale-100"
+                          x-transition:leave="ease-in-out duration-200"
+                          x-transition:leave-start="opacity-100 scale-100"
+                          x-transition:leave-end="opacity-0 scale-90"
+                          style="display: none !important;">
+
+                      <div class="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden">
+
+                          <div class="md:w-1/2 relative">
+                              <img id="modal-product-image"
+                                   :src="modalData.image || ''"
+                                   :alt="modalData.alt || modalData.title || 'Imagen del producto'"
+                                   class="w-full h-64 md:h-full object-cover">
+                          </div>
+
+                          <div class="md:w-1/2 p-6 md:p-10 relative">
+
+                              <button @click="closeModal()"
+                                      class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 text-2xl font-light leading-none">
+                                  &times;
+                              </button>
+
+                              <h2 id="modal-product-title" class="text-3xl font-extrabold text-gray-900 mb-3" x-text="modalData.title || 'Información no disponible'"></h2>
+
+                              <p id="modal-product-description" class="text-gray-600 text-base mb-6" x-text="modalData.description || 'Descripción no disponible.'"></p>
+
+                              <p id="modal-product-price" class="text-2xl font-extrabold text-pink-600 mb-6" x-text="modalData.price || 'Precio no disponible'"></p>
+
+                              <div class="mb-8">
+                                  <h3 class="text-lg font-bold text-gray-800 mb-2">Ingredientes:</h3>
+                                  <ul id="modal-product-ingredients" class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                      <template x-for="ingredient in modalData.ingredients">
+                                          <li x-text="ingredient"></li>
+                                      </template>
+                                      <li x-show="!modalData.ingredients || modalData.ingredients.length === 0">Sin ingredientes específicos.</li>
+                                  </ul>
+                              </div>
+                              <a id="whatsapp-link" target="_blank" href="#" @click.stop
+                                 class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 w-full text-center block">
+                                  Ordenar por WhatsApp
+                              </a>
+                          </div>
+                      </div>
+                  </dialog>
+              </div>
+          </div>
       </section>
       <section class="bg-[url('public/images/desserts-patterns.png')] bg-repeat bg-[#E0F7F4] w-full flex flex-col lg:flex-row items-stretch relative overflow-hidden min-h-[60vh]" id="services">
          <div class="relative w-full lg:w-7/12 px-6 sm:px-10 py-5 sm:py-5 flex flex-col justify-start items-center sm:justify-start sm:items-center

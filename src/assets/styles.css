@@ -134,8 +134,9 @@ nav a {
 	padding-bottom: 70px;
 }
 .img-box .img-container {
-	width: 295px;
-	height: 325px;
+	width: 300px;
+	height: 258px;
+	max-height: 260px;
 	overflow: hidden;
 	margin-right: 8px;
 }
@@ -145,8 +146,8 @@ nav a {
 	object-fit: cover;
 }
 .img-container:hover img {
-	-webkit-transform: scale(1.2);
-	transform: scale(1.2);
+	-webkit-transform: scale(1);
+	transform: scale(1);
 	transition: 0.2s ease-in-out;
 }
 /* Carousel */
@@ -201,28 +202,6 @@ nav a {
 	font-weight: 600;
 	font-style: normal;
 	font-variation-settings: "wdth" 100;
-}
-/* Modal animation */
-@keyframes shake {
-	0% {
-		transform: translateX(0);
-		opacity: 0;
-	}
-	25% {
-		transform: translateX(-20px);
-	}
-	50% {
-		transform: translateX(20px);
-	}
-	75% {
-		transform: translateX(-25px);
-	}
-	100% {
-		transform: translateX(0);
-	}
-}
-.animate-shake-on-open[open] {
-	animation: shake 0.5s ease-in-out;
 }
 @keyframes fade-in {
 	from {
