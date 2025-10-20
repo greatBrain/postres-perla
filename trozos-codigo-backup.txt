@@ -1,0 +1,15 @@
+<ul id="modal-product-ingredients" class="text-md text-gray-800 font-medium space-y-1">
+
+                                    <template x-for="filling in modalData.fillingFlavors">
+
+                                        <li x-text="filling"></li>
+
+                                    </template>
+
+                                    <li x-show="!modalData.fillingFlavors || modalData.fillingFlavors.length === 0" class="italic">
+
+                                       Sin sabores de relleno específicos.
+
+                                    </li>
+
+                                </ul>

@@ -1,1 +1,0 @@
-// Fetch data from json file and render to UI
