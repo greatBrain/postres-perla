@@ -77,3 +77,10 @@
       initialize();
    }
 })();
+function sendWhatsappMessage(productName){
+    const PHONENUMBER = '8296469680';
+    const BASEMESSAGE = `Hola Perla, me interesa hablar sobre este producto:\n${productName}\n`;
+    const ENCODEDMESSAGE = encodeURIComponent(BASEMESSAGE);
+    const WHATSAPPURL = `https://wa.me/${PHONENUMBER}?text=${ENCODEDMESSAGE}`;
+    return WHATSAPPURL;
+}

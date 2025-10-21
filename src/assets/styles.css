@@ -114,7 +114,7 @@ nav a {
 	background-color: var(--perla-yellow);
 	display: flex;
 	flex-direction: column;
-	padding-top: 95px;
+	padding-top: 50px;
 	padding-bottom: 50px;
 }
 .catalog>.title {

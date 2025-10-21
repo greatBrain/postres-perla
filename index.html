@@ -251,7 +251,7 @@
         <div class="container py-4">
             <div class="catalog-text mb-10 text-center">
                 <h2 class="text-gray-700 text-4xl md:text-4xl sm:text-3xl xs:text-3xl lg:text-5xl xl:text-5xl ubuntu-font-bold title">
-                    Explora nuestros productos <span class="text-yellow-400">artesanales</span>
+                    Explora nuestros productos <span class="text-yellow-500">artesanales</span>
                 </h2>
             </div>
             <div class="w-full mx-auto py-4" x-data="{
@@ -272,7 +272,7 @@
                       },
                       showProductModal(product) {
                           this.modalData = product;                          
-                          const WHATSAPPURL = sendWhatsappMessage ? sendWhatsappMessage(product.title, product.price, product.image) : '#';
+                          const WHATSAPPURL = sendWhatsappMessage ? sendWhatsappMessage(product.title) : '#';
                           document.getElementById('whatsapp-link').href = WHATSAPPURL;                          
                           this.isModalOpen = true;
                           this.$refs.productsModal.showModal(); // Método nativo para mostrar
@@ -283,7 +283,7 @@
                           this.isModalOpen = false; // Restablece el estado para la próxima animación
                           document.body.classList.remove('overflow-hidden');
                       }
-                  }" x-init="initContent()">
+                }" x-init="initContent()">
                 <div id="category-selector" class="flex flex-row gap-0 justify-center
                               sm:overflow-x-visible overflow-x-auto p-3
                               max-w-fit mx-auto
@@ -292,28 +292,28 @@
                               md:bg-gray-100/50 md:rounded-full md:shadow-lg
                               sm:bg-gray-100/50 sm:rounded-full sm:shadow-lg">
                     <button data-category="pasteles" @click="activeCategory = 'pasteles'" :class="{
-                                  'bg-white text-gray-900 font-extrabold shadow-lg lg:shadow-xl md:shadow-xl': activeCategory === 'pasteles',
+                                  'outline-none ring-2 ring-yellow-400 ring-opacity-80 bg-white text-gray-800 font-semibold shadow-lg lg:shadow-xl md:shadow-xl': activeCategory === 'pasteles',
                                   'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'pasteles'
                               }" class="category-btn flex justify-center items-center px-6 py-2 rounded-full whitespace-nowrap
-                                     transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-80">
+                                     transition duration-200">
                         <img src="public/icons/cake-for-filter.svg" class="w-6 h-6 pr-2" alt="">
                         Pasteles
                     </button>
                     <button data-category="postres" @click="activeCategory = 'postres'" :class="{
-                                  'bg-white text-gray-900 font-extrabold shadow-lg lg:shadow-xl md:shadow-xl': activeCategory === 'postres',
+                                  'outline-none ring-2 ring-yellow-400 ring-opacity-80 bg-white text-gray-800 font-semibold shadow-lg lg:shadow-xl md:shadow-xl': activeCategory === 'postres',
                                   'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'postres'
                               }" class="category-btn flex items-center px-6 py-2 rounded-full whitespace-nowrap
-                                     transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-80">
+                                     transition duration-200">
                         <img src="public/icons/dessert-for-filter.svg" class="w-6 h-6 pr-2" alt="">
                         Postres
                     </button>
                     <button data-category="mesa-dulces" @click="activeCategory = 'mesa-dulces'" :class="{
-                                  'bg-white text-gray-900 font-extrabold shadow-lg lg:shadow-xl md:shadow-xl': activeCategory === 'mesa-dulces',
+                                  'outline-none ring-2 ring-yellow-400 ring-opacity-80 bg-white text-gray-800 font-semibold shadow-lg lg:shadow-xl md:shadow-xl': activeCategory === 'mesa-dulces',
                                   'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'mesa-dulces'
                               }" class="category-btn flex items-center px-6 py-2 rounded-full whitespace-nowrap
-                                     transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-80">
+                                     transition duration-200">
                         <img src="public/icons/birdthday-for-filter.svg" class="w-6 h-6 pr-2" alt="">
-                        Mesas de Dulces
+                        Dulces
                     </button>
                 </div>
                 <div id="product-slider-container" class="slider-container ransition-transform slide-in flex lg:flex-wrap md:flex-wrap w-full overflow-x-auto" x-show="isContentVisible" x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0" style="display: none !important;">
@@ -340,8 +340,12 @@
                         No hay productos disponibles en esta categoría.
                     </div>
                 </div>
-                <dialog id="products-modal" x-ref="productsModal" class="p-0 rounded-2xl shadow-3xl backdrop:bg-black/80 w-11/12 md:w-3/3 lg:w-2/2 max-w-6xl !m-auto" @click.outside="closeModal()" x-show="isModalOpen" x-transition:enter="ease-in-out duration-200" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="ease-in-out duration-200" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" style="display: none !important;">
-                    <div class="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden">
+                <dialog id="products-modal" x-ref="productsModal" class="p-0 rounded-2xl shadow-3xl backdrop:bg-black/80 w-11/12 md:w-3/3 lg:w-2/2 max-w-6xl !m-auto" 
+                        @click.outside="closeModal()" x-show="isModalOpen" x-transition:enter="ease-in-out duration-200" 
+                        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" 
+                        x-transition:leave="ease-in-out duration-200" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" 
+                        style="display: none !important;">
+                    <div class="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden" @click.stop>
                         <div class="md:w-1/2 relative">
                             <img id="modal-product-image" :src="modalData.image || ''" :alt="modalData.alt || modalData.title || 'Imagen del producto'" class="w-full h-64 md:h-full object-cover">
                         </div>
@@ -349,13 +353,12 @@
                             <button @click="closeModal()" class="absolute top-4 right-4 text-gray-600 hover:text-gray-800 text-3xl font-light leading-none">
                                 &times;
                             </button>
-                            <h2 id="modal-product-title" class="text-3xl font-bold text-pink-600 mb-3" x-text="modalData.title || 'Información no disponible'"></h2>                            
-                            <div class="price">
-                                 <p class="text-xl font-semibold text-gray-600 mb-1">Información de precios:</p>                              
-                                 <ul id="modal-product-price" class="grid grid-cols-2 gap-x-6 list-disc list-inside text-sm text-gray-500 font-semibold space-y-1 mb-3">                                 
+                            <h2 id="modal-product-title" class="text-2xl font-bold text-pink-600 mb-3" x-text="modalData.title || 'Información no disponible'"></h2>                            
+                            <div class="price mb-3">
+                                 <p class="text-md font-bold text-gray-800 mb-1">Precios:</p>                              
+                                 <ul id="modal-product-price" class="flex justify-start items-center flex-wrap gap-x-6 space-y-1 mb-3">                                 
                                     <template x-for="(price, index) in modalData.prices">
-                                       <li x-text="price || 'Precios no disponibles'" 
-                                          :class="{ 'col-span-2': index === (modalData.prices.length - 1) }">
+                                       <li x-text="price || 'Precios no disponibles'" class="px-2 py-1 bg-green-200 font-semibold text-gray-800 rounded-full text-sm"> <!--:class="{ 'col-span-1': index === (modalData.prices.length - 1) }"-->
                                        </li>
                                     </template>                                 
                                     <li x-show="!modalData.prices || modalData.prices.length === 0" class="italic col-span-2">
@@ -364,7 +367,7 @@
                                  </ul>
                             </div>
                             <div class="mb-8">
-                                 <h3 class="text-lg font-bold text-gray-800 mb-3">
+                                 <h3 class="text-md font-bold text-gray-800 mb-3">
                                     Sabores de Relleno Disponibles
                                  </h3>
                                  <template x-if="modalData.fillingFlavors && modalData.fillingFlavors.included && modalData.fillingFlavors.included.length > 0">
@@ -372,7 +375,7 @@
                                        <p class="text-sm font-semibold text-gray-700 mb-2">Incluidos sin costo adicional:</p>
                                        <div class="flex flex-wrap gap-2">
                                          <template x-for="flavor in modalData.fillingFlavors.included">
-                                            <span class="px-3 py-1 bg-yellow-300 font-semibold text-gray-800 rounded-full text-sm font-medium" x-text="flavor"></span>
+                                            <span class="px-3 py-1 bg-yellow-300 font-semibold text-gray-800 rounded-full text-sm" x-text="flavor"></span>
                                           </template>
                                        </div>
                                     </div>
@@ -394,9 +397,10 @@
                                     Sin sabores de relleno específicos.
                                 </div>
                             </div>
-                            <a id="whatsapp-link" target="_blank" href="#" @click.stop class="flex justify-center items-center bg-green-600 hover:bg-green-00 text-white font-bold py-3 px-4 
+                            <a id="whatsapp-link" target="_blank" @click.stop class="flex justify-center items-center bg-green-600 hover:bg-green-00 text-white font-bold py-3 px-4 
                                rounded-full transition duration-300 w-full max-w-[100%] text-center block">
-                                <img src="./public/icons/whatsapp-white.png" alt="Icono de WhatsApp que abre un chat para realizar un pedido. Texto visible: Ordena ahora. Tono amigable y cercano." class="w-6 h-6 mr-2" loading="lazy">
+                                <img src="./public/icons/whatsapp-white.png" alt="Icono de WhatsApp que abre un chat para realizar un pedido. Texto visible: Ordena ahora. Tono amigable y cercano." 
+                                class="w-6 h-6 mr-2" loading="lazy">
                                 Ordena ahora
                             </a>
                         </div>
@@ -632,7 +636,7 @@
             </p>
         </div>
         <!-- Botón flotante WhatsApp -->
-        <div class="relative group w-18 h-18 mt-2 cursor-pointer transition-transform duration-300">
+        <div class="relative group w-18 h-18 mt-1 cursor-pointer transition-transform duration-300">
             <a href="https://wa.me/8296469680" target="_blank" rel="noopener noreferrer" aria-label="Chatea con nosotros por WhatsApp" class="absolute bottom-1 right-1 bg-green-600 w-14 h-14 rounded-full
                flex items-center justify-center shadow-lg ring-2 ring-white
                transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 hover:w-40">
@@ -640,47 +644,6 @@
             </a>
         </div>
     </div>
-    <!-- End boton whatsapp -->
-    <dialog id="products-modal" class="fixed inset-0 m-auto w-[calc(100%-32px)] sm:w-[calc(100%-48px)] md:w-[calc(100%-32px)] max-w-6xl rounded-xl p-0 z-50 backdrop:bg-black/70 animate-fade-in animate-shake-on-open" onclose="document.body.classList.remove('overflow-hidden')">
-        <div class="bg-white w-full rounded-xl shadow-lg py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-10 relative flex flex-col-reverse md:flex-row overflow-hidden">
-            <form method="dialog">
-                <button type="submit" class="absolute top-3 right-3 sm:top-4 sm:right-4 text-3xl font-bold text-gray-600 hover:text-pink-400 transition duration-300 ease-in-out">
-                    &times;
-                </button>
-            </form>
-            <div class="w-full md:w-1/2 mb-6 md:mb-0 md:pr-6 max-h-[800px] overflow-y-auto">
-                <h2 id="modal-product-title" class="text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-bold lato-bold mb-2 text-wrap"></h2>
-                <div class="w-full sm:w-80 h-1 bg-pink-400 mb-4"></div>
-                <p class="mb-2 lato-bold text-lg text-wrap">Descripción del producto:</p>
-                <p id="modal-product-description" class="text-gray-700 mb-4"></p>
-                <p class="mb-2 text-lg lato-bold">Posibles ingredientes :</p>
-                <ul id="modal-product-ingredients" class="list-disc list-inside text-gray-700 mb-5">
-                </ul>
-                <p class="mb-2 font-bold text-lg">Precios a partir de:</p>
-                <p id="modal-product-price" class="mb-1 font-bold text-3xl sm:text-4xl lato-black bg-yellow-300 p-2 inline-block mb-6"></p>
-                <a id="whatsapp-link" target="_blank">
-                    <button type="button" class="flex text-gray-800 text-md lato-bold hover:text-white
-                                  border border-gray-700 hover:bg-green-600 hover:border-green-600
-                                  focus:ring-5 focus:outline-none focus:ring-green-300
-                                  font-bold rounded-lg px-4 py-2.5
-                                  text-center me-2 mb-2 transition duration-200 ease-in-out
-                                  dark:border-green-500 dark:text-green-500
-                                  dark:hover:text-white dark:hover:bg-green-600
-                                  dark:focus:ring-green-700">
-                        <svg class="w-5 h-5 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 21">
-                            <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 3 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" />
-                        </svg>
-                        Pídelo por Whatsapp
-                    </button>
-                </a>
-            </div>
-            <div class="w-full md:w-1/2 flex items-center justify-center mt-6 md:mt-0">
-                <div class="w-full max-w-[485px] h-[300px] sm:h-[360px] md:h-[420px] bg-white rounded-xl flex items-center justify-center overflow-hidden">
-                    <img id="modal-product-image" src="" alt="Producto" class="w-full h-full object-cover rounded-lg transition transform duration-400 ease-in-out hover:scale-110" />
-                </div>
-            </div>
-        </div>
-    </dialog>
     <footer class="bg-[#FFD9C4] bg-[url('public/images/desserts-patterns.png')] bg-cover bg-center bg-no-repeat">
         <div class="mx-auto max-w-screen-xl px-4 py-14 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 gap-2 lg:grid-cols-1">

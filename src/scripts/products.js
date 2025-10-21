@@ -1,3 +1,15 @@
+const EXTRA_FILLING_FLAVORS = [            
+      { flavor: "Mermelada de fresa", price: "RD$300" },
+      { flavor: "Crema de coco", price: "RD$400" },
+      { flavor: "Crema de chocolate", price: "RD$400" },
+      { flavor: "Crema de pistacho", price: "RD$500" },
+      { flavor: "Crema de almendras", price: "RD$500" },
+      { flavor: "Crema ciruelas", price: "RD$500" },
+      { flavor: "Ron pasas", price: "RD$400" },
+      { flavor: "Frosting de queso", price: "RD$500" },
+      { flavor: "Capuchino", price: "RD$400" },
+      { flavor: "Coffee caramel", price: "RD$400" }
+]
 const ALL_PRODUCTS = [
   //Pasteles y bizcochos
   {
@@ -15,18 +27,7 @@ const ALL_PRODUCTS = [
             "Crema pastelera",
             "Mermelada de piña"            
         ],        
-        additional: [            
-            { flavor: "Mermelada de fresa", price: "RD$300" },
-            { flavor: "Crema de coco", price: "RD$400" },
-            { flavor: "Crema de chocolate", price: "RD$400" },
-            { flavor: "Crema de pistacho", price: "RD$500" },
-            { flavor: "Crema de almendras", price: "RD$500" },
-            { flavor: "Crema ciruelas", price: "RD$500" },
-            { flavor: "Ron pasas", price: "RD$400" },
-            { flavor: "Frosting de queso", price: "RD$500" },
-            { flavor: "Capuchino", price: "RD$400" },
-            { flavor: "Coffee caramel", price: "RD$400" }
-        ]
+        additional: EXTRA_FILLING_FLAVORS
     },
     category: "pasteles"
   },
@@ -37,32 +38,35 @@ const ALL_PRODUCTS = [
     alt: "Pasteles por porciones",
     href: "#",
     prices: [
-      "1 libra: RD$2,100", "1/2 libra: RD$1,400", 
-      "Precios no varían con los siguientes rellenos: dulce de leche, crema pastelera.", 
-      "Precios no incluyen decoración"
+      "1 libra: RD$2,100", "1/2 libra: RD$1,400"
     ],
-    fillingFlavors: [
-      "Dulce de leche", "Crema pastelera", "Mermelada de piña", "Mermelada de fresa: RD$300", "Crema de coco: RD$400", 
-      "Crema de chocolate: RD$400", "Crema de pistacho: RD$500", "Crema de almendras: RD$500", "Crema ciruelas: RD$500", 
-      "Ron pasas: RD$400", "Frosting de queso: RD$500", "Capuchino: RD$400", "Coffee caramel: RD$400"
-    ],
+    fillingFlavors: {        
+        included: [
+            "Dulce de leche", 
+            "Crema pastelera",
+            "Mermelada de piña"            
+        ],        
+        additional: EXTRA_FILLING_FLAVORS
+    },
     category: "pasteles"
   },
   {
-    title: "Pastel de zanahoria",
+    title: "Pastel de zanahoria (carrot cake)",
     description: "",
     image: "./public/images/carrot-cake.webp",
     alt: "Pastel de zanahoria",
     href: "#",
     prices: [
-      "3/4 de libra: RD$1,300.", "1/2 libra: RD$1,000.", "Precios solo de masa.", 
-      "Precios no incluyen decoración."
+      "3/4 libra: RD$1,300.", "1/2 libra: RD$1,000."
     ],
-    fillingFlavors: [
-      "Dulce de leche", "Crema pastelera", "Mermelada de piña", "Mermelada de fresa: RD$300", "Crema de coco: RD$400", 
-      "Crema de chocolate: RD$400", "Crema de pistacho: RD$500", "Crema de almendras: RD$500", "Crema ciruelas: RD$500", 
-      "Ron pasas: RD$400", "Frosting de queso: RD$500", "Capuchino: RD$400", "Coffee caramel: RD$400"
-    ],
+    fillingFlavors: {        
+        included: [
+            "Dulce de leche", 
+            "Crema pastelera",
+            "Mermelada de piña"            
+        ],        
+        additional: EXTRA_FILLING_FLAVORS
+    },
     category: "pasteles"
   },
   {
@@ -72,25 +76,33 @@ const ALL_PRODUCTS = [
     alt: "Pan de maíz",
     href: "#",
     prices: ["RD$1,000 c/u", "No relleno"],
-    fillingFlavors: [],
+    fillingFlavors: {        
+        included: [
+            "Dulce de leche", 
+            "Crema pastelera",
+            "Mermelada de piña"            
+        ],        
+        additional: EXTRA_FILLING_FLAVORS
+    },
     category: "pasteles"
   },  
   {
     title: "Pastel marmoleado",
     description: "",
-    image: "./public/images/portion-cake.jpg",
+    image: "./public/images/marmoleado.webp",
     alt: "Pan de maíz",
     href: "#",
     prices: [
-      "1 libra: RD$2,500.", "1/2 libra RD$1,500.", 
-      "Precios no varían solo con los siguientes rellenos: dulce de leche y crema pastelera.", 
-      "Precios no incluyen decoración."
+      "1 libra: RD$2,500.", "1/2 libra RD$1,500."
     ],
-    fillingFlavors: [
-      "Dulce de leche", "Crema pastelera", "Mermelada de piña", "Mermelada de fresa: RD$300", "Crema de coco: RD$400", 
-      "Crema de chocolate: RD$400", "Crema de pistacho: RD$500", "Crema de almendras: RD$500", "Crema ciruelas: RD$500", 
-      "Ron pasas: RD$400", "Frosting de queso: RD$500", "Capuchino: RD$400", "Coffee caramel: RD$400"
-    ],
+    fillingFlavors: {        
+        included: [
+            "Dulce de leche", 
+            "Crema pastelera",
+            "Mermelada de piña"            
+        ],        
+        additional: EXTRA_FILLING_FLAVORS
+    },
     category: "pasteles"
   },
 
@@ -102,46 +114,105 @@ const ALL_PRODUCTS = [
     image: "./public/images/pie.webp",
     alt: "Postre 2",
     href: "#",
-    prices: "RD$350.00",
-    fillingFlavors: ["Frutas frescas", "Masa quebrada", "Crema pastelera"],
+    prices: ["De piña: RD$700.00", "De fresas: RD$850.00"],
+    fillingFlavors: {
+      included:[], 
+      additional:[]
+    },
     category:"postres"
+  }, 
+  {
+    title: "Pudín de pan entero",
+    description: "Surtidos y deliciosos",
+    image: "./public/images/pudding.webp",
+    alt: "Pudin de pan completo",
+    href: "#",
+    prices: ["RD$1,150.00"],
+    fillingFlavors: {
+      included:[], 
+      additional:[]
+    },
+    category: "postres"
   },
   {
+    title: "Porciones pudín de pan",
+    description: "Surtidos y deliciosos",
+    image: "./public/images/pudding-portion.webp",
+    alt: "Porciones de pudin de pan",
+    href: "#",
+    prices: ["RD$200.00"],
+    fillingFlavors: {
+      included:[], 
+      additional:[]
+    },
+    category: "postres"
+  },  
+  {
+    title: "Fresas con crema",
+    description: "Surtidos y deliciosos",
+    image: "./public/images/fresas-crema.webp",
+    alt: "Fresas con crema",
+    href: "#",
+    prices: ["5 onzas: RD$150.00", "9 onzas: RD$400.00"],
+    fillingFlavors: {
+      included:[], 
+      additional:[]
+    },
+    category: "postres"
+  },  
+  {
+    title: "Tres (3) leches",
+    description: "Surtidos y deliciosos",
+    image: "./public/images/tres-leches.webp",
+    alt: "Tres leches",
+    href: "#",
+    prices: ["RD$150.00"],
+    fillingFlavors: {
+      included:[], 
+      additional:[]
+    },
+    category: "postres"
+  },  
+  //End postres
+  //Mesa dulces
+   {
     title: "Brownie de chocolate",
     description: "Surtidos y deliciosos",
     image: "./public/images/brownies.webp",
     alt: "Postre 2",
     href: "#",
-     prices: "RD$350.00",
-    fillingFlavors: ["Frutas frescas", "Masa quebrada", "Crema pastelera"],
-    category:"postres"
+    prices: ["RD$350.00"],
+    fillingFlavors: {
+      included:[], 
+      additional:[]
+    },
+    category:"mesa-dulces"
   },
   {
-    title: "Pudín de pan (completo y en porciones)",
+    title: "Mousse de fresa y chinola",
     description: "Surtidos y deliciosos",
-    image: "./public/images/pudding.webp",
-    alt: "Postre 2",
+    image: "./public/images/fresas-crema.webp",
+    alt: "Mousse de diferentes frutas",
     href: "#",
-    prices: "RD$350.00",
-    fillingFlavors: ["Frutas frescas", "Masa quebrada", "Crema pastelera"],
-    category: "postres"
+    prices: ["RD$350.00"],
+    fillingFlavors: {
+      included:[],
+      additional:[]
+    },
+    category:"mesa-dulces"
   },
   {
-    title: "Mousse de frutas",
-    description: "Surtidos y deliciosos",
-    image: "./public/images/mousse.webp",
-    alt: "Postre 2",
+    title: "Shots tres (3) leches",
+    description: "Shots de tres leches para mesa de dulce",
+    image: "./public/images/tres-leches.webp",
+    alt: "Tres leches",
     href: "#",
-    prices: "RD$350.00",
-    fillingFlavors: ["Frutas frescas", "Masa quebrada", "Crema pastelera"],
-    category:"postres"
-  }
-  //End postres
+    prices: ["Docena: RD$900"],
+    fillingFlavors: {
+      included:[], 
+      additional:[]
+    },
+    category: "mesa-dulces"
+  }, 
+  //End mesa dulces
 ];
-function sendWhatsappMessage(title,  prices, imageUrl){
-    const PHONENUMBER = '8296469680';
-    const BASEMESSAGE = `Hola Perla, me interesa hablar sobre este producto:\n- Producto: ${title}\n- Precio: ${ prices}`;
-    const ENCODEDMESSAGE = encodeURIComponent(BASEMESSAGE);
-    const WHATSAPPURL = `https://wa.me/${PHONENUMBER}?text=${ENCODEDMESSAGE}`;
-    return WHATSAPPURL;
-}
