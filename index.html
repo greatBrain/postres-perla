@@ -284,13 +284,15 @@
                           document.body.classList.remove('overflow-hidden');
                       }
                 }" x-init="initContent()">
-                <div id="category-selector" class="flex flex-row gap-0 justify-center
-                              sm:overflow-x-visible overflow-x-auto p-3
-                              max-w-fit mx-auto
-                              bg-transparent rounded-none shadow-none mb-10
-                              lg:bg-gray-100/50 lg:rounded-full lg:shadow-lg
-                              md:bg-gray-100/50 md:rounded-full md:shadow-lg
-                              sm:bg-gray-100/50 sm:rounded-full sm:shadow-lg">
+                <div id="category-selector" class="flex flex-row gap-0 justify-start
+                                     lg:justify-center md:justify-center
+                                     sm:overflow-x-visible overflow-x-auto p-3
+                                     **[scrollbar-width:none]** **[&::-webkit-scrollbar]:hidden**
+                                     max-w-fit mx-auto
+                                     bg-transparent rounded-none shadow-none mb-10
+                                     lg:bg-gray-100/50 lg:rounded-full lg:shadow-lg
+                                     md:bg-gray-100/50 md:rounded-full md:shadow-lg
+                                     sm:bg-gray-100/50 sm:rounded-full sm:shadow-lg">
                     <button data-category="pasteles" @click="activeCategory = 'pasteles'" :class="{
                                   'outline-none ring-2 ring-yellow-400 ring-opacity-80 bg-white text-gray-800 font-semibold shadow-lg lg:shadow-xl md:shadow-xl': activeCategory === 'pasteles',
                                   'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'pasteles'
@@ -313,7 +315,15 @@
                               }" class="category-btn flex items-center px-6 py-2 rounded-full whitespace-nowrap
                                      transition duration-200">
                         <img src="public/icons/birdthday-for-filter.svg" class="w-6 h-6 pr-2" alt="">
-                        Dulces
+                        Mesa de dulces
+                    </button>
+                    <button data-category="temporada" @click="activeCategory = 'temporada'" :class="{
+                                  'outline-none ring-2 ring-yellow-400 ring-opacity-80 bg-white text-gray-800 font-semibold shadow-lg lg:shadow-xl md:shadow-xl': activeCategory === 'temporada',
+                                  'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'temporada'
+                              }" class="category-btn flex items-center px-6 py-2 rounded-full whitespace-nowrap
+                                     transition duration-200">
+                        <img src="public/icons/tree-season.svg" class="w-6 h-6 pr-2" alt="">
+                        Temporada
                     </button>
                 </div>
                 <div id="product-slider-container" class="slider-container ransition-transform slide-in flex lg:flex-wrap md:flex-wrap w-full overflow-x-auto" x-show="isContentVisible" x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0" style="display: none !important;">

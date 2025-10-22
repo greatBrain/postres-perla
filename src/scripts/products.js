@@ -14,7 +14,7 @@ const ALL_PRODUCTS = [
   //Pasteles y bizcochos
   {
     title: "Pastel de vainilla (bizcocho dominicano)",
-    description: "Elaboramos el pastel para tus celebracion, a tu gusto y con tu estilo",
+    comments: "Elaboramos el pastel para tus celebracion, a tu gusto y con tu estilo",
     image: "./public/images/personal-cake.webp",
     alt: "Pastel personalizado",
     href: "#",
@@ -33,7 +33,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Pastel jugoso de chocolate",
-    description: "Si no lo deseas completo, igual lo puedes disfrutar en partes.",
+    comments: "Si no lo deseas completo, igual lo puedes disfrutar en partes.",
     image: "./public/images/chocolate-cake.webp",
     alt: "Pasteles por porciones",
     href: "#",
@@ -52,7 +52,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Pastel de zanahoria (carrot cake)",
-    description: "",
+    comments: "",
     image: "./public/images/carrot-cake.webp",
     alt: "Pastel de zanahoria",
     href: "#",
@@ -71,7 +71,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Pan de maíz entero (sin relleno)",
-    description: "",
+    comments: "",
     image: "./public/images/pan-maiz.webp",
     alt: "Pan de maíz",
     href: "#",
@@ -88,7 +88,7 @@ const ALL_PRODUCTS = [
   },  
   {
     title: "Pastel marmoleado",
-    description: "",
+    comments: "",
     image: "./public/images/marmoleado.webp",
     alt: "Pan de maíz",
     href: "#",
@@ -110,7 +110,7 @@ const ALL_PRODUCTS = [
   //Postres
   {
     title: "Pie de frutas",
-    description: "Fresas, moras",
+    comments: "Fresas, moras",
     image: "./public/images/pie.webp",
     alt: "Postre 2",
     href: "#",
@@ -123,7 +123,7 @@ const ALL_PRODUCTS = [
   }, 
   {
     title: "Pudín de pan entero",
-    description: "Surtidos y deliciosos",
+    comments: " ",
     image: "./public/images/pudding.webp",
     alt: "Pudin de pan completo",
     href: "#",
@@ -136,7 +136,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Porciones pudín de pan",
-    description: "Surtidos y deliciosos",
+    comments: " ",
     image: "./public/images/pudding-portion.webp",
     alt: "Porciones de pudin de pan",
     href: "#",
@@ -149,7 +149,7 @@ const ALL_PRODUCTS = [
   },  
   {
     title: "Fresas con crema",
-    description: "Surtidos y deliciosos",
+    comments: " ",
     image: "./public/images/fresas-crema.webp",
     alt: "Fresas con crema",
     href: "#",
@@ -162,7 +162,7 @@ const ALL_PRODUCTS = [
   },  
   {
     title: "Tres (3) leches",
-    description: "Surtidos y deliciosos",
+    comments: " ",
     image: "./public/images/tres-leches.webp",
     alt: "Tres leches",
     href: "#",
@@ -177,11 +177,11 @@ const ALL_PRODUCTS = [
   //Mesa dulces
    {
     title: "Brownie de chocolate",
-    description: "Surtidos y deliciosos",
+    comments: " ",
     image: "./public/images/brownies.webp",
-    alt: "Postre 2",
+    alt: "Brownies",
     href: "#",
-    prices: ["RD$350.00"],
+    prices: ["Docena: RD$700.00"],
     fillingFlavors: {
       included:[], 
       additional:[]
@@ -190,7 +190,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Mousse de fresa y chinola",
-    description: "Surtidos y deliciosos",
+    comments: " ",
     image: "./public/images/fresas-crema.webp",
     alt: "Mousse de diferentes frutas",
     href: "#",
@@ -203,7 +203,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Shots tres (3) leches",
-    description: "Shots de tres leches para mesa de dulce",
+    comments: "Shots de tres leches para mesa de dulce",
     image: "./public/images/tres-leches.webp",
     alt: "Tres leches",
     href: "#",
@@ -214,5 +214,133 @@ const ALL_PRODUCTS = [
     },
     category: "mesa-dulces"
   }, 
+  {
+    title: "Cupcakes por docena",
+    comments: "",
+    image: "./public/images/cupcakes.webp",
+    alt: "Tres leches",
+    href: "#",
+    prices: [
+      "docena de vainilla, decoración en suspiro: RD$700.00",
+      "docena de chocolate, decoración en suspiro: RD$850.00",
+      "topper personalizados: RD$200.00 adicional"
+    ],
+    fillingFlavors: {
+      included:[], 
+      additional:[]
+    },
+    category: "mesa-dulces"
+  }, 
+  {
+    title: "Alfajores de maicena",
+    comments: "",
+    image: "./public/images/generica.png",
+    alt: "Alfajores maicena con dulce de leche",
+    href: "#",
+    prices: [
+      "docena: RD$750.00"
+    ],
+    fillingFlavors: {
+      included:["Dulce de leche"], 
+      additional:[]
+    },
+    category: "mesa-dulces"
+  }, 
+  {
+    title: "Mantecados",
+    comments: "",
+    image: "./public/images/generica.png",
+    alt: "MANTECADOS",
+    href: "#",
+    prices: [
+      "Docena: RD$300.00"
+    ],
+    fillingFlavors: {
+      included: [],
+      additional: []
+    },
+    category: "mesa-dulces"
+  },
+  {
+    title: "Polvorones de almendra",
+    comments: "",
+    image: "./public/images/generica.png",
+    alt: "POLVORONES DE ALMENDRAS",
+    href: "#",
+    prices: [
+      "Docena: RD$650.00"
+    ],
+    fillingFlavors: {
+      included: [],
+      additional: []
+    },
+    category: "mesa-dulces"
+  },
+  {
+    title: "Galletas en fondant personalizadas",
+    comments: "",
+    image: "./public/images/generica.png",
+    alt: "GALLETAS EN FONDANT PERSONALIZADAS",
+    href: "#",
+    prices: [
+      "Docena con empacadas por separado y nota personalizada: RD$1,000.00",
+      "Empacadas juntas: RD$1,000.00"
+    ],
+    fillingFlavors: {
+      included: [],
+      additional: []
+    },
+    category: "mesa-dulces"
+  },
+  {
+    title: "Galletas personalizadas con azúcar glass",
+    comments: "",
+    image: "./public/images/generica.png",
+    alt: "Galletas personalizadas con azúcar glass",
+    href: "#",
+    prices: [
+      "Docena empacadas juntas: RD$800.00",
+      "Empacadas por separado y nota personalizada: RD$950.00"
+    ],
+    fillingFlavors: {
+      included: [],
+      additional: []
+    },
+    category: "mesa-dulces"
+  },
+  {
+    title: "Galletas personalizadas solo con color y escrita con tinta comestible",
+    comments: "",
+    image: "./public/images/generica.png",
+    alt: "Galletas personalizadas solo con color y escrita con tinta comestible",
+    href: "#",
+    prices: [
+      "Docena empacadas juntas: RD$700.00",
+      "Empacadas por separado con nota personalizada: RD$850.00"
+    ],
+    fillingFlavors: {
+      included: [],
+      additional: []
+    },
+    category: "mesa-dulces"
+  },
   //End mesa dulces
+  //Temporada
+  {
+    title: "Galletas de gengibre navideñas",
+    comments: "",
+    image: "./public/images/ginger-cake-white.webp",
+    alt: "GALLETAS DE JENGIBRE DE NAVIDAD",
+    href: "#",
+    prices: [
+      "Docena decorada en blanco: RD$800.00",
+      "Con colores: RD$950.00"
+    ],
+    fillingFlavors: {
+      included: [],
+      additional: []
+    },
+    category: "temporada"
+  }
+  //End temporada
 ];
