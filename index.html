@@ -259,21 +259,21 @@
                       products: ALL_PRODUCTS,
                       modalData: {},
                       isModalOpen: false,
-                      
+
                       // Si el array de productos aún no está cargado, devuelve un array vacío
-                      get filteredProducts() {                          
+                      get filteredProducts() {
                           return this.products ? this.products.filter(product => product.category === this.activeCategory) : [];
                       },
-                      isContentVisible: false,                      
+                      isContentVisible: false,
                       initContent() {
                          setTimeout(() => {
                             this.isContentVisible = true;
                          }, 80);
                       },
                       showProductModal(product) {
-                          this.modalData = product;                          
+                          this.modalData = product;
                           const WHATSAPPURL = sendWhatsappMessage ? sendWhatsappMessage(product.title) : '#';
-                          document.getElementById('whatsapp-link').href = WHATSAPPURL;                          
+                          document.getElementById('whatsapp-link').href = WHATSAPPURL;
                           this.isModalOpen = true;
                           this.$refs.productsModal.showModal(); // Método nativo para mostrar
                           document.body.classList.add('overflow-hidden');
@@ -287,7 +287,7 @@
                 <div id="category-selector" class="flex flex-row gap-0 justify-center
                               sm:overflow-x-visible overflow-x-auto p-3
                               max-w-fit mx-auto
-                              bg-transparent rounded-none shadow-none mb-10                               
+                              bg-transparent rounded-none shadow-none mb-10
                               lg:bg-gray-100/50 lg:rounded-full lg:shadow-lg
                               md:bg-gray-100/50 md:rounded-full md:shadow-lg
                               sm:bg-gray-100/50 sm:rounded-full sm:shadow-lg">
@@ -340,10 +340,10 @@
                         No hay productos disponibles en esta categoría.
                     </div>
                 </div>
-                <dialog id="products-modal" x-ref="productsModal" class="p-0 rounded-2xl shadow-3xl backdrop:bg-black/80 w-11/12 md:w-3/3 lg:w-2/2 max-w-6xl !m-auto" 
-                        @click.outside="closeModal()" x-show="isModalOpen" x-transition:enter="ease-in-out duration-200" 
-                        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" 
-                        x-transition:leave="ease-in-out duration-200" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" 
+                <dialog id="products-modal" x-ref="productsModal" class="p-0 rounded-2xl shadow-3xl backdrop:bg-black/80 w-11/12 md:w-3/3 lg:w-2/2 max-w-6xl !m-auto"
+                        @click.outside="closeModal()" x-show="isModalOpen" x-transition:enter="ease-in-out duration-200"
+                        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="ease-in-out duration-200" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
                         style="display: none !important;">
                     <div class="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden" @click.stop>
                         <div class="md:w-1/2 relative">
@@ -353,14 +353,14 @@
                             <button @click="closeModal()" class="absolute top-4 right-4 text-gray-600 hover:text-gray-800 text-3xl font-light leading-none">
                                 &times;
                             </button>
-                            <h2 id="modal-product-title" class="text-2xl font-bold text-pink-600 mb-3" x-text="modalData.title || 'Información no disponible'"></h2>                            
+                            <h2 id="modal-product-title" class="text-2xl font-bold text-pink-600 mb-3" x-text="modalData.title || 'Información no disponible'"></h2>
                             <div class="price mb-3">
-                                 <p class="text-md font-bold text-gray-800 mb-1">Precios:</p>                              
-                                 <ul id="modal-product-price" class="flex justify-start items-center flex-wrap gap-x-6 space-y-1 mb-3">                                 
+                                 <p class="text-md font-bold text-gray-800 mb-1">Precios:</p>
+                                 <ul id="modal-product-price" class="flex justify-start items-center flex-wrap gap-x-6 space-y-1 mb-3">
                                     <template x-for="(price, index) in modalData.prices">
                                        <li x-text="price || 'Precios no disponibles'" class="px-2 py-1 bg-green-200 font-semibold text-gray-800 rounded-full text-sm"> <!--:class="{ 'col-span-1': index === (modalData.prices.length - 1) }"-->
                                        </li>
-                                    </template>                                 
+                                    </template>
                                     <li x-show="!modalData.prices || modalData.prices.length === 0" class="italic col-span-2">
                                        Precios no disponibles para este producto.
                                     </li>
@@ -397,9 +397,9 @@
                                     Sin sabores de relleno específicos.
                                 </div>
                             </div>
-                            <a id="whatsapp-link" target="_blank" @click.stop class="flex justify-center items-center bg-green-600 hover:bg-green-00 text-white font-bold py-3 px-4 
+                            <a id="whatsapp-link" target="_blank" @click.stop class="flex justify-center items-center bg-green-600 hover:bg-green-00 text-white font-bold py-3 px-4
                                rounded-full transition duration-300 w-full max-w-[100%] text-center block">
-                                <img src="./public/icons/whatsapp-white.png" alt="Icono de WhatsApp que abre un chat para realizar un pedido. Texto visible: Ordena ahora. Tono amigable y cercano." 
+                                <img src="./public/icons/whatsapp-white.png" alt="Icono de WhatsApp que abre un chat para realizar un pedido. Texto visible: Ordena ahora. Tono amigable y cercano."
                                 class="w-6 h-6 mr-2" loading="lazy">
                                 Ordena ahora
                             </a>
@@ -446,6 +446,12 @@
                 <p class="text-pink-500 text-xl sm:text-xl ubuntu-font-bold group-hover:opacity-0 transition-opacity duration-300 z-10">
                     Mesas de Dulces
                 </p>
+                <button class="lg:hidden md:hidden shadow-2xl mt-3 bg-pink-400 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                       <path d="M5 15a1 1 0 001.707.707L15 7.414V13a1 1 0 102 0V5a1 1 0 00-1-1h-8a1 1 0 100 2h5.586L5.707 14.293A1 1 0 005 15z"></path>
+                    </svg>
+                    Ver mas
+               </button>
             </div>
             <div class="group relative bg-white rounded-2xl
                w-[85%] sm:w-[75%] md:w-[55%] lg:w-56 xl:w-56 2xl:w-80
@@ -465,6 +471,12 @@
                 <p class="text-pink-500 text-xl sm:text-xl ubuntu-font-bold group-hover:opacity-0 transition-opacity duration-300 z-10">
                     Eventos Personalizados
                 </p>
+                <button class="lg:hidden md:hidden shadow-2xl mt-3 bg-pink-400 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                       <path d="M5 15a1 1 0 001.707.707L15 7.414V13a1 1 0 102 0V5a1 1 0 00-1-1h-8a1 1 0 100 2h5.586L5.707 14.293A1 1 0 005 15z"></path>
+                    </svg>
+                    Ver mas
+               </button>
             </div>
             <div class="group relative bg-white rounded-2xl
                w-[85%] sm:w-[75%] md:w-[55%] lg:w-[45%] xl:w-56 2xl:w-80
@@ -484,6 +496,12 @@
                 <p class="text-pink-500 text-xl sm:text-xl ubuntu-font-bold group-hover:opacity-0 transition-opacity duration-300 z-10">
                     Catering y bandejas personalizadas
                 </p>
+                <button class="lg:hidden md:hidden shadow-2xl mt-3 bg-pink-400 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                       <path d="M5 15a1 1 0 001.707.707L15 7.414V13a1 1 0 102 0V5a1 1 0 00-1-1h-8a1 1 0 100 2h5.586L5.707 14.293A1 1 0 005 15z"></path>
+                    </svg>
+                    Ver mas
+               </button>
             </div>
         </div>
     </section>
