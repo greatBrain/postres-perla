@@ -77,12 +77,8 @@ const ALL_PRODUCTS = [
     href: "#",
     prices: ["RD$1,000 c/u", "No relleno"],
     fillingFlavors: {        
-        included: [
-            "Dulce de leche", 
-            "Crema pastelera",
-            "Mermelada de piña"            
-        ],        
-        additional: EXTRA_FILLING_FLAVORS
+        included: [],        
+        additional: []
     },
     category: "pasteles"
   },  

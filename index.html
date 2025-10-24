@@ -44,13 +44,16 @@
 </head>
 
 <body>
-    <nav class="fixed z-50 w-full bg-pink-500 shadow dark:bg-pink-300 h-16 flex items-center justify-between px-6">
-        <a href="#" class="brand-logo flex flex-no-wrap items-center py-5">
-            <img src="./public/icons/P-perla-logo.png" alt="Logo de la pastelería Postres Perla" class="h-12 w-12 md:h-12 md:w-12 drop-shadow-xl rounded-full border-4" />
-            <span class="text-white pl-2 text-xl lg:text-3xl md:text-3xl font-normal">Postres Perla</span>
-        </a>
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center space-x-4 text-white capitalize font-semibold ubuntu-font overflow-x-hidden">
+    <nav class="fixed z-50 w-full bg-pink-600 shadow dark:bg-pink-300 h-14 lg:h-16 flex items-center justify-start px-6
+     rounded-full mt-[2px] max-w-[98%] mx-[8px] md:justify-center lg:justify-between
+     lg:rounded-none lg:mt-0 lg:max-w-full lg:mx-0">
+        <a href="#" class="hidden lg:flex brand-logo flex-nowrap items-center py-5">
+            <img src="./public/icons/P-perla-logo.png" alt="Logo de la pastelería Postres Perla" class="h-12 w-12 md:h-10 md:w-10 
+            lg:h-12 lg:w-12 drop-shadow-xl rounded-full border-4" />
+            <span class="text-white pl-2 text-2xl lg:text-3xl font-normal">Postres Perla</span>
+        </a>        
+        <div class="flex justify-start items-center space-x-4 text-white capitalize font-semibold ubuntu-font overflow-x-auto
+        sm:overflow-x-auto md:overflow-x-hidden lg:overflow-x-hidden">
             <a href="#season-desserts">
                 <button class="overflow-hidden flex relative bg-green-900 justify-center items-center text-white font-semibold py-2 px-4 sm:py-2 sm:px-6
                      rounded-full shadow-md shadow-2xl transition
@@ -69,48 +72,6 @@
             <a href="#testimonials" class="border-b-2 border-transparent hover:border-yellow-500 hover:text-black dark:hover:text-gray-200 text-lg">Testimonios</a>
             <a href="#contact" class="border-b-2 border-transparent hover:border-yellow-500 hover:text-black dark:hover:text-gray-200 text-lg">Contáctanos</a>
             <a href="#about-me" class="border-b-2 border-transparent hover:border-yellow-400 hover:text-black dark:hover:text-gray-200 text-lg">Conócenos</a>
-        </div>
-        <!-- Mobile Menu -->
-        <div class="md:hidden" x-data="{ open: false }" x-cloak>
-            <button @click="open = !open" class="text-white focus:outline-none" aria-label="Abrir menú móvil">
-                <svg x-show="!open" class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2z" clip-rule="evenodd" />
-                </svg>
-                <svg x-show="open" class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.707 5.293a1 1 0 010 1.414L13.414 12l5.293 5.293a1 1 0 01-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 01-1.414-1.414L10.586 12 5.293 6.707a1 1 0 011.414-1.414L12 10.586l5.293-5.293a1 1 0 011.414 0z" />
-                </svg>
-            </button>
-            <div x-show="open" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-1/2" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="translate-x-1/2" x-transition:leave-end="translate-x-full" class="fixed top-0 right-0 w-1/2 min-w-[250px] h-full bg-[#F472B6] dark:bg-[#F472B6] bg-[url('public/images/desserts-patterns.png')] shadow-md z-50">
-                <div class="flex justify-end p-4">
-                    <button @click="open = false" class="text-white focus:outline-none" aria-label="Cerrar menú móvil">
-                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.707 5.293a1 1 0 010 1.414L13.414 12l5.293 5.293a1 1 0 01-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 01-1.414-1.414L10.586 12 5.293 6.707a1 1 0 011.414-1.414L12 10.586l5.293-5.293a1 1 0 011.414 0z" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="flex flex-col items-center justify-center space-y-4 py-24 text-white capitalize font-bold ubuntu-font">
-                    <a href="#season-desserts">
-                        <button class="overflow-hidden flex relative bg-green-900 justify-center items-center text-white font-semibold py-2 px-4 sm:py-2 sm:px-6
-                           rounded-full shadow-md shadow-2xl transition
-                           hover:text-yellow-400 hover:shadow-3xl">
-                            <svg width="30" height="30" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
-                                <polygon points="100,20 160,120 40,120" fill="white" stroke="white" stroke-width="2" />
-                                <polygon points="100,80 170,190 30,190" fill="white" stroke="white" stroke-width="2" />
-                                <polygon points="100,150 180,260 20,260" fill="white" stroke="white" stroke-width="2" />
-                                <rect x="85" y="260" width="30" height="40" fill="#8B4513" />
-                            </svg>
-                            <span class="relative z-10">Navidad</span>
-                        </button>
-                    </a>
-                    <a href="#services" @click="open = false" class="hover:text-gray-100 text-lg">Servicios</a>
-                    <a href="#testimonials" @click="open = false" class="hover:text-gray-100 text-lg">Testimonios</a>
-                    <a href="#catalog" @click="open = false" class="hover:text-gray-100 text-lg">Productos</a>
-                    <a href="#contact" @click="open = false" class="hover:text-gray-100 text-lg">Contáctanos</a>
-                    <a href="#about-me" @click="open = false" class="hover:text-gray-100 text-lg">Conócenos</a>
-                </div>
-            </div>
-            <div x-show="open" @click="open = false" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 bg-black/50 z-40">
-            </div>
         </div>
     </nav>
     <section class="banner relative w-full h-screen parallax-bg
@@ -455,7 +416,7 @@
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M5 15a1 1 0 001.707.707L15 7.414V13a1 1 0 102 0V5a1 1 0 00-1-1h-8a1 1 0 100 2h5.586L5.707 14.293A1 1 0 005 15z"></path>
                     </svg>
-                    Ver mas
+                    Ver más
                 </button>
             </div>
             <div class="group relative bg-white rounded-2xl
@@ -480,7 +441,7 @@
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M5 15a1 1 0 001.707.707L15 7.414V13a1 1 0 102 0V5a1 1 0 00-1-1h-8a1 1 0 100 2h5.586L5.707 14.293A1 1 0 005 15z"></path>
                     </svg>
-                    Ver mas
+                    Ver más
                 </button>
             </div>
             <div class="group relative bg-white rounded-2xl
@@ -505,7 +466,7 @@
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M5 15a1 1 0 001.707.707L15 7.414V13a1 1 0 102 0V5a1 1 0 00-1-1h-8a1 1 0 100 2h5.586L5.707 14.293A1 1 0 005 15z"></path>
                     </svg>
-                    Ver mas
+                    Ver más
                 </button>
             </div>
         </div>
@@ -521,24 +482,25 @@
                 </p>
             </div>
             <div class="w-full" role="region" aria-label="Contenedor de testimonios">
-                <div id="testimonial-container" class="flex flex-wrap lg:flex-nowrap gap-4 py-6 **snap-x snap-mandatory**">
-                    <div class="w-100 flex-shrink-0 mb-8 lg:mb-0 md:mb-0 w-11/12 lg:w-4/12 md:w-4/12 snap-center max-h-[200px]">
+                <div id="testimonial-container" class="flex flex-wrap md:flex-nowrap lg:flex-nowrap justify-center gap-4 py-6 **snap-x snap-mandatory**">
+                    <div class="w-100 flex-shrink-0 mb-8 lg:mb-0 md:mb-0 w-11/12 lg:w-4/12 md:w-4/12 snap-center h-[234px] max-h-[240px]">
                         <div class="p-6 bg-yellow-100/90 backdrop-blur-sm rounded-xl shadow-md border border-pink-200 
                         hover:shadow-lg transition-all **h-full**" role="group" aria-label="Testimonio de Ana Castillo">
                             <p class="text-xl text-gray-800 italic mb-4">
-                                “Pedí un bizcocho para el cumpleaños de mi hijo y fue justo lo que esperaba: sencillo, fresco y con muy buen sabor.”
+                                “Pedí un bizcocho para el cumpleaños de mi hijo y justo lo que esperaba recibir! Con muy buen sabor.”
                             </p>
                         </div>
                     </div>
-                    <div class="w-100 flex-shrink-0 mb-8 lg:mb-0 md:mb-0 w-11/12 lg:w-4/12 md:w-4/12 snap-center max-h-[200px]">
+                    <div class="w-100 flex-shrink-0 mb-8 lg:mb-0 md:mb-0 w-11/12 lg:w-4/12 md:w-4/12 snap-center 
+                     h-[234px] max-h-[240px]">
                         <div class="p-6 bg-purple-100/80 backdrop-blur-sm rounded-xl shadow-md border border-purple-200 
-                        hover:shadow-lg transition-all **h-full**" role="group" aria-label="Testimonio de Carlos Mejía">
+                        hover:shadow-lg transition-all h-full" role="group" aria-label="Testimonio de Carlos Mejía">
                             <p class="text-xl text-gray-800 italic mb-4">
                                 “En Postres Perla encontré un lugar donde todavía se siente que las cosas se hacen a mano y con calma.”
                             </p>
                         </div>
                     </div>
-                    <div class="w-100 flex-shrink-0 mb-5 lg:mb-0 md:mb-0 w-11/12 lg:w-4/12 md:w-4/12 snap-center max-h-[200px]">
+                    <div class="w-100 flex-shrink-0 mb-5 lg:mb-0 md:mb-0 w-11/12 lg:w-4/12 md:w-4/12 snap-center h-[234px] max-h-[240px]">
                         <div class="p-6 bg-green-100/80 backdrop-blur-sm rounded-xl shadow-md border border-green-200 
                         hover:shadow-lg transition-all **h-full**" role="group" aria-label="Testimonio de Laura Sánchez">
                             <p class="text-xl text-gray-800 italic mb-4">
@@ -565,7 +527,7 @@
                         <img class="w-10 h-10" src="public/icons/instagram.png" alt="Icono de Instagram" loading="lazy">
                     </div>
                     <div>
-                        <a href="#" class="hover:underline" aria-label="Ir al perfil de Instagram de Postres Perla">
+                        <a href="https://www.instagram.com/postres.perla?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:underline" aria-label="Ir al perfil de Instagram de Postres Perla">
                             <h3 class="text-xl font-semibold text-pink-600">Postres.perla</h3>
                         </a>
                     </div>
@@ -575,7 +537,7 @@
                         <img class="w-10 h-10" src="public/icons/pinterest.png" alt="Icono de Pinterest" loading="lazy">
                     </div>
                     <div>
-                        <a href="#" class="hover:underline" aria-label="Ver ideas de Postres Perla en Pinterest">
+                        <a href="https://pin.it/2vLaI3PUB" target="_blank" class="hover:underline" aria-label="Ver ideas de Postres Perla en Pinterest">
                             <h3 class="text-xl font-semibold text-pink-600">Postres Perla</h3>
                         </a>
                     </div>
@@ -585,7 +547,7 @@
                         <img class="w-10 h-10" src="public/icons/facebook.png" alt="Icono de Facebook" loading="lazy">
                     </div>
                     <div>
-                        <a href="#" class="hover:underline" aria-label="Visita nuestro Facebook: Postres.perla">
+                        <a href="https://www.facebook.com/perla.pascual.961" target="_blank" class="hover:underline" aria-label="Visita nuestro Facebook: Postres.perla">
                             <h3 class="text-xl font-semibold text-pink-600">Postres.perla</h3>
                         </a>
                     </div>
@@ -596,7 +558,7 @@
                     </div>
                     <div class="overflow-hidden">
                         <h3 class="text-xl font-semibold text-pink-600 whitespace-nowrap overflow-hidden text-ellipsis">
-                            <a href="mailto:posperla@gmail.com" class="hover:underline" aria-label="Enviar correo a posperla@gmail.com">posperla@gmail.com</a>
+                            <a href="mailto:pascualperla226@gmail.com" class="hover:underline" aria-label="Enviar correo a posperla@gmail.com">pascualperla226@gmail.com</a>
                         </h3>
                     </div>
                 </div>
@@ -687,10 +649,10 @@
                         <a href="https://www.instagram.com/postres.perla?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="flex items-center justify-center w-10 h-10 hover:scale-110 transition-transform duration-200">
                             <img src="./public/icons/instagram.png" alt="Instagram logo" class="w-9 h-9">
                         </a>
-                        <a href="#" class="flex items-center justify-center w-10 h-10 hover:scale-110 transition-transform duration-200" target="_blank">
+                        <a href="https://www.facebook.com/perla.pascual.961" class="flex items-center justify-center w-10 h-10 hover:scale-110 transition-transform duration-200" target="_blank">
                             <img src="./public/icons/facebook.png" alt="Facebook logo" class="w-9 h-9">
                         </a>
-                        <a href="#" class="flex items-center justify-center w-10 h-10 hover:scale-110 transition-transform duration-200" target="_blank">
+                        <a href="https://pin.it/2vLaI3PUB" class="flex items-center justify-center w-10 h-10 hover:scale-110 transition-transform duration-200" target="_blank">
                             <img src="./public/icons/pinterest.png" alt="Pinterest logo" class="w-8 h-8">
                         </a>
                     </div>
