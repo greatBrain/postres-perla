@@ -275,7 +275,7 @@ const ALL_PRODUCTS = [
   {
     title: "Galletas en fondant personalizadas",
     comments: "",
-    image: "./public/images/generica.png",
+    image: "./public/images/fondant-cake.webp",
     alt: "GALLETAS EN FONDANT PERSONALIZADAS",
     href: "#",
     prices: [
