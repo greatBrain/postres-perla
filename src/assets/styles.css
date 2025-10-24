@@ -234,8 +234,8 @@ nav a {
 	overflow-x: auto;
 	overflow-y: hidden;
 	scroll-behavior: smooth;
-	scrollbar-width: thin;
-	scrollbar-color: #ec4899 #fce7f3;
+	/* scrollbar-width: thin;
+	scrollbar-color: #ec4899 #fce7f3; */
 	scroll-snap-type: x mandatory;
 }
 #services-cards-father-container::-webkit-scrollbar {
@@ -267,4 +267,11 @@ nav a {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }

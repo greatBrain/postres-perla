@@ -52,7 +52,7 @@
             lg:h-12 lg:w-12 drop-shadow-xl rounded-full border-4" />
             <span class="text-white pl-2 text-2xl lg:text-3xl font-normal">Postres Perla</span>
         </a>        
-        <div class="flex justify-start items-center space-x-4 text-white capitalize font-semibold ubuntu-font overflow-x-auto
+        <div class="flex justify-start items-center space-x-2 md:space-x-4 text-white capitalize font-semibold ubuntu-font scrollbar-hide overflow-x-auto
         sm:overflow-x-auto md:overflow-x-hidden lg:overflow-x-hidden">
             <a href="#season-desserts">
                 <button class="overflow-hidden flex relative bg-green-900 justify-center items-center text-white font-semibold py-2 px-4 sm:py-2 sm:px-6
@@ -220,7 +220,6 @@
                       products: ALL_PRODUCTS,
                       modalData: {},
                       isModalOpen: false,
-
                       // Si el array de productos aún no está cargado, devuelve un array vacío
                       get filteredProducts() {
                           return this.products ? this.products.filter(product => product.category === this.activeCategory) : [];
@@ -248,8 +247,10 @@
                 <div id="category-selector" class="flex flex-row gap-0 justify-start
                                      lg:justify-center md:justify-center
                                      sm:overflow-x-visible overflow-x-auto p-3
-                                     **[scrollbar-width:none]** **[&::-webkit-scrollbar]:hidden**
-                                     max-w-fit mx-auto
+                                     scrollbar-hide
+                                     w-[385px]
+                                     max-w-[395px] md:w-full
+                                     md:max-w-fit mx-auto
                                      bg-transparent rounded-none shadow-none mb-10
                                      lg:bg-gray-100/50 lg:rounded-full lg:shadow-lg
                                      md:bg-gray-100/50 md:rounded-full md:shadow-lg
@@ -259,7 +260,7 @@
                                   'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'pasteles'
                               }" class="category-btn flex justify-center items-center px-6 py-2 rounded-full whitespace-nowrap
                                      transition duration-200">
-                        <img src="public/icons/cake-for-filter.svg" class="w-6 h-6 pr-2" alt="">
+                        <img src="public/icons/cake-for-filter.svg" class="w-6 h-6 pr-1" alt="">
                         Pasteles
                     </button>
                     <button data-category="postres" @click="activeCategory = 'postres'" :class="{
@@ -267,7 +268,7 @@
                                   'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'postres'
                               }" class="category-btn flex items-center px-6 py-2 rounded-full whitespace-nowrap
                                      transition duration-200">
-                        <img src="public/icons/dessert-for-filter.svg" class="w-6 h-6 pr-2" alt="">
+                        <img src="public/icons/dessert-for-filter.svg" class="w-6 h-6 pr-1" alt="">
                         Postres
                     </button>
                     <button data-category="mesa-dulces" @click="activeCategory = 'mesa-dulces'" :class="{
@@ -275,7 +276,7 @@
                                   'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'mesa-dulces'
                               }" class="category-btn flex items-center px-6 py-2 rounded-full whitespace-nowrap
                                      transition duration-200">
-                        <img src="public/icons/birdthday-for-filter.svg" class="w-6 h-6 pr-2" alt="">
+                        <img src="public/icons/birdthday-for-filter.svg" class="w-6 h-6 pr-1" alt="">
                         Mesa de dulces
                     </button>
                     <button data-category="temporada" @click="activeCategory = 'temporada'" :class="{
@@ -287,7 +288,7 @@
                         Temporada
                     </button>
                 </div>
-                <div id="product-slider-container" class="slider-container ransition-transform slide-in flex lg:flex-wrap md:flex-wrap w-full overflow-x-auto" x-show="isContentVisible" x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0" style="display: none !important;">
+                <div id="product-slider-container" class="slider-container ransition-transform slide-in flex lg:flex-wrap md:flex-wrap w-full overflow-x-auto scrollbar-hide" x-show="isContentVisible" x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0" style="display: none !important;">
                     <template x-for="product in filteredProducts" :key="product.title">
                         <div class="w-full mt-3 mb-3 sm:w-1/2 md:w-1/2 lg:w-1/4 px-3 flex justify-center">
                             <div class="img-box bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden max-w-[295px]">
@@ -393,7 +394,8 @@
                 </div>
             </div>
         </div>
-        <div class="bg-[url('public/images/desserts-patterns.png')] bg-repeat w-full lg:w-10/12 bg-[#E0F7F4] px-5 py-4 gap-6 min-h-[30vh] relative z-10" id="services-cards-father-container">
+        <div class="bg-[url('public/images/desserts-patterns.png')] bg-repeat w-full lg:w-10/12 bg-[#E0F7F4] px-5 py-4 gap-6 min-h-[30vh] relative z-10
+        scrollbar-hide" id="services-cards-father-container">
             <div class="group relative bg-white rounded-2xl
                w-[85%] sm:w-[75%] md:w-[55%] lg:w-56 xl:w-56 2xl:w-80
                min-h-[240px] sm:min-h-[280px]
@@ -494,7 +496,7 @@
                     <div class="w-100 flex-shrink-0 mb-8 lg:mb-0 md:mb-0 w-11/12 lg:w-4/12 md:w-4/12 snap-center 
                      h-[234px] max-h-[240px]">
                         <div class="p-6 bg-purple-100/80 backdrop-blur-sm rounded-xl shadow-md border border-purple-200 
-                        hover:shadow-lg transition-all h-full" role="group" aria-label="Testimonio de Carlos Mejía">
+                        hover:shadow-lg transition-all **h-full**" role="group" aria-label="Testimonio de Carlos Mejía">
                             <p class="text-xl text-gray-800 italic mb-4">
                                 “En Postres Perla encontré un lugar donde todavía se siente que las cosas se hacen a mano y con calma.”
                             </p>
