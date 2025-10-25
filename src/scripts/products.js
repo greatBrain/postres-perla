@@ -1,4 +1,4 @@
-const EXTRA_FILLING_FLAVORS = [            
+const EXTRA_FILLING_FLAVORS = [
       { flavor: "Mermelada de fresa", price: "RD$300" },
       { flavor: "Crema de coco", price: "RD$400" },
       { flavor: "Crema de chocolate", price: "RD$400" },
@@ -21,12 +21,12 @@ const ALL_PRODUCTS = [
     prices: [
       "1 libra: RD$1,900.00", "1/2 libra: RD$1,200", "1/4: libra RD$1,000"
     ],
-    fillingFlavors: {        
+    fillingFlavors: {
         included: [
-            "Dulce de leche", 
+            "Dulce de leche",
             "Crema pastelera",
-            "Mermelada de piña"            
-        ],        
+            "Mermelada de piña"
+        ],
         additional: EXTRA_FILLING_FLAVORS
     },
     category: "pasteles"
@@ -40,12 +40,12 @@ const ALL_PRODUCTS = [
     prices: [
       "1 libra: RD$2,100", "1/2 libra: RD$1,400"
     ],
-    fillingFlavors: {        
+    fillingFlavors: {
         included: [
-            "Dulce de leche", 
+            "Dulce de leche",
             "Crema pastelera",
-            "Mermelada de piña"            
-        ],        
+            "Mermelada de piña"
+        ],
         additional: EXTRA_FILLING_FLAVORS
     },
     category: "pasteles"
@@ -59,12 +59,12 @@ const ALL_PRODUCTS = [
     prices: [
       "3/4 libra: RD$1,300.", "1/2 libra: RD$1,000."
     ],
-    fillingFlavors: {        
+    fillingFlavors: {
         included: [
-            "Dulce de leche", 
+            "Dulce de leche",
             "Crema pastelera",
-            "Mermelada de piña"            
-        ],        
+            "Mermelada de piña"
+        ],
         additional: EXTRA_FILLING_FLAVORS
     },
     category: "pasteles"
@@ -76,12 +76,12 @@ const ALL_PRODUCTS = [
     alt: "Pan de maíz",
     href: "#",
     prices: ["RD$1,000 c/u", "No relleno"],
-    fillingFlavors: {        
-        included: [],        
+    fillingFlavors: {
+        included: [],
         additional: []
     },
     category: "pasteles"
-  },  
+  },
   {
     title: "Pastel marmoleado",
     comments: "",
@@ -91,12 +91,12 @@ const ALL_PRODUCTS = [
     prices: [
       "1 libra: RD$2,500.", "1/2 libra RD$1,500."
     ],
-    fillingFlavors: {        
+    fillingFlavors: {
         included: [
-            "Dulce de leche", 
+            "Dulce de leche",
             "Crema pastelera",
-            "Mermelada de piña"            
-        ],        
+            "Mermelada de piña"
+        ],
         additional: EXTRA_FILLING_FLAVORS
     },
     category: "pasteles"
@@ -112,11 +112,11 @@ const ALL_PRODUCTS = [
     href: "#",
     prices: ["De piña: RD$700.00", "De fresas: RD$850.00"],
     fillingFlavors: {
-      included:[], 
+      included:[],
       additional:[]
     },
     category:"postres"
-  }, 
+  },
   {
     title: "Pudín de pan entero",
     comments: " ",
@@ -125,7 +125,7 @@ const ALL_PRODUCTS = [
     href: "#",
     prices: ["RD$1,150.00"],
     fillingFlavors: {
-      included:[], 
+      included:[],
       additional:[]
     },
     category: "postres"
@@ -138,11 +138,11 @@ const ALL_PRODUCTS = [
     href: "#",
     prices: ["RD$200.00"],
     fillingFlavors: {
-      included:[], 
+      included:[],
       additional:[]
     },
     category: "postres"
-  },  
+  },
   {
     title: "Fresas con crema",
     comments: " ",
@@ -151,11 +151,11 @@ const ALL_PRODUCTS = [
     href: "#",
     prices: ["5 onzas: RD$150.00", "9 onzas: RD$400.00"],
     fillingFlavors: {
-      included:[], 
+      included:[],
       additional:[]
     },
     category: "postres"
-  },  
+  },
   {
     title: "Tres (3) leches",
     comments: " ",
@@ -164,11 +164,11 @@ const ALL_PRODUCTS = [
     href: "#",
     prices: ["RD$150.00"],
     fillingFlavors: {
-      included:[], 
+      included:[],
       additional:[]
     },
     category: "postres"
-  },  
+  },
   //End postres
   //Mesa dulces
    {
@@ -179,7 +179,7 @@ const ALL_PRODUCTS = [
     href: "#",
     prices: ["Docena: RD$700.00"],
     fillingFlavors: {
-      included:[], 
+      included:[],
       additional:[]
     },
     category:"mesa-dulces"
@@ -205,11 +205,11 @@ const ALL_PRODUCTS = [
     href: "#",
     prices: ["Docena: RD$900"],
     fillingFlavors: {
-      included:[], 
+      included:[],
       additional:[]
     },
     category: "mesa-dulces"
-  }, 
+  },
   {
     title: "Cupcakes por docena",
     comments: "",
@@ -222,11 +222,11 @@ const ALL_PRODUCTS = [
       "topper personalizados: RD$200.00 adicional"
     ],
     fillingFlavors: {
-      included:[], 
+      included:[],
       additional:[]
     },
     category: "mesa-dulces"
-  }, 
+  },
   {
     title: "Alfajores de maicena",
     comments: "",
@@ -237,11 +237,11 @@ const ALL_PRODUCTS = [
       "docena: RD$750.00"
     ],
     fillingFlavors: {
-      included:["Dulce de leche"], 
+      included:["Dulce de leche"],
       additional:[]
     },
     category: "mesa-dulces"
-  }, 
+  },
   {
     title: "Mantecados",
     comments: "",
@@ -260,7 +260,7 @@ const ALL_PRODUCTS = [
   {
     title: "Polvorones de almendra",
     comments: "",
-    image: "./public/images/generica.png",
+    image: "./public/images/polvorones.webp",
     alt: "POLVORONES DE ALMENDRAS",
     href: "#",
     prices: [
@@ -291,7 +291,7 @@ const ALL_PRODUCTS = [
   {
     title: "Galletas personalizadas con azúcar glass",
     comments: "",
-    image: "./public/images/generica.png",
+    image: "./public/images/glass-cake.webp",
     alt: "Galletas personalizadas con azúcar glass",
     href: "#",
     prices: [

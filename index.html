@@ -42,16 +42,15 @@
         });
     </script>
 </head>
-
 <body>
     <nav class="fixed z-50 w-full bg-pink-600 shadow dark:bg-pink-300 h-14 lg:h-16 flex items-center justify-start px-6
-     rounded-full mt-[2px] max-w-[98%] mx-[8px] md:justify-center lg:justify-between
+     rounded-full mt-[2px] max-w-[96.5%] mx-2 md:justify-center lg:justify-between
      lg:rounded-none lg:mt-0 lg:max-w-full lg:mx-0">
         <a href="#" class="hidden lg:flex brand-logo flex-nowrap items-center py-5">
-            <img src="./public/icons/P-perla-logo.png" alt="Logo de la pastelería Postres Perla" class="h-12 w-12 md:h-10 md:w-10 
+            <img src="./public/icons/P-perla-logo.png" alt="Logo de la pastelería Postres Perla" class="h-12 w-12 md:h-10 md:w-10
             lg:h-12 lg:w-12 drop-shadow-xl rounded-full border-4" />
             <span class="text-white pl-2 text-2xl lg:text-3xl font-normal">Postres Perla</span>
-        </a>        
+        </a>
         <div class="flex justify-start items-center space-x-2 md:space-x-4 text-white capitalize font-semibold ubuntu-font scrollbar-hide overflow-x-auto
         sm:overflow-x-auto md:overflow-x-hidden lg:overflow-x-hidden">
             <a href="#season-desserts">
@@ -74,7 +73,7 @@
             <a href="#about-me" class="border-b-2 border-transparent hover:border-yellow-400 hover:text-black dark:hover:text-gray-200 text-lg">Conócenos</a>
         </div>
     </nav>
-    <section class="banner relative w-full h-screen parallax-bg
+    <section class="banner relative w-full h-screen
             bg-[url('public/images/cookie-mobile.webp')]
             lg:bg-[url('public/images/cookie.webp')]
             xl:bg-[url('public/images/cookie.webp')]
@@ -86,7 +85,7 @@
         <div class="relative h-full transition-transform duration-500 ease-in-out" id="slider-container">
             <div class="absolute w-full h-full overflow-hidden">
                 <div class="flex h-full items-center justify-center md:justify-start w-full px-4 md:px-20">
-                    <div class="relative flex flex-col sm:flex-row items-center md:items-start gap-4 sm:gap-6 py-6 px-4 sm:p-10 max-w-4xl
+                    <div class="relative flex flex-col sm:flex-row items-center md:items-start gap-4 sm:gap-2 py-6 px-4 sm:px-2 sm:p-2 max-w-6xl
                      lg:max-w-4xl md:max-w-6xl sm:max-w-6xl
                      lg:bg-[url('public/images/vectors/blob-bg.png')] md:bg-[url('public/images/vectors/blob-bg.png')] bg-no-repeat bg-contain bg-center
                      sm:scale-100 scale-95">
@@ -295,7 +294,7 @@
                                 <div class="img-container overflow-hidden rounded-t-2xl">
                                     <img :src="product.image" :alt="product.alt || product.title" class="object-cover w-full h-48 transition-transform duration-300 hover:scale-105">
                                 </div>
-                                <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left">
+                                <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left min-h-[150px]">
                                     <p class="lower-case text-pink-600 font-bold text-xl transition duration-300 block mb-1 ubuntu-font-bold text" x-text="product.title">
                                     </p>
                                     <button @click="showProductModal(product)" class="shadow-2xl mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
@@ -484,18 +483,18 @@
                 </p>
             </div>
             <div class="w-full" role="region" aria-label="Contenedor de testimonios">
-                <div id="testimonial-container" class="flex flex-wrap md:flex-nowrap lg:flex-nowrap justify-center gap-4 py-6 **snap-x snap-mandatory**">
-                    <div class="w-100 flex-shrink-0 mb-8 lg:mb-0 md:mb-0 w-11/12 lg:w-4/12 md:w-4/12 snap-center h-[234px] max-h-[240px]">
-                        <div class="p-6 bg-yellow-100/90 backdrop-blur-sm rounded-xl shadow-md border border-pink-200 
+                <div id="testimonial-container" class="flex flex-wrap md:flex-nowrap lg:flex-nowrap justify-center gap-2 md:gap-4 py-6 snap-x snap-mandatory">
+                    <div class="w-100 flex-shrink-0 mb-3 lg:mb-0 md:mb-0 w-11/12 lg:w-4/12 md:w-4/12 snap-center h-[234px] max-h-[240px]">
+                        <div class="p-6 bg-yellow-100/90 backdrop-blur-sm rounded-xl shadow-md border border-pink-200
                         hover:shadow-lg transition-all **h-full**" role="group" aria-label="Testimonio de Ana Castillo">
                             <p class="text-xl text-gray-800 italic mb-4">
                                 “Pedí un bizcocho para el cumpleaños de mi hijo y justo lo que esperaba recibir! Con muy buen sabor.”
                             </p>
                         </div>
                     </div>
-                    <div class="w-100 flex-shrink-0 mb-8 lg:mb-0 md:mb-0 w-11/12 lg:w-4/12 md:w-4/12 snap-center 
+                    <div class="w-100 flex-shrink-0 mb-8 lg:mb-0 md:mb-0 w-11/12 lg:w-4/12 md:w-4/12 snap-center
                      h-[234px] max-h-[240px]">
-                        <div class="p-6 bg-purple-100/80 backdrop-blur-sm rounded-xl shadow-md border border-purple-200 
+                        <div class="p-6 bg-purple-100/80 backdrop-blur-sm rounded-xl shadow-md border border-purple-200
                         hover:shadow-lg transition-all **h-full**" role="group" aria-label="Testimonio de Carlos Mejía">
                             <p class="text-xl text-gray-800 italic mb-4">
                                 “En Postres Perla encontré un lugar donde todavía se siente que las cosas se hacen a mano y con calma.”
@@ -503,7 +502,7 @@
                         </div>
                     </div>
                     <div class="w-100 flex-shrink-0 mb-5 lg:mb-0 md:mb-0 w-11/12 lg:w-4/12 md:w-4/12 snap-center h-[234px] max-h-[240px]">
-                        <div class="p-6 bg-green-100/80 backdrop-blur-sm rounded-xl shadow-md border border-green-200 
+                        <div class="p-6 bg-green-100/80 backdrop-blur-sm rounded-xl shadow-md border border-green-200
                         hover:shadow-lg transition-all **h-full**" role="group" aria-label="Testimonio de Laura Sánchez">
                             <p class="text-xl text-gray-800 italic mb-4">
                                 “Me gustó que no era empalagoso, se notaba la calidad de los ingredientes sin necesidad de exagerar.”
