@@ -96,14 +96,13 @@ nav a {
 /*End Cupcake banner falling*/
 /*Da estilo a los sabores de los ponches*/
 .badge {
-  background: rgba(255,255,255,0.15);
+  background: rgba(248, 220, 4, 0.503);
   border-radius: 20px;
   padding: 6px 10px;
   margin: 4px;
   backdrop-filter: blur(4px);
 }
-.badge:hover {
-  background: rgba(243, 0, 69, 0.7);
+.badge:hover {  
   transform: scale(1.05);
   transition: all 0.2s ease;
 }
