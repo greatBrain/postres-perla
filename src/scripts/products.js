@@ -337,6 +337,24 @@ const ALL_PRODUCTS = [
       additional: []
     },
     category: "temporada"
+  },
+  {
+    title: "Ponche navideño",
+    comments: "",
+    image: "./public/images/ponche.webp",
+    alt: "PONCHE DE NAVIDAD",
+    href: "#",
+    prices: [
+      "Dulce de leche: RD$700.00",
+      "Cafe: RD$700.00", 
+      "Pistacho: RD$700.00",
+      "Ciruela: RD$700.00"
+    ],
+    fillingFlavors: {
+      included: [],
+      additional: []
+    },
+    category: "temporada"
   }
   //End temporada
 ];
