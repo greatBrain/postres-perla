@@ -185,9 +185,9 @@ const ALL_PRODUCTS = [
     category:"mesa-dulces"
   },
   {
-    title: "Mousse de fresa y chinola",
+    title: "Mousse de fresa y chinola (foto de referencia)",
     comments: " ",
-    image: "./public/images/fresas-crema.webp",
+    image: "./public/images/mousse.webp",
     alt: "Mousse de diferentes frutas",
     href: "#",
     prices: ["RD$350.00"],
@@ -230,7 +230,7 @@ const ALL_PRODUCTS = [
   {
     title: "Alfajores de maicena",
     comments: "",
-    image: "./public/images/generica.png",
+    image: "./public/images/alfajores.webp",
     alt: "Alfajores maicena con dulce de leche",
     href: "#",
     prices: [
@@ -245,7 +245,7 @@ const ALL_PRODUCTS = [
   {
     title: "Mantecados",
     comments: "",
-    image: "./public/images/generica.png",
+    image: "./public/images/mantecados.webp",
     alt: "MANTECADOS",
     href: "#",
     prices: [
@@ -305,10 +305,10 @@ const ALL_PRODUCTS = [
     category: "mesa-dulces"
   },
   {
-    title: "Galletas personalizadas solo con color y escrita con tinta comestible",
+    title: "Galletas personalizadas con color y tinta comestible",
     comments: "",
-    image: "./public/images/generica.png",
-    alt: "Galletas personalizadas solo con color y escrita con tinta comestible",
+    image: "./public/images/galleta-personal.webp",
+    alt: "Galletas personalizadas con color y tinta comestible",
     href: "#",
     prices: [
       "Docena empacadas juntas: RD$700.00",
@@ -345,10 +345,10 @@ const ALL_PRODUCTS = [
     alt: "PONCHE DE NAVIDAD",
     href: "#",
     prices: [
-      "Dulce de leche: RD$700.00",
-      "Cafe: RD$700.00", 
+      "Dulce de leche: RD$600.00",
+      "Snickers: RD$700.00",
       "Pistacho: RD$700.00",
-      "Ciruela: RD$700.00"
+      "Ciruela: RD$600.00"
     ],
     fillingFlavors: {
       included: [],
