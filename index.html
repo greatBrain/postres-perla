@@ -181,7 +181,7 @@
                                     <img src="public/images/season/bottle-no-bg.png" class="drop-shadow-xl w-full h-full object-contain">
                                 </div>
                                 <div class="punch-flavors w-full flex flex-col items-center text-center px-1">
-                                    <ul class="grid w-[100%] grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-x-4 lg:gap-x-8 md:gap-x-8 p-2 rounded-lg">
+                                    <ul class="grid w-[100%] grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-x-4 lg:gap-x-4 md:gap-x-4 p-2 rounded-lg">
                                         <li class="flex flex-col justify-center items-center text-white font-semibold text-lg badge">
                                             Dulce de leche: <span>RD$600.00</span>
                                         </li>
@@ -290,11 +290,13 @@
                 <div id="product-slider-container" class="slider-container ransition-transform slide-in flex lg:flex-wrap md:flex-wrap w-full overflow-x-auto scrollbar-hide" x-show="isContentVisible" x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0" style="display: none !important;">
                     <template x-for="product in filteredProducts" :key="product.title">
                         <div class="w-full mt-3 mb-3 sm:w-1/2 md:w-1/2 lg:w-1/4 px-3 flex justify-center">
-                            <div class="img-box bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden max-w-[295px]">
+                            <div class="img-box bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300
+                                overflow-hidden max-w-[295px]
+                                bg-gradient-to-r from-pink-50 to-white">
                                 <div class="img-container overflow-hidden rounded-t-2xl">
                                     <img :src="product.image" :alt="product.alt || product.title" class="object-cover w-full h-48 transition-transform duration-300 hover:scale-105">
                                 </div>
-                                <div class="bg-gradient-to-r from-pink-50 to-white p-6 text-left min-h-[150px]">
+                                <div class="p-6 text-left min-h-[150px]">
                                     <p class="lower-case text-pink-600 font-bold text-xl transition duration-300 block mb-1 ubuntu-font-bold text" x-text="product.title">
                                     </p>
                                     <button @click="showProductModal(product)" class="shadow-2xl mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
@@ -550,8 +552,9 @@
                 </div>
             </div>
             <div class="flex flex-col md:flex-row items-center gap-8">
-                <img src="public/images/chef.webp" alt="Retrato de Perla Pascual, fundadora de Postres Perla" loading="lazy" class="w-52 h-52 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-2 border-pink-400
-                  shadow-lg object-cover transition-all duration-400 ease-in-out" />
+                <img src="public/images/chef.webp" alt="Retrato de Perla Pascual, fundadora de Postres Perla" loading="lazy"
+                 class="w-50 h-50 md:w-72 md:h-72 lg:w-75 lg:h-74 rounded-full border-2 border-pink-400 shadow-lg object-contain
+                 transition-all duration-400 ease-in-out" />
                 <p class="text-lg md:text-xl text-gray-700 font-medium leading-relaxed text-center md:text-left">
                     <span class="block mb-4">
                         Este proyecto nació del sueño de su fundadora, <strong>Perla Pascual</strong>. Su amor por
