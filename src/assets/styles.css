@@ -96,7 +96,7 @@ nav a {
 /*End Cupcake banner falling*/
 /*Da estilo a los sabores de los ponches*/
 .badge {
-  background: rgba(248, 220, 4, 0.503);
+  background: rgb(247 72 216 / 50%);
   border-radius: 20px;
   padding: 6px 10px;
   margin: 4px;
