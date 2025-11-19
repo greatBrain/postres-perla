@@ -14,7 +14,7 @@ const ALL_PRODUCTS = [
   //Pasteles y bizcochos
   {
     title: "Pastel de vainilla (bizcocho dominicano)",
-    comments: "Elaboramos el pastel para tus celebracion, a tu gusto y con tu estilo",
+    comments: "Decoración no incluida en el precio del pastel",
     image: "./public/images/personal-cake.webp",
     alt: "Pastel personalizado",
     href: "#",
@@ -33,7 +33,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Pastel jugoso de chocolate",
-    comments: "Si no lo deseas completo, igual lo puedes disfrutar en partes.",
+    comments: "Decoración no incluida en el precio del pastel",
     image: "./public/images/chocolate-cake.webp",
     alt: "Pasteles por porciones",
     href: "#",
@@ -52,7 +52,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Pastel de zanahoria (carrot cake)",
-    comments: "",
+    comments: "Decoración no incluida en el precio del pastel",
     image: "./public/images/carrot-cake.webp",
     alt: "Pastel de zanahoria",
     href: "#",
@@ -70,8 +70,8 @@ const ALL_PRODUCTS = [
     category: "pasteles"
   },
   {
-    title: "Pan de maíz entero (sin relleno)",
-    comments: "",
+    title: "Pan de maíz entero",
+   comments: "Sin relleno",
     image: "./public/images/pan-maiz.webp",
     alt: "Pan de maíz",
     href: "#",
@@ -84,7 +84,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Pastel marmoleado",
-    comments: "",
+   comments: "Decoración no incluida en el precio del pastel",
     image: "./public/images/marmoleado.webp",
     alt: "Pan de maíz",
     href: "#",
@@ -106,7 +106,7 @@ const ALL_PRODUCTS = [
   //Postres
   {
     title: "Pie de frutas",
-    comments: "Fresas, moras",
+    comments: "Frutas: piña, fresas y moras",
     image: "./public/images/pie.webp",
     alt: "Postre 2",
     href: "#",
@@ -119,7 +119,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Pudín de pan entero",
-    comments: " ",
+    comments: "Sin relleno",
     image: "./public/images/pudding.webp",
     alt: "Pudin de pan completo",
     href: "#",
@@ -132,7 +132,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Porciones pudín de pan",
-    comments: " ",
+    comments: "Sin relleno",
     image: "./public/images/pudding-portion.webp",
     alt: "Porciones de pudin de pan",
     href: "#",
@@ -145,7 +145,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Fresas con crema",
-    comments: " ",
+    comments: "Crema batida acompañada de fresas frescas",
     image: "./public/images/fresas-crema.webp",
     alt: "Fresas con crema",
     href: "#",
@@ -158,7 +158,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Tres (3) leches",
-    comments: " ",
+    comments: "",
     image: "./public/images/tres-leches.webp",
     alt: "Tres leches",
     href: "#",
@@ -173,7 +173,7 @@ const ALL_PRODUCTS = [
   //Mesa dulces
    {
     title: "Brownie de chocolate",
-    comments: " ",
+    comments: "",
     image: "./public/images/brownies.webp",
     alt: "Brownies",
     href: "#",
@@ -185,8 +185,8 @@ const ALL_PRODUCTS = [
     category:"mesa-dulces"
   },
   {
-    title: "Mousse de fresa y chinola (foto de referencia)",
-    comments: " ",
+    title: "Mousse de fresa y chinola",
+    comments: "Imágen de referencia",
     image: "./public/images/mousse.webp",
     alt: "Mousse de diferentes frutas",
     href: "#",
@@ -199,8 +199,8 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Shots tres (3) leches",
-    comments: "Shots de tres leches para mesa de dulce",
-    image: "./public/images/tres-leches.webp",
+    comments: "Perfectos para tu mesa de dulces",
+    image: "./public/images/shots-tres-leches.webp",
     alt: "Tres leches",
     href: "#",
     prices: ["Docena: RD$900"],
@@ -212,7 +212,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Cupcakes por docena",
-    comments: "",
+    comments: "Imágen de referencia",
     image: "./public/images/cupcakes.webp",
     alt: "Tres leches",
     href: "#",
@@ -279,8 +279,8 @@ const ALL_PRODUCTS = [
     alt: "GALLETAS EN FONDANT PERSONALIZADAS",
     href: "#",
     prices: [
-      "Docena con empacadas por separado y nota personalizada: RD$1,000.00",
-      "Empacadas juntas: RD$1,000.00"
+      "Con empaque por separado y nota personalizada: RD$1,200.00",
+      "En empaque juntas: RD$1,000.00"
     ],
     fillingFlavors: {
       included: [],
