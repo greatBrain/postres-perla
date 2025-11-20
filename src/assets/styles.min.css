@@ -1,0 +1,244 @@
+:root {
+    --white-bg: #fff;
+    --black-bg: #000;
+    --perla-soft-green: #e7f8cc;
+    --light-yellow: #FBE7C6;
+    --salmon-color: #FC8578;
+    --light-pink: #f5dff8;
+    --white-bone: #fffbf4;
+    --perla-yellow: #fffefa;
+}
+
+/* --- RESET & GLOBAL --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+nav a {
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.brand-logo {
+    font-family: "Caveat Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* --- ANIMATIONS --- */
+
+/* Snow Effect */
+@keyframes snowfall {
+    0% { transform: translate3d(var(--left-ini, 0vw), 0, 0); }
+    100% { transform: translate3d(var(--left-end, 0vw), 110vh, 0); }
+}
+
+.initial-snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.initial-snow > * {
+    color: white;
+    position: absolute;
+    top: -5vh;
+    font-size: var(--size, 80px);
+    animation-name: snowfall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Cupcake Drop */
+@keyframes dropBounce {
+    0% { transform: translateY(-160px); opacity: 0; }
+    20% { transform: translateY(-90px); opacity: 0; }
+    60% { transform: translateY(0); opacity: 1; }
+    75% { transform: translateY(-14px); }
+    90% { transform: translateY(8px); }
+    100% { transform: translateY(0); }
+}
+
+.animate-drop-bounce {
+    animation: dropBounce 1.1s ease-out 1;
+}
+
+/* Modal Fade Out */
+@keyframes fade-out-anim {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.animate-fade-in:not([open]) {
+    animation: fade-out-anim 0.11s ease-out forwards;
+}
+
+/* --- COMPONENTS --- */
+
+/* Badges */
+.badge {
+    background: rgb(247 72 216 / 50%);
+    border-radius: 20px;
+    padding: 6px 10px;
+    margin: 4px;
+    backdrop-filter: blur(4px);
+}
+
+.badge:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+/* Catalog & Sliders */
+.catalog {
+    background-color: var(--perla-yellow);
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.catalog > .title, 
+.testimonials #testimonialas-container > .title {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.catalog .gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; /* Default desktop behavior */
+}
+
+.slide {
+    padding-bottom: 70px;
+}
+
+.img-box .img-container {
+    width: 300px;
+    height: 258px;
+    max-height: 260px;
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+.img-box .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out;
+}
+
+.img-container:hover img {
+    transform: scale(1); /* Nota: Scale 1 es el tamaño normal, ¿querías hacer zoom? si es así usa 1.1 */
+}
+
+/* Services Horizontal Scroll Container */
+#services-cards-father-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+/* Custom Scrollbar Styling */
+#services-cards-father-container::-webkit-scrollbar {
+    height: 8px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#services-cards-father-container::-webkit-scrollbar-track {
+    background: #fce7f3;
+    border-radius: 4px;
+}
+
+#services-cards-father-container::-webkit-scrollbar-thumb {
+    background-color: #ec4899;
+    border-radius: 4px;
+    border: 2px solid #fce7f3;
+}
+
+.scrollbar-show::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scrollbar-show::-webkit-scrollbar-thumb {
+    background-color: #ec4899;
+    border-radius: 9999px;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Tablet & Mobile Shared Styles (Horizontal Scroll Mode) */
+@media (max-width: 992px) {
+    .catalog .gallery {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; /* Alineación izquierda para scroll natural */
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        padding-left: 10px; /* Espacio para empezar a scrollear */
+    }
+
+    .img-box {
+        flex: 0 0 auto;
+        max-width: 300px;
+    }
+
+    .img-box .img-container {
+        width: 300px;
+        height: 292px;
+        margin-right: 8px;
+    }
+
+    /* Ajustes específicos para servicios en móvil */
+    #services-cards-father-container {
+        justify-content: flex-start;
+        padding-bottom: 50px;
+        /* Ocultar scrollbar en movil visualmente pero mantener funcionalidad */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    #services-cards-father-container::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .testimonials, #services {
+        height: auto;
+    }
+}

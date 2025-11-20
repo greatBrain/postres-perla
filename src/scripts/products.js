@@ -157,8 +157,8 @@ const ALL_PRODUCTS = [
     category: "postres"
   },
   {
-    title: "Tres (3) leches",
-    comments: "",
+    title: "Tres leches",
+    comments: "Delicioso y cremoso para que lo degustes",
     image: "./public/images/tres-leches.webp",
     alt: "Tres leches",
     href: "#",
@@ -173,7 +173,7 @@ const ALL_PRODUCTS = [
   //Mesa dulces
    {
     title: "Brownie de chocolate",
-    comments: "",
+    comments: "Individual y por docena (12na)",
     image: "./public/images/brownies.webp",
     alt: "Brownies",
     href: "#",
@@ -190,7 +190,7 @@ const ALL_PRODUCTS = [
     image: "./public/images/mousse.webp",
     alt: "Mousse de diferentes frutas",
     href: "#",
-    prices: ["RD$350.00"],
+    prices: ["Docena (12na): RD$1,200.00"],
     fillingFlavors: {
       included:[],
       additional:[]
@@ -229,7 +229,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Alfajores de maicena",
-    comments: "",
+    comments: "Ideal para tu mesa de dulces",
     image: "./public/images/alfajores.webp",
     alt: "Alfajores maicena con dulce de leche",
     href: "#",
@@ -244,7 +244,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Mantecados",
-    comments: "",
+    comments: "Agregado: chispas de colores",
     image: "./public/images/mantecados.webp",
     alt: "MANTECADOS",
     href: "#",
@@ -259,7 +259,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Polvorones de almendra",
-    comments: "",
+    comments: "Con almendras naturales",
     image: "./public/images/polvorones.webp",
     alt: "POLVORONES DE ALMENDRAS",
     href: "#",
@@ -274,7 +274,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Galletas en fondant personalizadas",
-    comments: "",
+    comments: "Precio dependerá del diseño",
     image: "./public/images/fondant-cake.webp",
     alt: "GALLETAS EN FONDANT PERSONALIZADAS",
     href: "#",
@@ -290,7 +290,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Galletas personalizadas con azúcar glass",
-    comments: "",
+    comments: "Precio dependerá del diseño",
     image: "./public/images/glass-cake.webp",
     alt: "Galletas personalizadas con azúcar glass",
     href: "#",
@@ -306,7 +306,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Galletas personalizadas con color y tinta comestible",
-    comments: "",
+    comments: "Imágen de referencia",
     image: "./public/images/galleta-personal.webp",
     alt: "Galletas personalizadas con color y tinta comestible",
     href: "#",
@@ -323,8 +323,8 @@ const ALL_PRODUCTS = [
   //End mesa dulces
   //Temporada
   {
-    title: "Galletas de gengibre navideñas",
-    comments: "",
+    title: "Galletas navideñas de gengibre",
+    comments: "Un clásico de esta hermosa temporada!",
     image: "./public/images/ginger-cake-white.webp",
     alt: "GALLETAS DE JENGIBRE DE NAVIDAD",
     href: "#",
@@ -340,7 +340,7 @@ const ALL_PRODUCTS = [
   },
   {
     title: "Ponche navideño",
-    comments: "",
+    comments: "Disfruta de nuestra colección de ponches artesanales exclusiva de la temporada!",
     image: "./public/images/ponche.webp",
     alt: "PONCHE DE NAVIDAD",
     href: "#",
