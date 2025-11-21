@@ -250,9 +250,7 @@
                                      lg:justify-center md:justify-center
                                      sm:overflow-x-visible overflow-x-auto p-3
                                      scrollbar-hide
-                                     w-[385px]
-                                     max-w-[395px] md:w-full
-                                     md:max-w-fit mx-auto
+                                     w-full md:max-w-fit mx-auto
                                      rounded-none shadow-none mb-10
                                      lg:bg-white lg:rounded-full lg:shadow-lg
                                      md:bg-white md:rounded-full md:shadow-lg
@@ -260,7 +258,8 @@
                     <button data-category="pasteles" @click="activeCategory = 'pasteles'" :class="{
                                   'outline-none ring-2 ring-yellow-400 ring-opacity-80 bg-white text-gray-800 font-semibold shadow-lg lg:shadow-xl md:shadow-xl': activeCategory === 'pasteles',
                                   'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'pasteles'
-                              }" class="category-btn flex justify-center items-center px-6 py-2 rounded-full whitespace-nowrap
+                              }" class="category-btn flex flex-col justify-center items-center md:flex-row lg:flex-row px-10 py-1 
+                                     md:px-6 md:py-2 lg:px-6 lg:py-2 rounded-full whitespace-nowrap
                                      transition duration-200">
                         <img src="public/icons/cake-for-filter.svg" class="w-6 h-6 pr-1" alt="">
                         Pasteles
@@ -268,7 +267,8 @@
                     <button data-category="postres" @click="activeCategory = 'postres'" :class="{
                                   'outline-none ring-2 ring-yellow-400 ring-opacity-80 bg-white text-gray-800 font-semibold shadow-lg lg:shadow-xl md:shadow-xl': activeCategory === 'postres',
                                   'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'postres'
-                              }" class="category-btn flex items-center px-6 py-2 rounded-full whitespace-nowrap
+                              }" class="category-btn flex flex-col justify-center items-center md:flex-row lg:flex-row px-10 py-1 
+                                     md:px-6 md:py-2 lg:px-6 lg:py-2 rounded-full whitespace-nowrap
                                      transition duration-200">
                         <img src="public/icons/dessert-for-filter.svg" class="w-6 h-6 pr-1" alt="">
                         Postres
@@ -276,7 +276,8 @@
                     <button data-category="mesa-dulces" @click="activeCategory = 'mesa-dulces'" :class="{
                                   'outline-none ring-2 ring-yellow-400 ring-opacity-80 bg-white text-gray-800 font-semibold shadow-lg lg:shadow-xl md:shadow-xl': activeCategory === 'mesa-dulces',
                                   'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'mesa-dulces'
-                              }" class="category-btn flex items-center px-6 py-2 rounded-full whitespace-nowrap
+                              }" class="category-btn flex flex-col justify-center items-center md:flex-row lg:flex-row px-10 py-1 
+                                     md:px-6 md:py-2 lg:px-6 lg:py-2 rounded-full whitespace-nowrap
                                      transition duration-200">
                         <img src="public/icons/birdthday-for-filter.svg" class="w-6 h-6 pr-1" alt="">
                         Mesa de dulces
@@ -284,7 +285,8 @@
                     <button data-category="temporada" @click="activeCategory = 'temporada'" :class="{
                                   'outline-none ring-2 ring-yellow-400 ring-opacity-80 bg-white text-gray-800 font-semibold shadow-lg lg:shadow-xl md:shadow-xl': activeCategory === 'temporada',
                                   'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'temporada'
-                              }" class="category-btn flex items-center px-6 py-2 rounded-full whitespace-nowrap
+                              }" class="category-btn flex flex-col justify-center items-center md:flex-row lg:flex-row px-10 py-1 
+                                     md:px-6 md:py-2 lg:px-6 lg:py-2 rounded-full whitespace-nowrap
                                      transition duration-200">
                         <img src="public/icons/tree-season.svg" class="w-6 h-6 pr-2" alt="">
                         Temporada
