@@ -323,26 +323,10 @@ const ALL_PRODUCTS = [
   //End mesa dulces
   //Temporada
   {
-    title: "Galletas navideñas de gengibre",
-    comments: "Un clásico de esta hermosa temporada!",
-    image: "./public/images/ginger-cake-white.webp",
-    alt: "GALLETAS DE JENGIBRE DE NAVIDAD",
-    href: "#",
-    prices: [
-      "Docena decorada en blanco: RD$800.00",
-      "Con colores: RD$950.00"
-    ],
-    fillingFlavors: {
-      included: [],
-      additional: []
-    },
-    category: "temporada"
-  },
-  {
-    title: "Ponche navideño",
-    comments: "Disfruta de nuestra colección de ponches artesanales exclusiva de la temporada!",
+    title: "Ponche artesanal",
+    comments: "Disfruta de nuestra colección de ponches artesanales exclusivos!",
     image: "./public/images/ponche.webp",
-    alt: "PONCHE DE NAVIDAD",
+    alt: "PONCHE",
     href: "#",
     prices: [
       "Dulce de leche: RD$600.00",
