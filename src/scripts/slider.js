@@ -7,6 +7,7 @@ function imageSlider() {
         autoplaySpeed: 3800,
         touchStartX: null,
         isTransitioning: false,
+        hasTransition: true,
 
         init() {
             // Setup slides with clones for infinite loop: [Last, 0, 1, 2, First]
@@ -43,7 +44,7 @@ function imageSlider() {
                     this.jumpToIndex(1);
                 }
                 this.isTransitioning = false;
-            }, 500); // Match CSS duration
+            }, 700); // Match CSS duration
         },
 
         prev() {
@@ -56,17 +57,16 @@ function imageSlider() {
                     this.jumpToIndex(this.slides.length - 2);
                 }
                 this.isTransitioning = false;
-            }, 500);
+            }, 700);
         },
 
         jumpToIndex(index) {
-            // Disable transition temporarily
-            const el = document.querySelector('.slider-flex-container');
-            if (el) el.style.transition = 'none';
+            this.hasTransition = false;
             this.currentIndex = index;
-            // Force reflow
-            if (el) el.offsetHeight;
-            if (el) el.style.transition = 'transform 500ms ease-out';
+            // Re-enable transition after a small delay to allow DOM update
+            setTimeout(() => {
+                this.hasTransition = true;
+            }, 50);
         },
 
         goTo(index) {
