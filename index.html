@@ -20,7 +20,6 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <!-- Tailwind -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Alpine.js -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <!-- Google Fonts -->
@@ -28,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
     <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="src/assets/styles.min.css">
+    <link rel="stylesheet" href="src/assets/styles.css">
     <link rel="stylesheet" href="src/assets/fonts.css">
     <!-- Swiper.js -->
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
@@ -47,25 +46,25 @@
 </head>
 
 <body>
-    <nav class="fixed z-50 w-full bg-pink-600 backdrop-blur-xs md:backdrop-blur-none lg:backdrop-blur-none shadow dark:bg-pink-300 h-14 lg:h-16 
-     flex items-center justify-start px-5 md:px-6 lg:px-6
-     rounded-full mt-[2px] max-w-[96.5%] mx-2 md:justify-center lg:justify-between
-     lg:rounded-none lg:mt-0 lg:max-w-full lg:mx-0">
+    <nav class="fixed z-50 bg-pink-500 backdrop-blur-xs md:backdrop-blur-none lg:backdrop-blur-none shadow dark:bg-pink-500 h-14 lg:h-16 
+     flex items-center justify-between px-5 md:px-6 lg:px-6
+     rounded-full mt-[4px] w-[94%] left-1/2 -translate-x-1/2 md:justify-center lg:justify-between
+     lg:rounded-none lg:mt-0 lg:max-w-full lg:mx-0 lg:w-full lg:left-0 lg:translate-x-0">
         <a href="#" class="hidden lg:flex brand-logo flex-nowrap items-center py-5">
             <img src="./public/icons/P-perla-logo.png" alt="Logo de la pastelería Postres Perla" class="h-12 w-12 md:h-10 md:w-10
             lg:h-12 lg:w-12 drop-shadow-xl rounded-full border-4" />
-            <span class="text-white pl-2 text-2xl lg:text-3xl font-normal">Postres Perla</span>
+            <span class="text-white pl-2 text-2xl lg:text-3xl font-bold md:font-normal">Postres Perla</span>
         </a>
-        <div class="flex justify-start items-center space-x-1 md:space-x-4 text-white capitalize font-semibold ubuntu-font scrollbar-hide overflow-x-auto
-        sm:overflow-x-auto md:overflow-x-hidden lg:overflow-x-hidden">
+        <div class="flex justify-start items-center space-x-2 md:space-x-4 text-white capitalize font-semibold ubuntu-font scrollbar-hide overflow-x-auto
+        sm:overflow-x-auto md:overflow-x-hidden lg:overflow-x-hidden py-1">
             <a href="#catalog"
-                class="border-b-2 border-transparent hover:border-yellow-500 hover:text-black dark:hover:text-gray-200 text-lg">Productos</a>
+                class="nav-btn whitespace-nowrap px-4 py-2 transition-all text-sm sm:text-lg">Productos</a>
             <a href="#testimonials"
-                class="border-b-2 border-transparent hover:border-yellow-500 hover:text-black dark:hover:text-gray-200 text-lg">Testimonios</a>
+                class="nav-btn whitespace-nowrap px-4 py-2 transition-all text-sm sm:text-lg">Testimonios</a>
             <a href="#contact"
-                class="border-b-2 border-transparent hover:border-yellow-500 hover:text-black dark:hover:text-gray-200 text-lg">Contáctanos</a>
+                class="nav-btn whitespace-nowrap px-4 py-2 transition-all text-sm sm:text-lg">Contáctanos</a>
             <a href="#about-me"
-                class="border-b-2 border-transparent hover:border-yellow-400 hover:text-black dark:hover:text-gray-200 text-lg">Conócenos</a>
+                class="nav-btn whitespace-nowrap px-4 py-2 transition-all text-sm sm:text-lg">Conócenos</a>
         </div>
     </nav>
     <section class="banner parallax-bg relative w-full h-screen max-h-[700px] md:max-h-full lg:max-h-full
@@ -96,8 +95,8 @@
                             </h1>
                             <p
                                 class="text-base text-gray-900 text-xl lg:text-gray-700 md:text-gray-700 lg:md:text-2xl md:text-2xl sm:text-xl md:text-xl mt-3 lato-regular mb-3">
-                                ¡Prueba hoy nuestros productos 100% artesanales, elaborados con ingredientes frescos y
-                                llenos de sabor!
+                                ¡Descubre nuestros productos 100% artesanales, preparados con ingredientes frescos
+                                y con una dedicación que se siente en cada bocado!
                             </p>
                             <a href="#catalog">
                                 <button class="w-xs mt-5 lg:w-sm md:w-sm mt-5 overflow-hidden relative bg-pink-500 text-white font-bold py-2 px-5 sm:py-3 sm:px-8
@@ -111,7 +110,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
                                             d="M9 5l7 7-7 7"></path>
                                     </svg>
-                                    <span class="relative z-10">Explora el catalogo</span>
+                                    <span class="relative z-10">Haz tu pedido aquí</span>
                             </a>
                         </div>
                     </div>
@@ -125,7 +124,7 @@
             <div class="catalog-text mb-10 text-center">
                 <h2 data-aos="fade-up"
                     class="text-gray-700 text-4xl md:text-4xl sm:text-3xl xs:text-3xl lg:text-5xl xl:text-5xl ubuntu-font-bold title">
-                    Explora nuestros productos <span class="text-yellow-500">artesanales</span>
+                    Nuestros productos <span class="text-yellow-500">100% artesanales</span>
                 </h2>
             </div>
             <div class="w-full mx-auto py-4" x-data="{
@@ -411,43 +410,71 @@
                     nuestros clientes.
                 </p>
             </div>
-            <div class="w-full" role="region" aria-label="Contenedor de testimonios">
-                <div id="testimonial-container"
-                    class="flex flex-wrap md:flex-nowrap lg:flex-nowrap justify-center gap-2 md:gap-4 py-6 snap-x snap-mandatory">
-                    <div class="w-100 flex-shrink-0 mb-3 lg:mb-0 md:mb-0 w-11/12 lg:w-4/12 md:w-4/12 snap-center h-[234px] max-h-[240px]"
-                        data-aos="fade-up">
-                        <div class="p-6 bg-yellow-100/90 backdrop-blur-sm rounded-xl shadow-md border border-pink-200
-                        hover:shadow-lg transition-all **h-full**" role="group"
-                            aria-label="Testimonio de Ana Castillo">
-                            <p class="text-xl text-gray-800 italic mb-4">
-                                “Pedí un bizcocho para el cumpleaños de mi hijo y justo lo que esperaba recibir! Con muy
-                                buen sabor.”
-                            </p>
+            <div class="w-full relative mx-auto max-w-7xl overflow-hidden" role="region"
+                aria-label="Contenedor de testimonios">
+                <div class="swiper testimonialSwiper mx-auto">
+                    <div class="swiper-wrapper" id="testimonial-container">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide h-auto" data-rating="5">
+                            <div class="p-6 bg-yellow-100/90 backdrop-blur-sm rounded-xl shadow-md border border-pink-200 hover:shadow-lg transition-all h-full text-left"
+                                role="group" aria-label="Testimonio de Ana Castillo">
+                                <div class="stars-container mb-3 flex gap-1"></div>
+                                <p class="text-xl text-gray-800 italic mb-4">
+                                    “Pedí un bizcocho para el cumpleaños de mi hijo y justo lo que esperaba recibir! Con
+                                    muy buen sabor.”
+                                </p>
+                                <p class="text-pink-600 font-bold">- Ana Castillo</p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide h-auto" data-rating="5">
+                            <div class="p-6 bg-purple-100/80 backdrop-blur-sm rounded-xl shadow-md border border-purple-200 hover:shadow-lg transition-all h-full text-left"
+                                role="group" aria-label="Testimonio de Carlos Mejía">
+                                <div class="stars-container mb-3 flex gap-1"></div>
+                                <p class="text-xl text-gray-800 italic mb-4">
+                                    “En Postres Perla encontré un lugar donde todavía se siente que las cosas se hacen a
+                                    mano y con calma.”
+                                </p>
+                                <p class="text-pink-600 font-bold">- Carlos Mejía</p>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide h-auto" data-rating="5">
+                            <div class="p-6 bg-green-100/80 backdrop-blur-sm rounded-xl shadow-md border border-green-200 hover:shadow-lg transition-all h-full text-left"
+                                role="group" aria-label="Testimonio de Laura Sánchez">
+                                <div class="stars-container mb-3 flex gap-1"></div>
+                                <p class="text-xl text-gray-800 italic mb-4">
+                                    “Me gustó que no era empalagoso, se notaba la calidad de los ingredientes sin
+                                    necesidad de exagerar.”
+                                </p>
+                                <p class="text-pink-600 font-bold">- Laura Sánchez</p>
+                            </div>
+                        </div>
+                        <!-- Duplicate Slides for smoother infinite loop -->
+                        <div class="swiper-slide h-auto" data-rating="5">
+                            <div
+                                class="p-6 bg-yellow-100/90 backdrop-blur-sm rounded-xl shadow-md border border-pink-200 hover:shadow-lg transition-all h-full text-left">
+                                <div class="stars-container mb-3 flex gap-1"></div>
+                                <p class="text-xl text-gray-800 italic mb-4">“¡Increíble atención y sabor único! Volveré
+                                    a pedir pronto.”</p>
+                                <p class="text-pink-600 font-bold">- María Pérez</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto" data-rating="5">
+                            <div
+                                class="p-6 bg-purple-100/80 backdrop-blur-sm rounded-xl shadow-md border border-purple-200 hover:shadow-lg transition-all h-full text-left">
+                                <div class="stars-container mb-3 flex gap-1"></div>
+                                <p class="text-xl text-gray-800 italic mb-4">“Los mejores postres de Santo Domingo, sin
+                                    duda alguna.”</p>
+                                <p class="text-pink-600 font-bold">- José Rodríguez</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="w-100 flex-shrink-0 mb-8 lg:mb-0 md:mb-0 w-11/12 lg:w-4/12 md:w-4/12 snap-center
-                     h-[234px] max-h-[240px]" data-aos="fade-up" data-aos-delay="100">
-                        <div class="p-6 bg-purple-100/80 backdrop-blur-sm rounded-xl shadow-md border border-purple-200
-                        hover:shadow-lg transition-all **h-full**" role="group"
-                            aria-label="Testimonio de Carlos Mejía">
-                            <p class="text-xl text-gray-800 italic mb-4">
-                                “En Postres Perla encontré un lugar donde todavía se siente que las cosas se hacen a
-                                mano y con calma.”
-                            </p>
-                        </div>
-                    </div>
-                    <div class="w-100 flex-shrink-0 mb-5 lg:mb-0 md:mb-0 w-11/12 lg:w-4/12 md:w-4/12 snap-center h-[234px] max-h-[240px]"
-                        data-aos="fade-up" data-aos-delay="200">
-                        <div class="p-6 bg-green-100/80 backdrop-blur-sm rounded-xl shadow-md border border-green-200
-                        hover:shadow-lg transition-all **h-full**" role="group"
-                            aria-label="Testimonio de Laura Sánchez">
-                            <p class="text-xl text-gray-800 italic mb-4">
-                                “Me gustó que no era empalagoso, se notaba la calidad de los ingredientes sin necesidad
-                                de exagerar.”
-                            </p>
-                        </div>
-                    </div>
-
+                    <!-- Navigation Buttons (Moved inside for better control) -->
+                    <div class="swiper-button-next !text-pink-600"></div>
+                    <div class="swiper-button-prev !text-pink-600"></div>
+                    <!-- Pagination (Moved inside) -->
+                    <div class="swiper-pagination testimonial-pagination !-bottom-2"></div>
                 </div>
             </div>
         </div>
@@ -520,43 +547,79 @@
         <div class="absolute top-10 left-10 w-72 h-72 bg-pink-200 opacity-30 rounded-full blur-3xl z-0"></div>
         <div class="absolute bottom-10 right-10 w-96 h-96 bg-pink-100 opacity-30 rounded-full blur-2xl z-0"></div>
         <div class="relative z-10 max-w-6xl mx-auto px-6">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="text-4xl md:text-4xl font-bold text-pink-500 mb-2">Conócenos</h2>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-pink-600 mb-4 ubuntu-font-bold tracking-tight">
+                    Tu confianza es nuestro motor
+                </h2>
                 <div class="flex items-center justify-center gap-4">
-                    <div class="w-40 h-0.5 bg-pink-300"></div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-pink-400" fill="currentColor"
-                        viewBox="0 0 24 24">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
-                        2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09
-                        3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4
-                        6.86-8.55 11.54L12 21.35z" />
-                    </svg>
-                    <div class="w-40 h-0.5 bg-pink-300"></div>
+                    <div class="w-24 h-1 bg-pink-300 rounded-full"></div>
+                    <span class="text-pink-400">✧</span>
+                    <div class="w-24 h-1 bg-pink-300 rounded-full"></div>
                 </div>
             </div>
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <img src="public/images/chef.webp" alt="Retrato de Perla Pascual, fundadora de Postres Perla"
-                    loading="lazy" class="w-50 h-50 md:w-72 md:h-72 lg:w-75 lg:h-74 rounded-full border-2 border-pink-400 shadow-lg object-contain
-                 transition-all duration-400 ease-in-out" data-aos="zoom-in" />
-                <p class="text-lg md:text-xl text-gray-700 font-medium leading-relaxed text-center md:text-left"
-                    data-aos="fade-left">
-                    <span class="block mb-4">
-                        Este proyecto nació del sueño de su fundadora, <strong>Perla Pascual</strong>. Su amor por
-                        la repostería y su formación, le han permitido transformar recetas tradicionales en
-                        verdadero arte.
-                    </span>
-                    <span class="italic">
-                        "Mezclamos técnica, el <strong>corazón y creatividad</strong> en cada solicitud de nuestros
-                        clientes.
-                        Cada una cuenta una historia y lleva consigo un pedacito de pasión y dedicación."
-                    </span><br><br>
-                    <span class="great-vibes-regular text-gray-900 text-2xl font-bold pt-4">
-                        Perla Pascual, repostera fundadora
-                    </span>
-                </p>
+            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+                <!-- Imagen con Sello de Confianza -->
+                <div class="relative shrink-0" data-aos="zoom-in">
+                    <img src="public/images/chef.webp" alt="Perla Pascual, repostera fundadora" loading="lazy"
+                        class="w-64 h-64 md:w-80 md:h-80 rounded-full border-8 border-white shadow-2xl object-contain bg-pink-100" />
+
+                    <!-- SVG Sello de Confianza (Garantía de Sabor) -->
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 md:w-40 md:h-40 animate-slow-spin">
+                        <svg viewBox="0 0 100 100" class="w-full h-full drop-shadow-lg">
+                            <defs>
+                                <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0">
+                                </path>
+                            </defs>
+                            <circle cx="50" cy="50" r="45" fill="white" class="fill-white" />
+                            <circle cx="50" cy="50" r="38" fill="none" stroke="#db2777" stroke-width="0.5"
+                                stroke-dasharray="2,2" />
+                            <text class="text-[9.5px] font-bold uppercase fill-pink-600 tracking-wider">
+                                <textPath xlink:href="#circlePath" startOffset="0%">✧ 100% ARTESANAL ✧ GARANTÍA DE SABOR
+                                    ✧</textPath>
+                            </text>
+                            <g transform="translate(32, 32) scale(0.15)">
+                                <path fill="#db2777"
+                                    d="M119.5 240.2l-21.7-12.2-21.7 12.2c-5.7 3.2-12.7-1.8-11.4-8.2l4.8-23.9-17.7-16.7c-4.6-4.3-2-12 4.4-12.7l24.4-2.8 10.2-22.3c2.7-5.9 11.2-5.9 13.9 0l10.2 22.3 24.4 2.8c6.4.7 9 8.4 4.4 12.7L126.1 208l4.8 23.9c1.3 6.4-5.7 11.4-11.4 8.3z" />
+                            </g>
+                            <text x="50" y="55" text-anchor="middle"
+                                class="text-[7px] font-black fill-pink-500 ubuntu-font">POSTRES PERLA</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Text Area - Brand Promise -->
+                <div class="flex-1 text-center md:text-left space-y-6" data-aos="fade-left">
+                    <h3 class="text-2xl md:text-2xl font-bold text-gray-800 leading-tight">
+                        <!-- <br class="hidden md:block"> -->
+                        Brindamos <span class="text-pink-500">excelencia</span> en cada entrega
+                    </h3>
+
+                    <div class="space-y-4 text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                        <p>
+                            En <span class="text-pink-600 font-bold">Postres Perla</span> nuestra prioridad
+                            es transformar simples ingredientes en momentos inolvidables para tí!
+                        </p>
+                        <p class="border-l-4 border-pink-400 pl-6 italic bg-white/50 py-4 rounded-r-xl shadow-sm">
+                            "No solo horneamos; creamos arte comestible bajo el compromiso de entregar calidad absoluta
+                            en cada pedido."
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+                        <div
+                            class="flex items-center gap-2 px-4 py-2 bg-pink-100 rounded-full text-pink-700 font-bold text-sm">
+                            <span class="text-xl">✓</span> Hecho a mano
+                        </div>
+                        <div
+                            class="flex items-center gap-2 px-4 py-2 bg-yellow-100 rounded-full text-yellow-700 font-bold text-sm">
+                            <span class="text-xl">✓</span> Ingredientes premium
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="signature flex justify-center px-4">
-            </div>
+        </div>
+        <div class="signature flex justify-center px-4">
+        </div>
         </div>
     </section>
     <!-- Boton whatsapp -->
@@ -633,7 +696,7 @@
 <script src="./src/scripts/slider.js"></script>
 <script src="./src/scripts/products.js"></script>
 <script src="./src/scripts/services.js"></script>
-<script src="./src/scripts/main.min.js"></script>
+<script src="./src/scripts/main.js"></script>
 <!-- <script src="src/scripts/snow-generator.min.js"></script> -->
 <script>
     document.addEventListener('scroll', function () {

@@ -2,7 +2,8 @@
    'use strict';
    document.addEventListener('DOMContentLoaded', function () {
       initSmoothScroll();
-      initProductCarousel();
+      // initProductCarousel(); // Alpine.js is used for products instead
+      renderStars();
       initTestimonialCarousel();
    });
    function initSmoothScroll() {
@@ -10,6 +11,7 @@
       function scrollToElement(e) {
          e.preventDefault();
          const targetId = this.getAttribute('href');
+         if (!targetId || targetId === '#') return;
          const targetElement = document.querySelector(targetId);
 
          if (targetElement) {
@@ -22,11 +24,61 @@
          anchor.addEventListener('click', scrollToElement);
       });
    }
+
+   function renderStars() {
+      const starContainers = document.querySelectorAll('.stars-container');
+      const starSVG = `<svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>`;
+
+      starContainers.forEach(container => {
+         const slide = container.closest('.swiper-slide');
+         if (slide) {
+            const rating = parseInt(slide.dataset.rating) || 5;
+            container.innerHTML = starSVG.repeat(rating);
+         }
+      });
+   }
+
+   function initTestimonialCarousel() {
+      if (typeof Swiper !== 'undefined' && document.querySelector('.testimonialSwiper')) {
+         new Swiper('.testimonialSwiper', {
+            loop: true,
+            loopAdditionalSlides: 2,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            autoplay: {
+               delay: 2000,
+               disableOnInteraction: false,
+               pauseOnMouseEnter: true
+            },
+            pagination: {
+               el: '.testimonial-pagination',
+               clickable: true,
+               dynamicBullets: true,
+            },
+            navigation: {
+               nextEl: '.swiper-button-next',
+               prevEl: '.swiper-button-prev',
+            },
+            observer: true,
+            observeParents: true,
+            breakpoints: {
+               768: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+               },
+               1024: {
+                  slidesPerView: 2,
+                  spaceBetween: 30,
+               },
+            }
+         });
+      }
+   }
 })();
-function sendWhatsappMessage(productName){
-    const PHONENUMBER = '8296469680';
-    const BASEMESSAGE = `Hola Perla, me interesa hablar sobre este producto:\n${productName}\n`;
-    const ENCODEDMESSAGE = encodeURIComponent(BASEMESSAGE);
-    const WHATSAPPURL = `https://wa.me/${PHONENUMBER}?text=${ENCODEDMESSAGE}`;
-    return WHATSAPPURL;
+function sendWhatsappMessage(productName) {
+   const PHONENUMBER = '8296469680';
+   const BASEMESSAGE = `Hola Perla, me interesa hablar sobre este producto:\n${productName}\n`;
+   const ENCODEDMESSAGE = encodeURIComponent(BASEMESSAGE);
+   const WHATSAPPURL = `https://wa.me/${PHONENUMBER}?text=${ENCODEDMESSAGE}`;
+   return WHATSAPPURL;
 }
