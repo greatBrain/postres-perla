@@ -57,6 +57,9 @@
         </a>
         <div class="flex justify-start items-center space-x-2 md:space-x-4 text-white capitalize font-semibold ubuntu-font scrollbar-hide overflow-x-auto
         sm:overflow-x-auto md:overflow-x-hidden lg:overflow-x-hidden py-1">
+            <a href="#slider-section" class="nav-btn whitespace-nowrap px-4 py-2 transition-all text-sm sm:text-lg">
+                Inspírate
+            </a>
             <a href="#catalog"
                 class="nav-btn whitespace-nowrap px-4 py-2 transition-all text-sm sm:text-lg">Productos</a>
             <a href="#contact"
@@ -341,21 +344,23 @@
             </div>
         </div>
     </section>
-
-    <!-- <section class="slider-section py-12 md:py-24 bg-gray-50/50 overflow-hidden" x-data="imageSlider()" x-init="init()"
-        @mouseenter="stopAutoplay()" @mouseleave="startAutoplay()">
+    <section id="slider-section" class="slider-section py-12 md:py-24 bg-gray-50/50 overflow-hidden 
+        [--slide-width:75%] [--slide-step:65%] md:[--slide-width:45%] md:[--slide-step:30%]" x-data="imageSlider()"
+        x-init="init()" @mouseenter="stopAutoplay()" @mouseleave="startAutoplay()">
         <div class="max-w-[1400px] mx-auto relative px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-gray-800 text-4xl md:text-5xl lg:text-6xl ubuntu-font-bold tracking-tight">
-                    Nuestras <span class="text-pink-600">Especialidades</span>
+            <div class="text-center mb-18" data-aos="fade-up">
+                <h2 class="text-gray-800 text-4xl md:text-5xl lg:text-5xl ubuntu-font-bold tracking-tight">
+                    Hacemos de tus celebraciones momentos inolvidables
                 </h2>
-                <div class="w-24 h-1.5 bg-yellow-400 mx-auto mt-6 rounded-full"></div>
-                <p class="text-gray-600 mt-6 text-xl md:text-2xl font-light">Un toque de dulzura en cada bocado</p>
+                <div class="w-28 h-1.5 bg-yellow-400 mx-auto mt-6 rounded-full"></div>
+                <p class="text-gray-700 mt-6 text-xl md:text-2xl font-light">
+                    Con detalles que marcan la diferencia.
+                </p>
             </div>
 
-            <div class="relative flex items-center justify-center">                
+            <div class="relative flex items-center justify-center">
                 <button @click="prev()"
-                    class="absolute -left-2 md:-left-8 lg:-left-16 z-20 bg-white/80 hover:bg-pink-100 text-pink-600 p-4 rounded-full shadow-lg transition-all hover:scale-110 focus:outline-none border border-pink-100 group">
+                    class="cursor-pointer absolute -left-2 md:-left-8 lg:-left-16 z-20 bg-white/80 hover:bg-pink-100 text-pink-600 p-4 rounded-full shadow-lg transition-all hover:scale-110 focus:outline-none border border-pink-100 group">
                     <svg class="w-6 h-6 transform group-hover:-translate-x-1 transition-transform" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7">
@@ -365,20 +370,26 @@
                 <div class="relative w-full overflow-visible" data-aos="fade-up">
                     <div class="flex h-[400px] md:h-[500px] slider-flex-container items-center"
                         :class="hasTransition ? 'transition-transform duration-700 ease-in-out' : ''"
-                        :style="`transform: translateX(-${(currentIndex * 80) - 10}%)`"
+                        :style="`transform: translateX(calc(50% - var(--slide-step) * (${currentIndex} + 0.5)))`"
                         @touchstart="touchStartX = $event.touches[0].clientX"
                         @touchend="if (touchStartX - $event.changedTouches[0].clientX > 50) next(); if (touchStartX - $event.changedTouches[0].clientX < -50) prev();">
                         <template x-for="(slide, index) in slides" :key="index">
-                            <div class="w-[80%] flex-shrink-0 px-2 md:px-4 transition-all duration-700 ease-in-out"
-                                :class="{ 'scale-100 opacity-100 z-20': currentIndex === index, 'scale-90 opacity-40 grayscale-[50%]': currentIndex !== index }">
+                            <div class="flex-shrink-0 transition-all duration-700 ease-in-out"
+                                style="width: var(--slide-width); margin-left: calc((var(--slide-step) - var(--slide-width)) / 2); margin-right: calc((var(--slide-step) - var(--slide-width)) / 2);"
+                                :class="{ 
+                                    'scale-110 opacity-100 z-30': currentIndex === index, 
+                                    'scale-90 opacity-40 grayscale-[50%] z-10': (currentIndex === index + 1 || currentIndex === index - 1),
+                                    'opacity-0 pointer-events-none': Math.abs(currentIndex - index) > 1 
+                                }">
                                 <div
                                     class="relative group/slide cursor-pointer overflow-hidden rounded-[2rem] shadow-xl md:shadow-2xl h-full w-full bg-white border border-gray-100">
                                     <img :src="slide.image" :alt="slide.title"
                                         class="w-full h-full max-h-[400px] md:max-h-[500px] object-cover transition-transform duration-700">
-                                    
+
                                     <div
-                                        class="absolute inset-x-0 bottom-0 w-full h-full bg-pink-600/90 flex flex-col justify-center items-center text-center p-8 md:p-14 transform translate-y-full group-hover/slide:translate-y-0 transition-all duration-500 ease-in-out backdrop-blur-md z-10">
-                                        <h3 class="text-2xl md:text-5xl font-bold mb-4 ubuntu-font text-white"
+                                        class="absolute inset-x-0 bottom-0 w-full h-full bg-yellow-300/40 flex flex-col justify-center items-center 
+                                        text-center p-8 md:p-14 transform translate-y-full group-hover/slide:translate-y-0 transition-all duration-500 ease-in-out backdrop-blur-md z-10">
+                                        <h3 class="text-2xl md:text-3xl font-bold mb-4 ubuntu-font text-white"
                                             x-text="slide.title"></h3>
                                         <div class="w-24 h-1.5 bg-yellow-400 mb-8 rounded-full"></div>
                                         <p class="text-base md:text-2xl text-pink-50 max-w-2xl px-4 font-light"
@@ -389,15 +400,14 @@
                         </template>
                     </div>
                 </div>
-
                 <button @click="next()"
-                    class="absolute -right-2 md:-right-8 lg:-right-16 z-20 bg-white/80 hover:bg-pink-100 text-pink-600 p-4 rounded-full shadow-lg transition-all hover:scale-110 focus:outline-none border border-pink-100 group">
+                    class="cursor-pointer absolute -right-2 md:-right-8 lg:-right-16 z-20 bg-white/80 hover:bg-pink-100 text-pink-600 p-4 rounded-full shadow-lg transition-all hover:scale-110 focus:outline-none border border-pink-100 group">
                     <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
                     </svg>
                 </button>
-            </div>            
+            </div>
             <div class="flex justify-center mt-10 gap-4" data-aos="fade-up" data-aos-delay="200">
                 <template x-for="(slide, index) in rawSlides" :key="index">
                     <button @click="goTo(index)"
@@ -406,7 +416,7 @@
                 </template>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <section
         class="relative testimonials bg-top bg-no-repeat bg-[length:100%] bg-[url('public/images/soft-green-wave.svg')] py-20 px-6 md:px-10"
@@ -652,9 +662,9 @@
         <!-- Botón flotante WhatsApp -->
         <div class="relative group w-full sm:w-18 h-18 cursor-pointer transition-transform duration-300">
             <a href="https://wa.me/8296469680" target="_blank" rel="noopener noreferrer"
-                aria-label="Chatea conmigo por WhatsApp" class="relative sm:absolute bottom-0 sm:bottom-1 left-1/2 -translate-x-1/2 bg-green-600 w-full sm:w-14 h-14 rounded-full
+                aria-label="Chatea conmigo por WhatsApp" class="relative sm:absolute bottom-0 sm:bottom-1 left-1/2 -translate-x-1/2 bg-green-600 w-full sm:w-12 h-12 rounded-full
                flex items-center justify-center shadow-lg ring-2 ring-white
-               transition-all duration-300 group-hover:scale-105 group-hover:rotate-3 hover:sm:w-40">
+               transition-all duration-300 group-hover:scale-105 hover:sm:w-40">
                 <img src="./public/icons/whatsapp-white.png" alt="Logo de WhatsApp" class="w-8 h-8" loading="lazy">
                 <span class="ml-2 block sm:hidden text-white font-bold">Chatea conmigo</span>
             </a>
