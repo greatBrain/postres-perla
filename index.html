@@ -159,7 +159,7 @@
                           document.body.classList.remove('overflow-hidden');
                       }
                 }" x-init="initContent()">
-                <div id="category-selector mouse-pointer" data-aos="fade-up" data-aos-delay="100" class="flex flex-row gap-0 justify-start
+                <div id="category-selector" data-aos="fade-up" data-aos-delay="100" class="flex flex-row gap-2 md:gap-0 justify-start
                                      lg:justify-center md:justify-center
                                      sm:overflow-x-visible overflow-x-auto p-3
                                      scrollbar-hide
@@ -169,40 +169,40 @@
                                      md:bg-white md:rounded-full md:shadow-lg
                                      sm:bg-white sm:rounded-full sm:shadow-lg">
                     <button data-category="pasteles" @click="activeCategory = 'pasteles'" :class="{
-                                  'outline-none ring-2 ring-yellow-400 ring-opacity-80 bg-white text-gray-800 font-semibold shadow-lg lg:shadow-xl md:shadow-xl': activeCategory === 'pasteles',
-                                  'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'pasteles'
-                              }" class="category-btn flex flex-col justify-center items-center md:flex-row lg:flex-row px-10 py-1 
-                                     md:px-6 md:py-2 lg:px-6 lg:py-2 rounded-full whitespace-nowrap
+                                  'bg-yellow-200 text-gray-800 border-transparent shadow-md md:ring-2 md:ring-yellow-400 md:ring-opacity-80 md:bg-white md:text-gray-800 md:shadow-lg': activeCategory === 'pasteles',
+                                  'bg-white text-gray-400 border-gray-100 shadow-sm md:bg-transparent md:text-gray-500 md:border-transparent md:shadow-none': activeCategory !== 'pasteles'
+                              }" class="category-btn flex flex-row justify-center items-center md:flex-row lg:flex-row px-4 py-1.5 
+                                     md:px-6 md:py-2 lg:px-6 lg:py-2 rounded-full whitespace-nowrap border-2
                                      transition duration-200">
-                        <img src="public/icons/cake-for-filter.svg" class="w-6 h-6 pr-1" alt="">
-                        Pasteles
+                        <img src="public/icons/cake-for-filter.svg" class="w-5 h-5 md:w-6 md:h-6 md:pr-1" alt="">
+                        <span class="text-[10px] md:text-base font-bold">Pasteles</span>
                     </button>
                     <button data-category="postres" @click="activeCategory = 'postres'" :class="{
-                                  'outline-none ring-2 ring-yellow-400 ring-opacity-80 bg-white text-gray-800 font-semibold shadow-lg lg:shadow-xl md:shadow-xl': activeCategory === 'postres',
-                                  'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'postres'
-                              }" class="category-btn flex flex-col justify-center items-center md:flex-row lg:flex-row px-10 py-1 
-                                     md:px-6 md:py-2 lg:px-6 lg:py-2 rounded-full whitespace-nowrap
+                                  'bg-yellow-200 text-gray-800 border-transparent shadow-md md:ring-2 md:ring-yellow-400 md:ring-opacity-80 md:bg-white md:text-gray-800 md:shadow-lg': activeCategory === 'postres',
+                                  'bg-white text-gray-400 border-gray-100 shadow-sm md:bg-transparent md:text-gray-500 md:border-transparent md:shadow-none': activeCategory !== 'postres'
+                              }" class="category-btn flex flex-row justify-center items-center md:flex-row lg:flex-row px-4 py-1.5 
+                                     md:px-6 md:py-2 lg:px-6 lg:py-2 rounded-full whitespace-nowrap border-2
                                      transition duration-200">
-                        <img src="public/icons/dessert-for-filter.svg" class="w-6 h-6 pr-1" alt="">
-                        Postres
+                        <img src="public/icons/dessert-for-filter.svg" class="w-5 h-5 md:w-6 md:h-6 pr-1" alt="">
+                        <span class="text-[10px] md:text-base font-bold">Postres</span>
                     </button>
                     <button data-category="mesa-dulces" @click="activeCategory = 'mesa-dulces'" :class="{
-                                  'outline-none ring-2 ring-yellow-400 ring-opacity-80 bg-white text-gray-800 font-semibold shadow-lg lg:shadow-xl md:shadow-xl': activeCategory === 'mesa-dulces',
-                                  'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'mesa-dulces'
-                              }" class="category-btn flex flex-col justify-center items-center md:flex-row lg:flex-row px-10 py-1 
-                                     md:px-6 md:py-2 lg:px-6 lg:py-2 rounded-full whitespace-nowrap
+                                  'bg-yellow-200 text-gray-800 border-transparent shadow-md md:ring-2 md:ring-yellow-400 md:ring-opacity-80 md:bg-white md:text-gray-800 md:shadow-lg': activeCategory === 'mesa-dulces',
+                                  'bg-white text-gray-400 border-gray-100 shadow-sm md:bg-transparent md:text-gray-500 md:border-transparent md:shadow-none': activeCategory !== 'mesa-dulces'
+                              }" class="mouse-pointer category-btn flex flex-row justify-center items-center md:flex-row lg:flex-row px-4 py-1.5 
+                                     md:px-6 md:py-2 lg:px-6 lg:py-2 rounded-full whitespace-nowrap border-2
                                      transition duration-200">
-                        <img src="public/icons/birdthday-for-filter.svg" class="w-6 h-6 pr-1" alt="">
-                        Mesa de dulces
+                        <img src="public/icons/birdthday-for-filter.svg" class="w-5 h-5 md:w-6 md:h-6 pr-1" alt="">
+                        <span class="text-[10px] md:text-base font-bold">Mesa de dulces</span>
                     </button>
                     <button data-category="temporada" @click="activeCategory = 'temporada'" :class="{
-                                  'outline-none ring-2 ring-yellow-400 ring-opacity-80 bg-white text-gray-800 font-semibold shadow-lg lg:shadow-xl md:shadow-xl': activeCategory === 'temporada',
-                                  'bg-transparent text-gray-500 font-semibold hover:text-gray-700 shadow-none': activeCategory !== 'temporada'
-                              }" class="category-btn flex flex-col justify-center items-center md:flex-row lg:flex-row px-10 py-1 
-                                     md:px-6 md:py-2 lg:px-6 lg:py-2 rounded-full whitespace-nowrap
+                                  'bg-yellow-200 text-gray-800 border-transparent shadow-md md:ring-2 md:ring-yellow-400 md:ring-opacity-80 md:bg-white md:text-gray-800 md:shadow-lg': activeCategory === 'temporada',
+                                  'bg-white text-gray-400 border-gray-100 shadow-sm md:bg-transparent md:text-gray-500 md:border-transparent md:shadow-none': activeCategory !== 'temporada'
+                              }" class="mouse-pointer category-btn flex flex-row justify-center items-center md:flex-row lg:flex-row px-4 py-1.5 
+                                     md:px-6 md:py-2 lg:px-6 lg:py-2 rounded-full whitespace-nowrap border-2
                                      transition duration-200">
-                        <img src="public/icons/tree-season.svg" class="w-6 h-6 pr-2" alt="">
-                        Ponches
+                        <img src="public/icons/tree-season.svg" class="w-5 h-5 md:w-6 md:h-6 pr-2" alt="">
+                        <span class="text-[10px] md:text-base font-bold">Ponches</span>
                     </button>
                 </div>
                 <!-- Línea separadora solo en móviles -->
