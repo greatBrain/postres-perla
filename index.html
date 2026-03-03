@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postres Perla | Repostería en Santo Domingo, Rep. Dominicana</title>
+    <title>Postres Perla | Repostería artesanal en Santo Domingo, Rep. Dominicana</title>
     <meta name="description"
         content="Postres Perla: endulza tus días con nosotros, cada pedido realizado con amor en Santo Domingo. Pasteles, dulces y más. ¡Haz tu pedido!">
     <meta name="keywords"
@@ -39,7 +39,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             AOS.init({
-                once: true
+                once: false //lets animation execute always user scroll the page, no matter the times...
             });
         });
     </script>
@@ -71,13 +71,13 @@
         </div>
     </nav>
     <section class="banner parallax-bg relative w-full h-screen max-h-[700px] md:max-h-full lg:max-h-full
-            bg-[url('public/images/cookie-mobile.webp')]
+            bg-[url('public/images/cookie.webp')]
             lg:bg-[url('public/images/cookie.webp')]
             xl:bg-[url('public/images/cookie.webp')]
             md:bg-[url('public/images/cookie.webp')]
             sm:bg-[url('public/images/cookie.webp')]
             xs:bg-[url('public/images/cookie-mobile.webp')]
-            bg-bottom bg-cover bg-no-repeat bg-fixed overflow-hidden">
+            bg-[95%_50%] bg-cover bg-no-repeat overflow-hidden">
         <div class="initial-snow snow-area" id="snow-container"></div>
         <div class="relative h-full transition-transform duration-500 ease-in-out" id="slider-container">
             <div class="absolute w-full h-full overflow-hidden">
@@ -93,13 +93,15 @@
                                  lg:bg-transparent md:bg-transparent lg:backdrop-blur-none md:backdrop-blur-none lg:p-0 md:p-0"
                             data-aos="fade-up" data-aos-delay="200">
                             <h1
-                                class="banner-slide-title text-gray-900 sm:text-shadow-xl lg:text-gray-700 md:text-gray-700 ubuntu-font-bold font-semibold text-shadow-2xs text-5xl sm:text-6xl md:text-6xl lg:text-7xl xs:text-8xl leading-tight">
-                                ¿Con antojo de algo rico?
+                                class="banner-slide-title text-gray-900 sm:text-shadow-xl lg:text-gray-800 md:text-gray-800 ubuntu-font-bold font-semibold text-shadow-2xs text-5xl sm:text-6xl md:text-6xl lg:text-7xl xs:text-8xl leading-tight">
+                                ¿Se te antoja algo rico?
                             </h1>
                             <p
                                 class="text-base text-gray-900 text-xl lg:text-gray-700 md:text-gray-700 lg:md:text-2xl md:text-2xl sm:text-xl md:text-xl mt-3 lato-regular mb-3">
-                                ¡Descubre nuestros productos 100% artesanales, preparados con ingredientes frescos
-                                y con una dedicación que se siente en cada bocado!
+                                Prueba ahora nuestros <strong class="text-gray-800 bg-yellow-200 px-1">productos 100%
+                                    artesanales</strong>, con una variedad de opciones irresistibles y preparados con
+                                ingredientes premium
+                                que <strong class="text-gray-800">¡sentirás en cada bocado!</strong>
                             </p>
                             <a href="#catalog">
                                 <button class="w-xs mt-5 lg:w-sm md:w-sm mt-5 overflow-hidden relative bg-pink-500 text-white font-bold py-2 px-5 sm:py-3 sm:px-8
@@ -776,8 +778,8 @@
         const parallaxElements = document.querySelectorAll('.parallax-bg');
         if (parallaxElements.length > 0) {
             parallaxElements.forEach(element => {
-                // Mantenemos la alineación X en center, modificamos solo Y
-                element.style.backgroundPosition = `center calc(100% + ${scrolled * 0.4}px)`;
+                // Sincronizamos la posición horizontal al 95% y la vertical comienza en 50% (center)
+                element.style.backgroundPosition = `95% calc(50% + ${scrolled * 0.3}px)`;
             });
         }
     });
