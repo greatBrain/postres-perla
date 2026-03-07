@@ -40,10 +40,10 @@
         document.addEventListener('DOMContentLoaded', () => {
             AOS.init({
                 //lets animation execute always user scroll the page, no matter the times...
-                once: false 
+                once: false
             });
         });
-    </script>    
+    </script>
 </head>
 
 <body>
@@ -291,12 +291,12 @@
                                 <template
                                     x-if="modalData.fillingFlavors && modalData.fillingFlavors.included && modalData.fillingFlavors.included.length > 0">
                                     <div class="mb-5">
-                                        <p class="text-sm font-semibold text-gray-700 mb-2">Incluidos sin costo
+                                        <p class="text-sm font-bold text-gray-700 mb-2">Incluidos sin costo
                                             adicional:</p>
                                         <div class="flex flex-wrap gap-2">
                                             <template x-for="flavor in modalData.fillingFlavors.included">
                                                 <span
-                                                    class="px-3 py-1 bg-yellow-300 font-semibold text-gray-800 rounded-full text-sm"
+                                                    class="px-3 py-1 bg-yellow-300 border border-yellow-500/50 font-bold text-gray-900 rounded-full text-sm transition-transform hover:scale-105 cursor-default"
                                                     x-text="flavor"></span>
                                             </template>
                                         </div>
@@ -305,16 +305,17 @@
                                 <template
                                     x-if="modalData.fillingFlavors && modalData.fillingFlavors.additional && modalData.fillingFlavors.additional.length > 0">
                                     <div class="mb-5">
-                                        <p class="text-sm font-semibold text-gray-700 mb-2">Adicionales (costo extra):
+                                        <p class="text-sm font-bold text-gray-700 mb-2">Adicionales (costo extra):
                                         </p>
-                                        <div class="grid grid-cols-2 gap-y-2 gap-x-4 text-sm">
+                                        <div
+                                            class="grid grid-rows-2 grid-flow-col md:grid-rows-none md:grid-cols-2 md:grid-flow-row gap-3 text-sm overflow-x-auto md:overflow-x-visible pb-2 scrollbar-hide snap-x snap-mandatory">
                                             <template x-for="item in modalData.fillingFlavors.additional">
                                                 <div
-                                                    class="flex justify-between items-center col-span-2 sm:col-span-1 border-b border-white pb-1">
-                                                    <span class="text-gray-500 font-semibold"
-                                                        x-text="item.flavor"></span>
-                                                    <span class="font-semibold text-pink-600"
-                                                        x-text="'+' + item.price"></span>
+                                                    class="flex justify-between items-center p-3 bg-gray-50/50 border border-gray-200 rounded-xl transition-colors hover:border-pink-300 min-w-[240px] md:min-w-0 snap-start">
+                                                    <span class="text-gray-900 font-bold" x-text="item.flavor"></span>
+                                                    <span
+                                                        class="bg-white px-2 py-1 rounded-lg shadow-sm font-bold text-gray-800 text-xs border border-gray-200"
+                                                        x-text="'+RD$' + item.price"></span>
                                                 </div>
                                             </template>
                                         </div>
