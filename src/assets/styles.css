@@ -301,6 +301,11 @@ nav a {
 	scrollbar-width: none;
 }
 
+.no-scroll {
+	overflow: hidden !important;
+	touch-action: none;
+}
+
 .scrollbar-show::-webkit-scrollbar {
 	height: 8px;
 }
