@@ -184,6 +184,10 @@ nav a {
 	font-variation-settings: "wdth" 100;
 }
 
+.category-btn:hover {
+	cursor: pointer;
+}
+
 .catalog .gallery {
 	display: flex;
 	flex-direction: row;
