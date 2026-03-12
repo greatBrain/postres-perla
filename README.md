@@ -1,7 +1,8 @@
 # Postres Perla 
 
-A landing page of a small pastry shop. The current version. This project is designed to validate the concept of the pastry's online presence.
-<img src="https://github.com/user-attachments/assets/f37ef228-531a-4f30-9c71-6de292a4a020" style="width:200px; height:450px">
+An website of a small pastry shop. The current version. This project is designed to validate the concept of the pastry's online presence.
+
+<img width="457" height="823" alt="shot" src="https://github.com/user-attachments/assets/63349010-8640-47e7-9365-6967c0a25ced" />
 
 ## Features
 - **Responsive Design**: The page is fully responsive, ensuring a seamless experience across desktop, tablet, and mobile devices.
@@ -9,15 +10,12 @@ A landing page of a small pastry shop. The current version. This project is desi
 - **Interactive Elements**: Basic interactivity using **Vanilla JavaScript**, making the page more engaging for users.
 - **Future Plans**: The site will be migrated to **VueJS**, **FastAPI**, and **Supabase** in the near future to improve functionality and performance.
 
-<img src="https://github.com/user-attachments/assets/17b6253f-3992-4625-8415-ed47e7afcb71" style="width:200px; height:450px">
-
+<img width="442" height="836" alt="modal" src="https://github.com/user-attachments/assets/66735c4d-47ea-4983-a58d-e4f6b09f4dc1" />
 
 ## Technologies Used
 - **HTML**: For the structure and content of the page.
 - **Tailwind CSS**: For styling and responsive design.
 - **Alpine JS / JavaScript Vanilla**: For simple interactivity and dynamic behavior.
-
-<img src="https://github.com/user-attachments/assets/facf6bd6-322a-46a2-a6ce-b2e64a236420" style="width:200px; height:450px">
 
 ## Project Roadmap
 1. **Current State**: Basic landing page with HTML, Tailwind CSS, and JavaScript.
