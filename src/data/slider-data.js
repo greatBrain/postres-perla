@@ -1,4 +1,4 @@
-const SLIDER_DATA = [
+export const SLIDER_DATA = [
     {
         image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80',
         title: 'Pasteles de Ensueño',
@@ -25,6 +25,3 @@ const SLIDER_DATA = [
         description: 'Pequeños bocados de felicidad creados con pasión y dedicación.'
     }
 ];
-
-// Hacerlo disponible globalmente para que Alpine.js pueda acceder
-window.SLIDER_DATA = SLIDER_DATA;
