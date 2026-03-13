@@ -58,10 +58,14 @@ class SiteAbout extends HTMLElement {
 
                     <div class="space-y-4 text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
                         <p>
-                            En <span class="text-pink-600 font-bold">Postres Perla</span> nuestra prioridad
-                            es transformar simples ingredientes en momentos inolvidables para tí!
+                           Hola, <strong>soy Perla</strong>, soy pastelera profesional y fundadora de este hermoso proyecto. 
+                           Desde mi cocina preparo lo mejor para tí, con mucha dedicación.
                         </p>
-                        <p class="border-l-4 border-pink-400 pl-6 italic bg-white/50 py-4 rounded-r-xl shadow-sm">
+                        <p>
+                            Aquí, en <span class="text-pink-600 font-bold italic">Postres Perla</span> nuestra prioridad
+                            es transformar simples ingredientes en momentos inolvidables!
+                        </p>
+                        <p class="text-[16px] text-gray-800 border-l-4 border-pink-400 pl-6 italic bg-white/50 py-4 rounded-r-xl shadow-sm">
                             "No solo horneamos; creamos arte comestible bajo el compromiso de entregar calidad absoluta
                             en cada pedido."
                         </p>
