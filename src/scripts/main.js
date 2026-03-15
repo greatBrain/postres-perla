@@ -11,6 +11,7 @@ import '../components/site-contact.js';
 import '../components/site-about.js';
 import '../components/site-footer.js';
 import '../components/floating-whatsapp.js';
+import '../components/portion-calculator.js';
 
 // Hacer los datos disponibles globalmente para Alpine.js (Light DOM)
 window.ALL_PRODUCTS = ALL_PRODUCTS;
