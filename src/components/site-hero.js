@@ -39,7 +39,7 @@ class SiteHero extends HTMLElement {
                                 que <strong class="text-gray-800">¡sentirás en cada bocado!</strong>
                             </p>
                             <a href="#catalog">
-                                <button class="w-xs mt-5 lg:w-sm md:w-sm mt-5 overflow-hidden relative bg-pink-500 text-white font-bold py-2 px-5 sm:py-3 sm:px-8
+                                <button class="w-xs mt-5 lg:w-sm md:w-xs max-w-[250px] mt-5 overflow-hidden relative bg-pink-500 text-white font-bold py-2 px-5 sm:py-3 sm:px-8
                                rounded-full shadow-md shadow-2xl transition duration-500 ease-in-out
                                before:content-[''] before:absolute before:top-0 before:left-0
                                before:w-0 before:h-full before:bg-white/50 before:transition-all
@@ -51,7 +51,7 @@ class SiteHero extends HTMLElement {
                                             d="M9 5l7 7-7 7"></path>
                                     </svg>
                                     <span class="relative z-10">Haz tu pedido aquí</span>
-                            </a>
+                            </a> 
                         </div>
                     </div>
                 </div>

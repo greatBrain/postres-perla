@@ -15,12 +15,7 @@ class SiteNavbar extends HTMLElement {
             <span class="text-white pl-2 text-2xl lg:text-3xl font-bold md:font-normal">Postres Perla</span>
         </a>
         <div class="flex justify-start items-center space-x-2 md:space-x-4 text-white capitalize font-semibold ubuntu-font scrollbar-hide overflow-x-auto
-        sm:overflow-x-auto md:overflow-x-hidden lg:overflow-x-hidden py-1">
-            <a href="#portion-calculator"
-                class="whitespace-nowrap px-3 sm:px-4 py-1.5 sm:py-2 bg-yellow-200 hover:bg-yellow-300 text-gray-800 rounded-full shadow-md hover:shadow-lg transition-all text-sm sm:text-lg font-bold flex items-center border border-yellow-200">
-                <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                Calcular porciones
-            </a>
+        sm:overflow-x-auto md:overflow-x-hidden lg:overflow-x-hidden py-1">            
             <a href="#catalog"
                 class="nav-btn whitespace-nowrap px-4 py-2 transition-all text-sm sm:text-lg">Productos</a>
             <a href="#contact"
