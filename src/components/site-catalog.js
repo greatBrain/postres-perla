@@ -129,6 +129,20 @@ class SiteCatalog extends HTMLElement {
                         No hay productos en esta categoría.
                     </div>
                 </div>
+
+                <!--<div class="my-6">
+                    <p>Quieres saber que tamano necesitas?</p>
+                    <button class="cursor-pointer w-full max-w-[220px] mx-auto items-center justify-center shadow-2xl mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 
+                                        font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M5 15a1 1 0 001.707.707L15 7.414V13a1 1 0 102 0V5a1 1 0 00-1-1h-8a1 1 0 100 2h5.586L5.707 14.293A1 1 0 005 15z">
+                            </path>
+                        </svg>
+                        Calcula aqui
+                    </button>
+                </div>-->
+
                 <dialog id="products-modal" x-ref="productsModal"
                     class="scrollbar-hide p-0 rounded-2xl shadow-3xl backdrop:bg-black/80 w-11/12 md:max-w-3xl !m-auto overflow-hidden"
                     @click.outside="closeModal()" x-show="isModalOpen" x-transition:enter="ease-in-out duration-200"

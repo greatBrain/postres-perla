@@ -17,7 +17,7 @@ class PortionCalculator extends HTMLElement {
 
     getHtml() {
         return `
-        <section id="portion-calculator" class="py-16 lg:py-24 px-4 md:px-8 bg-white/50 overflow-hidden relative">
+        <section id="portion-calculator" class="py-16 lg:py-24 px-4 md:px-8 bg-white overflow-hidden relative">
             <div class="container mx-auto relative z-10">
                 <!-- Two Column Layout -->
                 <div class="grid lg:grid-cols-[1fr_1.25fr] gap-16 lg:gap-20 items-start">                    
@@ -55,35 +55,32 @@ class PortionCalculator extends HTMLElement {
                     </div>
 
                     <!-- Right Column: Calculator Card -->
-                    <div data-aos="fade-left" class="relative">
-                        <!-- Sutil halo decorativo trasero -->
-                        <div class="absolute -top-10 -right-10 w-56 h-56 bg-pink-200 rounded-full mix-blend-multiply opacity-50 blur-3xl z-0 pointer-events-none"></div>
-                        <div class="absolute -bottom-10 -left-10 w-56 h-56 bg-yellow-200 rounded-full mix-blend-multiply opacity-50 blur-3xl z-0 pointer-events-none"></div>
-
-                        <div class="relative max-w-[380px] mx-auto md:max-w-full z-10 bg-white/40 backdrop-blur-xl rounded-3xl rounded-tr-[2rem] rounded-bl-[2rem] shadow-2xl shadow-pink-500/10 border border-pink-300 border-[3px] p-2 sm:p-4 overflow-hidden">                        
+                    <div data-aos="fade-left" class="relative rounded-[24px] shadow-md border border-pink-100 p-3 sm:p-6 lg:p-8 overflow-hidden">
+                        <div class="relative max-w-[380px] mx-auto md:max-w-full z-10 bg-[rgba(255,255,255,0.85)] max-w-full rounded-3xl rounded-tr-[2rem] rounded-bl-[2rem] shadow-xl border border-white p-0 sm:p-2 overflow-hidden" style="backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">                        
                             <!-- Step 1: Input Form -->
                             <div id="calc-step-1" class="p-6 md:p-8 transition-all duration-500 ease-in-out">
                                 <div class="mb-8 flex flex-col items-center text-center">
                                     <div class="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center mb-4">
                                         <img src="public/images/vectors/cupcake.svg" class="w-12 h-12 drop-shadow-sm" alt="Calculator Icon" />
                                     </div>
-                                    <h3 class="text-2xl text-gray-800 font-bold mb-1">Calculadora de porciones</h3>
-                                    <p class="text-gray-500">Indica cuántas personas asistirán.</p>
+                                    <h3 class="text-2xl text-gray-800 font-bold mb-1">Calculadora de porciones</h3>                                    
                                 </div>
 
                                 <!-- Guest Count -->
                                 <div class="mb-8">
-                                    <label class="block text-gray-700 font-semibold mb-3 text-lg">Ingresa el número de invitados</label>
+                                    <label class="block text-gray-700 font-semibold mb-3 text-lg">
+                                        Indica cuántas personas asistirán
+                                    </label>
                                     <input type="number" id="guest-count" placeholder="Ejemplo: 25" min="1"
-                                        class="w-full text-center text-xl font-bold text-gray-800 bg-pink-50 border-2 border-pink-200 rounded-2xl py-4 px-4 focus:outline-none focus:border-pink-500 focus:ring-4 focus:ring-pink-100 transition-all shadow-inner mb-4">
+                                        class="w-full text-center text-xl font-bold text-gray-800 bg-white/70 border border-gray-300 rounded-2xl py-4 px-4 focus:outline-none focus:border-pink-500 focus:ring-4 focus:ring-pink-100 transition-all shadow-inner mb-4 backdrop-blur-sm">
                                     
                                     <!-- Quick Buttons -->
                                     <div class="flex flex-row overflow-x-auto scrollbar-hide flex-nowrap md:flex-wrap justify-start md:justify-center gap-2 md:gap-3">
-                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-pink-200 text-pink-600 rounded-full font-semibold hover:bg-pink-500 hover:text-white focus:bg-pink-500 focus:text-white transition-all transform active:scale-105 shadow-sm" data-val="10">10 invitados</button>
-                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-pink-200 text-pink-600 rounded-full font-semibold hover:bg-pink-500 hover:text-white focus:bg-pink-500 focus:text-white transition-all transform active:scale-105 shadow-sm" data-val="20">20 invitados</button>
-                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-pink-200 text-pink-600 rounded-full font-semibold hover:bg-pink-500 hover:text-white focus:bg-pink-500 focus:text-white transition-all transform active:scale-105 shadow-sm" data-val="30">30 invitados</button>
-                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-pink-200 text-pink-600 rounded-full font-semibold hover:bg-pink-500 hover:text-white focus:bg-pink-500 focus:text-white transition-all transform active:scale-105 shadow-sm" data-val="50">50 invitados</button>
-                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-pink-200 text-pink-600 rounded-full font-semibold hover:bg-pink-500 hover:text-white focus:bg-pink-500 focus:text-white transition-all transform active:scale-105 shadow-sm" data-val="100">100+ invitados</button>
+                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-pink-200 text-pink-600 rounded-full font-semibold hover:bg-pink-100 transition-all transform active:scale-105 shadow-sm" data-val="10">10 invitados</button>
+                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-pink-200 text-pink-600 rounded-full font-semibold hover:bg-pink-100 transition-all transform active:scale-105 shadow-sm" data-val="20">20 invitados</button>
+                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-pink-200 text-pink-600 rounded-full font-semibold hover:bg-pink-100 transition-all transform active:scale-105 shadow-sm" data-val="30">30 invitados</button>
+                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-pink-200 text-pink-600 rounded-full font-semibold hover:bg-pink-100 transition-all transform active:scale-105 shadow-sm" data-val="50">50 invitados</button>
+                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-pink-200 text-pink-600 rounded-full font-semibold hover:bg-pink-100 transition-all transform active:scale-105 shadow-sm" data-val="100">100+ invitados</button>
                                     </div>
                                 </div>
 
@@ -92,14 +89,14 @@ class PortionCalculator extends HTMLElement {
                                     <!-- Event Type -->
                                     <div class="w-full min-w-0">
                                         <label class="block text-gray-700 font-semibold mb-2 md:mb-3 text-sm md:text-base">Tipo de evento (opcional)</label>
-                                        <div class="flex flex-col gap-2 w-full">
-                                            <label class="flex items-center w-full p-2.5 md:p-3 bg-white border border-gray-200 rounded-xl cursor-pointer hover:bg-pink-50 hover:border-pink-200 transition-all">
-                                                <input type="radio" name="event_type" value="cumpleanos" checked class="text-pink-500 focus:ring-pink-500 w-4 h-4 md:w-5 md:h-5 shrink-0">
-                                                <span class="ml-2 md:ml-3 text-gray-700 text-xs md:text-sm flex-1 break-words leading-tight">Cumpleaños / Celebración</span>
+                                        <div class="flex p-1 bg-gray-200/60 rounded-3xl relative w-full h-12 md:h-14">
+                                            <label class="flex-1 cursor-pointer">
+                                                <input type="radio" name="event_type" value="cumpleanos" checked class="sr-only peer">
+                                                <div class="w-full h-full flex items-center justify-center text-xs md:text-sm font-bold text-gray-600 rounded-3xl peer-checked:bg-white peer-checked:shadow-md peer-checked:text-pink-600 transition-all duration-300 px-2 text-center leading-tight">Cumpleaños</div>
                                             </label>
-                                            <label class="flex items-center w-full p-2.5 md:p-3 bg-white border border-gray-200 rounded-xl cursor-pointer hover:bg-pink-50 hover:border-pink-200 transition-all">
-                                                <input type="radio" name="event_type" value="boda" class="text-pink-500 focus:ring-pink-500 w-4 h-4 md:w-5 md:h-5 shrink-0">
-                                                <span class="ml-2 md:ml-3 text-gray-700 text-xs md:text-sm flex-1 break-words leading-tight">Boda / Evento corporativo</span>
+                                            <label class="flex-1 cursor-pointer">
+                                                <input type="radio" name="event_type" value="boda" class="sr-only peer">
+                                                <div class="w-full h-full flex items-center justify-center text-xs md:text-sm font-bold text-gray-600 rounded-3xl peer-checked:bg-white peer-checked:shadow-md peer-checked:text-pink-600 transition-all duration-300 px-2 text-center leading-tight">Boda / evento formal</div>
                                             </label>
                                         </div>
                                     </div>
@@ -107,23 +104,25 @@ class PortionCalculator extends HTMLElement {
                                     <!-- Portion Style -->
                                     <div class="w-full min-w-0">
                                         <label class="block text-gray-700 font-semibold mb-2 md:mb-3 text-sm md:text-base">Estilo de porción</label>
-                                        <div class="flex flex-col gap-2 w-full">
-                                            <label class="flex items-center w-full p-2.5 md:p-3 bg-white border border-gray-200 rounded-xl cursor-pointer hover:bg-pink-50 hover:border-pink-200 transition-all">
-                                                <input type="radio" name="portion_style" value="normal" checked class="text-pink-500 focus:ring-pink-500 w-4 h-4 md:w-5 md:h-5 shrink-0">
-                                                <span class="ml-2 md:ml-3 text-gray-700 text-xs md:text-sm flex-1 break-words leading-tight">Normal (Recomendada)</span>
+                                        <div class="flex p-1 bg-gray-200/60 rounded-3xl relative w-full h-12 md:h-14">
+                                            <label class="flex-1 cursor-pointer">
+                                                <input type="radio" name="portion_style" value="normal" checked class="sr-only peer">
+                                                <div class="w-full h-full flex items-center justify-center text-xs md:text-sm font-bold text-gray-600 rounded-3xl peer-checked:bg-white peer-checked:shadow-md peer-checked:text-pink-600 transition-all duration-300 px-2 text-center leading-tight">Normal</div>
                                             </label>
-                                            <label class="flex items-center w-full p-2.5 md:p-3 bg-white border border-gray-200 rounded-xl cursor-pointer hover:bg-pink-50 hover:border-pink-200 transition-all">
-                                                <input type="radio" name="portion_style" value="generosa" class="text-pink-500 focus:ring-pink-500 w-4 h-4 md:w-5 md:h-5 shrink-0">
-                                                <span class="ml-2 md:ml-3 text-gray-700 text-xs md:text-sm flex-1 break-words leading-tight">Generosa (Porciones grandes)</span>
+                                            <label class="flex-1 cursor-pointer">
+                                                <input type="radio" name="portion_style" value="generosa" class="sr-only peer">
+                                                <div class="w-full h-full flex items-center justify-center text-xs md:text-sm font-bold text-gray-600 rounded-3xl peer-checked:bg-white peer-checked:shadow-md peer-checked:text-pink-600 transition-all duration-300 px-2 text-center leading-tight">Generosa</div>
                                             </label>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Action Button -->
-                                <button id="btn-calculate" class="cursor-pointer w-full max-w-sm mx-auto bg-pink-400 hover:bg-pink-500 text-white font-bold py-4 px-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-[1.02] active:scale-[0.98] text-lg flex justify-center items-center shrink-0 text-nowrap">
-                                    Ver recomendación
-                                    <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                <button id="btn-calculate" class="relative group cursor-pointer w-full max-w-sm mx-auto bg-pink-500 hover:bg-pink-600 text-white font-bold py-4 px-6 rounded-full shadow-[0_0_20px_rgba(236,72,153,0.4)] hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] transition-all hover:scale-[1.02] active:scale-[0.98] text-lg flex justify-center items-center shrink-0 text-nowrap">
+                                    <span class="relative z-10 flex items-center justify-center">
+                                        Ver recomendación
+                                        <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                    </span>
                                 </button>
                                 
                                 <div id="calc-error" class="text-red-500 text-center mt-4 hidden font-medium">Por favor ingresa el número de invitados.</div>
@@ -185,14 +184,22 @@ class PortionCalculator extends HTMLElement {
         const calcBtn = this.querySelector('#btn-calculate');
         const errorMsg = this.querySelector('#calc-error');
 
+        const updateChips = (val) => {
+            quickBtns.forEach(b => {
+                if (b.dataset.val === val) {
+                    b.classList.remove('bg-white', 'text-pink-600', 'border-pink-200');
+                    b.classList.add('bg-pink-500', 'text-white', 'border-pink-500');
+                } else {
+                    b.classList.remove('bg-pink-500', 'text-white', 'border-pink-500');
+                    b.classList.add('bg-white', 'text-pink-600', 'border-pink-200');
+                }
+            });
+        };
+
         quickBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 countInput.value = btn.dataset.val;
-                // Add tiny visual feedback to the button
-                btn.classList.add('bg-pink-100', 'ring-2', 'ring-pink-300');
-                setTimeout(() => {
-                    btn.classList.remove('bg-pink-100', 'ring-2', 'ring-pink-300');
-                }, 200);
+                updateChips(btn.dataset.val);
                 errorMsg.classList.add('hidden');
             });
         });
@@ -201,6 +208,7 @@ class PortionCalculator extends HTMLElement {
             if (countInput.value > 0) {
                 errorMsg.classList.add('hidden');
             }
+            updateChips(countInput.value);
         });
 
         // Calculate Action
