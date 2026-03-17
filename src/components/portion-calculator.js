@@ -17,7 +17,7 @@ class PortionCalculator extends HTMLElement {
 
     getHtml() {
         return `
-        <section id="portion-calculator" class="py-16 lg:py-24 px-4 md:px-8 bg-gradient-to-r from-white via-white to-[#FFF7D9] overflow-hidden relative">
+        <section id="calculadora-de-porciones" class="py-16 lg:py-24 px-4 md:px-8 bg-gradient-to-r from-white via-white to-[#FFF7D9] overflow-hidden relative">
             <div class="container mx-auto relative z-10">
                 <!-- Two Column Layout -->
                 <div class="grid lg:grid-cols-[1fr_1.25fr] gap-16 lg:gap-20 items-start">                    

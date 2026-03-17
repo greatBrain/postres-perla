@@ -38,20 +38,39 @@ class SiteHero extends HTMLElement {
                                 ingredientes premium
                                 que <strong class="text-gray-800">¡sentirás en cada bocado!</strong>
                             </p>
-                            <a href="#catalog">
-                                <button class="w-xs mt-5 lg:w-sm md:w-xs max-w-[250px] mt-5 overflow-hidden relative bg-pink-500 text-white font-bold py-2 px-5 sm:py-3 sm:px-8
-                               rounded-full shadow-md shadow-2xl transition duration-500 ease-in-out
-                               before:content-[''] before:absolute before:top-0 before:left-0
-                               before:w-0 before:h-full before:bg-white/50 before:transition-all
-                               before:duration-300 hover:scale-105 before:ease-in-out hover:before:w-full
-                               hover:text-gray-900 hover:shadow-3xl">
-                                    <svg class="w-4 h-4 inline-block ml-2 relative z-10" fill="none"
-                                        stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
-                                            d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                    <span class="relative z-10">Haz tu pedido aquí</span>
-                            </a> 
+                            <div class="flex flex-col sm:flex-row gap-3 mt-6 sm:mt-8 items-center sm:justify-start justify-center w-full">
+                                <a href="#catalog" class="w-full sm:w-auto">
+                                    <button class="cursor-pointer w-full sm:w-auto overflow-hidden relative bg-pink-500 text-white font-bold py-3 px-6 sm:px-8
+                                   rounded-full shadow-md shadow-2xl transition duration-500 ease-in-out
+                                   before:content-[''] before:absolute before:top-0 before:left-0
+                                   before:w-0 before:h-full before:bg-white/30 before:transition-all
+                                   before:duration-300 hover:scale-105 before:ease-in-out hover:before:w-full
+                                   hover:text-white hover:shadow-3xl flex justify-center items-center">
+                                        <span class="relative z-10 whitespace-nowrap">Ver productos disponibles</span>
+                                        <svg class="w-5 h-5 ml-2 relative z-10" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </button>
+                                </a>
+                                <a href="#calculadora-de-porciones" class="w-full sm:w-auto">
+                                    <button class="cursor-pointer w-full sm:w-auto overflow-hidden relative bg-white border-2 border-pink-400 text-pink-600 font-bold py-3 px-6 sm:px-8
+                                   rounded-full shadow-md transition duration-500 ease-in-out
+                                   hover:bg-pink-50 hover:border-pink-500 hover:scale-105 hover:-translate-y-1
+                                   hover:shadow-lg flex justify-center items-center">
+                                        <svg class="w-5 h-5 ml-2 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 3l1.5 3L17 7l-3.5 1L12 11l-1.5-3L7 7l3.5-1L12 3z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M18 14l.8 1.5L20 16l-1.2.5L18 18l-.8-1.5L16 16l1.2-.5L18 14z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 14l.8 1.5L8 16l-1.2.5L6 18l-.8-1.5L4 16l1.2-.5L6 14z" />
+                                        </svg>
+                                        <span class="relative z-10 whitespace-nowrap">Ayúdame a elegir</span>                                        
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
