@@ -28,7 +28,7 @@ class PortionCalculator extends HTMLElement {
                                 Herramienta gratuita
                             </span>
                             <div class="flex flex-wrap portion-title-container">
-                                <h3 class="flex text-4xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4 tracking-tight">
+                                <h3 class="flex text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 tracking-tight">
                                     Calcula el tamaño <br> de tu pastel                                 
                                 </h3>
                                 <img src="public/icons/icon-arrow.gif" class="h-full max-h-md ml-8 hidden md:block opacity-80 mix-blend-multiply">
@@ -68,13 +68,13 @@ class PortionCalculator extends HTMLElement {
                             <!-- Step 1: Input Form -->
                             <div id="calc-step-1" class="p-6 md:p-8 transition-all duration-500 ease-in-out">                                
                                 <!-- Guest Count -->
-                                <div class="mb-10 bg-gray-100/50 px-3 py-3 rounded-3xl">
+                                <div class="mb-10 bg-gray-200/50 px-3 py-3 rounded-3xl">
                                     <label class="flex flex-row flex-nowrap items-center gap-2 mt-5 mb-2">
                                         <img src="public/icons/person-team-icon.svg" class="max-w-[35px]"> 
                                         <span class="text-gray-700 font-semibold text-2xl">¿Cuántas personas asistirán al evento?</span>
                                     </label>
                                     <!-- Quick Buttons -->
-                                    <div class="flex flex-row overflow-x-auto scrollbar-hide flex-nowrap md:flex-wrap justify-start md:justify-center gap-2 md:gap-3 mb-3 mt-6 pb-2">
+                                    <div class="flex flex-row overflow-x-auto scrollbar-hide flex-nowrap md:flex-wrap justify-start md:justify-center gap-2 mb-3 mt-6 pb-2">
                                         <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-gray-100 shadow-[0_4px_10px_rgba(0,0,0,0.04)] text-gray-600 rounded-full font-semibold hover:border-pink-200 hover:shadow-[0_4px_12px_rgba(236,72,153,0.15)] hover:text-pink-600 transition-all duration-300 transform active:scale-95" data-val="10">10 personas</button>
                                         <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-gray-100 shadow-[0_4px_10px_rgba(0,0,0,0.04)] text-gray-600 rounded-full font-semibold hover:border-pink-200 hover:shadow-[0_4px_12px_rgba(236,72,153,0.15)] hover:text-pink-600 transition-all duration-300 transform active:scale-95" data-val="20">20 personas</button>
                                         <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-gray-100 shadow-[0_4px_10px_rgba(0,0,0,0.04)] text-gray-600 rounded-full font-semibold hover:border-pink-200 hover:shadow-[0_4px_12px_rgba(236,72,153,0.15)] hover:text-pink-600 transition-all duration-300 transform active:scale-95" data-val="30">30 personas</button>
@@ -83,28 +83,28 @@ class PortionCalculator extends HTMLElement {
                                     </div>
                                     <input type="number" id="guest-count" placeholder="Ej: 25 invitados" min="1"
                                         class="w-full min-h-[120px] text-center text-xl font-semibold 
-                                        text-gray-700 bg-white/90 border border-gray-300/60
+                                        text-gray-700 bg-white/90 border border-gray-400/50
                                         rounded-2xl py-4 px-4 focus:outline-none focus:border-gray-400  focus:ring-2 focus:ring-gray-200 
                                         transition-all shadow-inner backdrop-blur-sm">
                                 </div>
                                 <!-- Options Grid -->
                                 <div class="grid grid-cols-1 md:grid-cols-1 gap-4 md:gap-6 mb-10 mt-14 w-full max-w-full
-                                    bg-gray-100/50 px-2 py-3 rounded-3xl">
+                                    bg-gray-200/50 px-2 py-3 rounded-3xl">
                                     <!-- Event Type -->
                                     <div class="w-full min-w-0">
                                         <label class="flex flex-row flex-nowrap items-center gap-1 text-gray-700 font-semibold mb-2 md:mb-2 text-sm md:text-base">
                                         <img src="public/icons/celebration-icon.svg" class="max-w-[28px]"> Tipo de evento (opcional)
                                         </label>
-                                        <div class="flex p-1.5 bg-gray-100 rounded-full shadow-inner border border-gray-200/50 relative w-full h-12 md:h-14">
+                                        <div class="flex p-1.5 bg-white rounded-full shadow-inner border border-gray-400/50 relative w-full h-12 md:h-14">
                                             <label class="flex-1 cursor-pointer relative z-10 group">
                                                 <input type="radio" name="event_type" value="cumpleanos" checked class="sr-only peer">
-                                                <div class="w-full h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-500 rounded-full peer-checked:bg-pink-500 peer-checked:text-white peer-checked:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_2px_4px_rgba(236,72,153,0.3)] transition-all duration-300 ease-in-out px-2 text-center leading-tight group-hover:text-pink-500 peer-checked:group-hover:text-white">
+                                                <div class="w-full max-w-[295px] h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-500 rounded-full peer-checked:bg-pink-500 peer-checked:text-white peer-checked:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_2px_4px_rgba(236,72,153,0.3)] transition-all duration-300 ease-in-out px-2 text-center leading-tight group-hover:text-pink-500 peer-checked:group-hover:text-white">
                                                     Cumpleaños
                                                 </div>
                                             </label>
                                             <label class="flex-1 cursor-pointer relative z-10 group">
                                                 <input type="radio" name="event_type" value="boda" class="sr-only peer">
-                                                <div class="w-full h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-500 rounded-full peer-checked:bg-pink-500 peer-checked:text-white peer-checked:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_2px_4px_rgba(236,72,153,0.3)] transition-all duration-300 ease-in-out px-2 text-center leading-tight group-hover:text-pink-500 peer-checked:group-hover:text-white">Boda / evento formal</div>
+                                                <div class="w-full max-w-[295px] h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-500 rounded-full peer-checked:bg-pink-500 peer-checked:text-white peer-checked:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_2px_4px_rgba(236,72,153,0.3)] transition-all duration-300 ease-in-out px-2 text-center leading-tight group-hover:text-pink-500 peer-checked:group-hover:text-white">Boda / evento formal</div>
                                             </label>
                                         </div>
                                     </div>                                    
@@ -113,23 +113,23 @@ class PortionCalculator extends HTMLElement {
                                         <label class="flex flex-row flex-nowrap items-center gap-1 text-gray-700 font-semibold mb-2 md:mb-2 text-sm md:text-base">
                                             <img src="public/icons/cake-slice.svg" class="max-w-[25px]"> Tamaño de porciones
                                         </label>
-                                        <div class="flex p-1.5 bg-gray-100 rounded-full shadow-inner border border-gray-200/50 relative w-full h-12 md:h-14">
+                                        <div class="flex p-1.5 bg-white rounded-full shadow-inner border border-gray-400/50 relative w-full h-12 md:h-14">
                                             <label class="flex-1 cursor-pointer relative z-10 group">
                                                 <input type="radio" name="portion_style" value="normal" checked class="sr-only peer">
-                                                <div class="w-full h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-500 rounded-full peer-checked:bg-pink-500 peer-checked:text-white peer-checked:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_2px_4px_rgba(236,72,153,0.3)] transition-all duration-300 ease-in-out px-2 text-center leading-tight group-hover:text-pink-500 peer-checked:group-hover:text-white">Normal</div>
+                                                <div class="w-full max-w-[295px] h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-500 rounded-full peer-checked:bg-pink-500 peer-checked:text-white peer-checked:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_2px_4px_rgba(236,72,153,0.3)] transition-all duration-300 ease-in-out px-2 text-center leading-tight group-hover:text-pink-500 peer-checked:group-hover:text-white">Normal</div>
                                             </label>
                                             <label class="flex-1 cursor-pointer relative z-10 group">
                                                 <input type="radio" name="portion_style" value="generosa" class="sr-only peer">
-                                                <div class="w-full h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-500 rounded-full peer-checked:bg-pink-500 peer-checked:text-white peer-checked:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_2px_4px_rgba(236,72,153,0.3)] transition-all duration-300 ease-in-out px-2 text-center leading-tight group-hover:text-pink-500 peer-checked:group-hover:text-white">Generoso</div>
+                                                <div class="w-full max-w-[295px] h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-500 rounded-full peer-checked:bg-pink-500 peer-checked:text-white peer-checked:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_2px_4px_rgba(236,72,153,0.3)] transition-all duration-300 ease-in-out px-2 text-center leading-tight group-hover:text-pink-500 peer-checked:group-hover:text-white">Generoso</div>
                                             </label>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Action Button -->
-                                <div class="bg-gray-100/50 px-2 py-3 rounded-3xl">
-                                    <p class="font-semibold text-md text-gray-700 text-center pb-3">Obtén recomendaciones que se ajusten a ti aquí</p>
-                                    <button id="btn-calculate" class="relative group cursor-pointer w-full max-w-lg max-h-[50px] mx-auto bg-gradient-to-r from-pink-500 to-pink-400 hover:from-pink-400 hover:to-pink-300
+                                <div class="bg-gray-200/50 px-2 py-3 rounded-3xl">
+                                    <p class="font-semibold text-md text-gray-700 text-center pb-3">Obtén recomendaciones aquí</p>
+                                    <button id="btn-calculate" class="relative group cursor-pointer w-full max-w-xl max-h-[50px] mx-auto bg-gradient-to-r from-pink-500 to-pink-400 hover:from-pink-400 hover:to-pink-300
                                     text-white font-bold py-4 px-6 rounded-full shadow-[0_8px_20px_rgba(236,72,153,0.3)] 
                                     hover:shadow-[0_12px_25px_rgba(236,72,153,0.5)] transition-all duration-300 hover:scale-105 hover:brightness-110
                                     active:scale-95 text-lg flex justify-center items-center shrink-0 text-nowrap border border-pink-300/50">

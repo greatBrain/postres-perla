@@ -5,7 +5,7 @@ class SiteCatalog extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-    <section class="catalog flex justify-center items-center bg-[url('public/images/desserts-patterns.png')] bg-repeat"
+    <section class="parallax-bg catalog flex justify-center items-center bg-[url('public/images/desserts-patterns.png')] bg-repeat"
         id="catalog">
         <div class="container py-4">
             <div class="catalog-text mb-10 text-center">
