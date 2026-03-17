@@ -17,7 +17,7 @@ class PortionCalculator extends HTMLElement {
 
     getHtml() {
         return `
-        <section id="portion-calculator" class="py-16 lg:py-24 px-4 md:px-8 bg-white overflow-hidden relative">
+        <section id="portion-calculator" class="py-16 lg:py-24 px-4 md:px-8 bg-gradient-to-r from-white via-white to-[#FFF7D9] overflow-hidden relative">
             <div class="container mx-auto relative z-10">
                 <!-- Two Column Layout -->
                 <div class="grid lg:grid-cols-[1fr_1.25fr] gap-16 lg:gap-20 items-start">                    
@@ -28,12 +28,12 @@ class PortionCalculator extends HTMLElement {
                                 Herramienta gratuita
                             </span>
                             <div class="flex flex-wrap portion-title-container">
-                                <h3 class="flex text-4xl lg:text-6xl font-bold text-gray-800 leading-tight mb-4">
+                                <h3 class="flex text-4xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4 tracking-tight">
                                     Calcula el tamaño <br> de tu pastel                                 
                                 </h3>
-                                <img src="public/icons/icon-arrow.gif" class="h-full max-h-md ml-8 hidden md:block">
+                                <img src="public/icons/icon-arrow.gif" class="h-full max-h-md ml-8 hidden md:block opacity-80 mix-blend-multiply">
                             </div>
-                            <h4 class="text-gray-800 text-2xl leading-relaxed">
+                            <h4 class="text-gray-700 font-medium text-xl md:text-2xl leading-relaxed">
                                 ¿No estás seguro si alcanzará para todos tus invitados?
                             </h4>
                             <p class="text-gray-600 text-lg leading-relaxed my-2">      
@@ -48,38 +48,38 @@ class PortionCalculator extends HTMLElement {
                         <ul class="space-y-4 text-gray-800 font-medium font-semibold">
                             <li class="flex items-center">
                                 <svg class="w-6 h-6 text-green-500 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
                                  Cumpleaños
                             </li>
                             <li class="flex items-center">
-                                <svg class="w-6 h-6 text-green-500 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <svg class="w-6 h-6 text-green-500 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
                                 Reuniones casuales
                             </li>
                             <li class="flex items-center">
-                                <svg class="w-6 h-6 text-green-500 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <svg class="w-6 h-6 text-green-500 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
                                 Bodas y todo tipo de eventos formales
                             </li>
                         </ul>
                     </div>
                     <!-- Right Column: Calculator Card -->
-                    <div data-aos="fade-left" class="relative max-w-[380px] mx-auto md:max-w-full z-10 bg-[rgba(255, 255, 255, 0.91)] 
-                    max-w-full rounded-4xl shadow-2xl border border-white p-0 sm:p-2 overflow-hidden" 
-                    style="backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">                        
+                    <div data-aos="fade-left" class="relative max-w-[380px] mx-auto md:max-w-full z-10 bg-white/85 
+                    max-w-full rounded-4xl shadow-[0_8px_32px_rgba(236,72,153,0.12)] border border-l-4 border-l-pink-600/40 border-pink-500/30 p-0 sm:p-2 overflow-hidden backdrop-blur-md" 
+                    style="-webkit-backdrop-filter: blur(10px);">                        
                             <!-- Step 1: Input Form -->
                             <div id="calc-step-1" class="p-6 md:p-8 transition-all duration-500 ease-in-out">                                
                                 <!-- Guest Count -->
                                 <div class="mb-10 bg-gray-100/50 px-3 py-3 rounded-3xl">
                                     <label class="flex flex-row flex-nowrap items-center gap-2 mt-5 mb-2">
                                         <img src="public/icons/person-team-icon.svg" class="max-w-[35px]"> 
-                                        <span class="text-gray-700 font-semibold text-xl">¿Cuántas personas asistirán?</span>
+                                        <span class="text-gray-700 font-semibold text-2xl">¿Cuántas personas asistirán al evento?</span>
                                     </label>
                                     <!-- Quick Buttons -->
-                                    <div class="flex flex-row overflow-x-auto scrollbar-hide flex-nowrap md:flex-wrap justify-start md:justify-center gap-1 md:gap-3 mb-3 mt-6">
-                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-2 py-1 bg-white border border-pink-400 text-gray-700 rounded-full font-semibold hover:bg-pink-500 hover:text-white transition-all transform active:scale-105 shadow-sm" data-val="10">10 personas</button>
-                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-2 py-1 bg-white border border-pink-400 text-gray-700 rounded-full font-semibold hover:bg-pink-500 hover:text-white transition-all transform active:scale-105 shadow-sm" data-val="20">20 personas</button>
-                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-2 py-1 bg-white border border-pink-400 text-gray-700 rounded-full font-semibold hover:bg-pink-500 hover:text-white transition-all transform active:scale-105 shadow-sm" data-val="30">30 personas</button>
-                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-2 py-1 bg-white border border-pink-400 text-gray-700 rounded-full font-semibold hover:bg-pink-500 hover:text-white transition-all transform active:scale-105 shadow-sm" data-val="50">50 personas</button>
-                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-2 py-1 bg-white border border-pink-400 text-gray-700 rounded-full font-semibold hover:bg-pink-500 hover:text-white transition-all transform active:scale-105 shadow-sm" data-val="100">100+ personas</button>
+                                    <div class="flex flex-row overflow-x-auto scrollbar-hide flex-nowrap md:flex-wrap justify-start md:justify-center gap-2 md:gap-3 mb-3 mt-6 pb-2">
+                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-gray-100 shadow-[0_4px_10px_rgba(0,0,0,0.04)] text-gray-600 rounded-full font-semibold hover:border-pink-200 hover:shadow-[0_4px_12px_rgba(236,72,153,0.15)] hover:text-pink-600 transition-all duration-300 transform active:scale-95" data-val="10">10 personas</button>
+                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-gray-100 shadow-[0_4px_10px_rgba(0,0,0,0.04)] text-gray-600 rounded-full font-semibold hover:border-pink-200 hover:shadow-[0_4px_12px_rgba(236,72,153,0.15)] hover:text-pink-600 transition-all duration-300 transform active:scale-95" data-val="20">20 personas</button>
+                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-gray-100 shadow-[0_4px_10px_rgba(0,0,0,0.04)] text-gray-600 rounded-full font-semibold hover:border-pink-200 hover:shadow-[0_4px_12px_rgba(236,72,153,0.15)] hover:text-pink-600 transition-all duration-300 transform active:scale-95" data-val="30">30 personas</button>
+                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-gray-100 shadow-[0_4px_10px_rgba(0,0,0,0.04)] text-gray-600 rounded-full font-semibold hover:border-pink-200 hover:shadow-[0_4px_12px_rgba(236,72,153,0.15)] hover:text-pink-600 transition-all duration-300 transform active:scale-95" data-val="50">50 personas</button>
+                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-gray-100 shadow-[0_4px_10px_rgba(0,0,0,0.04)] text-gray-600 rounded-full font-semibold hover:border-pink-200 hover:shadow-[0_4px_12px_rgba(236,72,153,0.15)] hover:text-pink-600 transition-all duration-300 transform active:scale-95" data-val="100">100+ personas</button>
                                     </div>
                                     <input type="number" id="guest-count" placeholder="Ej: 25 invitados" min="1"
                                         class="w-full min-h-[120px] text-center text-xl font-semibold 
@@ -95,16 +95,16 @@ class PortionCalculator extends HTMLElement {
                                         <label class="flex flex-row flex-nowrap items-center gap-1 text-gray-700 font-semibold mb-2 md:mb-2 text-sm md:text-base">
                                         <img src="public/icons/celebration-icon.svg" class="max-w-[28px]"> Tipo de evento (opcional)
                                         </label>
-                                        <div class="flex p-1 bg-gray-200/60 rounded-3xl border border-pink-200 relative w-full h-12 md:h-14">
-                                            <label class="flex-1 cursor-pointer">
+                                        <div class="flex p-1.5 bg-gray-100 rounded-full shadow-inner border border-gray-200/50 relative w-full h-12 md:h-14">
+                                            <label class="flex-1 cursor-pointer relative z-10 group">
                                                 <input type="radio" name="event_type" value="cumpleanos" checked class="sr-only peer">
-                                                <div class="w-full h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-600 rounded-3xl peer-checked:bg-white peer-checked:shadow-md peer-checked:text-pink-600 transition-all duration-300 px-2 text-center leading-tight">
+                                                <div class="w-full h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-500 rounded-full peer-checked:bg-pink-500 peer-checked:text-white peer-checked:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_2px_4px_rgba(236,72,153,0.3)] transition-all duration-300 ease-in-out px-2 text-center leading-tight group-hover:text-pink-500 peer-checked:group-hover:text-white">
                                                     Cumpleaños
                                                 </div>
                                             </label>
-                                            <label class="flex-1 cursor-pointer">
+                                            <label class="flex-1 cursor-pointer relative z-10 group">
                                                 <input type="radio" name="event_type" value="boda" class="sr-only peer">
-                                                <div class="w-full h-full flex items-center justify-center text-xs md:text-sm font-bold text-gray-600 rounded-3xl peer-checked:bg-white peer-checked:shadow-md peer-checked:text-pink-600 transition-all duration-300 px-2 text-center leading-tight">Boda / evento formal</div>
+                                                <div class="w-full h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-500 rounded-full peer-checked:bg-pink-500 peer-checked:text-white peer-checked:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_2px_4px_rgba(236,72,153,0.3)] transition-all duration-300 ease-in-out px-2 text-center leading-tight group-hover:text-pink-500 peer-checked:group-hover:text-white">Boda / evento formal</div>
                                             </label>
                                         </div>
                                     </div>                                    
@@ -113,14 +113,14 @@ class PortionCalculator extends HTMLElement {
                                         <label class="flex flex-row flex-nowrap items-center gap-1 text-gray-700 font-semibold mb-2 md:mb-2 text-sm md:text-base">
                                             <img src="public/icons/cake-slice.svg" class="max-w-[25px]"> Tamaño de porciones
                                         </label>
-                                        <div class="flex p-1 bg-gray-200/60 rounded-3xl border border-pink-200 relative w-full h-12 md:h-14">
-                                            <label class="flex-1 cursor-pointer">
+                                        <div class="flex p-1.5 bg-gray-100 rounded-full shadow-inner border border-gray-200/50 relative w-full h-12 md:h-14">
+                                            <label class="flex-1 cursor-pointer relative z-10 group">
                                                 <input type="radio" name="portion_style" value="normal" checked class="sr-only peer">
-                                                <div class="w-full h-full flex items-center justify-center text-xs md:text-sm font-bold text-gray-600 rounded-3xl peer-checked:bg-white peer-checked:shadow-md peer-checked:text-pink-600 transition-all duration-300 px-2 text-center leading-tight">Normal</div>
+                                                <div class="w-full h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-500 rounded-full peer-checked:bg-pink-500 peer-checked:text-white peer-checked:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_2px_4px_rgba(236,72,153,0.3)] transition-all duration-300 ease-in-out px-2 text-center leading-tight group-hover:text-pink-500 peer-checked:group-hover:text-white">Normal</div>
                                             </label>
-                                            <label class="flex-1 cursor-pointer">
+                                            <label class="flex-1 cursor-pointer relative z-10 group">
                                                 <input type="radio" name="portion_style" value="generosa" class="sr-only peer">
-                                                <div class="w-full h-full flex items-center justify-center text-xs md:text-sm font-bold text-gray-600 rounded-3xl peer-checked:bg-white peer-checked:shadow-md peer-checked:text-pink-600 transition-all duration-300 px-2 text-center leading-tight">Generoso</div>
+                                                <div class="w-full h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-500 rounded-full peer-checked:bg-pink-500 peer-checked:text-white peer-checked:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_2px_4px_rgba(236,72,153,0.3)] transition-all duration-300 ease-in-out px-2 text-center leading-tight group-hover:text-pink-500 peer-checked:group-hover:text-white">Generoso</div>
                                             </label>
                                         </div>
                                     </div>
@@ -128,8 +128,11 @@ class PortionCalculator extends HTMLElement {
 
                                 <!-- Action Button -->
                                 <div class="bg-gray-100/50 px-2 py-3 rounded-3xl">
-                                    <p class="font-semibold text-md text-gray-700 text-center pb-3">Obtén las recomendaciones aquí</p>
-                                    <button id="btn-calculate" class="relative group cursor-pointer w-full max-w-sm mx-auto bg-pink-500 hover:bg-pink-600 text-white font-bold py-4 px-6 rounded-full shadow-[0_0_20px_rgba(236,72,153,0.4)] hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] transition-all hover:scale-[1.02] active:scale-[0.98] text-lg flex justify-center items-center shrink-0 text-nowrap">
+                                    <p class="font-semibold text-md text-gray-700 text-center pb-3">Obtén recomendaciones que se ajusten a ti aquí</p>
+                                    <button id="btn-calculate" class="relative group cursor-pointer w-full max-w-lg max-h-[50px] mx-auto bg-gradient-to-r from-pink-500 to-pink-400 hover:from-pink-400 hover:to-pink-300
+                                    text-white font-bold py-4 px-6 rounded-full shadow-[0_8px_20px_rgba(236,72,153,0.3)] 
+                                    hover:shadow-[0_12px_25px_rgba(236,72,153,0.5)] transition-all duration-300 hover:scale-105 hover:brightness-110
+                                    active:scale-95 text-lg flex justify-center items-center shrink-0 text-nowrap border border-pink-300/50">
                                         <span class="relative z-10 flex items-center justify-center">
                                             Ver resultados
                                             <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -143,7 +146,7 @@ class PortionCalculator extends HTMLElement {
                             <div id="calc-step-2" class="p-6 md:p-8 hidden opacity-0 transition-opacity duration-500 ease-in-out">
                                 <div class="text-center">
                                     <div class="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4 shadow-sm">
-                                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
                                     </div>
                                     <h3 class="text-2xl text-gray-800 font-bold mb-2">
                                         Opción recomendada para <span id="res-guests" class="font-bold text-pink-500 text-xl"></span> personas:
@@ -155,7 +158,7 @@ class PortionCalculator extends HTMLElement {
                                         <p id="res-range" class="text-gray-600 text-xs md:text-sm bg-white/80 inline-block px-3 md:px-4 py-1.5 rounded-full border border-gray-100 shadow-sm text-center leading-tight mx-auto max-w-[95%]"></p>
                                     </div>
                                     <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-8 text-left flex items-start shadow-sm">
-                                        <svg class="w-6 h-6 text-gray-400 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        <svg class="w-6 h-6 text-gray-400 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                         <p class="text-gray-700 text-sm leading-relaxed">
                                             <strong class="font-bold text-gray-800">Sugerencia:</strong> si deseas variedad para tus invitados, puedes complementar con cupcakes o mini postres.
                                         </p>
@@ -194,11 +197,11 @@ class PortionCalculator extends HTMLElement {
         const updateChips = (val) => {
             quickBtns.forEach(b => {
                 if (b.dataset.val === val) {
-                    b.classList.remove('bg-white', 'text-pink-600', 'border-pink-200');
-                    b.classList.add('bg-pink-500', 'text-white', 'border-pink-500');
+                    b.classList.remove('bg-white', 'text-gray-600', 'shadow-[0_4px_10px_rgba(0,0,0,0.04)]', 'border-gray-100');
+                    b.classList.add('bg-pink-50', 'text-pink-600', 'border-pink-300', 'shadow-[inset_0_3px_6px_rgba(236,72,153,0.15)]');
                 } else {
-                    b.classList.remove('bg-pink-500', 'text-white', 'border-pink-500');
-                    b.classList.add('bg-white', 'text-pink-600', 'border-pink-200');
+                    b.classList.remove('bg-pink-50', 'text-pink-600', 'border-pink-300', 'shadow-[inset_0_3px_6px_rgba(236,72,153,0.15)]');
+                    b.classList.add('bg-white', 'text-gray-600', 'shadow-[0_4px_10px_rgba(0,0,0,0.04)]', 'border-gray-100');
                 }
             });
         };
