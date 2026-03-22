@@ -4,6 +4,7 @@ class FloatingWhatsapp extends HTMLElement {
     }
 
     connectedCallback() {
+        const WHATSAPPURL = window.sendWhatsappMessage ? window.sendWhatsappMessage({ type: 'general' }) : 'https://wa.me/8296469680';
         this.innerHTML = `
     <div id="floating-btn" class="fixed z-50 flex flex-col items-center justify-center
          bottom-0 md:bottom-4 ls:bottom-4 right-4
@@ -25,7 +26,7 @@ class FloatingWhatsapp extends HTMLElement {
         </div>
         <!-- Botón flotante WhatsApp -->
         <div class="relative group w-full sm:w-18 h-18 cursor-pointer transition-transform duration-300">
-            <a href="https://wa.me/8296469680" target="_blank" rel="noopener noreferrer"
+            <a href="${WHATSAPPURL}" target="_blank" rel="noopener noreferrer"
                 aria-label="Chatea conmigo por WhatsApp" class="relative sm:absolute bottom-0 sm:bottom-1 left-1/2 -translate-x-1/2 bg-green-600 w-full sm:w-14 h-14 rounded-full
                flex items-center justify-center shadow-lg ring-2 ring-white
                transition-all duration-300 group-hover:scale-95 hover:sm:w-40">

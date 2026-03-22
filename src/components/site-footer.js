@@ -4,6 +4,7 @@ class SiteFooter extends HTMLElement {
     }
 
     connectedCallback() {
+        const WHATSAPPURL = window.sendWhatsappMessage ? window.sendWhatsappMessage({ type: 'general' }) : 'https://wa.me/8296469680';
         this.innerHTML = `
     <footer
         class="bg-[#FFD9C4] bg-[url('public/images/desserts-patterns.png')] bg-cover bg-center bg-no-repeat pt-16 pb-8 bg-fixed">
@@ -30,7 +31,7 @@ class SiteFooter extends HTMLElement {
                         ¿Quieres cotizar tu evento o hacer un pedido?
                     </h3>
                     <div class="space-y-4">
-                        <a href="https://wa.me/8296469680" target="_blank"
+                        <a href="${WHATSAPPURL}" target="_blank"
                             class="group flex items-center gap-3 text-gray-800 hover:text-green-600 transition-colors">
                             <div class="p-2 bg-white rounded-full shadow-sm group-hover:shadow-md transition-all">
                                 <img src="./public/icons/whatsapp.png" alt="WhatsApp" class="w-5 h-5">

@@ -31,7 +31,7 @@ class SiteCatalog extends HTMLElement {
                       },
                       showProductModal(product) {
                           this.modalData = product;
-                          const WHATSAPPURL = sendWhatsappMessage ? sendWhatsappMessage(product.title) : '#';
+                          const WHATSAPPURL = window.sendWhatsappMessage ? window.sendWhatsappMessage({ type: 'product', productName: product.title }) : '#';
                           document.getElementById('whatsapp-link').href = WHATSAPPURL;
                           this.isModalOpen = true;
                           this.$refs.productsModal.showModal();

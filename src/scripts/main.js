@@ -16,13 +16,24 @@ import '../components/floating-whatsapp.js';
 window.ALL_PRODUCTS = ALL_PRODUCTS;
 window.SLIDER_DATA = SLIDER_DATA;
 
-// Lógica de Soporte (Mantenida intacta)
-export function sendWhatsappMessage(productName) {
+// Lógica de Soporte contextual para WhatsApp (Centralizada)
+export function sendWhatsappMessage(context = {}) {
    const PHONENUMBER = '8296469680';
-   const BASEMESSAGE = `Hola Perla, me interesa hablar sobre este producto:\n${productName}\n`;
-   const ENCODEDMESSAGE = encodeURIComponent(BASEMESSAGE);
-   const WHATSAPPURL = `https://wa.me/${PHONENUMBER}?text=${ENCODEDMESSAGE}`;
-   return WHATSAPPURL;
+   let message = "Hola Perla! ";
+
+   if (typeof context === 'string') {
+      // Retrocompatibilidad si se pasa solo un string
+      message += `Quiero pedir un *${context}* que vi en el catálogo.`;
+   } else if (context.type === 'product') {
+      message += `Quiero pedir un *${context.productName}* que vi en el catálogo.`;
+   } else if (context.type === 'prodductConfigurator') {
+      message += `He usado la calculadora de prodcutos y necesito una cotización para un evento de *${context.portions} personas*. Estilo: *${context.style}*.`;
+   } else {
+      message += "Me gustaría recibir más información sobre sus productos y servicios especializados.";
+   }
+
+   const ENCODEDMESSAGE = encodeURIComponent(message);
+   return `https://wa.me/${PHONENUMBER}?text=${ENCODEDMESSAGE}`;
 }
 window.sendWhatsappMessage = sendWhatsappMessage;
 
