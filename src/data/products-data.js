@@ -19,6 +19,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/personal-cake.webp",
     alt: "Pastel personalizado",
     href: "#",
+    price_from: 1000,
     prices: [
       "1 libra: RD$1,900.00", "1/2 libra: RD$1,200", "1/4: libra RD$1,000"
     ],
@@ -38,6 +39,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/chocolate-cake.webp",
     alt: "Pasteles por porciones",
     href: "#",
+    price_from: 1400,
     prices: [
       "1 libra: RD$2,100", "1/2 libra: RD$1,400"
     ],
@@ -57,6 +59,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/carrot-cake.webp",
     alt: "Pastel de zanahoria",
     href: "#",
+    price_from: 1000,
     prices: [
       "3/4 libra: RD$1,300.", "1/2 libra: RD$1,000."
     ],
@@ -76,6 +79,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/pan-maiz.webp",
     alt: "Pan de maíz",
     href: "#",
+    price_from: 1000,
     prices: ["RD$1,000 c/u", "No relleno"],
     fillingFlavors: {
       included: [],
@@ -89,6 +93,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/marmoleado.webp",
     alt: "Pan de maíz",
     href: "#",
+    price_from: 1500,
     prices: [
       "1 libra: RD$2,500.", "1/2 libra RD$1,500."
     ],
@@ -111,6 +116,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/pie.webp",
     alt: "Postre 2",
     href: "#",
+    price_from: 700,
     prices: ["De piña: RD$700.00", "De fresas: RD$850.00"],
     fillingFlavors: {
       included: [],
@@ -124,6 +130,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/pudding.webp",
     alt: "Pudin de pan completo",
     href: "#",
+    price_from: 1150,
     prices: ["RD$1,150.00"],
     fillingFlavors: {
       included: [],
@@ -137,6 +144,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/pudding-portion.webp",
     alt: "Porciones de pudin de pan",
     href: "#",
+    price_from: 200,
     prices: ["RD$200.00"],
     fillingFlavors: {
       included: [],
@@ -150,6 +158,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/fresas-crema.webp",
     alt: "Fresas con crema",
     href: "#",
+    price_from: 150,
     prices: ["5 onzas: RD$150.00", "9 onzas: RD$400.00"],
     fillingFlavors: {
       included: [],
@@ -163,6 +172,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/tres-leches.webp",
     alt: "Tres leches",
     href: "#",
+    price_from: 150,
     prices: ["RD$150.00"],
     fillingFlavors: {
       included: [],
@@ -178,6 +188,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/brownies.webp",
     alt: "Brownies",
     href: "#",
+    price_from: 700,
     prices: ["Docena: RD$700.00"],
     fillingFlavors: {
       included: [],
@@ -191,6 +202,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/mousse.webp",
     alt: "Mousse de diferentes frutas",
     href: "#",
+    price_from: 1200,
     prices: ["Docena (12na): RD$1,200.00"],
     fillingFlavors: {
       included: [],
@@ -204,6 +216,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/shots-tres-leches.webp",
     alt: "Tres leches",
     href: "#",
+    price_from: 900,
     prices: ["Docena: RD$900"],
     fillingFlavors: {
       included: [],
@@ -217,6 +230,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/cupcakes.webp",
     alt: "Tres leches",
     href: "#",
+    price_from: 700,
     prices: [
       "docena de vainilla, decoración en suspiro: RD$700.00",
       "docena de chocolate, decoración en suspiro: RD$850.00",
@@ -234,6 +248,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/alfajores.webp",
     alt: "Alfajores maicena con dulce de leche",
     href: "#",
+    price_from: 750,
     prices: [
       "docena: RD$750.00"
     ],
@@ -249,6 +264,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/mantecados.webp",
     alt: "MANTECADOS",
     href: "#",
+    price_from: 300,
     prices: [
       "Docena: RD$300.00"
     ],
@@ -264,6 +280,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/polvorones.webp",
     alt: "POLVORONES DE ALMENDRAS",
     href: "#",
+    price_from: 650,
     prices: [
       "Docena: RD$650.00"
     ],
@@ -279,6 +296,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/fondant-cake.webp",
     alt: "GALLETAS EN FONDANT PERSONALIZADAS",
     href: "#",
+    price_from: 1000,
     prices: [
       "Con empaque por separado y nota personalizada: RD$1,200.00",
       "En empaque juntas: RD$1,000.00"
@@ -295,6 +313,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/glass-cake.webp",
     alt: "Galletas personalizadas con azúcar glass",
     href: "#",
+    price_from: 800,
     prices: [
       "Docena empacadas juntas: RD$800.00",
       "Empacadas por separado y nota personalizada: RD$950.00"
@@ -311,6 +330,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/galleta-personal.webp",
     alt: "Galletas personalizadas con color y tinta comestible",
     href: "#",
+    price_from: 700,
     prices: [
       "Docena empacadas juntas: RD$700.00",
       "Empacadas por separado con nota personalizada: RD$850.00"
@@ -329,6 +349,7 @@ export const ALL_PRODUCTS = [
     image: "./public/images/ponche.webp",
     alt: "PONCHE",
     href: "#",
+    price_from: 600,
     prices: [
       "Dulce de leche: RD$600.00",
       "Snickers: RD$700.00",
