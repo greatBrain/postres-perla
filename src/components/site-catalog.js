@@ -108,18 +108,25 @@ class SiteCatalog extends HTMLElement {
                                         class="object-cover w-full h-48 transition-transform duration-300 hover:scale-105">
                                 </div>
                                 <div class="p-6 text-left min-h-[150px]">
-                                    <p class="lower-case text-pink-600 font-bold text-xl transition duration-300 block mb-1 ubuntu-font-bold text"
+                                    <p class="lower-case text-gray-700 font-bold text-xl transition duration-300 block mb-1 ubuntu-font-bold text"
                                         x-text="product.title">
                                     </p>
+                                    <span x-show="product.price_from"
+                                        class="inline-flex items-center gap-1 mt-1 mb-2 px-2 py-1 bg-pink-50 text-pink-600 text-sm font-bold rounded-full">
+                                        <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-4-6h8"/>
+                                        </svg>
+                                        Desde RD$<span x-text="product.price_from ? product.price_from.toLocaleString('es-DO') : ''"></span>
+                                    </span>
                                     <button @click="showProductModal(product)"
-                                        class="cursor-pointer w-full max-w-[220px] mx-auto items-center justify-center shadow-2xl mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 
+                                        class="cursor-pointer w-full max-w-[250px] mx-auto items-center justify-center shadow-2xl mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 
                                         font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
                                         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                                             <path
                                                 d="M5 15a1 1 0 001.707.707L15 7.414V13a1 1 0 102 0V5a1 1 0 00-1-1h-8a1 1 0 100 2h5.586L5.707 14.293A1 1 0 005 15z">
                                             </path>
                                         </svg>
-                                        Ver producto
+                                        Cotizar
                                     </button>
                                 </div>
                             </div>
