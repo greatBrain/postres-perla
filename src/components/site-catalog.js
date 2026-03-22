@@ -143,103 +143,114 @@ class SiteCatalog extends HTMLElement {
                         No hay productos en esta categoría.
                     </div>
                 </div>
+                <!-- Modal Rediseñado: Pantalla Semi-Completa Real (Sin márgenes laterales) -->
                 <dialog id="products-modal" x-ref="productsModal"
-                    class="scrollbar-hide p-0 rounded-2xl shadow-3xl backdrop:bg-black/80 w-11/12 md:max-w-3xl !m-auto overflow-hidden"
-                    @click.outside="closeModal()" x-show="isModalOpen" x-transition:enter="ease-in-out duration-200"
-                    x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
-                    x-transition:leave="ease-in-out duration-200" x-transition:leave-start="opacity-100 scale-100"
-                    x-transition:leave-end="opacity-0 scale-90" style="display: none !important;">
-                    <button @click="closeModal()"
-                        class="absolute top-4 right-4 text-gray-600 hover:text-gray-800 text-3xl font-light leading-none z-50 bg-white/50 rounded-full w-8 h-8 flex items-center justify-center backdrop-blur-sm">
-                        &times;
-                    </button>
-                    <div class="flex flex-col bg-white rounded-2xl overflow-hidden max-h-[95vh] w-full relative"
-                        @click.stop>
-                        <div
-                            class="w-full relative bg-pink-400/40 flex items-center justify-center border-b border-gray-100 shrink-0">
-                            <img id="modal-product-image" :src="modalData.image || ''"
-                                :alt="modalData.alt || modalData.title || 'Imagen del producto'"
-                                class="w-full h-auto max-h-[350px] object-contain">
-                        </div>
-                        <div class="w-full p-6 md:p-10 relative overflow-y-auto flex flex-col scrollbar-hide">
-                            <h2 id="modal-product-title" class="text-2xl font-bold text-pink-600 mb-3"
-                                x-text="modalData.title || 'Información no disponible'"></h2>
-                            <div class="price mb-3">
-                                <p class="text-md font-bold text-gray-800 mb-1">Precios:</p>
-                                <ul id="modal-product-price"
-                                    class="flex justify-start items-center flex-wrap gap-x-6 space-y-1 mb-3">
-                                    <template x-for="(price, index) in modalData.prices">
-                                        <li x-text="price || 'Precios no disponibles'"
-                                            class="px-2 py-1 bg-green-200 font-semibold text-gray-800 rounded-full text-sm">
-                                            <!--:class="{ 'col-span-1': index === (modalData.prices.length - 1) }"-->
-                                        </li>
-                                    </template>
-                                    <li x-show="!modalData.prices || modalData.prices.length === 0"
-                                        class="italic col-span-2">
-                                        Precios no disponibles para este producto.
-                                    </li>
-                                </ul>
-                                <p id="product-comment" class="text-sm font-semibold italic bg-yellow-400 mt-4 py-2 px-2 w-[90%] md:[65%] lg:w-[70%] 
-                                rounded-xl" x-text="modalData.comments"></p>
+                    class="scrollbar-hide p-0 m-0 rounded-t-[2.5rem] shadow-[0_-20px_50px_rgba(0,0,0,0.3)] backdrop:bg-black/80 w-full max-w-full h-[98vh] mt-auto overflow-hidden border-none"
+                    @click.outside="closeModal()" x-show="isModalOpen" 
+                    x-transition:enter="transition ease-out duration-500"
+                    x-transition:enter-start="translate-y-full" 
+                    x-transition:enter-end="translate-y-0"
+                    x-transition:leave="transition ease-in duration-400" 
+                    x-transition:leave-start="translate-y-0"
+                    x-transition:leave-end="translate-y-full" 
+                    style="display: none !important;">
+                    
+                    <div class="flex flex-col h-full bg-white relative w-full" @click.stop>
+                        <!-- Botón de cierre (Refinado) -->
+                        <button @click="closeModal()"
+                            class="absolute top-6 right-6 text-gray-500 hover:text-gray-900 transition-all z-50 bg-white/80 backdrop-blur-md shadow-lg rounded-full w-12 h-12 flex items-center justify-center border border-gray-100/50">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+
+                        <!-- Pull handle (Móvil) -->
+                        <div class="w-16 h-1.5 bg-gray-200 rounded-full mx-auto mt-4 mb-2 md:hidden"></div>
+
+                        <div class="flex flex-col md:flex-row h-full overflow-hidden w-full">
+                            <!-- LADO IZQUIERDO: Imagen (Respetando proporciones con bordes redondeados) -->
+                            <div class="w-full md:w-[38%] bg-gray-50 flex items-center justify-center p-6 md:p-10 shrink-0 h-[45vh] md:h-full overflow-hidden border-b md:border-b-0 md:border-r border-gray-100">
+                                <img id="modal-product-image" :src="modalData.image || ''"
+                                    :alt="modalData.alt || modalData.title || 'Imagen del producto'"
+                                    class="w-full h-full object-contain drop-shadow-2xl transition-transform duration-700 hover:scale-110 rounded-3xl">
                             </div>
-                            <span class="block w-full h-[2px] bg-pink-400 mx-auto my-5"></span>
-                            <div class="mb-2">
-                                <h3 class="text-lg font-bold text-gray-800 mb-3">
-                                    Sabores de relleno
-                                </h3>
-                                <template
-                                    x-if="modalData.fillingFlavors && modalData.fillingFlavors.included && modalData.fillingFlavors.included.length > 0">
-                                    <div class="mb-5">
-                                        <p class="text-sm font-bold text-gray-700 mb-2">Incluidos sin costo
-                                            adicional:</p>
-                                        <div class="flex flex-nowrap overflow-x-auto md:flex-wrap gap-2 scrollbar-hide">
-                                            <template x-for="flavor in modalData.fillingFlavors.included">
-                                                <span
-                                                    class="px-3 py-1 bg-yellow-300 border border-yellow-500/50 font-bold text-gray-900 rounded-full text-sm transition-transform hover:scale-105 cursor-default whitespace-nowrap"
-                                                    x-text="flavor"></span>
+
+                            <!-- LADO DERECHO: Información -->
+                            <div class="w-full md:flex-grow flex flex-col h-full overflow-hidden relative bg-white">
+                                <div class="flex-grow overflow-y-auto p-6 md:p-14 lg:p-20 scrollbar-hide pb-40">
+                                    <h2 id="modal-product-title" class="text-3xl md:text-5xl font-bold text-pink-600 mb-8 leading-[1.1] tracking-tight"
+                                        x-text="modalData.title || 'Información no disponible'"></h2>
+
+                                    <div class="price mb-10">
+                                        <p class="text-lg font-black text-gray-900 mb-4 uppercase tracking-tighter text-sm">Variantes y Precios:</p>
+                                        <ul id="modal-product-price" class="flex justify-start items-center flex-wrap gap-3">
+                                            <template x-for="(price, index) in modalData.prices">
+                                                <li x-text="price"
+                                                    class="px-5 py-2.5 bg-green-200 font-bold text-gray-900 rounded-full text-xs md:text-base border border-green-300 shadow-sm transition-transform hover:translate-y-[-2px]">
+                                                </li>
                                             </template>
+                                        </ul>
+
+                                        <!-- Nota del Chef -->
+                                        <div x-show="modalData.comments" class="mt-10">
+                                            <div class="bg-yellow-400 py-4 px-6 rounded-2xl shadow-sm inline-flex items-center gap-3 max-w-full">
+                                                <svg class="w-5 h-5 text-gray-900 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                                </svg>
+                                                <p id="product-comment" class="text-xs md:text-base font-bold italic text-gray-900" 
+                                                    x-text="modalData.comments"></p>
+                                            </div>
                                         </div>
                                     </div>
-                                </template>
-                                <template
-                                    x-if="modalData.fillingFlavors && modalData.fillingFlavors.additional && modalData.fillingFlavors.additional.length > 0">
-                                    <div class="mb-5">
-                                        <p class="text-sm font-bold text-gray-700 mb-2">Adicionales (costo extra):
-                                        </p>
-                                        <div
-                                            class="grid grid-rows-1 grid-flow-col md:grid-rows-none md:grid-cols-2 md:grid-flow-row gap-3 text-sm overflow-x-auto md:overflow-x-visible pb-2 scrollbar-hide snap-x snap-mandatory">
-                                            <template x-for="item in modalData.fillingFlavors.additional">
-                                                <div
-                                                    class="flex justify-between items-center p-3 mb-3 bg-gray-50/50 border border-gray-200 rounded-xl transition-colors hover:border-pink-300 min-w-[240px] md:min-w-0 snap-start">
-                                                    <span class="text-gray-900 font-bold" x-text="item.flavor"></span>
-                                                    <span
-                                                        class="bg-white px-2 py-1 rounded-lg shadow-sm font-bold text-gray-800 text-xs border border-gray-200"
-                                                        x-text="'+RD$' + item.price"></span>
+
+                                    <div class="w-full h-px bg-gray-100 my-10"></div>
+
+                                    <!-- Personalización -->
+                                    <div class="mb-4">
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-8">Personaliza tu orden</h3>
+                                        
+                                        <!-- Incluidos (Desplazamiento horizontal en móvil/tablet) -->
+                                        <template x-if="modalData.fillingFlavors && modalData.fillingFlavors.included && modalData.fillingFlavors.included.length > 0">
+                                            <div class="mb-12">
+                                                <p class="text-[11px] font-black text-gray-400 mb-5 uppercase tracking-widest leading-none">Rellenos incluidos</p>
+                                                <div class="flex flex-nowrap lg:flex-wrap overflow-x-scroll lg:overflow-x-visible gap-3 pb-4 scrollbar-hide snap-x snap-mandatory lg:snap-none -mx-2 px-2">
+                                                    <template x-for="flavor in modalData.fillingFlavors.included">
+                                                        <span class="px-5 py-2.5 bg-yellow-300 border border-yellow-400 font-bold text-gray-900 rounded-full text-[11px] md:text-sm whitespace-nowrap snap-start shadow-sm"
+                                                            x-text="flavor"></span>
+                                                    </template>
                                                 </div>
-                                            </template>
-                                        </div>
+                                            </div>
+                                        </template>
+
+                                        <!-- Adicionales (Desplazamiento horizontal en móvil/tablet) -->
+                                        <template x-if="modalData.fillingFlavors && modalData.fillingFlavors.additional && modalData.fillingFlavors.additional.length > 0">
+                                            <div>
+                                                <p class="text-[11px] font-black text-gray-400 mb-5 uppercase tracking-widest leading-none">Opciones adicionales</p>
+                                                <div class="flex lg:grid lg:grid-cols-2 overflow-x-scroll lg:overflow-x-visible flex-nowrap lg:flex-wrap gap-4 pb-6 scrollbar-hide snap-x snap-mandatory lg:snap-none -mx-2 px-2">
+                                                    <template x-for="item in modalData.fillingFlavors.additional">
+                                                        <div class="flex-none w-[80%] md:w-[45%] lg:w-full snap-start flex justify-between items-center p-5 bg-gray-50 border border-gray-100 rounded-[1.25rem] transition-colors hover:border-pink-200 group shadow-sm">
+                                                            <span class="text-gray-900 font-bold text-sm" x-text="item.flavor"></span>
+                                                            <span class="bg-white px-3 py-1.5 rounded-xl shadow-sm font-black text-gray-900 text-[10px] md:text-xs border border-gray-100 group-hover:text-pink-600 transition-colors"
+                                                                x-text="'+RD$' + item.price"></span>
+                                                        </div>
+                                                    </template>
+                                                </div>
+                                            </div>
+                                        </template>
                                     </div>
-                                </template>
-                                <div x-show="!modalData.fillingFlavors || (!modalData.fillingFlavors.included || modalData.fillingFlavors.included.length === 0) && (!modalData.fillingFlavors.additional || modalData.fillingFlavors.additional.length === 0)"
-                                    class="italic text-gray-500 text-sm">
-                                    Sin sabores de relleno específicos.
+                                </div>
+
+                                <!-- Footer Sticky -->
+                                <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12 bg-white/80 backdrop-blur-md border-t border-gray-50 flex justify-center z-10">
+                                    <a id="whatsapp-link" target="_blank" @click.stop 
+                                        class="flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-12 rounded-[1.5rem] transition-all duration-300 w-full max-w-2xl text-center shadow-2xl hover:shadow-green-200/50 transform hover:-translate-y-1">
+                                        <img src="./public/icons/whatsapp-white.png" alt="WhatsApp" class="w-7 h-7 mr-4">
+                                        <span class="text-lg md:text-xl">Hablar con Perla</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Whatsapp modal button -->
-                    <div class="whatsapp-modal-btn-container sticky bottom-0 bg-white/95 backdrop-blur-sm pt-2 pb-2 mt-auto z-10
-                        max-w-full flex justify-center">
-                        <a id="whatsapp-link" target="_blank" @click.stop class="flex justify-center items-center bg-green-600 
-                        hover:bg-green-700 text-white font-bold py-3 px-4 rounded-full transition duration-300 w-full max-w-[85%] md:max-w-[55%] 
-                        text-center block">
-                            <img src="./public/icons/whatsapp-white.png"
-                                alt="Icono de WhatsApp que abre un chat para realizar un pedido. Texto visible: Cotiza ahora. Tono amigable y cercano."
-                                class="w-6 h-6 mr-2" loading="lazy">
-                            Cotiza aquí
-                        </a>
-                    </div>
-                    <!-- End Whatsapp modal button -->
                 </dialog>
             </div>
         </div>
