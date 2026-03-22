@@ -5,7 +5,7 @@ class SiteCatalog extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-    <section class="catalog flex justify-center items-center bg-[url('public/images/desserts-patterns.png')] bg-repeat"
+    <section class="catalog flex justify-center items-center"
         id="catalog">
         <div class="container py-4">
             <div class="catalog-text mb-10 text-center">
@@ -101,33 +101,40 @@ class SiteCatalog extends HTMLElement {
                     <template x-for="product in filteredProducts" :key="product.title">
                         <div @click="showProductModal(product)" class="cursor-pointer w-full mt-3 mb-3 sm:w-1/2 md:w-1/2 lg:w-1/4 px-3 flex justify-center"
                             data-aos="fade-up">
-                            <div class="img-box bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300
-                                overflow-hidden max-w-[295px] bg-gradient-to-r from-pink-50 to-white">
-                                <div class="img-container overflow-hidden rounded-t-2xl">
-                                    <img :src="product.image" :alt="product.alt || product.title"
-                                        class="object-cover w-full h-48 transition-transform duration-300 hover:scale-105">
+                            <div class="img-box bg-white rounded-[2rem] shadow-sm hover:shadow-2xl transition-all duration-500
+                                overflow-hidden max-w-[310px] flex flex-col border border-gray-300">
+                                
+                                <!-- Contenedor de Imagen (Like Concept #1) -->
+                                <div class="img-container overflow-hidden p-3 pb-0">
+                                    <img :src="product.image" :alt="product.alt || product.title" 
+                                        class="object-cover w-full h-56 rounded-[1.5rem] transition-transform duration-500 hover:scale-110">
                                 </div>
-                                <div class="p-6 text-left min-h-[150px]">
-                                    <p class="lower-case text-gray-700 font-bold text-xl transition duration-300 block mb-1 ubuntu-font-bold text"
+
+                                <!-- Contenido de la Card -->
+                                <div class="p-5 pt-4 flex flex-col flex-grow">
+                                    <h3 class="lower-case text-gray-800 font-bold text-xl leading-tight mb-2 ubuntu-font-bold tracking-tight"
                                         x-text="product.title">
-                                    </p>
-                                    <span x-show="product.price_from"
-                                        class="inline-flex items-center gap-1 mt-1 mb-2 px-2 py-1 bg-pink-50 text-pink-600 text-sm font-bold rounded-full">
-                                        <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-4-6h8"/>
-                                        </svg>
-                                        Desde RD$<span x-text="product.price_from ? product.price_from.toLocaleString('es-DO') : ''"></span>
-                                    </span>
-                                    <button @click="showProductModal(product)"
-                                        class="cursor-pointer w-full max-w-[250px] mx-auto items-center justify-center shadow-2xl mt-3 bg-yellow-300 hover:bg-yellow-400 text-sm text-black-800 
-                                        font-semibold px-4 py-2 rounded-full transition duration-200 flex items-center gap-1">
-                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M5 15a1 1 0 001.707.707L15 7.414V13a1 1 0 102 0V5a1 1 0 00-1-1h-8a1 1 0 100 2h5.586L5.707 14.293A1 1 0 005 15z">
-                                            </path>
-                                        </svg>
-                                        Cotizar
-                                    </button>
+                                    </h3>
+                                    
+                                    <!-- Descripción secundaria (Comments) -->
+                                    <p class="text-gray-500 text-sm mb-4 line-clamp-2 flex-grow" x-text="product.comments || 'Un toque único de sabor artesanal.'"></p>
+
+                                    <!-- Footer de la Card (Segmentado: Precio a la izquierda, Botón a la derecha) -->
+                                    <div class="flex items-center justify-between mt-auto pt-2 border-t border-gray-50">
+                                        <div class="flex flex-col">
+                                            <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Desde</span>
+                                            <span x-show="product.price_from" class="text-gray-900 font-bold text-lg leading-none">
+                                                RD$<span x-text="product.price_from.toLocaleString('es-DO')"></span>
+                                            </span>
+                                        </div>
+
+                                        <button @click.stop="showProductModal(product)"
+                                            class="cursor-pointer w-12 h-12 flex items-center justify-center bg-gray-900 text-white rounded-2xl hover:bg-pink-600 hover:shadow-lg transition-all duration-300">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                                            </svg>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
