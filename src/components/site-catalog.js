@@ -192,7 +192,7 @@ class SiteCatalog extends HTMLElement {
                                         </ul>
 
                                         <!-- Nota del Chef -->
-                                        <div x-show="modalData.comments" class="mt-10">
+                                        <div x-show="modalData.comments" class="mt-8">
                                             <div class="bg-yellow-400 py-4 px-6 rounded-2xl shadow-sm inline-flex items-center gap-3 max-w-full">
                                                 <svg class="w-5 h-5 text-gray-700 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                                     <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9a1 1 0 00-1-1z" clip-rule="evenodd" />
