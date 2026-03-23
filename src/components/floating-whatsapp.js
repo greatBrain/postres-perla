@@ -15,7 +15,7 @@ class FloatingWhatsapp extends HTMLElement {
             after:border-8 after:border-t-white after:border-x-transparent after:border-b-0
             animate-bounce sm:animate-none">
             <p class="px-3 py-1 text-gray-800 text-sm sm:text-base font-semibold whitespace-nowrap">
-                ¡Hablemos!<span class="text-sm sm:text-xl">😊</span>
+                ¡Hablame😊!
             </p>
         </div>
 
