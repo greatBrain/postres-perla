@@ -8,10 +8,10 @@ class SiteCatalog extends HTMLElement {
     <section class="catalog flex justify-center items-center"
         id="catalog">
         <div class="container py-4">
-            <div class="catalog-text mb-5 text-center">
+            <div class="catalog-text mb-5 md:mb-10 lg:mb-10 text-center">
                 <h2 data-aos="fade-up"
                     class="text-gray-800 text-4xl md:text-4xl sm:text-3xl xs:text-3xl lg:text-5xl xl:text-5xl ubuntu-font-bold title">
-                    Nuestros productos <span class="text-yellow-500">100% artesanales</span>
+                    Nuestros productos, 100% artesanales!
                 </h2>
             </div>
             <div class="w-full mx-auto py-4 px-4 sm:px-0" x-data="{
@@ -48,13 +48,13 @@ class SiteCatalog extends HTMLElement {
                     
                     <!-- CTA Invitación responsivo encima del selector -->
                     <div data-aos="fade-up" data-aos-delay="50" 
-                        class="w-full md:max-w-fit mx-auto flex justify-start pl-4 md:justify-start md:pl-2 mb-2">
-                        <span class="text-pink-400 text-lg font-semibold tracking-tight">Selecciona una categoría</span>
+                        class="w-full md:max-w-fit mx-auto flex justify-start pl-4 ">
+                        <span class="text-gray-700 text-sm md:text-lg lg:text-lg font-semibold tracking-tight">Elige una categoría</span>
                     </div>
 
                 <div id="category-selector" data-aos="fade-up" data-aos-delay="100" class="flex flex-row items-center gap-2 md:gap-0 justify-start
                                      lg:justify-center md:justify-center
-                                     sm:overflow-x-visible overflow-x-auto p-3
+                                     sm:overflow-x-visible overflow-x-auto p-2
                                      scrollbar-hide
                                      w-full md:max-w-fit mx-auto
                                      rounded-none shadow-none mb-6 md:mb-10
@@ -190,7 +190,7 @@ class SiteCatalog extends HTMLElement {
                                 <div class="flex-grow overflow-y-auto p-6 md:p-14 lg:p-20 scrollbar-hide pb-40">
                                     <h2 id="modal-product-title" class="text-3xl md:text-5xl font-bold text-gray-800 mb-5 leading-[1.1] tracking-tight"
                                         x-text="modalData.title || 'Información no disponible'"></h2>
-                                    <div class="price mb-10">
+                                    <div class="price mb-6">
                                         <p class="text-2xl font-bold text-gray-700 mb-4 tracking-tighter">Variantes y Precios:</p>
                                         <ul id="modal-product-price" class="flex justify-start items-center flex-wrap gap-3">
                                             <template x-for="(price, index) in modalData.prices">
@@ -202,7 +202,7 @@ class SiteCatalog extends HTMLElement {
 
                                         <!-- Nota del Chef -->
                                         <div x-show="modalData.comments" class="mt-3">
-                                            <div class="bg-yellow-400 py-4 px-6 rounded-2xl shadow-sm inline-flex items-center gap-3 max-w-full">
+                                            <div class="bg-yellow-200 py-2 px-4 rounded-2xl shadow-sm inline-flex items-center gap-3 max-w-full">
                                                 <svg class="w-5 h-5 text-gray-700 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                                     <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9a1 1 0 00-1-1z" clip-rule="evenodd" />
                                                 </svg>
@@ -212,7 +212,7 @@ class SiteCatalog extends HTMLElement {
                                         </div>
                                     </div>
 
-                                    <div class="w-full h-px bg-gray-100 my-10"></div>
+                                    <div class="w-full h-px bg-gray-100 my-4"></div>
 
                                     <!-- Personalización -->
                                     <div class="mb-4">
