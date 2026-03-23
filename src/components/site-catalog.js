@@ -10,7 +10,7 @@ class SiteCatalog extends HTMLElement {
         <div class="container py-4">
             <div class="catalog-text mb-10 text-center">
                 <h2 data-aos="fade-up"
-                    class="text-gray-700 text-4xl md:text-4xl sm:text-3xl xs:text-3xl lg:text-5xl xl:text-5xl ubuntu-font-bold title">
+                    class="text-gray-800 text-4xl md:text-4xl sm:text-3xl xs:text-3xl lg:text-5xl xl:text-5xl ubuntu-font-bold title">
                     Nuestros productos <span class="text-yellow-500">100% artesanales</span>
                 </h2>
             </div>
@@ -169,20 +169,20 @@ class SiteCatalog extends HTMLElement {
 
                         <div class="flex flex-col md:flex-row h-full overflow-hidden w-full">
                             <!-- LADO IZQUIERDO: Imagen (Respetando proporciones con bordes redondeados) -->
-                            <div class="w-full md:w-[38%] bg-gray-50 flex items-center justify-center p-6 md:p-10 shrink-0 h-[45vh] md:h-full overflow-hidden border-b md:border-b-0 md:border-r border-gray-100">
+                            <div class="w-full md:w-[38%] bg-gray-50 flex items-center justify-center p-6 md:p-10 shrink-0 h-[38vh] md:h-full overflow-hidden border-b md:border-b-0 md:border-r border-gray-100">
                                 <img id="modal-product-image" :src="modalData.image || ''"
                                     :alt="modalData.alt || modalData.title || 'Imagen del producto'"
-                                    class="w-full h-full object-contain drop-shadow-2xl transition-transform duration-700 hover:scale-110 rounded-3xl">
+                                    class="w-full h-full object-contain drop-shadow-xl transition-transform duration-700 rounded-3xl">
                             </div>
 
                             <!-- LADO DERECHO: Información -->
                             <div class="w-full md:flex-grow flex flex-col h-full overflow-hidden relative bg-white">
                                 <div class="flex-grow overflow-y-auto p-6 md:p-14 lg:p-20 scrollbar-hide pb-40">
-                                    <h2 id="modal-product-title" class="text-3xl md:text-5xl font-bold text-pink-600 mb-8 leading-[1.1] tracking-tight"
+                                    <h2 id="modal-product-title" class="text-3xl md:text-5xl font-bold text-gray-800 mb-7 leading-[1.1] tracking-tight"
                                         x-text="modalData.title || 'Información no disponible'"></h2>
 
                                     <div class="price mb-10">
-                                        <p class="text-lg font-black text-gray-900 mb-4 uppercase tracking-tighter text-sm">Variantes y Precios:</p>
+                                        <p class="text-2xl font-bold text-gray-700 mb-8 tracking-tighter">Variantes y Precios:</p>
                                         <ul id="modal-product-price" class="flex justify-start items-center flex-wrap gap-3">
                                             <template x-for="(price, index) in modalData.prices">
                                                 <li x-text="price"
@@ -194,7 +194,7 @@ class SiteCatalog extends HTMLElement {
                                         <!-- Nota del Chef -->
                                         <div x-show="modalData.comments" class="mt-10">
                                             <div class="bg-yellow-400 py-4 px-6 rounded-2xl shadow-sm inline-flex items-center gap-3 max-w-full">
-                                                <svg class="w-5 h-5 text-gray-900 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                                <svg class="w-5 h-5 text-gray-700 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                                     <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9a1 1 0 00-1-1z" clip-rule="evenodd" />
                                                 </svg>
                                                 <p id="product-comment" class="text-xs md:text-base font-bold italic text-gray-900" 
@@ -207,13 +207,13 @@ class SiteCatalog extends HTMLElement {
 
                                     <!-- Personalización -->
                                     <div class="mb-4">
-                                        <h3 class="text-2xl font-bold text-gray-900 mb-8">Personaliza tu orden</h3>
+                                        <h3 class="text-2xl font-bold text-gray-700 mb-6">Personaliza tu orden</h3>
                                         
                                         <!-- Incluidos (Desplazamiento horizontal en móvil/tablet) -->
                                         <template x-if="modalData.fillingFlavors && modalData.fillingFlavors.included && modalData.fillingFlavors.included.length > 0">
-                                            <div class="mb-12">
-                                                <p class="text-[11px] font-black text-gray-400 mb-5 uppercase tracking-widest leading-none">Rellenos incluidos</p>
-                                                <div class="flex flex-nowrap lg:flex-wrap overflow-x-scroll lg:overflow-x-visible gap-3 pb-4 scrollbar-hide snap-x snap-mandatory lg:snap-none -mx-2 px-2">
+                                            <div class="mb-10">
+                                                <p class="text-sm font-black text-gray-700 mb-3 tracking-widest leading-none">Rellenos incluidos</p>
+                                                <div class="flex flex-nowrap lg:flex-wrap overflow-x-scroll lg:overflow-x-visible gap-3 pb-3 scrollbar-hide snap-x snap-mandatory lg:snap-none -mx-2 px-2">
                                                     <template x-for="flavor in modalData.fillingFlavors.included">
                                                         <span class="px-5 py-2.5 bg-yellow-300 border border-yellow-400 font-bold text-gray-900 rounded-full text-[11px] md:text-sm whitespace-nowrap snap-start shadow-sm"
                                                             x-text="flavor"></span>
@@ -225,7 +225,7 @@ class SiteCatalog extends HTMLElement {
                                         <!-- Adicionales (Desplazamiento horizontal en móvil/tablet) -->
                                         <template x-if="modalData.fillingFlavors && modalData.fillingFlavors.additional && modalData.fillingFlavors.additional.length > 0">
                                             <div>
-                                                <p class="text-[11px] font-black text-gray-400 mb-5 uppercase tracking-widest leading-none">Opciones adicionales</p>
+                                                <p class="text-sm font-black text-gray-700 mb-5 tracking-widest leading-none">Opciones adicionales</p>
                                                 <div class="flex lg:grid lg:grid-cols-2 overflow-x-scroll lg:overflow-x-visible flex-nowrap lg:flex-wrap gap-4 pb-6 scrollbar-hide snap-x snap-mandatory lg:snap-none -mx-2 px-2">
                                                     <template x-for="item in modalData.fillingFlavors.additional">
                                                         <div class="flex-none w-[80%] md:w-[45%] lg:w-full snap-start flex justify-between items-center p-5 bg-gray-50 border border-gray-100 rounded-[1.25rem] transition-colors hover:border-pink-200 group shadow-sm">
@@ -241,11 +241,11 @@ class SiteCatalog extends HTMLElement {
                                 </div>
 
                                 <!-- Footer Sticky -->
-                                <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12 bg-white/80 backdrop-blur-md border-t border-gray-50 flex justify-center z-10">
+                                <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12 bg-white border-t border-gray-50 flex justify-center z-10">
                                     <a id="whatsapp-link" target="_blank" @click.stop 
-                                        class="flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-12 rounded-[1.5rem] transition-all duration-300 w-full max-w-2xl text-center shadow-2xl hover:shadow-green-200/50 transform hover:-translate-y-1">
+                                        class="flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-10 rounded-[1.5rem] transition-all duration-300 w-full max-w-2xl text-center shadow-2xl hover:shadow-green-200/50 transform hover:-translate-y-1">
                                         <img src="./public/icons/whatsapp-white.png" alt="WhatsApp" class="w-7 h-7 mr-4">
-                                        <span class="text-lg md:text-xl">Hablar con Perla</span>
+                                        <span class="text-lg md:text-xl">Pídelo aquí</span>
                                     </a>
                                 </div>
                             </div>

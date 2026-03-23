@@ -10,7 +10,7 @@ class SiteTestimonials extends HTMLElement {
         id="testimonials" aria-labelledby="testimonials-title">
         <div class="max-w-7xl mx-auto flex flex-col justify-center items-center text-center space-y-10 pt-5">
             <div data-aos="fade-up">
-                <h2 id="testimonials-title" class="text-[#C84C7E] text-5xl md:text-5xl ubuntu-font-bold">
+                <h2 id="testimonials-title" class="text-gray-800 text-5xl md:text-5xl ubuntu-font-bold">
                     ¿Qué opinan nuestros clientes?
                 </h2>
                 <p class="text-gray-800 mt-4 max-w-xl mx-auto text-lg sm:text-xl md:text-xl ubuntu-font-regular">
