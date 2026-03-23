@@ -65,8 +65,8 @@ class SiteCatalog extends HTMLElement {
                     
 
                     <button data-category="pasteles" @click="activeCategory = 'pasteles'" :class="{
-                                   'bg-yellow-200 text-gray-800 border-transparent shadow-md md:ring-2 md:ring-yellow-400 md:ring-opacity-80 md:bg-white md:text-gray-800 md:shadow-lg': activeCategory === 'pasteles',
-                                   'bg-white text-gray-700 border-white shadow-sm md:bg-transparent md:text-gray-600 md:border-transparent md:shadow-none': activeCategory !== 'pasteles'
+                                    'bg-yellow-200 text-gray-800 border-transparent shadow-md md:bg-yellow-200 md:border-gray-200 md:text-gray-800 md:shadow-lg': activeCategory === 'pasteles',
+                                    'bg-white text-gray-700 border-white shadow-sm md:bg-transparent md:text-gray-600 md:border-transparent md:shadow-none': activeCategory !== 'pasteles'
                                }" class="category-btn flex flex-row justify-center items-center md:flex-row lg:flex-row px-4 py-1.5 
                                       md:px-6 md:py-2 lg:px-6 lg:py-2 rounded-full whitespace-nowrap border-2
                                       transition duration-200">
@@ -74,8 +74,8 @@ class SiteCatalog extends HTMLElement {
                         <span class="text-[14px] md:text-base font-bold">Pasteles</span>
                     </button>
                     <button data-category="postres" @click="activeCategory = 'postres'" :class="{
-                                   'bg-yellow-200 text-gray-800 border-transparent shadow-md md:ring-2 md:ring-yellow-400 md:ring-opacity-80 md:bg-white md:text-gray-800 md:shadow-lg': activeCategory === 'postres',
-                                   'bg-white text-gray-700 border-white shadow-sm md:bg-transparent md:text-gray-600 md:border-transparent md:shadow-none': activeCategory !== 'postres'
+                                    'bg-yellow-200 text-gray-800 border-transparent shadow-md md:bg-yellow-200 md:border-gray-200 md:text-gray-800 md:shadow-lg': activeCategory === 'postres',
+                                    'bg-white text-gray-700 border-white shadow-sm md:bg-transparent md:text-gray-600 md:border-transparent md:shadow-none': activeCategory !== 'postres'
                                }" class="category-btn flex flex-row justify-center items-center md:flex-row lg:flex-row px-4 py-1.5 
                                       md:px-6 md:py-2 lg:px-6 lg:py-2 rounded-full whitespace-nowrap border-2
                                       transition duration-200">
@@ -83,8 +83,8 @@ class SiteCatalog extends HTMLElement {
                         <span class="text-[14px] md:text-base font-bold">Postres</span>
                     </button>
                     <button data-category="mesa-dulces" @click="activeCategory = 'mesa-dulces'" :class="{
-                                   'bg-yellow-200 text-gray-800 border-transparent shadow-md md:ring-2 md:ring-yellow-400 md:ring-opacity-80 md:bg-white md:text-gray-800 md:shadow-lg': activeCategory === 'mesa-dulces',
-                                   'bg-white text-gray-700 border-white shadow-sm md:bg-transparent md:text-gray-600 md:border-transparent md:shadow-none': activeCategory !== 'mesa-dulces'
+                                    'bg-yellow-200 text-gray-800 border-transparent shadow-md md:bg-yellow-200 md:border-gray-200 md:text-gray-800 md:shadow-lg': activeCategory === 'mesa-dulces',
+                                    'bg-white text-gray-700 border-white shadow-sm md:bg-transparent md:text-gray-600 md:border-transparent md:shadow-none': activeCategory !== 'mesa-dulces'
                                }" class="category-btn flex flex-row justify-center items-center md:flex-row lg:flex-row px-4 py-1.5 
                                       md:px-6 md:py-2 lg:px-6 lg:py-2 rounded-full whitespace-nowrap border-2
                                       transition duration-200">
@@ -92,8 +92,8 @@ class SiteCatalog extends HTMLElement {
                         <span class="text-[14px] md:text-base font-bold">Mesa de dulces</span>
                     </button>
                     <button data-category="temporada" @click="activeCategory = 'temporada'" :class="{
-                                   'bg-yellow-200 text-gray-800 border-transparent shadow-md md:ring-2 md:ring-yellow-400 md:ring-opacity-80 md:bg-white md:text-gray-800 md:shadow-lg': activeCategory === 'temporada',
-                                   'bg-white text-gray-700 border-white shadow-sm md:bg-transparent md:text-gray-600 md:border-transparent md:shadow-none': activeCategory !== 'temporada'
+                                    'bg-yellow-200 text-gray-800 border-transparent shadow-md md:bg-yellow-200 md:border-gray-200 md:text-gray-800 md:shadow-lg': activeCategory === 'temporada',
+                                    'bg-white text-gray-700 border-white shadow-sm md:bg-transparent md:text-gray-600 md:border-transparent md:shadow-none': activeCategory !== 'temporada'
                                }" class="category-btn flex flex-row justify-center items-center md:flex-row lg:flex-row px-4 py-1.5 
                                       md:px-6 md:py-2 lg:px-6 lg:py-2 rounded-full whitespace-nowrap border-2
                                       transition duration-200">
