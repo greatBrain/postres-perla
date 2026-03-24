@@ -1,10 +1,11 @@
 class PortionCalculator extends HTMLElement {
     constructor() {
         super();
-        this.guests = 0;
-        this.step = 1;
+        this.guests = null;
+        this.eventType = null;
+        this.portionStyle = null;
         this.recommendation = {
-            lbs: 0,
+            lbsText: '',
             minMsg: 0,
             maxMsg: 0
         };
@@ -17,165 +18,165 @@ class PortionCalculator extends HTMLElement {
 
     getHtml() {
         return `
-        <section id="calculadora-de-porciones" class="py-16 lg:py-24 px-4 md:px-8 bg-gradient-to-r from-white via-white to-[#FFF7D9] overflow-hidden relative">
+        <section id="calculadora-de-porciones" class="py-16 lg:py-24 px-4 md:px-8 bg-gradient-to-r from-white via-white to-[#FFF7D9] overflow-hidden relative font-sans">
             <div class="container mx-auto relative z-10">
                 <!-- Two Column Layout -->
-                <div class="grid lg:grid-cols-[1fr_1.25fr] gap-16 lg:gap-20 items-start">                    
+                <div class="grid lg:grid-cols-[1fr_1.25fr] gap-12 lg:gap-20 items-start">                    
                     <!-- Left Column: Context -->
-                    <div class="flex flex-col justify-start space-y-4 lg:pt-10" data-aos="fade-right">
+                    <div class="flex flex-col justify-start space-y-6 lg:pt-10" data-aos="fade-right">
                         <div>
-                            <span class="inline-block bg-yellow-200 text-gray-800 font-semibold px-3 py-1 rounded-full text-sm mb-4 tracking-wider">
+                            <span class="inline-block bg-yellow-300 text-gray-900 font-bold px-4 py-1.5 rounded-full text-xs mb-6 uppercase tracking-widest shadow-sm">
                                 Herramienta gratuita
                             </span>
-                            <div class="flex flex-wrap portion-title-container">
-                                <h3 class="flex text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 tracking-tight">
+                            <div class="flex items-center portion-title-container mb-6">
+                                <h3 class="text-5xl lg:text-6xl font-bold text-gray-800 leading-[1.1] tracking-tighter">
                                     Calcula el tamaño <br> de tu pastel                                 
                                 </h3>
-                                <img src="public/icons/icon-arrow.gif" class="h-full max-h-md ml-8 hidden md:block opacity-80 mix-blend-multiply">
+                                <!-- Minimalist Arrow Icon -->
+                                <svg class="w-12 h-12 text-pink-500 hidden md:block opacity-80 ml-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
                             </div>
-                            <h4 class="text-gray-700 font-medium text-xl md:text-2xl leading-relaxed">
+                            <h4 class="text-gray-800 font-bold text-2xl lg:text-3xl leading-snug mt-10">
                                 ¿No estás seguro si alcanzará para todos tus invitados?
                             </h4>
-                            <p class="text-gray-600 text-lg leading-relaxed my-2">      
-                                Usa nuestra <strong class="font-bold text-gray-800">calculadora</strong> para saber cuántas porciones necesitas y evita que falte pastel.                                                                                       
+                            <p class="text-gray-600 text-lg lg:text-xl leading-relaxed mt-6 max-w-xl">      
+                                Usa nuestra <strong class="font-extrabold text-gray-900 border-b-2 border-pink-100">calculadora inteligente</strong> para saber cuántas porciones necesitas y asegúrate de que nadie se quede sin probarlo.                                                                                       
                             </p>
                         </div>
 
-                        <p class="text-gray-600 text-lg leading-relaxed my-2">
-                            Ideal para:
-                        </p>
-                        
-                        <ul class="space-y-4 text-gray-800 font-medium font-semibold">
-                            <li class="flex items-center">
-                                <svg class="w-6 h-6 text-green-500 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
-                                 Cumpleaños
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-6 h-6 text-green-500 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
-                                Reuniones casuales
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-6 h-6 text-green-500 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
-                                Bodas y todo tipo de eventos formales
-                            </li>
-                        </ul>
+                        <div class="pt-4">
+                            <p class="text-gray-900 font-bold text-lg mb-4">Ideal para planificar:</p>
+                            <ul class="space-y-4 text-gray-700 font-medium">
+                                <li class="flex items-center group">
+                                    <div class="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center mr-4 shrink-0 transition-colors group-hover:bg-yellow-200">
+                                        <svg class="w-3.5 h-3.5 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="text-lg text-gray-700">Cumpleaños inolvidables</span>
+                                </li>
+                                <li class="flex items-center group">
+                                    <div class="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center mr-4 shrink-0 transition-colors group-hover:bg-yellow-200">
+                                        <svg class="w-3.5 h-3.5 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="text-lg text-gray-700">Reuniones y momentos especiales</span>
+                                </li>
+                                <li class="flex items-center group">
+                                    <div class="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center mr-4 shrink-0 transition-colors group-hover:bg-yellow-200">
+                                        <svg class="w-3.5 h-3.5 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="text-lg text-gray-700">Bodas y eventos de etiqueta</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+
                     <!-- Right Column: Calculator Card -->
-                    <div data-aos="fade-left" class="relative max-w-[380px] mx-auto md:max-w-full z-10 bg-white/85 
-                    max-w-full rounded-4xl shadow-[0_8px_32px_rgba(236,72,153,0.12)] border border-l-4 border-l-pink-600/40 border-pink-500/30 p-0 sm:p-2 overflow-hidden backdrop-blur-md" 
-                    style="-webkit-backdrop-filter: blur(10px);">                        
-                            <!-- Step 1: Input Form -->
-                            <div id="calc-step-1" class="p-6 md:p-8 transition-all duration-500 ease-in-out">                                
-                                <!-- Guest Count -->
-                                <div class="mb-10 bg-gray-200/50 px-3 py-3 rounded-3xl">
-                                    <label class="flex flex-row flex-nowrap items-center gap-2 mt-5 mb-2">
-                                        <img src="public/icons/person-team-icon.svg" class="max-w-[35px]"> 
-                                        <span class="text-gray-700 font-semibold text-2xl">¿Cuántas personas asistirán al evento?</span>
+                    <div data-aos="fade-left" class="relative max-w-full z-10 bg-white/90 
+                    rounded-[2.5rem] shadow-[0_20px_50px_rgba(236,72,153,0.12)] border border-white p-2 md:p-4 overflow-hidden backdrop-blur-xl" 
+                    style="-webkit-backdrop-filter: blur(15px);">                        
+                        <!-- Step 1: Input Form -->
+                        <div id="calc-step-1" class="p-6 md:p-8 transition-all duration-500 ease-in-out">                                
+                            <!-- Unified Guest Selection (Segmented Pills) -->
+                            <div class="mb-12">
+                                <label class="flex items-center gap-3 mb-6">
+                                    <img src="public/icons/person-team-icon.svg" class="w-10 h-10" alt="Invitados"> 
+                                    <span class="text-gray-900 font-[800] text-2xl tracking-tight">¿Cuántos invitados tienes?</span>
+                                </label>
+                                
+                                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 p-1.5 bg-gray-50 rounded-[2rem] border border-gray-100 shadow-inner">
+                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="10">10</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="15">15</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="20">20</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="25">25</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="30">30</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="40">40</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="50">50</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="75">75</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="100">100</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="150">150+</button>
+                                </div>
+                            </div>
+
+                            <!-- Options Grid -->
+                            <div class="space-y-10 mb-12">
+                                <!-- Event Type -->
+                                <div>
+                                    <label class="flex items-center gap-2 text-gray-800 font-bold mb-4 text-lg">
+                                        <img src="public/icons/celebration-icon.svg" class="w-7 h-7" alt="Evento"> Tipo de evento
                                     </label>
-                                    <!-- Quick Buttons -->
-                                    <div class="flex flex-row overflow-x-auto scrollbar-hide flex-nowrap md:flex-wrap justify-start md:justify-center gap-2 mb-3 mt-6 pb-2">
-                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-gray-100 shadow-[0_4px_10px_rgba(0,0,0,0.04)] text-gray-600 rounded-full font-semibold hover:border-pink-200 hover:shadow-[0_4px_12px_rgba(236,72,153,0.15)] hover:text-pink-600 transition-all duration-300 transform active:scale-95" data-val="10">10 personas</button>
-                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-gray-100 shadow-[0_4px_10px_rgba(0,0,0,0.04)] text-gray-600 rounded-full font-semibold hover:border-pink-200 hover:shadow-[0_4px_12px_rgba(236,72,153,0.15)] hover:text-pink-600 transition-all duration-300 transform active:scale-95" data-val="20">20 personas</button>
-                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-gray-100 shadow-[0_4px_10px_rgba(0,0,0,0.04)] text-gray-600 rounded-full font-semibold hover:border-pink-200 hover:shadow-[0_4px_12px_rgba(236,72,153,0.15)] hover:text-pink-600 transition-all duration-300 transform active:scale-95" data-val="30">30 personas</button>
-                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-gray-100 shadow-[0_4px_10px_rgba(0,0,0,0.04)] text-gray-600 rounded-full font-semibold hover:border-pink-200 hover:shadow-[0_4px_12px_rgba(236,72,153,0.15)] hover:text-pink-600 transition-all duration-300 transform active:scale-95" data-val="50">50 personas</button>
-                                        <button type="button" class="shrink-0 cursor-pointer quick-guest-btn px-4 py-2 bg-white border border-gray-100 shadow-[0_4px_10px_rgba(0,0,0,0.04)] text-gray-600 rounded-full font-semibold hover:border-pink-200 hover:shadow-[0_4px_12px_rgba(236,72,153,0.15)] hover:text-pink-600 transition-all duration-300 transform active:scale-95" data-val="100">100+ personas</button>
+                                    <div class="flex p-1.5 bg-[#F0F7E6] rounded-full border border-gray-100 shadow-sm gap-1">
+                                        <button type="button" class="event-type-pill cursor-pointer flex-1 py-3 text-sm font-bold rounded-full transition-all duration-300 text-gray-600 hover:text-pink-600 bg-transparent" data-val="cumpleanos">Cumpleaños</button>
+                                        <button type="button" class="event-type-pill cursor-pointer flex-1 py-3 text-sm font-bold rounded-full transition-all duration-300 text-gray-600 hover:text-pink-600 bg-transparent" data-val="boda">Boda / Formal</button>
                                     </div>
-                                    <input type="number" id="guest-count" placeholder="Ej: 25 invitados" min="1"
-                                        class="w-full min-h-[120px] text-center text-xl font-semibold 
-                                        text-gray-700 bg-white/90 border border-gray-400/50
-                                        rounded-2xl py-4 px-4 focus:outline-none focus:border-gray-400  focus:ring-2 focus:ring-gray-200 
-                                        transition-all shadow-inner backdrop-blur-sm">
-                                </div>
-                                <!-- Options Grid -->
-                                <div class="grid grid-cols-1 md:grid-cols-1 gap-4 md:gap-6 mb-10 mt-14 w-full max-w-full
-                                    bg-gray-200/50 px-2 py-3 rounded-3xl">
-                                    <!-- Event Type -->
-                                    <div class="w-full min-w-0">
-                                        <label class="flex flex-row flex-nowrap items-center gap-1 text-gray-700 font-semibold mb-2 md:mb-2 text-sm md:text-base">
-                                        <img src="public/icons/celebration-icon.svg" class="max-w-[28px]"> Tipo de evento (opcional)
-                                        </label>
-                                        <div class="flex p-1.5 bg-white rounded-full shadow-inner border border-gray-400/50 relative w-full h-12 md:h-14">
-                                            <label class="flex-1 cursor-pointer relative z-10 group">
-                                                <input type="radio" name="event_type" value="cumpleanos" checked class="sr-only peer">
-                                                <div class="w-full max-w-[295px] h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-500 rounded-full peer-checked:bg-pink-500 peer-checked:text-white peer-checked:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_2px_4px_rgba(236,72,153,0.3)] transition-all duration-300 ease-in-out px-2 text-center leading-tight group-hover:text-pink-500 peer-checked:group-hover:text-white">
-                                                    Cumpleaños
-                                                </div>
-                                            </label>
-                                            <label class="flex-1 cursor-pointer relative z-10 group">
-                                                <input type="radio" name="event_type" value="boda" class="sr-only peer">
-                                                <div class="w-full max-w-[295px] h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-500 rounded-full peer-checked:bg-pink-500 peer-checked:text-white peer-checked:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_2px_4px_rgba(236,72,153,0.3)] transition-all duration-300 ease-in-out px-2 text-center leading-tight group-hover:text-pink-500 peer-checked:group-hover:text-white">Boda / evento formal</div>
-                                            </label>
-                                        </div>
-                                    </div>                                    
-                                    <!-- Portion Style -->
-                                    <div class="w-full min-w-0">
-                                        <label class="flex flex-row flex-nowrap items-center gap-1 text-gray-700 font-semibold mb-2 md:mb-2 text-sm md:text-base">
-                                            <img src="public/icons/cake-slice.svg" class="max-w-[25px]"> Tamaño de porciones
-                                        </label>
-                                        <div class="flex p-1.5 bg-white rounded-full shadow-inner border border-gray-400/50 relative w-full h-12 md:h-14">
-                                            <label class="flex-1 cursor-pointer relative z-10 group">
-                                                <input type="radio" name="portion_style" value="normal" checked class="sr-only peer">
-                                                <div class="w-full max-w-[295px] h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-500 rounded-full peer-checked:bg-pink-500 peer-checked:text-white peer-checked:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_2px_4px_rgba(236,72,153,0.3)] transition-all duration-300 ease-in-out px-2 text-center leading-tight group-hover:text-pink-500 peer-checked:group-hover:text-white">Normal</div>
-                                            </label>
-                                            <label class="flex-1 cursor-pointer relative z-10 group">
-                                                <input type="radio" name="portion_style" value="generosa" class="sr-only peer">
-                                                <div class="w-full max-w-[295px] h-full flex items-center justify-center text-xs md:text-sm font-semibold text-gray-500 rounded-full peer-checked:bg-pink-500 peer-checked:text-white peer-checked:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_2px_4px_rgba(236,72,153,0.3)] transition-all duration-300 ease-in-out px-2 text-center leading-tight group-hover:text-pink-500 peer-checked:group-hover:text-white">Generoso</div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
+                                </div>                                    
 
-                                <!-- Action Button -->
-                                <div class="bg-gray-200/50 px-2 py-3 rounded-3xl">
-                                    <p class="font-semibold text-md text-gray-700 text-center pb-3">Obtén recomendaciones aquí</p>
-                                    <button id="btn-calculate" class="relative group cursor-pointer w-full max-w-xl max-h-[50px] mx-auto bg-gradient-to-r from-pink-500 to-pink-400 hover:from-pink-400 hover:to-pink-300
-                                    text-white font-bold py-4 px-6 rounded-full shadow-[0_8px_20px_rgba(236,72,153,0.3)] 
-                                    hover:shadow-[0_12px_25px_rgba(236,72,153,0.5)] transition-all duration-300 hover:scale-105 hover:brightness-110
-                                    active:scale-95 text-lg flex justify-center items-center shrink-0 text-nowrap border border-pink-300/50">
-                                        <span class="relative z-10 flex items-center justify-center">
-                                            Ver resultados
-                                            <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                        </span>
-                                    </button>                                
-                                    <div id="calc-error" class="text-red-500 text-center mt-4 hidden font-medium">Por favor ingresa el número de invitados.</div>
+                                <!-- Portion Style -->
+                                <div>
+                                    <label class="flex items-center gap-2 text-gray-800 font-bold mb-4 text-lg">
+                                        <img src="public/icons/cake-slice.svg" class="w-6 h-6" alt="Porción"> Tamaño de porciones
+                                    </label>
+                                    <div class="flex p-1.5 bg-[#F0F7E6] rounded-full border border-gray-100 shadow-sm gap-1">
+                                        <button type="button" class="portion-style-pill cursor-pointer flex-1 py-3 text-sm font-bold rounded-full transition-all duration-300 text-gray-600 hover:text-pink-600 bg-transparent" data-val="normal">Normal</button>
+                                        <button type="button" class="portion-style-pill cursor-pointer flex-1 py-3 text-sm font-bold rounded-full transition-all duration-300 text-gray-600 hover:text-pink-600 bg-transparent" data-val="generosa">Generoso</button>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Step 2: Results -->
-                            <div id="calc-step-2" class="p-6 md:p-8 hidden opacity-0 transition-opacity duration-500 ease-in-out">
-                                <div class="text-center">
-                                    <div class="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4 shadow-sm">
-                                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
-                                    </div>
-                                    <h3 class="text-2xl text-gray-800 font-bold mb-2">
-                                        Opción recomendada para <span id="res-guests" class="font-bold text-pink-500 text-xl"></span> personas:
-                                    </h3>
-                                    <div class="bg-gradient-to-br from-pink-50 to-white border border-pink-200 rounded-2xl p-4 md:p-6 shadow-sm mb-6 relative overflow-hidden flex flex-col items-center w-full">
-                                        <img src="public/images/vectors/cupcake.svg" class="w-10 h-10 md:w-12 md:h-12 mb-3 drop-shadow-sm opacity-90" alt="Cake Icon" />
-                                        <p class="text-gray-500 font-semibold uppercase tracking-wide text-[10px] md:text-xs mb-2">Pastel de</p>
-                                        <p id="res-lbs" class="text-2xl min-[375px]:text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center leading-tight"></p>
-                                        <p id="res-range" class="text-gray-600 text-xs md:text-sm bg-white/80 inline-block px-3 md:px-4 py-1.5 rounded-full border border-gray-100 shadow-sm text-center leading-tight mx-auto max-w-[95%]"></p>
-                                    </div>
-                                    <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-8 text-left flex items-start shadow-sm">
-                                        <svg class="w-6 h-6 text-gray-400 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                        <p class="text-gray-700 text-sm leading-relaxed">
-                                            <strong class="font-bold text-gray-800">Sugerencia:</strong> si deseas variedad para tus invitados, puedes complementar con cupcakes o mini postres.
-                                        </p>
-                                    </div>
-                                    <div class="flex flex-col gap-3 justify-center w-full">
-                                        <a href="#catalog" class="btn-catalog bg-white border border-pink-300 text-pink-600 hover:bg-pink-50 font-bold py-3 px-4 sm:px-6 rounded-full shadow-sm hover:shadow transition-all text-center flex-1 text-sm md:text-base whitespace-nowrap">
-                                            Ver bizcochos
-                                        </a>
-                                        <button id="btn-whatsapp" class="bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-3 px-4 sm:px-6 rounded-full shadow-lg hover:shadow-xl transition-all text-center flex-1 flex items-center justify-center text-sm md:text-base whitespace-nowrap">
-                                            <svg class="w-4 h-4 md:w-5 md:h-5 mr-2 shrink-0 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.252.38 2.404 1.01 3.385l-.837 3.054 3.125-.82c.943.582 2.052.923 3.238.923 3.181 0 5.767-2.585 5.767-5.766S15.212 6.172 12.031 6.172zm3.176 8.35c-.156.44-.816.843-1.157.904-.34.062-.782.124-1.993-.346-1.503-.585-2.548-2.128-2.627-2.232-.078-.103-.627-.835-.627-1.593 0-.757.391-1.13.535-1.282.146-.153.314-.191.419-.191.104 0 .208.001.294.005.093.003.218-.035.342.261.129.311.439 1.066.478 1.144.039.078.059.169.019.273-.039.103-.059.168-.137.26-.078.092-.167.208-.235.286-.078.093-.162.196-.059.375.103.179.462.766 1.037 1.28 1.488 1.334 2.146 1.547 2.333 1.624.187.078.297.065.406-.052.11-.117.478-.558.608-.75.129-.192.259-.16.429-.098.169.063 1.077.509 1.261.6.185.093.308.14.354.218.046.078.046.452-.11.892zM12.031 2C6.496 2 2 6.496 2 12.031c0 1.77.461 3.435 1.259 4.887L2 22l5.228-1.205C8.618 21.548 10.279 22 12.031 22 17.566 22 22 17.566 22 12.031 22 6.496 17.566 2 12.031 2z"/></svg>
-                                            Consultar por WhatsApp
-                                        </button>
-                                    </div>
-                                    
-                                    <button id="btn-back" class="mt-6 text-gray-400 hover:text-pink-500 font-semibold underline transition-colors">Volver a calcular</button>
-                                </div>
+                            <!-- Action Button -->
+                            <div class="pt-4">
+                                <button id="btn-calculate" disabled class="group relative w-full max-w-md mx-auto bg-gray-200 text-gray-400 font-black py-4 px-8 rounded-full shadow-none transition-all duration-500 text-xl flex justify-center items-center gap-3 cursor-not-allowed tracking-wider overflow-hidden">
+                                    <span class="relative z-10 flex items-center justify-center">
+                                        Ver resultados recomendados
+                                        <svg class="w-6 h-6 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
+                                    </span>
+                                </button>                                
                             </div>
+                        </div>
+
+                        <!-- Step 2: Results -->
+                        <div id="calc-step-2" class="p-6 md:p-10 hidden opacity-0 transition-all duration-500 ease-in-out translate-y-4">
+                            <div class="text-center">
+                                <div class="inline-flex items-center justify-center w-20 h-20 bg-green-50 rounded-full mb-6 shadow-sm border border-green-100">
+                                    <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl text-gray-900 font-black mb-4">¡Listo! 🎉</h3>
+                                <p class="text-gray-600 text-lg mb-8">Según tus preferencias para <span id="res-guests" class="font-black text-pink-500 underline decoration-pink-100"></span> personas:</p>
+                                
+                                <div class="bg-gradient-to-br from-pink-400/5 to-pink-300/10 border-2 border-pink-100 rounded-[2rem] p-8 lg:p-12 mb-8 relative overflow-hidden group shadow-sm transition-all hover:shadow-md">
+                                    <img src="public/images/vectors/cupcake.svg" class="w-16 h-16 absolute -right-4 -top-4 opacity-10 rotate-12 transition-transform group-hover:scale-125" alt="Cupcake" />
+                                    <span class="text-pink-400 font-black text-sm uppercase tracking-[0.2em] block mb-4">Recomendación Perla</span>
+                                    <p id="res-lbs" class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight"></p>
+                                    <div class="inline-block bg-white/80 backdrop-blur-sm px-6 py-2.5 rounded-full border border-pink-50 shadow-sm">
+                                        <p id="res-range" class="text-pink-500 font-bold text-sm md:text-base"></p>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 w-full">
+                                    <a href="#catalog" class="btn-catalog cursor-pointer bg-white border-2 border-pink-300 text-pink-500 hover:bg-pink-50 font-black py-4 px-6 rounded-3xl shadow-sm transition-all text-center">
+                                        Explorar Sabores
+                                    </a>
+                                    <button id="btn-whatsapp" class="bg-[#25D366] hover:bg-[#20bd5a] hover:scale-[1.02] cursor-pointer text-white font-black py-4 px-6 rounded-3xl shadow-lg transition-all flex items-center justify-center gap-3">
+                                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.252.38 2.404 1.01 3.385l-.837 3.054 3.125-.82c.943.582 2.052.923 3.238.923 3.181 0 5.767-2.585 5.767-5.766S15.212 6.172 12.031 6.172zm3.176 8.35c-.156.44-.816.843-1.157.904-.34.062-.782.124-1.993-.346-1.503-.585-2.548-2.128-2.627-2.232-.078-.103-.627-.835-.627-1.593 0-.757.391-1.13.535-1.282.146-.153.314-.191.419-.191.104 0 .208.001.294.005.093.003.218-.035.342.261.129.311.439 1.066.478 1.144.039.078.059.169.019.273-.039.103-.059.168-.137.26-.078.092-.167.208-.235.286-.078.093-.162.196-.059.375.103.179.462.766 1.037 1.28 1.488 1.334 2.146 1.547 2.333 1.624.187.078.297.065.406-.052.11-.117.478-.558.608-.75.129-.192.259-.16.429-.098.169.063 1.077.509 1.261.6.185.093.308.14.354.218.046.078.046.452-.11.892zM12.031 2C6.496 2 2 6.496 2 12.031c0 1.77.461 3.435 1.259 4.887L2 22l5.228-1.205C8.618 21.548 10.279 22 12.031 22 17.566 22 22 17.566 22 12.031 22 6.496 17.566 2 12.031 2z"/></svg>
+                                        Pedir por WhatsApp
+                                    </button>
+                                </div>
+                                
+                                <button id="btn-back" class="text-gray-400 hover:text-pink-400 font-bold cursor-pointer uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2 mx-auto">
+                                    <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                    Ajustar Datos
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -188,48 +189,62 @@ class PortionCalculator extends HTMLElement {
     }
 
     attachEventListeners() {
-        // Quick buttons
-        const quickBtns = this.querySelectorAll('.quick-guest-btn');
-        const countInput = this.querySelector('#guest-count');
+        const guestPills = this.querySelectorAll('.guest-pill');
+        const eventPills = this.querySelectorAll('.event-type-pill');
+        const portionPills = this.querySelectorAll('.portion-style-pill');
         const calcBtn = this.querySelector('#btn-calculate');
-        const errorMsg = this.querySelector('#calc-error');
 
-        const updateChips = (val) => {
-            quickBtns.forEach(b => {
-                if (b.dataset.val === val) {
-                    b.classList.remove('bg-white', 'text-gray-600', 'shadow-[0_4px_10px_rgba(0,0,0,0.04)]', 'border-gray-100');
-                    b.classList.add('bg-pink-50', 'text-pink-600', 'border-pink-300', 'shadow-[inset_0_3px_6px_rgba(236,72,153,0.15)]');
-                } else {
-                    b.classList.remove('bg-pink-50', 'text-pink-600', 'border-pink-300', 'shadow-[inset_0_3px_6px_rgba(236,72,153,0.15)]');
-                    b.classList.add('bg-white', 'text-gray-600', 'shadow-[0_4px_10px_rgba(0,0,0,0.04)]', 'border-gray-100');
-                }
-            });
+        const validateForm = () => {
+            const isReady = this.guests && this.eventType && this.portionStyle;
+            if (isReady) {
+                calcBtn.disabled = false;
+                calcBtn.classList.remove('bg-gray-200', 'text-gray-400', 'cursor-not-allowed', 'shadow-none');
+                calcBtn.classList.add('bg-gradient-to-r', 'from-pink-400/90', 'to-pink-300/90', 'text-white', 'cursor-pointer', 'shadow-[0_10px_25px_rgba(236,72,153,0.15)]', 'hover:shadow-[0_15px_30px_rgba(236,72,153,0.25)]', 'hover:scale-[1.02]');
+            } else {
+                calcBtn.disabled = true;
+                calcBtn.classList.add('bg-gray-200', 'text-gray-400', 'cursor-not-allowed', 'shadow-none');
+                calcBtn.classList.remove('bg-gradient-to-r', 'from-pink-400/90', 'to-pink-300/90', 'text-white', 'cursor-pointer', 'shadow-[0_10px_25px_rgba(236,72,153,0.15)]', 'hover:shadow-[0_15px_30px_rgba(236,72,153,0.25)]', 'hover:scale-[1.02]');
+            }
         };
 
-        quickBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                countInput.value = btn.dataset.val;
-                updateChips(btn.dataset.val);
-                errorMsg.classList.add('hidden');
+        const updatePillStyles = (pills, activeVal) => {
+            pills.forEach(pill => {
+                const isActive = pill.dataset.val === activeVal;
+                if (isActive) {
+                    pill.classList.remove('bg-white', 'bg-transparent', 'text-gray-500', 'text-gray-600', 'border-gray-100');
+                    pill.classList.add('bg-pink-100', 'text-pink-600', 'border-pink-300', 'shadow-sm', 'scale-[1.02]');
+                } else {
+                    pill.classList.add('text-gray-600');
+                    pill.classList.remove('bg-pink-100', 'text-pink-600', 'border-pink-300', 'shadow-sm', 'scale-[1.02]');
+                }
+            });
+            validateForm();
+        };
+
+        guestPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                this.guests = parseInt(pill.dataset.val);
+                updatePillStyles(guestPills, pill.dataset.val);
             });
         });
 
-        countInput.addEventListener('input', () => {
-            if (countInput.value > 0) {
-                errorMsg.classList.add('hidden');
-            }
-            updateChips(countInput.value);
+        eventPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                this.eventType = pill.dataset.val;
+                updatePillStyles(eventPills, pill.dataset.val);
+            });
+        });
+
+        portionPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                this.portionStyle = pill.dataset.val;
+                updatePillStyles(portionPills, pill.dataset.val);
+            });
         });
 
         // Calculate Action
         calcBtn.addEventListener('click', () => {
-            const guests = parseInt(countInput.value);
-            if (!guests || guests <= 0) {
-                errorMsg.classList.remove('hidden');
-                return;
-            }
-
-            this.guests = guests;
+            if (calcBtn.disabled) return;
             this.calculatePortions();
             this.showStep2();
         });
@@ -246,7 +261,7 @@ class PortionCalculator extends HTMLElement {
             this.showStep1();
         });
 
-        // Catalog Action (smooth scroll via anchor, handled globally or simple listener here)
+        // Catalog Action
         const catalogBtn = this.querySelector('.btn-catalog');
         catalogBtn.addEventListener('click', (e) => {
             const target = document.querySelector('#catalog');
@@ -258,18 +273,14 @@ class PortionCalculator extends HTMLElement {
     }
 
     calculatePortions() {
-        const eventType = this.querySelector('input[name="event_type"]:checked')?.value || 'cumpleanos';
-        const portionStyle = this.querySelector('input[name="portion_style"]:checked')?.value || 'normal';
-
         // Base logic: 1 lb = ~25 normal portions
-        let baseLbs = this.guests / 25; // Normal
+        let baseLbs = this.guests / 25;
 
         // Modifiers based on form style
-        if (portionStyle === 'generosa') baseLbs *= 1.25; // e.g. 1 lb yields less (20 portions), so you need more cake
+        if (this.portionStyle === 'generosa') baseLbs *= 1.25;
 
-        // Real world business adjustment:
-        // Weddings usually offer a lot of other food, cake pieces can be smaller
-        if (eventType === 'boda') {
+        // Event type modifiers
+        if (this.eventType === 'boda') {
             baseLbs *= 0.8;
         }
 
@@ -281,9 +292,6 @@ class PortionCalculator extends HTMLElement {
             recommendedLbs = 0.5;
         }
 
-        // Capping to realistic bizcocho max sizes usually 5+ lbs, 
-        // we just output what math says.
-
         const formatLbs = (lbs) => {
             if (lbs === 0.5) return '1/2 libra';
             if (lbs === 1) return '1 libra';
@@ -292,7 +300,6 @@ class PortionCalculator extends HTMLElement {
         };
 
         // Portions range estimation
-        // For standard 1lb: 20 - 30 portions.
         const minMsg = Math.floor(recommendedLbs * 20);
         const maxMsg = Math.floor(recommendedLbs * 28);
 
@@ -302,46 +309,39 @@ class PortionCalculator extends HTMLElement {
             maxMsg: maxMsg
         };
 
-        // Update UI
-        this.querySelector('#res-guests').textContent = this.guests;
+        // Update UI Results
+        this.querySelector('#res-guests').textContent = this.guests === 150 ? '150+' : this.guests;
         this.querySelector('#res-lbs').textContent = this.recommendation.lbsText;
-        this.querySelector('#res-range').textContent = `Rinde aproximadamente entre ${minMsg} y ${maxMsg} porciones`;
+        this.querySelector('#res-range').textContent = `Ideal para servir entre ${minMsg} y ${maxMsg} porciones`;
     }
 
     showStep2() {
         const step1 = this.querySelector('#calc-step-1');
         const step2 = this.querySelector('#calc-step-2');
 
-        step1.classList.add('opacity-0');
+        step1.classList.add('opacity-0', '-translate-y-4');
         setTimeout(() => {
             step1.classList.add('hidden');
-            step2.classList.remove('hidden');
-            // small delay to allow display block to take effect before opacity transition
-            setTimeout(() => {
-                step2.classList.remove('opacity-0');
-                step2.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }, 50);
-        }, 300); // Wait for fade out
+            step2.classList.remove('hidden', 'opacity-0', 'translate-y-4');
+            step2.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 400);
     }
 
     showStep1() {
         const step1 = this.querySelector('#calc-step-1');
         const step2 = this.querySelector('#calc-step-2');
 
-        step2.classList.add('opacity-0');
+        step2.classList.add('opacity-0', 'translate-y-4');
         setTimeout(() => {
             step2.classList.add('hidden');
-            step1.classList.remove('hidden');
-            setTimeout(() => {
-                step1.classList.remove('opacity-0');
-                step1.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }, 50);
-        }, 300);
+            step1.classList.remove('hidden', 'opacity-0', '-translate-y-4');
+            step1.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 400);
     }
 
     sendToWhatsApp() {
-        const phoneNumber = '8296469680'; // Obtained from main.js implementation
-        const message = `Hola! Usé la calculadora del sitio.\nEl evento es para ${this.guests} personas y el sistema recomienda un bizcocho de ${this.recommendation.lbsText}.\nQuisiera ver opciones disponibles.`;
+        const phoneNumber = '8296469680';
+        const message = `¡Hola! Usé la calculadora de porciones en su web.\n\n📊 Resultados:\n- Invitados: ${this.guests === 150 ? '150+' : this.guests}\n- Tipo de evento: ${this.eventType === 'cumpleanos' ? 'Cumpleaños' : 'Boda / Formal'}\n- Tamaño de porción: ${this.portionStyle === 'normal' ? 'Normal' : 'Generoso'}\n- Recomendación: ${this.recommendation.lbsText}\n\nQuisiera consultar disponibilidad y sabores.`;
         const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(waUrl, '_blank');
     }
