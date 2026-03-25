@@ -18,14 +18,14 @@ class PortionCalculator extends HTMLElement {
 
     getHtml() {
         return `
-        <section id="calculadora-de-porciones" class="py-16 lg:py-24 px-4 md:px-8 bg-gradient-to-r from-white via-white to-[#FFF7D9] overflow-hidden relative font-sans">
+        <section id="calculadora-de-porciones" class="py-16 lg:py-24 px-4 md:px-8 bg-slate-50 overflow-hidden relative font-sans">
             <div class="container mx-auto relative z-10">
                 <!-- Two Column Layout -->
                 <div class="grid lg:grid-cols-[1fr_1.25fr] gap-12 lg:gap-20 items-start">                    
                     <!-- Left Column: Context -->
                     <div class="flex flex-col justify-start space-y-6 lg:pt-10" data-aos="fade-right">
                         <div>
-                            <span class="inline-block bg-yellow-300 text-gray-900 font-bold px-4 py-1.5 rounded-full text-xs mb-6 uppercase tracking-widest shadow-sm">
+                            <span class="inline-block bg-yellow-300 text-gray-900 font-bold italic px-3 py-1.5 rounded-full text-xs mb-2 uppercase tracking-widest shadow-sm">
                                 Herramienta gratuita
                             </span>
                             <div class="flex items-center portion-title-container mb-6">
@@ -77,32 +77,29 @@ class PortionCalculator extends HTMLElement {
                     </div>
 
                     <!-- Right Column: Calculator Card -->
-                    <div data-aos="fade-left" class="relative max-w-full z-10 bg-white/90 
-                    rounded-[2.5rem] shadow-[0_20px_50px_rgba(236,72,153,0.12)] border border-white p-2 md:p-4 overflow-hidden backdrop-blur-xl" 
-                    style="-webkit-backdrop-filter: blur(15px);">                        
+                    <div data-aos="fade-left" class="relative max-w-full z-10 bg-white/95 
+                    rounded-[3rem] border border-gray-400 shadow-[0_24px_60px_rgba(0,0,0,0.08)] border border-gray-100 p-4 md:p-8 overflow-hidden backdrop-blur-xl" 
+                    style="-webkit-backdrop-filter: blur(20px);">                        
                         <!-- Step 1: Input Form -->
                         <div id="calc-step-1" class="p-6 md:p-8 transition-all duration-500 ease-in-out">                                
                             <!-- Unified Guest Selection (Segmented Pills) -->
                             <div class="mb-12">
                                 <label class="flex items-center gap-3 mb-6">
-                                    <img src="public/icons/person-team-icon.svg" class="w-10 h-10" alt="Invitados"> 
-                                    <span class="text-gray-900 font-[800] text-2xl tracking-tight">¿Cuántos invitados tienes?</span>
+                                    <img src="public/icons/person-team-icon.svg" class="w-8 h-8" alt="Invitados">
+                                    <span class="text-gray-900 font-[700] text-2xl tracking-tight">¿Cuántos invitados tienes?</span>
                                 </label>
                                 
-                                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 p-1.5 bg-gray-50 rounded-[2rem] border border-gray-100 shadow-inner">
-                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="10">10</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="15">15</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="20">20</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="25">25</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="30">30</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="40">40</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="50">50</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="75">75</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="100">100</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3 px-2 rounded-2xl text-sm font-bold transition-all duration-300 bg-white text-gray-500 border border-gray-100 hover:border-pink-200 hover:text-pink-600 hover:shadow-sm" data-val="150">150+</button>
+                                <div class="grid grid-cols-4 gap-3 md:gap-4 p-1">
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="10">10</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="15">15</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="20">20</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="25">25</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="30">30</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="40">40</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="50">50</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="100">100+</button>                                    
                                 </div>
                             </div>
-
                             <!-- Options Grid -->
                             <div class="space-y-10 mb-12">
                                 <!-- Event Type -->
@@ -110,9 +107,9 @@ class PortionCalculator extends HTMLElement {
                                     <label class="flex items-center gap-2 text-gray-800 font-bold mb-4 text-lg">
                                         <img src="public/icons/celebration-icon.svg" class="w-7 h-7" alt="Evento"> Tipo de evento
                                     </label>
-                                    <div class="flex p-1.5 bg-[#F0F7E6] rounded-full border border-gray-100 shadow-sm gap-1">
-                                        <button type="button" class="event-type-pill cursor-pointer flex-1 py-3 text-sm font-bold rounded-full transition-all duration-300 text-gray-600 hover:text-pink-600 bg-transparent" data-val="cumpleanos">Cumpleaños</button>
-                                        <button type="button" class="event-type-pill cursor-pointer flex-1 py-3 text-sm font-bold rounded-full transition-all duration-300 text-gray-600 hover:text-pink-600 bg-transparent" data-val="boda">Boda / Formal</button>
+                                    <div class="flex gap-3 md:gap-4 p-1">
+                                        <button type="button" class="event-type-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="cumpleanos">Cumpleaños</button>
+                                        <button type="button" class="event-type-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="boda">Boda / Formal</button>
                                     </div>
                                 </div>                                    
 
@@ -121,20 +118,20 @@ class PortionCalculator extends HTMLElement {
                                     <label class="flex items-center gap-2 text-gray-800 font-bold mb-4 text-lg">
                                         <img src="public/icons/cake-slice.svg" class="w-6 h-6" alt="Porción"> Tamaño de porciones
                                     </label>
-                                    <div class="flex p-1.5 bg-[#F0F7E6] rounded-full border border-gray-100 shadow-sm gap-1">
-                                        <button type="button" class="portion-style-pill cursor-pointer flex-1 py-3 text-sm font-bold rounded-full transition-all duration-300 text-gray-600 hover:text-pink-600 bg-transparent" data-val="normal">Normal</button>
-                                        <button type="button" class="portion-style-pill cursor-pointer flex-1 py-3 text-sm font-bold rounded-full transition-all duration-300 text-gray-600 hover:text-pink-600 bg-transparent" data-val="generosa">Generoso</button>
+                                    <div class="flex gap-3 md:gap-4 p-1">
+                                        <button type="button" class="portion-style-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="normal">Normal</button>
+                                        <button type="button" class="portion-style-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="generosa">Generoso</button>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Action Button -->
                             <div class="pt-4">
-                                <button id="btn-calculate" disabled class="group relative w-full max-w-md mx-auto bg-gray-200 text-gray-400 font-black py-4 px-8 rounded-full shadow-none transition-all duration-500 text-xl flex justify-center items-center gap-3 cursor-not-allowed tracking-wider overflow-hidden">
+                                <button id="btn-calculate" disabled class="group relative w-full max-w-md mx-auto font-black py-5 px-8 rounded-2xl transition-all duration-300 text-base md:text-lg flex justify-center items-center gap-3 tracking-wider overflow-hidden bg-gray-100 text-gray-400 cursor-not-allowed">
                                     <span class="relative z-10 flex items-center justify-center">
                                         Ver resultados recomendados
-                                        <svg class="w-6 h-6 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        <svg class="w-6 h-6 ml-2 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                         </svg>
                                     </span>
                                 </button>                                
@@ -161,12 +158,12 @@ class PortionCalculator extends HTMLElement {
                                     </div>
                                 </div>
 
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 w-full">
-                                    <a href="#catalog" class="btn-catalog cursor-pointer bg-white border-2 border-pink-300 text-pink-500 hover:bg-pink-50 font-black py-4 px-6 rounded-3xl shadow-sm transition-all text-center">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10 w-full">
+                                    <a href="#catalog" class="btn-catalog cursor-pointer border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white shadow-[0_8px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_25px_rgba(0,0,0,0.15)] hover:-translate-y-1 font-black py-4 px-6 rounded-2xl transition-all text-center flex items-center justify-center">
                                         Explorar Sabores
                                     </a>
-                                    <button id="btn-whatsapp" class="bg-[#25D366] hover:bg-[#20bd5a] hover:scale-[1.02] cursor-pointer text-white font-black py-4 px-6 rounded-3xl shadow-lg transition-all flex items-center justify-center gap-3">
-                                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.252.38 2.404 1.01 3.385l-.837 3.054 3.125-.82c.943.582 2.052.923 3.238.923 3.181 0 5.767-2.585 5.767-5.766S15.212 6.172 12.031 6.172zm3.176 8.35c-.156.44-.816.843-1.157.904-.34.062-.782.124-1.993-.346-1.503-.585-2.548-2.128-2.627-2.232-.078-.103-.627-.835-.627-1.593 0-.757.391-1.13.535-1.282.146-.153.314-.191.419-.191.104 0 .208.001.294.005.093.003.218-.035.342.261.129.311.439 1.066.478 1.144.039.078.059.169.019.273-.039.103-.059.168-.137.26-.078.092-.167.208-.235.286-.078.093-.162.196-.059.375.103.179.462.766 1.037 1.28 1.488 1.334 2.146 1.547 2.333 1.624.187.078.297.065.406-.052.11-.117.478-.558.608-.75.129-.192.259-.16.429-.098.169.063 1.077.509 1.261.6.185.093.308.14.354.218.046.078.046.452-.11.892zM12.031 2C6.496 2 2 6.496 2 12.031c0 1.77.461 3.435 1.259 4.887L2 22l5.228-1.205C8.618 21.548 10.279 22 12.031 22 17.566 22 22 17.566 22 12.031 22 6.496 17.566 2 12.031 2z"/></svg>
+                                    <button id="btn-whatsapp" class="bg-gray-900 border-2 border-gray-900 text-white shadow-[0_8px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_12px_25px_rgba(0,0,0,0.25)] hover:-translate-y-1 font-black py-4 px-6 rounded-2xl transition-all flex items-center justify-center gap-3">
+                                        <svg class="w-6 h-6 fill-[#25D366]" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.252.38 2.404 1.01 3.385l-.837 3.054 3.125-.82c.943.582 2.052.923 3.238.923 3.181 0 5.767-2.585 5.767-5.766S15.212 6.172 12.031 6.172zm3.176 8.35c-.156.44-.816.843-1.157.904-.34.062-.782.124-1.993-.346-1.503-.585-2.548-2.128-2.627-2.232-.078-.103-.627-.835-.627-1.593 0-.757.391-1.13.535-1.282.146-.153.314-.191.419-.191.104 0 .208.001.294.005.093.003.218-.035.342.261.129.311.439 1.066.478 1.144.039.078.059.169.019.273-.039.103-.059.168-.137.26-.078.092-.167.208-.235.286-.078.093-.162.196-.059.375.103.179.462.766 1.037 1.28 1.488 1.334 2.146 1.547 2.333 1.624.187.078.297.065.406-.052.11-.117.478-.558.608-.75.129-.192.259-.16.429-.098.169.063 1.077.509 1.261.6.185.093.308.14.354.218.046.078.046.452-.11.892zM12.031 2C6.496 2 2 6.496 2 12.031c0 1.77.461 3.435 1.259 4.887L2 22l5.228-1.205C8.618 21.548 10.279 22 12.031 22 17.566 22 22 17.566 22 12.031 22 6.496 17.566 2 12.031 2z"/></svg>
                                         Pedir por WhatsApp
                                     </button>
                                 </div>
@@ -198,24 +195,24 @@ class PortionCalculator extends HTMLElement {
             const isReady = this.guests && this.eventType && this.portionStyle;
             if (isReady) {
                 calcBtn.disabled = false;
-                calcBtn.classList.remove('bg-gray-200', 'text-gray-400', 'cursor-not-allowed', 'shadow-none');
-                calcBtn.classList.add('bg-gradient-to-r', 'from-pink-400/90', 'to-pink-300/90', 'text-white', 'cursor-pointer', 'shadow-[0_10px_25px_rgba(236,72,153,0.15)]', 'hover:shadow-[0_15px_30px_rgba(236,72,153,0.25)]', 'hover:scale-[1.02]');
+                calcBtn.classList.remove('bg-gray-100', 'text-gray-400', 'cursor-not-allowed');
+                calcBtn.classList.add('bg-gray-900', 'text-white', 'cursor-pointer', 'shadow-[0_12px_30px_rgba(0,0,0,0.25)]', 'hover:shadow-[0_16px_40px_rgba(0,0,0,0.3)]', 'hover:-translate-y-1');
             } else {
                 calcBtn.disabled = true;
-                calcBtn.classList.add('bg-gray-200', 'text-gray-400', 'cursor-not-allowed', 'shadow-none');
-                calcBtn.classList.remove('bg-gradient-to-r', 'from-pink-400/90', 'to-pink-300/90', 'text-white', 'cursor-pointer', 'shadow-[0_10px_25px_rgba(236,72,153,0.15)]', 'hover:shadow-[0_15px_30px_rgba(236,72,153,0.25)]', 'hover:scale-[1.02]');
+                calcBtn.classList.add('bg-gray-100', 'text-gray-400', 'cursor-not-allowed');
+                calcBtn.classList.remove('bg-gray-900', 'text-white', 'cursor-pointer', 'shadow-[0_12px_30px_rgba(0,0,0,0.25)]', 'hover:shadow-[0_16px_40px_rgba(0,0,0,0.3)]', 'hover:-translate-y-1');
             }
         };
 
         const updatePillStyles = (pills, activeVal) => {
             pills.forEach(pill => {
-                const isActive = pill.dataset.val === activeVal;
+                const isActive = pill.dataset.val === String(activeVal);
                 if (isActive) {
-                    pill.classList.remove('bg-white', 'bg-transparent', 'text-gray-500', 'text-gray-600', 'border-gray-100');
-                    pill.classList.add('bg-pink-100', 'text-pink-600', 'border-pink-300', 'shadow-sm', 'scale-[1.02]');
+                    pill.classList.remove('bg-white', 'text-gray-500', 'border-gray-200', 'shadow-[0_4px_10px_rgba(0,0,0,0.03)]', 'hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]', 'hover:-translate-y-1');
+                    pill.classList.add('bg-gray-900', 'border-gray-900', 'text-white', 'shadow-[0_12px_24px_rgba(0,0,0,0.2)]', '-translate-y-1');
                 } else {
-                    pill.classList.add('text-gray-600');
-                    pill.classList.remove('bg-pink-100', 'text-pink-600', 'border-pink-300', 'shadow-sm', 'scale-[1.02]');
+                    pill.classList.add('bg-white', 'text-gray-500', 'border-gray-200', 'shadow-[0_4px_10px_rgba(0,0,0,0.03)]', 'hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]', 'hover:-translate-y-1');
+                    pill.classList.remove('bg-gray-900', 'border-gray-900', 'text-white', 'shadow-[0_12px_24px_rgba(0,0,0,0.2)]', '-translate-y-1');
                 }
             });
             validateForm();

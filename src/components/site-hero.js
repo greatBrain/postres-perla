@@ -55,9 +55,9 @@ class SiteHero extends HTMLElement {
                                     </button>
                                 </a>
                                 <a href="#calculadora-de-porciones" class="w-full sm:w-auto">
-                                    <button class="cursor-pointer w-full sm:w-auto overflow-hidden relative bg-white border-2 border-pink-400 text-pink-600 font-bold py-3 px-6 sm:px-8
+                                    <button class="cursor-pointer w-full sm:w-auto overflow-hidden relative bg-white border-2 border-gray-800 text-gray-700 font-bold py-3 px-6 sm:px-8
                                    rounded-full shadow-md transition duration-500 ease-in-out
-                                   hover:bg-pink-50 hover:border-pink-500 hover:scale-105 hover:-translate-y-1
+                                   hover:bg-pink-50 hover:border-gray-800 hover:scale-105 hover:-translate-y-1
                                    hover:shadow-lg flex justify-center items-center">
                                         <svg class="w-5 h-5 ml-2 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
