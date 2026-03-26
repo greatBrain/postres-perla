@@ -25,7 +25,7 @@ class PortionCalculator extends HTMLElement {
                     <!-- Left Column: Context -->
                     <div class="flex flex-col justify-start space-y-6 lg:pt-10" data-aos="fade-right">
                         <div>
-                            <span class="inline-block bg-yellow-300 text-gray-900 font-bold italic px-3 py-1.5 rounded-full text-xs mb-2 uppercase tracking-widest shadow-sm">
+                            <span class="inline-block bg-yellow-200 text-gray-900 font-bold italic px-3 py-1.5 rounded-full text-xs mb-2 uppercase tracking-widest shadow-sm">
                                 Herramienta gratuita
                             </span>
                             <div class="flex items-center portion-title-container mb-6">
@@ -78,7 +78,7 @@ class PortionCalculator extends HTMLElement {
 
                     <!-- Right Column: Calculator Card -->
                     <div data-aos="fade-left" class="relative max-w-full z-10 bg-white/95 
-                    rounded-[3rem] border border-gray-400 shadow-[0_24px_60px_rgba(0,0,0,0.08)] border border-gray-100 p-4 md:p-8 overflow-hidden backdrop-blur-xl" 
+                    rounded-[3rem] border border-gray-500 shadow-[0_24px_60px_rgba(0,0,0,0.08)] border border-gray-100 p-4 md:p-8 overflow-hidden backdrop-blur-xl" 
                     style="-webkit-backdrop-filter: blur(20px);">                        
                         <!-- Step 1: Input Form -->
                         <div id="calc-step-1" class="p-6 md:p-8 transition-all duration-500 ease-in-out">                                
@@ -89,15 +89,15 @@ class PortionCalculator extends HTMLElement {
                                     <span class="text-gray-900 font-[700] text-2xl tracking-tight">¿Cuántos invitados tienes?</span>
                                 </label>
                                 
-                                <div class="grid grid-cols-4 gap-3 md:gap-4 p-1">
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="10">10</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="15">15</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="20">20</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="25">25</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="30">30</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="40">40</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="50">50</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="100">100+</button>                                    
+                                <div class="grid grid-cols-4 gap-3 md:gap-4 p-3 bg-gray-50 rounded-lg border border-gray-300">
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white  text-gray-700 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="10">10</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white  text-gray-700 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="15">15</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white  text-gray-700 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="20">20</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white  text-gray-700 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="25">25</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white  text-gray-700 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="30">30</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white  text-gray-700 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="40">40</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white  text-gray-700 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="50">50</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white  text-gray-700 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="100">100+</button>                                    
                                 </div>
                             </div>
                             <!-- Options Grid -->
@@ -108,8 +108,8 @@ class PortionCalculator extends HTMLElement {
                                         <img src="public/icons/celebration-icon.svg" class="w-7 h-7" alt="Evento"> Tipo de evento
                                     </label>
                                     <div class="flex gap-3 md:gap-4 p-1">
-                                        <button type="button" class="event-type-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="cumpleanos">Cumpleaños</button>
-                                        <button type="button" class="event-type-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="boda">Boda / Formal</button>
+                                        <button type="button" class="event-type-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-400 text-gray-600 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="cumpleanos">Cumpleaños</button>
+                                        <button type="button" class="event-type-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-400 text-gray-600 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="boda">Boda / Formal</button>
                                     </div>
                                 </div>                                    
 
@@ -119,15 +119,15 @@ class PortionCalculator extends HTMLElement {
                                         <img src="public/icons/cake-slice.svg" class="w-6 h-6" alt="Porción"> Tamaño de porciones
                                     </label>
                                     <div class="flex gap-3 md:gap-4 p-1">
-                                        <button type="button" class="portion-style-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="normal">Normal</button>
-                                        <button type="button" class="portion-style-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-200 text-gray-500 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="generosa">Generoso</button>
+                                        <button type="button" class="portion-style-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-400 text-gray-600 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="normal">Normal</button>
+                                        <button type="button" class="portion-style-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-gray-400 text-gray-600 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="generosa">Generoso</button>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Action Button -->
-                            <div class="pt-4">
-                                <button id="btn-calculate" disabled class="group relative w-full max-w-md mx-auto font-black py-5 px-8 rounded-2xl transition-all duration-300 text-base md:text-lg flex justify-center items-center gap-3 tracking-wider overflow-hidden bg-gray-100 text-gray-400 cursor-not-allowed">
+                            <div class="pt-3">
+                                <button id="btn-calculate" disabled class="group relative w-full max-w-md mx-auto font-semibold py-3 px-6 rounded-3xl transition-all duration-300 text-base md:text-lg flex justify-center items-center gap-3 tracking-wider overflow-hidden bg-gray-100 text-gray-400 cursor-not-allowed">
                                     <span class="relative z-10 flex items-center justify-center">
                                         Ver resultados recomendados
                                         <svg class="w-6 h-6 ml-2 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -196,11 +196,11 @@ class PortionCalculator extends HTMLElement {
             if (isReady) {
                 calcBtn.disabled = false;
                 calcBtn.classList.remove('bg-gray-100', 'text-gray-400', 'cursor-not-allowed');
-                calcBtn.classList.add('bg-gray-900', 'text-white', 'cursor-pointer', 'shadow-[0_12px_30px_rgba(0,0,0,0.25)]', 'hover:shadow-[0_16px_40px_rgba(0,0,0,0.3)]', 'hover:-translate-y-1');
+                calcBtn.classList.add('bg-gray-900/90', 'text-white', 'cursor-pointer', 'shadow-[0_12px_30px_rgba(0,0,0,0.25)]', 'hover:shadow-[0_16px_40px_rgba(0,0,0,0.3)]', 'hover:-translate-y-1');
             } else {
                 calcBtn.disabled = true;
                 calcBtn.classList.add('bg-gray-100', 'text-gray-400', 'cursor-not-allowed');
-                calcBtn.classList.remove('bg-gray-900', 'text-white', 'cursor-pointer', 'shadow-[0_12px_30px_rgba(0,0,0,0.25)]', 'hover:shadow-[0_16px_40px_rgba(0,0,0,0.3)]', 'hover:-translate-y-1');
+                calcBtn.classList.remove('bg-gray-900/90', 'text-white', 'cursor-pointer', 'shadow-[0_12px_30px_rgba(0,0,0,0.25)]', 'hover:shadow-[0_16px_40px_rgba(0,0,0,0.3)]', 'hover:-translate-y-1');
             }
         };
 
@@ -208,11 +208,11 @@ class PortionCalculator extends HTMLElement {
             pills.forEach(pill => {
                 const isActive = pill.dataset.val === String(activeVal);
                 if (isActive) {
-                    pill.classList.remove('bg-white', 'text-gray-500', 'border-gray-200', 'shadow-[0_4px_10px_rgba(0,0,0,0.03)]', 'hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]', 'hover:-translate-y-1');
-                    pill.classList.add('bg-gray-900', 'border-gray-900', 'text-white', 'shadow-[0_12px_24px_rgba(0,0,0,0.2)]', '-translate-y-1');
+                    pill.classList.remove('bg-white', 'text-gray-500', 'border-gray-400', 'shadow-[0_4px_10px_rgba(0,0,0,0.03)]', 'hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]', 'hover:-translate-y-1');
+                    pill.classList.add('bg-pink-700/80', 'text-white', 'shadow-[0_12px_24px_rgba(0,0,0,0.2)]');
                 } else {
-                    pill.classList.add('bg-white', 'text-gray-500', 'border-gray-200', 'shadow-[0_4px_10px_rgba(0,0,0,0.03)]', 'hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]', 'hover:-translate-y-1');
-                    pill.classList.remove('bg-gray-900', 'border-gray-900', 'text-white', 'shadow-[0_12px_24px_rgba(0,0,0,0.2)]', '-translate-y-1');
+                    pill.classList.add('bg-white', 'text-gray-500', 'border-gray-400', 'shadow-[0_4px_10px_rgba(0,0,0,0.03)]', 'hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]', 'hover:-translate-y-1');
+                    pill.classList.remove('bg-pink-700/80', 'text-white', 'shadow-[0_12px_24px_rgba(0,0,0,0.2)]', '-translate-y-1');
                 }
             });
             validateForm();
