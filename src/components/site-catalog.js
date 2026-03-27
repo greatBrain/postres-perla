@@ -61,9 +61,6 @@ class SiteCatalog extends HTMLElement {
                                      lg:bg-white lg:rounded-full lg:shadow-lg
                                      md:bg-white md:rounded-full md:shadow-lg
                                      sm:bg-white sm:rounded-full sm:shadow-lg">
-                    
-                    
-
                     <button data-category="pasteles" @click="activeCategory = 'pasteles'" :class="{
                                     'bg-yellow-200 text-gray-800 border-transparent shadow-md md:bg-yellow-200 md:border-gray-200 md:text-gray-800 md:shadow-lg': activeCategory === 'pasteles',
                                     'bg-white text-gray-700 border-white shadow-sm md:bg-transparent md:text-gray-600 md:border-transparent md:shadow-none': activeCategory !== 'pasteles'
@@ -112,7 +109,7 @@ class SiteCatalog extends HTMLElement {
                         <div @click="showProductModal(product)" class="cursor-pointer w-full mt-3 mb-3 sm:w-1/2 md:w-1/2 lg:w-1/4 px-3 flex justify-center"
                             data-aos="fade-up">
                             <div class="img-box bg-white rounded-[2rem] shadow-sm hover:shadow-2xl transition-all duration-500
-                                overflow-hidden max-w-[310px] flex flex-col border border-gray-300">
+                                overflow-hidden max-w-[310px] flex flex-col border border-pink-200">
                                 
                                 <!-- Contenedor de Imagen (Like Concept #1) -->
                                 <div class="img-container overflow-hidden p-3 pb-0">
