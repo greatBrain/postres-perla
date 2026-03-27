@@ -1,58 +1,56 @@
 class SiteHero extends HTMLElement {
-    constructor() {
-        super();
-    }
-
     connectedCallback() {
         this.innerHTML = `
-    <section class="banner parallax-bg relative w-full h-screen max-h-[700px] md:max-h-full lg:max-h-full
-            bg-[url('public/images/cookie-banner.webp')]
-            lg:bg-[url('public/images/cookie-banner.webp')]
-            xl:bg-[url('public/images/cookie-banner.webp')]
-            md:bg-[url('public/images/cookie-banner.webp')]
-            sm:bg-[url('public/images/cookie-banner.webp')]
-            xs:bg-[url('public/images/cookie-mobile.webp')]
-            bg-[95%_50%] bg-cover bg-no-repeat overflow-hidden">
-        <div class="initial-snow snow-area" id="snow-container"></div>
-        <div class="relative h-full transition-transform duration-500 ease-in-out" id="slider-container">
-            <div class="absolute w-full h-full overflow-hidden">
-                <div class="flex h-full items-center justify-center md:justify-start w-full px-4 md:px-20">
-                    <div class="relative flex flex-col sm:flex-row items-center md:items-start gap-4 sm:gap-2 py-6 px-4 sm:px-2 sm:p-2 max-w-6xl
-                     lg:max-w-4xl md:max-w-6xl sm:max-w-6xl                    
-                     sm:scale-100 scale-95">
-                        <img src="public/images/vectors/cupcake.svg"
-                            class="animate-drop-bounce w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 mt-2 md:mt-0 shrink-0 drop-shadow-xl"
-                            alt="Cupcake vector imagen" />
-                        <div class="text-center sm:text-left bg-white/70 backdrop-blur-xs rounded-lg p-4
-                                 lg:bg-transparent md:bg-transparent lg:backdrop-blur-none md:backdrop-blur-none lg:p-0 md:p-0"
-                            data-aos="fade-up" data-aos-delay="200">
-                            <h1
-                                class="banner-slide-title text-pink-500 sm:text-shadow-xl lg:text-pink-500 md:text-pink-500 ubuntu-font-bold font-semibold text-shadow-2xs text-5xl sm:text-6xl md:text-6xl lg:text-7xl xs:text-8xl leading-tight">
-                                ¿Se te antoja algo rico?
-                            </h1>
-                            <p
-                                class="text-base text-gray-900 text-xl lg:text-gray-700 md:text-gray-700 lg:md:text-2xl md:text-2xl sm:text-xl md:text-xl mt-3 lato-regular mb-3">
-                                Prueba ahora nuestros <strong class="text-gray-900 font-bold px-1">productos 100%
-                                    artesanales</strong>, con una variedad de opciones irresistibles y preparados con
-                                ingredientes premium
-                                que <strong class="text-gray-800">¡sentirás en cada bocado!</strong>
-                            </p>
-                            <a href="#catalog">
-                                <button class="w-xs mt-5 lg:w-sm md:w-sm mt-5 overflow-hidden relative bg-gray-800 text-yellow-300 font-bold py-2 px-5 sm:py-3 sm:px-8
-                               rounded-full shadow-md shadow-2xl transition duration-500 ease-in-out
-                               before:content-[''] before:absolute before:top-0 before:left-0
-                               before:w-0 before:h-full before:bg-white/50 before:transition-all
-                               before:duration-300 hover:scale-105 before:ease-in-out hover:before:w-full
-                               hover:text-gray-900 hover:shadow-3xl">
-                                    <svg class="w-4 h-4 inline-block ml-2 relative z-10" fill="none"
-                                        stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
-                                            d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                    <span class="relative z-10">Haz tu pedido aquí</span>
-                            </a>
-                        </div>
-                    </div>
+    <section class="banner parallax-bg relative w-full  h-[55vh] md:h-[67vh] lg:h-[95vh] overflow-hidden
+                 bg-[url('public/images/cookie-banner.webp')]
+                 bg-cover bg-no-repeat"
+             aria-label="Banner principal Postres Perla">
+
+        <!-- Snow particles layer -->
+        <div class="initial-snow snow-area absolute inset-0 z-10 pointer-events-none" id="snow-container"></div>
+
+        <!-- Content layer:
+             Mobile  → items-end + pb (texto en la zona baja, cookie arriba)
+             md+     → items-center (texto centrado verticalmente, cookie a la derecha) -->
+        <div class="relative h-full z-20 flex items-end md:items-center lg:items-center">
+            <div class="w-full max-w-4xl px-5 sm:px-10 md:px-16 lg:px-24 xl:px-32
+                        pb-14 sm:pb-16 md:pb-0">
+
+                <!-- Text block
+                     Mobile: glassmorphism card para legibilidad sobre la imagen
+                     md+: sin fondo (imagen no se superpone al texto) -->
+                <div class="max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl
+                            rounded-2xl p-5 sm:p-6 md:p-0
+                            bg-white/65 backdrop-blur-sm
+                            md:bg-transparent md:backdrop-blur-none
+                            shadow-sm md:shadow-none"
+                     data-aos="fade-up" data-aos-duration="600">
+                    <h1 class="ubuntu-font-bold font-bold leading-tight text-gray-800
+                               text-4xl sm:text-5xl md:text-6xl lg:text-6xl">
+                        Hechos a mano, para disfrutar hoy mismo
+                    </h1>
+                    <p class="lato-regular mt-6 mb-6 text-gray-800  text-sm sm:text-base md:text-xl lg:text-2xl">
+                        Prueba nuestros productos 100% artesanales, elaborados con ingredientes de calidad 
+                        y una variedad pensada para cada antojo. <strong class="text-stone-900">¡Sabor que se nota en cada bocado!</strong>
+                    </p>
+
+                    <a href="#catalog"
+                       class="inline-flex items-center gap-2
+                              bg-pink-500 text-white font-bold
+                              py-2.5 px-6 sm:py-3 sm:px-8
+                              rounded-full shadow-lg
+                              relative overflow-hidden
+                              transition-all duration-300 ease-in-out
+                              hover:scale-105 hover:shadow-2xl hover:text-gray-900
+                              before:content-[''] before:absolute before:inset-0
+                              before:bg-white/20 before:translate-x-[-100%]
+                              hover:before:translate-x-0 before:transition-transform before:duration-300">
+                        <svg class="w-4 h-4 relative z-10 shrink-0" fill="none"
+                             stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7"/>
+                        </svg>
+                        <span class="relative z-10 whitespace-nowrap">Haz tu pedido aquí</span>
+                    </a>
                 </div>
             </div>
         </div>
