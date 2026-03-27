@@ -2,20 +2,16 @@ class SiteNavbar extends HTMLElement {
     constructor() {
         super();
     }
-
-    connectedCallback() {
-        // Eliminar código duplicado de los links usando un array
+    connectedCallback() {        
         const links = [
             { href: '#catalog', text: 'Productos', extraClass: '' },
             { href: '#contact', text: 'Contáctanos', extraClass: '' },
             { href: '#about-me', text: 'Conócenos', extraClass: '' },
             { href: '#testimonials', text: 'Testimonios', extraClass: 'hidden md:block lg:block' }
-        ];
-
-        // Se elimina la clase 'nav-btn' causante del estilo por defecto. 
+        ];        
         // Estilo 'píldora' solo en hover (hover:bg-pink-500 hover:text-white).
         const linksHTML = links.map(link => `
-            <a href="${link.href}" class="whitespace-nowrap px-4 py-2 transition-all duration-300 text-sm sm:text-lg hover:bg-pink-500 hover:text-white rounded-full ${link.extraClass}">
+            <a href="${link.href}" class="whitespace-nowrap px-4 py-2 transition-all duration-400 text-sm sm:text-lg hover:bg-pink-500 hover:text-white rounded-full ${link.extraClass}">
                 ${link.text}
             </a>
         `).join('');
@@ -27,7 +23,7 @@ class SiteNavbar extends HTMLElement {
         
         <a href="#" class="flex brand-logo flex-nowrap items-center shrink-0 py-2 lg:py-5">
             <img src="./public/icons/P-perla-logo.png" alt="Logo de la pastelería Postres Perla" class="h-10 w-10 md:h-10 md:w-10
-            lg:h-12 lg:w-12 drop-shadow-xl rounded-full border-[3px] lg:border-4 border-pink-100" />
+            lg:h-12 lg:w-12  rounded-full border-[3px] lg:border-4 border-pink-100" />
             <span class="hidden md:block text-pink-600 pl-2 text-2xl lg:text-3xl font-bold md:font-normal">Postres Perla</span>
         </a>
         
@@ -35,8 +31,7 @@ class SiteNavbar extends HTMLElement {
         md:overflow-x-hidden py-1 w-full pl-3 lg:pl-0 lg:w-auto lg:justify-end">
             ${linksHTML}
         </div>
-    </nav>
-        `;
+    </nav>`;
 
         // Lógica de Smart Sticky Header unificada para móviles, tablets y desktop
         const nav = this.querySelector('#smart-navbar');
@@ -51,10 +46,8 @@ class SiteNavbar extends HTMLElement {
             } else {
                 nav.classList.remove('-translate-y-[150%]');
             }
-
             lastScrollY = currentScrollY;
         }, { passive: true });
     }
 }
-
 customElements.define('site-navbar', SiteNavbar);
