@@ -9,6 +9,9 @@ class SiteHero extends HTMLElement {
         <!-- Snow particles layer -->
         <div class="initial-snow snow-area absolute inset-0 z-10 pointer-events-none" id="snow-container"></div>
 
+        <!-- Gradient Overlay Warm Pink -->
+        <div class="absolute inset-0 bg-gradient-to-t from-pink-600/50 via-pink-400/20 to-transparent z-0 pointer-events-none mix-blend-multiply"></div>
+
         <!-- Content layer:
              Mobile  → items-end + pb (texto en la zona baja, cookie arriba)
              md+     → items-center (texto centrado verticalmente, cookie a la derecha) -->
@@ -16,32 +19,35 @@ class SiteHero extends HTMLElement {
             <div class="w-full max-w-4xl px-5 sm:px-10 md:px-16 lg:px-24 xl:px-32
                         pb-14 sm:pb-16 md:pb-0">
 
-                <!-- Text block
-                     Mobile: glassmorphism card para legibilidad sobre la imagen
-                     md+: sin fondo (imagen no se superpone al texto) -->
-                <div class="max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl
-                            rounded-2xl p-5 sm:p-6 md:p-0
-                            bg-white/65 backdrop-blur-sm
-                            md:bg-transparent md:backdrop-blur-none
-                            shadow-sm md:shadow-none"
+                <!-- Text block con Glassmorphism en todas las resoluciones para máxima legibilidad -->
+                <div class="relative max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-3xl
+                            rounded-3xl lg:rounded-[2.5rem] p-6 sm:p-8 md:p-10 lg:p-12
+                            bg-white/40 backdrop-blur-md border border-white/60
+                            shadow-[0_8px_32px_rgba(236,72,153,0.15)]"
                      data-aos="fade-up" data-aos-duration="600">
-                    <h1 class="ubuntu-font-bold font-bold leading-tight text-gray-800
-                               text-4xl sm:text-5xl md:text-6xl lg:text-6xl">
+                    
+                    <!-- Decorative Cupcake Vector -->
+                    <div class="absolute -top-6 -right-6 md:-top-16 md:-right-12 lg:-top-4 lg:-right-4 pointer-events-none drop-shadow-2xl animate-float">
+                        <img src="public/images/vectors/cupcake.svg" alt="Decoración Cupcake" 
+                             class="w-24 h-24 md:w-24 md:h-24 lg:w-26 lg:h-26 opacity-90 rotate-12 drop-shadow-[0_10px_10px_rgba(0,0,0,0.1)]">
+                    </div>
+                    <h1 class="ubuntu-font-bold font-extrabold leading-tight tracking-tight text-stone-900 drop-shadow-sm
+                               text-4xl sm:text-5xl md:text-5xl lg:text-7xl">
                         Hechos a mano, para disfrutar hoy mismo
                     </h1>
-                    <p class="lato-regular mt-6 mb-6 text-gray-800  text-sm sm:text-base md:text-xl lg:text-2xl">
+                    <p class="lato-regular mt-4 md:mt-6 mb-8 text-stone-800 text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-relaxed">
                         Prueba nuestros productos 100% artesanales, elaborados con ingredientes de calidad 
-                        y una variedad pensada para cada antojo. <strong class="text-stone-900">¡Sabor que se nota en cada bocado!</strong>
+                        y una variedad pensada para cada antojo. <strong class="text-pink-700 font-bold drop-shadow-sm">¡Sabor que se nota en cada bocado!</strong>
                     </p>
 
                     <a href="#catalog"
                        class="inline-flex items-center gap-2
-                              bg-pink-500 text-white font-bold
+                              bg-pink-500 hover:bg-pink-600 text-white font-bold
                               py-2.5 px-6 sm:py-3 sm:px-8
-                              rounded-full shadow-lg
+                              rounded-full shadow-lg shadow-pink-500/40
                               relative overflow-hidden
                               transition-all duration-300 ease-in-out
-                              hover:scale-105 hover:shadow-2xl hover:text-gray-900
+                              hover:scale-105 hover:shadow-xl
                               before:content-[''] before:absolute before:inset-0
                               before:bg-white/20 before:translate-x-[-100%]
                               hover:before:translate-x-0 before:transition-transform before:duration-300">

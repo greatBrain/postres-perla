@@ -10,7 +10,7 @@ class SiteNavbar extends HTMLElement {
             { href: '#testimonials', text: 'Testimonios', extraClass: 'hidden md:block lg:block' }
         ];
         const linksHTML = links.map(link => `
-            <a href="${link.href}" class="whitespace-nowrap px-4 py-2 transition-all duration-300 text-sm sm:text-base hover:bg-gray-900 hover:text-white/80 rounded-full ${link.extraClass}">
+            <a href="${link.href}" class="whitespace-nowrap px-4 py-2 transition-all duration-300 text-sm sm:text-base hover:bg-pink-50 hover:text-pink-600 rounded-full font-medium ${link.extraClass}">
                 ${link.text}
             </a>
         `).join('');
