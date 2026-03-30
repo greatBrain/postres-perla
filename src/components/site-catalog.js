@@ -69,9 +69,9 @@ class SiteCatalog extends HTMLElement {
                     ]">
                         <button @click="activeCategory = cat.id" 
                                 :class="activeCategory === cat.id ? 'bg-pink-500 text-white shadow-xl scale-105' : 'bg-white text-stone-600 hover:bg-pink-50 border-stone-100'"
-                                class="category-btn flex items-center gap-3 px-8 py-4 md:px-6 md:py-3 rounded-[1.25rem] whitespace-nowrap transition-all duration-500 font-bold border shadow-sm snap-center">
-                            <img :src="'public/icons/' + cat.icon" class="w-6 h-6 transition-all" :class="activeCategory === cat.id ? 'brightness-0 invert' : ''" alt="">
-                            <span x-text="cat.label" class="text-base"></span>
+                                class="category-btn shrink-0 flex items-center gap-2.5 md:gap-3 px-6 py-2.5 md:px-6 md:py-3 rounded-full md:rounded-[1.25rem] whitespace-nowrap transition-all duration-500 font-bold border shadow-sm snap-center">
+                            <img :src="'public/icons/' + cat.icon" class="w-5 h-5 md:w-6 md:h-6 transition-all" :class="activeCategory === cat.id ? 'brightness-0 invert' : ''" alt="">
+                            <span x-text="cat.label" class="text-sm md:text-base"></span>
                         </button>
                     </template>
                 </div>

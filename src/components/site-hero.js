@@ -30,7 +30,7 @@ class SiteHero extends HTMLElement {
                     <!-- Main Text (H1) -->
                     <h1 class="font-bold leading-[1.1] tracking-tight text-[#2D1E1E]
                                text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-6">
-                        Dulzura que <span class="text-pink-500 italic relative">abraza<svg class="absolute -bottom-2 left-0 w-full h-2 md:h-3 text-yellow-400 opacity-60" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 25 2, 50 5 T 100 5" stroke="currentColor" stroke-width="3" fill="transparent"/></svg></span> el alma.
+                        Dulzura que <span class="text-pink-500 italic relative">abraza<svg class="absolute -bottom-2 left-0 w-full h-2 md:h-3 text-yellow-400 opacity-60" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 25 2, 50 5 T 100 5" stroke="currentColor" stroke-width="3" fill="transparent"/></svg></span> el alma
                     </h1>
 
                     <!-- Paragraph -->
@@ -46,7 +46,7 @@ class SiteHero extends HTMLElement {
                                   bg-pink-500 hover:bg-pink-600 text-white font-bold
                                   py-4 px-8 md:px-10 rounded-2xl shadow-2xl shadow-pink-500/30
                                   transition-all duration-500 ease-out hover:scale-105 active:scale-95">
-                            <span class="relative z-10 text-base md:text-lg uppercase tracking-wider">Ver Catálogo</span>
+                            <span class="relative z-10 text-base md:text-lg tracking-wider">Ver Catálogo</span>
                             <svg class="w-5 h-5 md:w-6 md:h-6 relative z-10 transform transition-transform group-hover:translate-x-1" 
                                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>

@@ -147,12 +147,12 @@ class PortionCalculator extends HTMLElement {
                                     </svg>
                                 </div>
                                 <h3 class="text-3xl text-gray-900 font-black mb-4">¡Listo! 🎉</h3>
-                                <p class="text-gray-600 text-lg mb-8">Según tus preferencias para <span id="res-guests" class="font-black text-pink-500 underline decoration-pink-100"></span> personas:</p>
+                                <p class="text-gray-900 text-xl mb-8">Según tus preferencias para <span id="res-guests" class="font-black text-pink-500 underline decoration-pink-100"></span> personas:</p>
                                 
-                                <div class="bg-gradient-to-br from-pink-400/5 to-pink-300/10 border-2 border-pink-100 rounded-[2rem] p-8 lg:p-12 mb-8 relative overflow-hidden group shadow-sm transition-all hover:shadow-md">
+                                <div class="bg-gradient-to-br from-yellow-400/50 to-yellow-200/30 border-2 border-yellow-100 rounded-[2rem] p-8 lg:p-12 mb-8 relative overflow-hidden group shadow-sm transition-all hover:shadow-md">
                                     <img src="public/images/vectors/cupcake.svg" class="w-16 h-16 absolute -right-4 -top-4 opacity-10 rotate-12 transition-transform group-hover:scale-125" alt="Cupcake" />
-                                    <span class="text-pink-400 font-black text-sm uppercase tracking-[0.2em] block mb-4">Recomendación Perla</span>
-                                    <p id="res-lbs" class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight"></p>
+                                    <span class="text-pink-400 font-black tracking-[0.2em] block mb-4">Recomendación Perla</span> 
+                                    <p id="res-lbs" class="text-3xl md:text-5xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight"></p>
                                     <div class="inline-block bg-white/80 backdrop-blur-sm px-6 py-2.5 rounded-full border border-pink-50 shadow-sm">
                                         <p id="res-range" class="text-pink-500 font-bold text-sm md:text-base"></p>
                                     </div>
@@ -160,7 +160,7 @@ class PortionCalculator extends HTMLElement {
 
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10 w-full">
                                     <a href="#catalog" class="btn-catalog cursor-pointer border-2 border-stone-800 text-stone-800 hover:bg-stone-800 hover:text-white shadow-[0_8px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_25px_rgba(0,0,0,0.15)] hover:-translate-y-1 font-black py-4 px-6 rounded-2xl transition-all text-center flex items-center justify-center">
-                                        Explorar Sabores
+                                        Explorar opciones
                                     </a>
                                     <button id="btn-whatsapp" class="bg-pink-500 hover:bg-pink-600 text-white shadow-lg shadow-pink-500/40 font-black py-4 px-6 rounded-2xl transition-all flex items-center justify-center gap-3">
                                         <svg class="w-6 h-6 fill-[#25D366]" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.252.38 2.404 1.01 3.385l-.837 3.054 3.125-.82c.943.582 2.052.923 3.238.923 3.181 0 5.767-2.585 5.767-5.766S15.212 6.172 12.031 6.172zm3.176 8.35c-.156.44-.816.843-1.157.904-.34.062-.782.124-1.993-.346-1.503-.585-2.548-2.128-2.627-2.232-.078-.103-.627-.835-.627-1.593 0-.757.391-1.13.535-1.282.146-.153.314-.191.419-.191.104 0 .208.001.294.005.093.003.218-.035.342.261.129.311.439 1.066.478 1.144.039.078.059.169.019.273-.039.103-.059.168-.137.26-.078.092-.167.208-.235.286-.078.093-.162.196-.059.375.103.179.462.766 1.037 1.28 1.488 1.334 2.146 1.547 2.333 1.624.187.078.297.065.406-.052.11-.117.478-.558.608-.75.129-.192.259-.16.429-.098.169.063 1.077.509 1.261.6.185.093.308.14.354.218.046.078.046.452-.11.892zM12.031 2C6.496 2 2 6.496 2 12.031c0 1.77.461 3.435 1.259 4.887L2 22l5.228-1.205C8.618 21.548 10.279 22 12.031 22 17.566 22 22 17.566 22 12.031 22 6.496 17.566 2 12.031 2z"/></svg>
@@ -290,10 +290,10 @@ class PortionCalculator extends HTMLElement {
         }
 
         const formatLbs = (lbs) => {
-            if (lbs === 0.5) return '1/2 libra';
-            if (lbs === 1) return '1 libra';
-            if (lbs % 1 === 0.5) return `${Math.floor(lbs)} y 1 / 2 libras`;
-            return `${lbs} libras`;
+            if (lbs === 0.5) return 'Pastel de 1/2 libra';
+            if (lbs === 1) return 'Pastel de 1 libra';
+            if (lbs % 1 === 0.5) return `Pastel de ${Math.floor(lbs)} y 1 / 2 libras`;
+            return `Pastel de ${lbs} libras`;
         };
 
         // Portions range estimation
@@ -309,7 +309,7 @@ class PortionCalculator extends HTMLElement {
         // Update UI Results
         this.querySelector('#res-guests').textContent = this.guests === 100 ? '100+' : this.guests;
         this.querySelector('#res-lbs').textContent = this.recommendation.lbsText;
-        this.querySelector('#res-range').textContent = `Ideal para servir entre ${minMsg} y ${maxMsg} porciones`;
+        this.querySelector('#res-range').textContent = `Es ideal para servir entre ${minMsg} y ${maxMsg} porciones`;
     }
 
     showStep2() {

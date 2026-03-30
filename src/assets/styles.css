@@ -169,7 +169,7 @@ nav a {
 
 /*Products cards sliders*/
 .catalog {
-	background-color: var(--perla-yellow);
+	background-color: #eeeeed;
 	display: flex;
 	flex-direction: column;
 	padding-top: 50px;

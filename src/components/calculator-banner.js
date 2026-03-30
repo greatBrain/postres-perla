@@ -12,8 +12,8 @@ class CalculatorBanner extends HTMLElement {
                 <!--<div class="absolute -top-14 -left-10 w-64 h-64 bg-white/15 rounded-full blur-3xl pointer-events-none"></div>
                 <div class="absolute -bottom-14 -right-10 w-64 h-64 bg-yellow-400/20 rounded-full blur-3xl pointer-events-none"></div>-->
                 <div class="relative z-10 text-center md:text-left flex flex-col justify-center">
-                    <h4 class="text-white text-3xl md:text-4xl font-bold mb-2 ubuntu-font-bold tracking-tight">¿Tienes dudas con el tamaño del pastel?</h4>
-                    <p class="text-pink-50 text-base md:text-lg opacity-90 md:max-w-xl">Usa nuestra herramienta y calcula las porciones exactas para tu evento.</p>
+                    <h4 class="text-white text-4xl md:text-5xl font-bold mb-2 ubuntu-font-bold tracking-tight">¿Tienes dudas con el tamaño del pastel?</h4>
+                    <p class="text-pink-50 text-base md:text-lg opacity-90 md:max-w-full">Usa nuestra herramienta y calcula las porciones exactas para tu evento.</p>
                 </div>
                 <div class="relative z-10 shrink-0 mt-2 md:mt-0">
                     <a href="#calculadora-de-porciones" 
