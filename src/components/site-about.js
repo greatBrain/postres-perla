@@ -10,7 +10,7 @@ class SiteAbout extends HTMLElement {
         <div class="absolute bottom-10 right-10 w-96 h-96 bg-yellow-50 opacity-40 rounded-full blur-3xl z-0"></div>
         <div class="relative z-10 max-w-6xl mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl md:text-6xl font-black text-stone-900 mb-6 ubuntu-font-bold tracking-tight">
+                <h2 class="text-4xl md:text-6xl text-pink-500 mb-6 ubuntu-font-bold tracking-tight">
                     Tu confianza es nuestro motor
                 </h2>
                 <div class="flex items-center justify-center gap-6">

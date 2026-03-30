@@ -6,63 +6,67 @@ class SiteContact extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
     <section id="contact"
-        class="relative py-20 md:py-32 bg-stone-900 overflow-hidden">
+        class="relative py-24 md:py-32 bg-[#2D1E1E] overflow-hidden">
         
         <!-- Elementos decorativos (Blobs) en modo oscuro -->
-        <div class="absolute top-0 left-10 md:left-1/4 w-72 h-72 md:w-96 md:h-96 bg-pink-600/20 rounded-full mix-blend-screen filter blur-3xl opacity-60 z-0"></div>
-        <div class="absolute bottom-0 right-10 md:right-1/4 w-72 h-72 md:w-96 md:h-96 bg-yellow-500/10 rounded-full mix-blend-screen filter blur-3xl opacity-60 z-0"></div>
+        <div class="absolute top-0 left-10 md:left-1/4 w-72 h-72 md:w-96 md:h-96 bg-pink-600/10 rounded-full mix-blend-screen filter blur-3xl opacity-40 z-0"></div>
+        <div class="absolute bottom-0 right-10 md:right-1/4 w-72 h-72 md:w-96 md:h-96 bg-yellow-500/5 rounded-full mix-blend-screen filter blur-3xl opacity-40 z-0"></div>
 
         <div class="container mx-auto px-6 relative z-10">
-            <div class="text-center md:text-left mb-12" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl text-white ubuntu-font-bold tracking-tight">
-                    Contáctanos</h2>
-                <p class="mt-4 text-stone-300 text-lg sm:text-xl md:text-2xl ubuntu-font-regular font-light">
-                    ¿Tienes un antojo, una consulta o una idea? ¡Estamos listos para escucharte!
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-pink-400 font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Hablemos</span>
+                <h2 class="text-4xl md:text-5xl lg:text-7xl text-white ubuntu-font-bold tracking-tight title leading-tight">
+                    ¿Listo para darte un toque de <span class="text-pink-400 italic">dulzura</span>?
+                </h2>
+                <p class="mt-8 text-stone-300 text-lg md:text-xl font-light max-w-2xl mx-auto">
+                    ¿Tienes un antojo, una consulta o una idea? Estamos listos para escucharte y hacerlo realidad.
                 </p>
+                <div class="w-24 h-1 bg-yellow-400/30 mx-auto mt-10 rounded-full"></div>
             </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" role="list">
+                <!-- Instagram -->
                 <a href="https://www.instagram.com/postres.perla?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                    target="_blank" class="flex items-center w-full p-5 md:p-6 bg-stone-800/60 backdrop-blur-md border border-stone-700/80 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)] space-x-4 hover:bg-stone-800 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(236,72,153,0.15)] hover:border-pink-500/50 transition-all duration-300 group cursor-pointer"
-                    role="listitem" aria-label="Ir al perfil de Instagram de Postres Perla" data-aos="fade-right">
-                    <div class="p-3 bg-stone-700/50 rounded-full shadow-inner border border-stone-600/50 group-hover:bg-pink-500/10 group-hover:scale-110 transition-all duration-300 shrink-0">
-                        <img class="w-6 h-6 md:w-7 md:h-7" src="public/icons/instagram.png" alt="Icono de Instagram" loading="lazy">
+                    target="_blank" class="flex flex-col items-center text-center p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] shadow-2xl hover:bg-white/10 hover:-translate-y-2 transition-all duration-500 group cursor-pointer"
+                    role="listitem" aria-label="Instagram">
+                    <div class="p-4 bg-white/5 rounded-2xl mb-6 group-hover:bg-pink-500 group-hover:scale-110 transition-all duration-500 shrink-0 border border-white/5">
+                        <img class="w-8 h-8 brightness-0 invert" src="public/icons/instagram.png" alt="Instagram">
                     </div>
-                    <div class="overflow-hidden w-full">
-                        <h3 class="text-lg xl:text-xl font-medium text-stone-200 group-hover:text-pink-400 transition-colors truncate">Postres.perla</h3>
-                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">Instagram</h3>
+                    <p class="text-stone-400 text-sm">@postres.perla</p>
                 </a>
 
+                <!-- Pinterest -->
                 <a href="https://pin.it/2vLaI3PUB" target="_blank" 
-                    class="flex items-center w-full p-5 md:p-6 bg-stone-800/60 backdrop-blur-md border border-stone-700/80 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)] space-x-4 hover:bg-stone-800 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(236,72,153,0.15)] hover:border-pink-500/50 transition-all duration-300 group cursor-pointer"
-                    role="listitem" aria-label="Ver ideas de Postres Perla en Pinterest" data-aos="fade-up" data-aos-delay="100">
-                    <div class="p-3 bg-stone-700/50 rounded-full shadow-inner border border-stone-600/50 group-hover:bg-pink-500/10 group-hover:scale-110 transition-all duration-300 shrink-0">
-                        <img class="w-6 h-6 md:w-7 md:h-7" src="public/icons/pinterest.png" alt="Icono de Pinterest" loading="lazy">
+                    class="flex flex-col items-center text-center p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] shadow-2xl hover:bg-white/10 hover:-translate-y-2 transition-all duration-500 group cursor-pointer"
+                    role="listitem" aria-label="Pinterest">
+                    <div class="p-4 bg-white/5 rounded-2xl mb-6 group-hover:bg-pink-500 group-hover:scale-110 transition-all duration-500 shrink-0 border border-white/5">
+                        <img class="w-8 h-8 brightness-0 invert" src="public/icons/pinterest.png" alt="Pinterest">
                     </div>
-                    <div class="overflow-hidden w-full">
-                        <h3 class="text-lg xl:text-xl font-medium text-stone-200 group-hover:text-pink-400 transition-colors truncate">Postres Perla</h3>
-                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">Pinterest</h3>
+                    <p class="text-stone-400 text-sm">Postres Perla</p>
                 </a>
 
+                <!-- Facebook -->
                 <a href="https://www.facebook.com/perla.pascual.961" target="_blank" 
-                    class="flex items-center w-full p-5 md:p-6 bg-stone-800/60 backdrop-blur-md border border-stone-700/80 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)] space-x-4 hover:bg-stone-800 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(236,72,153,0.15)] hover:border-pink-500/50 transition-all duration-300 group cursor-pointer"
-                    role="listitem" aria-label="Visita nuestro Facebook: Postres.perla" data-aos="fade-up" data-aos-delay="200">
-                    <div class="p-3 bg-stone-700/50 rounded-full shadow-inner border border-stone-600/50 group-hover:bg-pink-500/10 group-hover:scale-110 transition-all duration-300 shrink-0">
-                        <img class="w-6 h-6 md:w-7 md:h-7" src="public/icons/facebook.png" alt="Icono de Facebook" loading="lazy">
+                    class="flex flex-col items-center text-center p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] shadow-2xl hover:bg-white/10 hover:-translate-y-2 transition-all duration-500 group cursor-pointer"
+                    role="listitem" aria-label="Facebook">
+                    <div class="p-4 bg-white/5 rounded-2xl mb-6 group-hover:bg-pink-500 group-hover:scale-110 transition-all duration-500 shrink-0 border border-white/5">
+                        <img class="w-8 h-8 brightness-0 invert" src="public/icons/facebook.png" alt="Facebook">
                     </div>
-                    <div class="overflow-hidden w-full">
-                        <h3 class="text-lg xl:text-xl font-medium text-stone-200 group-hover:text-pink-400 transition-colors truncate">Postres.perla</h3>
-                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">Facebook</h3>
+                    <p class="text-stone-400 text-sm">Perla Pascual</p>
                 </a>
 
+                <!-- Email -->
                 <a href="mailto:pascualperla226@gmail.com" 
-                    class="flex items-center w-full p-5 md:p-6 bg-stone-800/60 backdrop-blur-md border border-stone-700/80 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)] space-x-4 hover:bg-stone-800 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(236,72,153,0.15)] hover:border-pink-500/50 transition-all duration-300 group cursor-pointer"
-                    role="listitem" aria-label="Enviar correo a pascualperla226@gmail.com" data-aos="fade-left" data-aos-delay="300" title="pascualperla226@gmail.com">
-                    <div class="p-3 bg-stone-700/50 rounded-full shadow-inner border border-stone-600/50 group-hover:bg-pink-500/10 group-hover:scale-110 transition-all duration-300 shrink-0">
-                        <img class="w-6 h-6 md:w-7 md:h-7" src="public/icons/email.png" alt="Icono de correo electrónico" loading="lazy">
+                    class="flex flex-col items-center text-center p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] shadow-2xl hover:bg-white/10 hover:-translate-y-2 transition-all duration-500 group cursor-pointer"
+                    role="listitem" aria-label="Email">
+                    <div class="p-4 bg-white/5 rounded-2xl mb-6 group-hover:bg-pink-500 group-hover:scale-110 transition-all duration-500 shrink-0 border border-white/5">
+                        <img class="w-8 h-8 brightness-0 invert" src="public/icons/email.png" alt="Email">
                     </div>
-                    <div class="overflow-hidden w-full">
-                        <h3 class="text-base lg:text-sm xl:text-lg font-medium text-stone-200 group-hover:text-pink-400 transition-colors truncate">pascualperla226@gmail.com</h3>
-                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">E-mail</h3>
+                    <p class="text-stone-400 text-xs truncate w-full">pascualperla226@gmail.com</p>
                 </a>
             </div>
         </div>

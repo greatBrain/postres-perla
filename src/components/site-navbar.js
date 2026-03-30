@@ -4,7 +4,8 @@ class SiteNavbar extends HTMLElement {
     }
     connectedCallback() {
         const links = [
-            { href: '#catalog', text: 'Productos', extraClass: '' },            
+            { href: '#catalog', text: 'Productos', extraClass: '' },
+            { href: '#calculadora-de-porciones', text: 'Calculadora', extraClass: 'bg-yellow-200 text-stone-800 border border-yellow-200 shadow-sm hidden sm:block' },
             { href: '#contact', text: 'Contáctanos', extraClass: '' },
             { href: '#about-me', text: 'Conócenos', extraClass: '' },
             { href: '#testimonials', text: 'Testimonios', extraClass: 'hidden md:block lg:block' }

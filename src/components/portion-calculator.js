@@ -78,7 +78,7 @@ class PortionCalculator extends HTMLElement {
 
                     <!-- Right Column: Calculator Card -->
                     <div data-aos="fade-left" class="relative max-w-full z-10 bg-white/95 
-                    rounded-[3rem] border border-gray-500 shadow-[0_24px_60px_rgba(0,0,0,0.08)] border border-gray-100 p-4 md:p-8 overflow-hidden backdrop-blur-xl" 
+                    rounded-[3rem] shadow-[0_24px_60px_rgba(0,0,0,0.08)] border border-gray-100 p-4 md:p-8 overflow-hidden backdrop-blur-xl" 
                     style="-webkit-backdrop-filter: blur(20px);">                        
                         <!-- Step 1: Input Form -->
                         <div id="calc-step-1" class="p-6 md:p-8 transition-all duration-500 ease-in-out">                                
@@ -292,7 +292,7 @@ class PortionCalculator extends HTMLElement {
         const formatLbs = (lbs) => {
             if (lbs === 0.5) return '1/2 libra';
             if (lbs === 1) return '1 libra';
-            if (lbs % 1 === 0.5) return `${Math.floor(lbs)} y 1/2 libras`;
+            if (lbs % 1 === 0.5) return `${Math.floor(lbs)} y 1 / 2 libras`;
             return `${lbs} libras`;
         };
 
@@ -307,7 +307,7 @@ class PortionCalculator extends HTMLElement {
         };
 
         // Update UI Results
-        this.querySelector('#res-guests').textContent = this.guests === 150 ? '150+' : this.guests;
+        this.querySelector('#res-guests').textContent = this.guests === 100 ? '100+' : this.guests;
         this.querySelector('#res-lbs').textContent = this.recommendation.lbsText;
         this.querySelector('#res-range').textContent = `Ideal para servir entre ${minMsg} y ${maxMsg} porciones`;
     }
@@ -338,7 +338,7 @@ class PortionCalculator extends HTMLElement {
 
     sendToWhatsApp() {
         const phoneNumber = '8296469680';
-        const message = `¡Hola! Usé la calculadora de porciones en su web.\n\n📊 Resultados:\n- Invitados: ${this.guests === 150 ? '150+' : this.guests}\n- Tipo de evento: ${this.eventType === 'cumpleanos' ? 'Cumpleaños' : 'Boda / Formal'}\n- Tamaño de porción: ${this.portionStyle === 'normal' ? 'Normal' : 'Generoso'}\n- Recomendación: ${this.recommendation.lbsText}\n\nQuisiera consultar disponibilidad y sabores.`;
+        const message = `¡Hola! Usé la calculadora de porciones en su web.\n\n📊 Resultados: \n - Invitados: ${this.guests === 100 ? '100+' : this.guests} \n - Tipo de evento: ${this.eventType === 'cumpleanos' ? 'Cumpleaños' : 'Boda / Formal'} \n - Tamaño de porción: ${this.portionStyle === 'normal' ? 'Normal' : 'Generoso'} \n - Recomendación: ${this.recommendation.lbsText} \n\nQuisiera consultar disponibilidad y sabores.`;
         const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(waUrl, '_blank');
     }

@@ -6,84 +6,85 @@ class SiteTestimonials extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
     <section
-        class="relative testimonials bg-[#fffbf4] py-24 px-6 md:px-10"
+        class="relative testimonials bg-[#fcfaf7] py-24 px-6 md:px-10"
         id="testimonials" aria-labelledby="testimonials-title">
-        <div class="max-w-7xl mx-auto flex flex-col justify-center items-center text-center space-y-10 pt-5">
-            <div data-aos="fade-up">
-                <h2 id="testimonials-title" class="text-stone-800 text-5xl md:text-5xl ubuntu-font-bold">
-                    Nuestros clientes opinan
+        
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-pink-50/50 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto flex flex-col justify-center items-center text-center space-y-10 pt-5 relative z-10">
+            <div data-aos="fade-up" class="max-w-3xl">
+                <span class="text-pink-600 font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Experiencias Reales</span>
+                <h2 id="testimonials-title" class="text-[#2D1E1E] text-4xl md:text-5xl lg:text-6xl ubuntu-font-bold title leading-tight">
+                    Nuestros clientes <span class="text-pink-500 italic">opinan</span>
                 </h2>
-                <p class="text-stone-800 mt-4 max-w-xl mx-auto text-lg sm:text-xl md:text-xl ubuntu-font-regular">
-                    Testimonios auténticos que destacan el compromiso, la calidad y el impacto de nuestro trabajo en
-                    nuestros clientes.
+                <div class="w-24 h-1.5 bg-yellow-400 mx-auto mt-6 rounded-full opacity-60"></div>
+                <p class="text-stone-500 mt-8 text-lg md:text-xl font-light leading-relaxed">
+                    Testimonios auténticos que destacan el compromiso y la dulzura que ponemos en cada detalle.
                 </p>
             </div>
+            
             <div class="w-full relative mx-auto max-w-7xl overflow-hidden" role="region"
                 aria-label="Contenedor de testimonios">
-                <div class="swiper testimonialSwiper mx-auto">
+                <div class="swiper testimonialSwiper mx-auto py-8">
                     <div class="swiper-wrapper" id="testimonial-container">
                         <!-- Slide 1 -->
                         <div class="swiper-slide h-auto" data-rating="5">
-                            <div class="p-8 bg-white rounded-3xl shadow-[0_8px_30px_rgb(236,72,153,0.06)] ring-1 ring-pink-100 hover:shadow-[0_12px_40px_rgb(236,72,153,0.12)] hover:-translate-y-2 transition-all duration-300 h-full text-left relative overflow-hidden"
+                            <div class="p-10 bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgba(0,0,0,0.03)] border border-stone-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 h-full text-left relative overflow-hidden"
                                 role="group" aria-label="Testimonio de Ana Castillo">
-                                <span class="absolute -top-6 -left-2 text-9xl text-pink-50 font-sans leading-none z-0 rotate-12">"</span>
+                                <span class="absolute -top-8 -left-4 text-[12rem] text-pink-50/30 font-serif leading-none z-0">“</span>
                                 <div class="relative z-10">
-                                    <div class="stars-container mb-4 flex gap-1 text-yellow-400"></div>
-                                    <p class="text-xl text-stone-700 italic mb-6 leading-relaxed font-medium">
+                                    <div class="stars-container mb-6 flex gap-1 text-yellow-400"></div>
+                                    <p class="text-xl text-stone-700 italic mb-8 leading-relaxed font-medium">
                                         “Pedí un bizcocho para el cumpleaños de mi hijo y justo lo que esperaba recibir! Con muy buen sabor.”
                                     </p>
-                                    <p class="text-pink-500 font-bold uppercase tracking-widest text-sm">- Eliana</p>
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 font-bold text-xs">E</div>
+                                        <div>
+                                            <p class="text-[#2D1E1E] font-bold text-sm">Eliana</p>
+                                            <p class="text-stone-400 text-[10px] uppercase tracking-widest">Cliente Verificado</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Slide 2 -->
                         <div class="swiper-slide h-auto" data-rating="5">
-                            <div class="p-8 bg-white rounded-3xl shadow-[0_8px_30px_rgb(236,72,153,0.06)] ring-1 ring-pink-100 hover:shadow-[0_12px_40px_rgb(236,72,153,0.12)] hover:-translate-y-2 transition-all duration-300 h-full text-left relative overflow-hidden"
+                            <div class="p-10 bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgba(0,0,0,0.03)] border border-stone-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 h-full text-left relative overflow-hidden"
                                 role="group" aria-label="Testimonio de Carlos Mejía">
-                                <span class="absolute -top-6 -left-2 text-9xl text-pink-50 font-sans leading-none z-0 rotate-12">"</span>
+                                <span class="absolute -top-8 -left-4 text-[12rem] text-pink-50/30 font-serif leading-none z-0">“</span>
                                 <div class="relative z-10">
-                                    <div class="stars-container mb-4 flex gap-1 text-yellow-400"></div>
-                                    <p class="text-xl text-stone-700 italic mb-6 leading-relaxed font-medium">
+                                    <div class="stars-container mb-6 flex gap-1 text-yellow-400"></div>
+                                    <p class="text-xl text-stone-700 italic mb-8 leading-relaxed font-medium">
                                         “En Postres Perla encontré un lugar donde todavía se siente que las cosas se hacen a mano y con calma.”
                                     </p>
-                                    <p class="text-pink-500 font-bold uppercase tracking-widest text-sm">- Karina</p>
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 font-bold text-xs">K</div>
+                                        <div>
+                                            <p class="text-[#2D1E1E] font-bold text-sm">Karina</p>
+                                            <p class="text-stone-400 text-[10px] uppercase tracking-widest">Cliente Verificado</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Slide 3 -->
                         <div class="swiper-slide h-auto" data-rating="5">
-                            <div class="p-8 bg-white rounded-3xl shadow-[0_8px_30px_rgb(236,72,153,0.06)] ring-1 ring-pink-100 hover:shadow-[0_12px_40px_rgb(236,72,153,0.12)] hover:-translate-y-2 transition-all duration-300 h-full text-left relative overflow-hidden"
+                            <div class="p-10 bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgba(0,0,0,0.03)] border border-stone-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 h-full text-left relative overflow-hidden"
                                 role="group" aria-label="Testimonio de Laura Sánchez">
-                                <span class="absolute -top-6 -left-2 text-9xl text-pink-50 font-sans leading-none z-0 rotate-12">"</span>
+                                <span class="absolute -top-8 -left-4 text-[12rem] text-pink-50/30 font-serif leading-none z-0">“</span>
                                 <div class="relative z-10">
-                                    <div class="stars-container mb-4 flex gap-1 text-yellow-400"></div>
-                                    <p class="text-xl text-stone-700 italic mb-6 leading-relaxed font-medium">
+                                    <div class="stars-container mb-6 flex gap-1 text-yellow-400"></div>
+                                    <p class="text-xl text-stone-700 italic mb-8 leading-relaxed font-medium">
                                         “Me gustó que no era empalagoso, se notaba la calidad de los ingredientes sin necesidad de exagerar.”
                                     </p>
-                                    <p class="text-pink-500 font-bold uppercase tracking-widest text-sm">- Paola</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Duplicate Slides for smoother infinite loop -->
-                        <div class="swiper-slide h-auto" data-rating="5">
-                            <div class="p-8 bg-white rounded-3xl shadow-[0_8px_30px_rgb(236,72,153,0.06)] ring-1 ring-pink-100 hover:shadow-[0_12px_40px_rgb(236,72,153,0.12)] hover:-translate-y-2 transition-all duration-300 h-full text-left relative overflow-hidden">
-                                <span class="absolute -top-6 -left-2 text-9xl text-pink-50 font-sans leading-none z-0 rotate-12">"</span>
-                                <div class="relative z-10">
-                                    <div class="stars-container mb-4 flex gap-1 text-yellow-400"></div>
-                                    <p class="text-xl text-stone-700 italic mb-6 leading-relaxed font-medium">
-                                        “¡Increíble atención y sabor único! Por alla vuelvo.”</p>
-                                    <p class="text-pink-500 font-bold uppercase tracking-widest text-sm">- Elizabeth</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide h-auto" data-rating="5">
-                            <div class="p-8 bg-white rounded-3xl shadow-[0_8px_30px_rgb(236,72,153,0.06)] ring-1 ring-pink-100 hover:shadow-[0_12px_40px_rgb(236,72,153,0.12)] hover:-translate-y-2 transition-all duration-300 h-full text-left relative overflow-hidden">
-                                <span class="absolute -top-6 -left-2 text-9xl text-pink-50 font-sans leading-none z-0 rotate-12">"</span>
-                                <div class="relative z-10">
-                                    <div class="stars-container mb-4 flex gap-1 text-yellow-400"></div>
-                                    <p class="text-xl text-stone-700 italic mb-6 leading-relaxed font-medium">
-                                        “Uy que ricura esos pudinessss, los mejores sin duda alguna.”</p>
-                                    <p class="text-pink-500 font-bold uppercase tracking-widest text-sm">- Marcos</p>
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 font-bold text-xs">P</div>
+                                        <div>
+                                            <p class="text-[#2D1E1E] font-bold text-sm">Paola</p>
+                                            <p class="text-stone-400 text-[10px] uppercase tracking-widest">Cliente Verificado</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
