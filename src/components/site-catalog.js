@@ -14,10 +14,10 @@ class SiteCatalog extends HTMLElement {
 
         <div class="container py-16 md:py-24 relative z-10">
             <div class="catalog-text mb-12 md:mb-20 text-center max-w-3xl mx-auto px-4">
-                <span class="text-pink-600 font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Nuestra Selección</span>
+                <span class="text-gray-800 font-extrabold text-sm uppercase tracking-[0.3em] mb-4 block">Nuestra Selección</span>
                 <h2 data-aos="fade-up"
-                    class="text-[#2D1E1E] text-4xl md:text-5xl lg:text-7xl ubuntu-font-bold title leading-tight">
-                    Postres que crean <span class="text-pink-500 italic">historias</span> inolvidables
+                    class="text-[#2D1E1E] text-4xl md:text-5xl lg:text-6xl ubuntu-font-bold title leading-tight">
+                    Postres que crean <span class="text-pink-500 italic">momentos</span> inolvidables
                 </h2>
                 <div class="w-24 h-1.5 bg-yellow-400 mx-auto mt-8 rounded-full opacity-60"></div>
             </div>
@@ -113,29 +113,6 @@ class SiteCatalog extends HTMLElement {
                         </div>
                     </template>
                 </div>
-
-                <!-- Calculator Promo Banner (Fluent Connection) -->
-                <div data-aos="zoom-in" class="mt-20 md:mt-32 max-w-5xl mx-auto">
-                    <div class="bg-gradient-to-r from-[#2D1E1E] to-[#3d2929] rounded-[3rem] p-8 md:p-12 relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center gap-8 border border-white/10">
-                        <!-- Decorative glow -->
-                        <div class="absolute -top-24 -left-24 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl"></div>
-                        <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-yellow-500/20 rounded-full blur-3xl"></div>
-                        
-                        <div class="relative z-10 flex-grow text-center md:text-left">
-                            <h4 class="text-white text-3xl md:text-4xl font-bold mb-4 ubuntu-font-bold">¿Dudas con el tamaño?</h4>
-                            <p class="text-stone-300 text-lg md:text-xl">Usa nuestra herramienta inteligente y calcula las porciones exactas para tu evento.</p>
-                        </div>
-                        
-                        <div class="relative z-10 shrink-0">
-                            <a href="#calculadora-de-porciones" 
-                               class="inline-flex items-center gap-4 bg-yellow-400 hover:bg-yellow-500 text-stone-900 font-bold py-4 px-10 rounded-2xl shadow-xl shadow-yellow-400/20 transition-all hover:scale-105 active:scale-95 text-lg">
-                                <img src="public/icons/cake-slice.svg" class="w-6 h-6" alt="">
-                                Probar Calculadora
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Product Modal -->
                 <dialog id="products-modal" x-ref="productsModal"
                     class="scrollbar-hide p-0 m-0 rounded-t-[2.5rem] shadow-[0_-20px_50px_rgba(0,0,0,0.3)] backdrop:bg-black/80 w-full max-w-full h-[98vh] mt-auto overflow-hidden border-none"

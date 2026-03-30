@@ -14,12 +14,12 @@ class SiteContact extends HTMLElement {
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-16" data-aos="fade-up">
-                <span class="text-pink-400 font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Hablemos</span>
+                <span class="text-pink-400 font-bold text-sm uppercase tracking-[0.3em] mb-4 block">Hablemos</span>
                 <h2 class="text-4xl md:text-5xl lg:text-7xl text-white ubuntu-font-bold tracking-tight title leading-tight">
-                    ¿Listo para darte un toque de <span class="text-pink-400 italic">dulzura</span>?
+                    ¿Listo para darte <span class="text-pink-400 italic"> un toque de dulzura</span>?
                 </h2>
                 <p class="mt-8 text-stone-300 text-lg md:text-xl font-light max-w-2xl mx-auto">
-                    ¿Tienes un antojo, una consulta o una idea? Estamos listos para escucharte y hacerlo realidad.
+                    ¿Tienes un antojo, una consulta o una idea? Aquí estamos para escucharte y hacerlo realidad.
                 </p>
                 <div class="w-24 h-1 bg-yellow-400/30 mx-auto mt-10 rounded-full"></div>
             </div>
@@ -35,7 +35,6 @@ class SiteContact extends HTMLElement {
                     <h3 class="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">Instagram</h3>
                     <p class="text-stone-400 text-sm">@postres.perla</p>
                 </a>
-
                 <!-- Pinterest -->
                 <a href="https://pin.it/2vLaI3PUB" target="_blank" 
                     class="flex flex-col items-center text-center p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] shadow-2xl hover:bg-white/10 hover:-translate-y-2 transition-all duration-500 group cursor-pointer"

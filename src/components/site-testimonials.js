@@ -19,7 +19,7 @@ class SiteTestimonials extends HTMLElement {
                     Nuestros clientes <span class="text-pink-500 italic">opinan</span>
                 </h2>
                 <div class="w-24 h-1.5 bg-yellow-400 mx-auto mt-6 rounded-full opacity-60"></div>
-                <p class="text-stone-500 mt-8 text-lg md:text-xl font-light leading-relaxed">
+                <p class="text-stone-800 mt-8 text-lg md:text-xl font-light leading-relaxed">
                     Testimonios auténticos que destacan el compromiso y la dulzura que ponemos en cada detalle.
                 </p>
             </div>

@@ -1,36 +1,27 @@
 class SiteHero extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-    <section class="banner relative w-full h-[80vh] md:h-[80vh] lg:h-[95vh] overflow-hidden bg-[#fffbf4]"
-             aria-label="Banner principal Postres Perla">
-
+    <section class="banner relative w-full h-[85vh] md:h-[85vh] lg:h-[95vh] overflow-hidden bg-[#fffbf4]" aria-label="Banner principal Postres Perla">
         <!-- Background layers for depth -->
         <div class="absolute inset-0 z-0 opacity-40">
             <div class="absolute top-[10%] left-[5%] w-32 h-32 bg-pink-200 rounded-full blur-3xl animate-float"></div>
             <div class="absolute bottom-[20%] right-[10%] w-48 h-48 bg-yellow-100 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
         </div>
-
         <!-- Floating Decorative Crumbs -->
         <div class="absolute inset-0 z-10 pointer-events-none hidden md:block">
              <div class="absolute top-1/4 right-[40%] w-3 h-3 bg-pink-400 rounded-full blur-[1px] opacity-60 animate-bounce" style="animation-duration: 3s;"></div>
              <div class="absolute bottom-1/3 right-[35%] w-2 h-2 bg-yellow-400 rounded-full blur-[1px] opacity-60 animate-bounce" style="animation-duration: 4s;"></div>
              <div class="absolute top-1/2 right-[45%] w-4 h-4 bg-pink-300 rounded-lg rotate-45 opacity-40 animate-pulse"></div>
         </div>
-
         <!-- Main Cookie Image -->
         <div class="absolute top-0 right-0 h-full w-full md:w-3/5 z-0 pointer-events-none overflow-hidden">
-            <img src="public/images/cookie-banner.webp" 
-                 alt="Cookie artesanal Postres Perla" 
-                 class="w-full h-full object-contain md:object-cover object-right 
-                        translate-x-20 md:translate-x-0 opacity-40 md:opacity-100
-                        drop-shadow-[-20px_20px_50px_rgba(0,0,0,0.1)] transition-transform duration-1000">
+            <img src="public/images/cookie-banner.webp" alt="Cookie artesanal Postres Perla" 
+                 class="w-full h-full object-contain md:object-cover object-right translate-x-20 md:translate-x-0 opacity-40 md:opacity-100 drop-shadow-[-20px_20px_50px_rgba(0,0,0,0.1)] transition-transform duration-1000">
         </div>
-
         <!-- Content layer -->
         <div class="relative h-full z-20 flex items-center">
             <div class="container mx-auto px-6 md:px-12 lg:px-24">
-                <div class="max-w-2xl lg:max-w-3xl" data-aos="fade-right" data-aos-duration="1000">
-                    
+                <div class="max-w-2xl lg:max-w-3xl" data-aos="fade-right" data-aos-duration="1000">                    
                     <!-- Intro Eyebrow -->
                     <span class="inline-block py-1.5 px-4 rounded-full bg-white text-pink-600 font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] mb-6 border border-pink-100 shadow-sm">
                         ✨ Hecho con amor en cada mordisco
@@ -44,7 +35,8 @@ class SiteHero extends HTMLElement {
 
                     <!-- Paragraph -->
                     <p class="mt-4 mb-10 text-gray-600 text-base md:text-xl lg:text-2xl leading-relaxed max-w-xl font-light">
-                        Descubre el arte de la repostería artesanal. Horneamos con pasión para convertir cada día en una <span class="font-bold text-pink-600 underline decoration-pink-100">celebración única</span>.
+                        Descubre el arte de la <span class="font-bold text-gray-700 decoration-pink-100 italic">repostería artesanal</span>.
+                        Horneamos con dedicación para convertir cada ocasión en una <span class="font-bold text-pink-600 underline decoration-pink-100">celebración única</span>.
                     </p>
 
                     <!-- CTA Buttons -->

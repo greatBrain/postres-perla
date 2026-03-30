@@ -18,7 +18,7 @@ class PortionCalculator extends HTMLElement {
 
     getHtml() {
         return `
-        <section id="calculadora-de-porciones" class="py-16 lg:py-24 px-4 md:px-8 bg-pink-50 overflow-hidden relative font-sans">
+        <section id="calculadora-de-porciones" class="py-16 lg:py-24 px-4 md:px-8 bg-pink-200/60 overflow-hidden relative font-sans">
             <div class="container mx-auto relative z-10">
                 <!-- Two Column Layout -->
                 <div class="grid lg:grid-cols-[1fr_1.25fr] gap-12 lg:gap-20 items-start">                    
@@ -78,7 +78,7 @@ class PortionCalculator extends HTMLElement {
 
                     <!-- Right Column: Calculator Card -->
                     <div data-aos="fade-left" class="relative max-w-full z-10 bg-white/95 
-                    rounded-[3rem] shadow-[0_24px_60px_rgba(0,0,0,0.08)] border border-gray-100 p-4 md:p-8 overflow-hidden backdrop-blur-xl" 
+                    rounded-[3rem] shadow-[0_24px_60px_rgba(0,0,0,0.08)] border border-pink-300 p-4 md:p-8 overflow-hidden backdrop-blur-xl" 
                     style="-webkit-backdrop-filter: blur(20px);">                        
                         <!-- Step 1: Input Form -->
                         <div id="calc-step-1" class="p-6 md:p-8 transition-all duration-500 ease-in-out">                                
@@ -209,10 +209,10 @@ class PortionCalculator extends HTMLElement {
                 const isActive = pill.dataset.val === String(activeVal);
                 if (isActive) {
                     pill.classList.remove('bg-white', 'text-stone-800', 'border-pink-200', 'shadow-[0_4px_10px_rgba(0,0,0,0.03)]', 'hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]', 'hover:-translate-y-1');
-                    pill.classList.add('bg-yellow-400', 'text-stone-900', 'shadow-md');
+                    pill.classList.add('bg-yellow-300', 'text-stone-900', 'shadow-md');
                 } else {
                     pill.classList.add('bg-white', 'text-stone-800', 'border-pink-200', 'shadow-[0_4px_10px_rgba(0,0,0,0.03)]', 'hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]', 'hover:-translate-y-1');
-                    pill.classList.remove('bg-yellow-400', 'text-stone-900', 'shadow-md', '-translate-y-1');
+                    pill.classList.remove('bg-yellow-300', 'text-stone-900', 'shadow-md', '-translate-y-1');
                 }
             });
             validateForm();
