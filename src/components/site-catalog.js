@@ -204,7 +204,7 @@ class SiteCatalog extends HTMLElement {
                                     <a id="whatsapp-link" target="_blank" @click.stop 
                                         class="flex items-center justify-center bg-pink-500 hover:bg-pink-600 text-white shadow-xl shadow-pink-500/30 font-bold py-4 px-10 rounded-2xl transition-all duration-300 w-full max-w-2xl transform hover:-translate-y-1">
                                         <img src="./public/icons/whatsapp-white.png" alt="WhatsApp" class="w-7 h-7 mr-4">
-                                        <span class="text-lg md:text-xl uppercase tracking-wider">Hacer Pedido</span>
+                                        <span class="text-lg md:text-xl uppercase tracking-wider">Realizar pedido</span>
                                     </a>
                                 </div>
                             </div>

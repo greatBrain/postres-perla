@@ -18,7 +18,7 @@ class PortionCalculator extends HTMLElement {
 
     getHtml() {
         return `
-        <section id="calculadora-de-porciones" class="py-16 lg:py-24 px-4 md:px-8 bg-pink-200/60 overflow-hidden relative font-sans">
+        <section id="calculadora-de-porciones" class="d-none py-16 lg:py-24 px-4 md:px-8 bg-pink-200/60 overflow-hidden relative font-sans">
             <div class="container mx-auto relative z-10">
                 <!-- Two Column Layout -->
                 <div class="grid lg:grid-cols-[1fr_1.25fr] gap-12 lg:gap-20 items-start">                    
@@ -90,12 +90,12 @@ class PortionCalculator extends HTMLElement {
                                 </label>
                                 
                                 <div class="grid grid-cols-4 gap-3 md:gap-4 p-3 bg-stone-50 rounded-lg border border-pink-200">
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="10">10</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="15">15</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="20">20</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="25">25</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="30">30</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="40">40</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-500 data-val="10">10</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-200 data-val="15">15</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-200 data-val="20">20</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-200 data-val="25">25</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-200 data-val="30">30</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-200 data-val="40">40</button>
                                     <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="50">50</button>
                                     <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="100">100+</button>                                    
                                 </div>
@@ -129,7 +129,7 @@ class PortionCalculator extends HTMLElement {
                             <div class="pt-3">
                                 <button id="btn-calculate" disabled class="group relative w-full max-w-md mx-auto font-semibold py-3 px-6 rounded-3xl transition-all duration-300 text-base md:text-lg flex justify-center items-center gap-3 tracking-wider overflow-hidden bg-stone-100 text-stone-400 cursor-not-allowed">
                                     <span class="relative z-10 flex items-center justify-center">
-                                        Ver resultados recomendados
+                                        Ver recomendación
                                         <svg class="w-6 h-6 ml-2 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                         </svg>
@@ -140,38 +140,61 @@ class PortionCalculator extends HTMLElement {
 
                         <!-- Step 2: Results -->
                         <div id="calc-step-2" class="p-6 md:p-10 hidden opacity-0 transition-all duration-500 ease-in-out translate-y-4">
-                            <div class="text-center">
-                                <div class="inline-flex items-center justify-center w-20 h-20 bg-green-50 rounded-full mb-6 shadow-sm border border-green-100">
-                                    <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <div class="text-center relative">
+                                <!-- Icono de Éxito Refinado -->
+                                <div class="inline-flex items-center justify-center w-20 h-20 bg-pink-100/50 rounded-full mb-6 shadow-sm border border-pink-200">
+                                    <svg class="w-10 h-10 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
                                     </svg>
                                 </div>
-                                <h3 class="text-3xl text-gray-900 font-black mb-4">¡Listo! 🎉</h3>
-                                <p class="text-gray-900 text-xl mb-8">Según tus preferencias para <span id="res-guests" class="font-black text-pink-500 underline decoration-pink-100"></span> personas:</p>
+                                <h3 class="text-3xl lg:text-4xl text-gray-900 font-black mb-2 tracking-tight">¡Cálculo Exitoso!</h3>
                                 
-                                <div class="bg-gradient-to-br from-yellow-400/50 to-yellow-200/30 border-2 border-yellow-100 rounded-[2rem] p-8 lg:p-12 mb-8 relative overflow-hidden group shadow-sm transition-all hover:shadow-md">
-                                    <img src="public/images/vectors/cupcake.svg" class="w-16 h-16 absolute -right-4 -top-4 opacity-10 rotate-12 transition-transform group-hover:scale-125" alt="Cupcake" />
-                                    <span class="text-pink-400 font-black tracking-[0.2em] block mb-4">Recomendación Perla</span> 
-                                    <p id="res-lbs" class="text-3xl md:text-5xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight"></p>
-                                    <div class="inline-block bg-white/80 backdrop-blur-sm px-6 py-2.5 rounded-full border border-pink-50 shadow-sm">
-                                        <p id="res-range" class="text-pink-500 font-bold text-sm md:text-base"></p>
-                                    </div>
-                                </div>
-
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10 w-full">
-                                    <a href="#catalog" class="btn-catalog cursor-pointer border-2 border-stone-800 text-stone-800 hover:bg-stone-800 hover:text-white shadow-[0_8px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_25px_rgba(0,0,0,0.15)] hover:-translate-y-1 font-black py-4 px-6 rounded-2xl transition-all text-center flex items-center justify-center">
-                                        Explorar opciones
-                                    </a>
-                                    <button id="btn-whatsapp" class="bg-pink-500 hover:bg-pink-600 text-white shadow-lg shadow-pink-500/40 font-black py-4 px-6 rounded-2xl transition-all flex items-center justify-center gap-3">
-                                        <svg class="w-6 h-6 fill-[#25D366]" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.252.38 2.404 1.01 3.385l-.837 3.054 3.125-.82c.943.582 2.052.923 3.238.923 3.181 0 5.767-2.585 5.767-5.766S15.212 6.172 12.031 6.172zm3.176 8.35c-.156.44-.816.843-1.157.904-.34.062-.782.124-1.993-.346-1.503-.585-2.548-2.128-2.627-2.232-.078-.103-.627-.835-.627-1.593 0-.757.391-1.13.535-1.282.146-.153.314-.191.419-.191.104 0 .208.001.294.005.093.003.218-.035.342.261.129.311.439 1.066.478 1.144.039.078.059.169.019.273-.039.103-.059.168-.137.26-.078.092-.167.208-.235.286-.078.093-.162.196-.059.375.103.179.462.766 1.037 1.28 1.488 1.334 2.146 1.547 2.333 1.624.187.078.297.065.406-.052.11-.117.478-.558.608-.75.129-.192.259-.16.429-.098.169.063 1.077.509 1.261.6.185.093.308.14.354.218.046.078.046.452-.11.892zM12.031 2C6.496 2 2 6.496 2 12.031c0 1.77.461 3.435 1.259 4.887L2 22l5.228-1.205C8.618 21.548 10.279 22 12.031 22 17.566 22 22 17.566 22 12.031 22 6.496 17.566 2 12.031 2z"/></svg>
-                                        Pedir por WhatsApp
+                                <!-- Resumen y "Ajustar Datos" -->
+                                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 mt-2">
+                                    <p class="text-gray-600 text-lg">Para <span id="res-guests" class="font-black text-stone-800 underline decoration-pink-200"></span> invitados:</p>
+                                    <button id="btn-back" class="text-pink-500 hover:text-pink-600 font-bold cursor-pointer text-sm transition-colors flex items-center justify-center gap-1.5 bg-pink-50 hover:bg-pink-100 px-3.5 py-1.5 rounded-full">
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                                        Ajustar Datos
                                     </button>
                                 </div>
                                 
-                                <button id="btn-back" class="text-gray-400 hover:text-pink-400 font-bold cursor-pointer uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2 mx-auto">
-                                    <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                    Ajustar Datos
-                                </button>
+                                <!-- Certificado de Recomendación Principal -->
+                                <div class="bg-gradient-to-br from-yellow-300/40 to-yellow-100/40 border-2 border-yellow-200/60 rounded-[2.5rem] p-8 lg:p-12 mb-8 relative overflow-hidden group shadow-xl transition-all hover:shadow-2xl">
+                                    <!-- Elementos Decorativos -->
+                                    <img src="public/images/vectors/cupcake.svg" class="w-24 h-24 absolute -right-6 -top-6 opacity-[0.12] rotate-12 transition-transform duration-700 group-hover:scale-110" alt="" />
+                                    
+                                    <div class="relative z-10 flex flex-col items-center justify-center">
+                                        <span class="text-stone-800 font-black tracking-[0.2em] block mb-3 opacity-80 uppercase text-xs">Recomendación Perla</span> 
+                                        
+                                        <!-- Alto Contraste con Marrón Profundo -->
+                                        <p id="res-lbs" class="text-3xl md:text-5xl lg:text-6xl font-black text-stone-900 mb-6 leading-tight drop-shadow-sm tracking-tighter"></p>
+                                        
+                                        <!-- Rango Dinámico -->
+                                        <div class="inline-block bg-white/90 backdrop-blur-md px-6 py-2.5 rounded-full border border-pink-100 shadow-sm mb-5">
+                                            <p id="res-range" class="text-pink-600 font-bold text-sm md:text-base"></p>
+                                        </div>
+                                        
+                                        <!-- Validación Social -->
+                                        <p class="text-sm md:text-base text-stone-700 font-medium italic opacity-90 block">
+                                            🌟 "La opción preferida para asegurar que todos repitan sabor."
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Jerarquía de CTAs y Mobile-first -->
+                                <div class="flex flex-col-reverse md:flex-row gap-4 w-full justify-center items-center">
+                                    <!-- Secundario (Outline / Ghost) -->
+                                    <a href="#catalog" class="btn-catalog w-full md:w-auto cursor-pointer border-2 border-stone-200 text-stone-600 hover:border-stone-800 hover:text-stone-900 font-bold py-4 px-8 rounded-2xl transition-all text-center flex items-center justify-center gap-2 group bg-white/50 hover:bg-white backdrop-blur-sm">
+                                        Explorar opciones
+                                        <svg class="w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                    </a>
+                                    
+                                    <!-- Primario Absoluto (WhatsApp) -->
+                                    <button id="btn-whatsapp" class="w-full md:w-auto bg-pink-500 hover:bg-pink-600 text-white shadow-[0_8px_20px_rgba(236,72,153,0.3)] hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(236,72,153,0.4)] font-black py-4 px-8 rounded-2xl transition-all flex items-center justify-center gap-3">
+                                        <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.252.38 2.404 1.01 3.385l-.837 3.054 3.125-.82c.943.582 2.052.923 3.238.923 3.181 0 5.767-2.585 5.767-5.766S15.212 6.172 12.031 6.172zm3.176 8.35c-.156.44-.816.843-1.157.904-.34.062-.782.124-1.993-.346-1.503-.585-2.548-2.128-2.627-2.232-.078-.103-.627-.835-.627-1.593 0-.757.391-1.13.535-1.282.146-.153.314-.191.419-.191.104 0 .208.001.294.005.093.003.218-.035.342.261.129.311.439 1.066.478 1.144.039.078.059.169.019.273-.039.103-.059.168-.137.26-.078.092-.167.208-.235.286-.078.093-.162.196-.059.375.103.179.462.766 1.037 1.28 1.488 1.334 2.146 1.547 2.333 1.624.187.078.297.065.406-.052.11-.117.478-.558.608-.75.129-.192.259-.16.429-.098.169.063 1.077.509 1.261.6.185.093.308.14.354.218.046.078.046.452-.11.892zM12.031 2C6.496 2 2 6.496 2 12.031c0 1.77.461 3.435 1.259 4.887L2 22l5.228-1.205C8.618 21.548 10.279 22 12.031 22 17.566 22 22 17.566 22 12.031 22 6.496 17.566 2 12.031 2z"/></svg>
+                                        Apartar mi pastel ahora
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -268,37 +291,89 @@ class PortionCalculator extends HTMLElement {
             }
         });
     }
+    //Funcion anterior
+    // calculatePortions() {
+    //     // Base logic: 1 lb = ~25 normal portions
+    //     let baseLbs = this.guests / 25;
 
+    //     // Modifiers based on form style
+    //     if (this.portionStyle === 'generosa') baseLbs *= 1.25;
+
+    //     // Event type modifiers
+    //     if (this.eventType === 'boda') {
+    //         baseLbs *= 0.8;
+    //     }
+
+    //     // Round up to nearest 0.5 lb
+    //     let recommendedLbs = Math.ceil(baseLbs * 2) / 2;
+
+    //     // Minimum order size 0.5 lb
+    //     if (recommendedLbs < 0.5) {
+    //         recommendedLbs = 0.5;
+    //     }
+
+    //     const formatLbs = (lbs) => {
+    //         if (lbs === 0.5) return 'Pastel de 1/2 libra';
+    //         if (lbs === 1) return 'Pastel de 1 libra';
+    //         if (lbs % 1 === 0.5) return `Pastel de ${Math.floor(lbs)} y 1 / 2 libras`;
+    //         return `Pastel de ${lbs} libras`;
+    //     };
+
+    //     // Portions range estimation
+    //     const minMsg = Math.floor(recommendedLbs * 20);
+    //     const maxMsg = Math.floor(recommendedLbs * 28);
+
+    //     this.recommendation = {
+    //         lbsText: formatLbs(recommendedLbs),
+    //         minMsg: minMsg,
+    //         maxMsg: maxMsg
+    //     };
+
+    //     // Update UI Results
+    //     this.querySelector('#res-guests').textContent = this.guests === 100 ? '100+' : this.guests;
+    //     this.querySelector('#res-lbs').textContent = this.recommendation.lbsText;
+    //     this.querySelector('#res-range').textContent = `Es ideal para servir entre ${minMsg} y ${maxMsg} porciones`;
+    // }
+
+    //funcion mejorada
     calculatePortions() {
-        // Base logic: 1 lb = ~25 normal portions
-        let baseLbs = this.guests / 25;
+        const PORCIONES_POR_LIBRA = 25;
+        const MIN_ORDER = 0.5;
 
-        // Modifiers based on form style
-        if (this.portionStyle === 'generosa') baseLbs *= 1.25;
+        const modifiers = {
+            style: this.portionStyle === 'generosa' ? 1.2 : 1.0,
+            event: this.eventType === 'boda' ? 0.85 : 1.0
+        };
 
-        // Event type modifiers
-        if (this.eventType === 'boda') {
-            baseLbs *= 0.8;
-        }
+        // 3. Cálculo de libras base
+        // Aplicamos los modificadores al requerimiento total
+        let exactLbs = (this.guests / PORCIONES_POR_LIBRA) * modifiers.style * modifiers.event;
 
-        // Round up to nearest 0.5 lb
-        let recommendedLbs = Math.ceil(baseLbs * 2) / 2;
+        // 4. Ajuste por escala (Margen de seguridad)
+        // En eventos pequeños, el margen de error es menor; en grandes, se necesita un pequeño extra.
+        if (this.guests > 50) exactLbs *= 1.05;
 
-        // Minimum order size 0.5 lb
-        if (recommendedLbs < 0.5) {
-            recommendedLbs = 0.5;
-        }
+        // 5. Redondeo comercial (a la media libra superior)
+        let recommendedLbs = Math.max(MIN_ORDER, Math.ceil(exactLbs * 2) / 2);
 
+        // 6. Formateo de texto profesional
         const formatLbs = (lbs) => {
             if (lbs === 0.5) return 'Pastel de 1/2 libra';
             if (lbs === 1) return 'Pastel de 1 libra';
-            if (lbs % 1 === 0.5) return `Pastel de ${Math.floor(lbs)} y 1 / 2 libras`;
-            return `Pastel de ${lbs} libras`;
+
+            const entero = Math.floor(lbs);
+            const tieneMedia = lbs % 1 !== 0;
+
+            return tieneMedia
+                ? `Pastel de ${entero} y 1/2 libras`
+                : `Pastel de ${entero} libras`;
         };
 
-        // Portions range estimation
+        // 7. Estimación de rango de porciones reales
+        // Inverso del cálculo: ¿Cuánto rinde realmente lo que estamos recomendando?
+        // Consideramos un rango de 20 (corte grande) a 25 (corte estándar) por libra.
         const minMsg = Math.floor(recommendedLbs * 20);
-        const maxMsg = Math.floor(recommendedLbs * 28);
+        const maxMsg = Math.floor(recommendedLbs * 25);
 
         this.recommendation = {
             lbsText: formatLbs(recommendedLbs),
@@ -306,12 +381,11 @@ class PortionCalculator extends HTMLElement {
             maxMsg: maxMsg
         };
 
-        // Update UI Results
-        this.querySelector('#res-guests').textContent = this.guests === 100 ? '100+' : this.guests;
+        // 8. Actualización de UI
+        this.querySelector('#res-guests').textContent = this.guests;
         this.querySelector('#res-lbs').textContent = this.recommendation.lbsText;
         this.querySelector('#res-range').textContent = `Es ideal para servir entre ${minMsg} y ${maxMsg} porciones`;
     }
-
     showStep2() {
         const step1 = this.querySelector('#calc-step-1');
         const step2 = this.querySelector('#calc-step-2');

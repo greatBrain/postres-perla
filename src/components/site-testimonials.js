@@ -94,6 +94,9 @@ class SiteTestimonials extends HTMLElement {
                 </div>
             </div>
         </div>
+        <div class="text-center mt-10">
+            <p class="text-gray-800 text-sm italic font-light max-w-2xl mx-auto">*Testimonios obtenidos en conversación directa con los clientes</p>            
+        </div>
     </section>
         `;
     }

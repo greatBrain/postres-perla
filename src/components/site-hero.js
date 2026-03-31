@@ -24,7 +24,7 @@ class SiteHero extends HTMLElement {
                 <div class="max-w-2xl lg:max-w-3xl" data-aos="fade-right" data-aos-duration="1000">                    
                     <!-- Intro Eyebrow -->
                     <span class="inline-block py-1.5 px-4 rounded-full bg-white text-pink-600 font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] mb-6 border border-pink-100 shadow-sm">
-                        ✨ Hecho con amor en cada mordisco
+                        ✨ Sabor en cada mordisco
                     </span>
                     
                     <!-- Main Text (H1) -->
@@ -55,7 +55,7 @@ class SiteHero extends HTMLElement {
                         </a>
 
                         <a href="#calculadora-de-porciones"
-                           class="inline-flex items-center justify-center gap-2 w-full sm:w-auto
+                           class="d-none inline-flex items-center justify-center gap-2 w-full sm:w-auto
                                   bg-yellow-100 hover:bg-yellow-200 text-stone-800 font-bold
                                   py-4 px-8 rounded-2xl border-2 border-yellow-200/50
                                   transition-all duration-300 hover:scale-105 group">
