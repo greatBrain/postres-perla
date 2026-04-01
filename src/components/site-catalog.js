@@ -2,12 +2,9 @@ class SiteCatalog extends HTMLElement {
     constructor() {
         super();
     }
-
     connectedCallback() {
         this.innerHTML = `
-    <section class="catalog flex justify-center items-center bg-[#f2eee8] relative"
-        id="catalog">
-        
+    <section class="catalog flex justify-center items-center bg-[#f2eee8] relative" id="catalog">        
         <!-- Decorative background elements -->
         <div class="absolute top-0 right-0 w-72 h-72 bg-pink-100/40 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute bottom-20 left-0 w-96 h-96 bg-yellow-100/20 rounded-full blur-3xl pointer-events-none"></div>
@@ -217,6 +214,5 @@ class SiteCatalog extends HTMLElement {
         `;
     }
 }
-
 customElements.define('site-catalog', SiteCatalog);
 
