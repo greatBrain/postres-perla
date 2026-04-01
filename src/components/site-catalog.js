@@ -9,7 +9,7 @@ class SiteCatalog extends HTMLElement {
         <div class="absolute top-0 right-0 w-72 h-72 bg-pink-100/40 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute bottom-20 left-0 w-96 h-96 bg-yellow-100/20 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div class="container py-16 md:py-24 relative z-10">
+        <div class="container py-8 md:py-8 relative z-10">
             <div class="catalog-text mb-12 md:mb-20 text-center max-w-3xl mx-auto px-4">
                 <span class="text-gray-800 font-extrabold text-sm uppercase tracking-[0.3em] mb-4 block">Nuestra Selección</span>
                 <h2 data-aos="fade-up"
