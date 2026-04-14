@@ -18,7 +18,7 @@ class PortionCalculator extends HTMLElement {
 
     getHtml() {
         return `
-        <section id="calculadora-de-porciones" class="d-none py-16 lg:py-24 px-4 md:px-8 bg-pink-200/60 overflow-hidden relative font-sans">
+        <section id="calculadora-de-porciones" class="py-16 lg:py-24 px-4 md:px-8 bg-pink-200/60 overflow-hidden relative font-sans">
             <div class="container mx-auto relative z-10">
                 <!-- Two Column Layout -->
                 <div class="grid lg:grid-cols-[1fr_1.25fr] gap-12 lg:gap-20 items-start">                    
@@ -29,19 +29,19 @@ class PortionCalculator extends HTMLElement {
                                 Herramienta gratuita
                             </span>
                             <div class="flex items-center portion-title-container mb-6">
-                                <h3 class="text-5xl lg:text-6xl font-bold text-gray-800 leading-[1.1] tracking-tighter">
-                                    Calcula el tamaño <br> de tu pastel                                 
+                                <h3 class="text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] tracking-tighter">
+                                    Obtén el tamaño ideal <br> de tu pastel                                 
                                 </h3>
                                 <!-- Minimalist Arrow Icon -->
                                 <svg class="w-12 h-12 text-pink-500 hidden md:block opacity-80 ml-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                             </div>
-                            <h4 class="text-gray-800 font-bold text-2xl lg:text-3xl leading-snug mt-10">
+                            <h4 class="text-gray-800 font-bold text-xl lg:text-2xl leading-snug mt-10">
                                 ¿No estás seguro si alcanzará para todos tus invitados?
                             </h4>
                             <p class="text-gray-600 text-lg lg:text-xl leading-relaxed mt-6 max-w-xl">      
-                                Usa nuestra <strong class="font-extrabold text-gray-900 border-b-2 border-pink-100">calculadora inteligente</strong> para saber cuántas porciones necesitas y asegúrate de que nadie se quede sin probarlo.                                                                                       
+                                Usa nuestra <strong class="font-extrabold text-gray-900 border-b-2 border-pink-100">calculadora</strong> para saber cuántas porciones necesitas y asegúrate de que nadie se quede sin probarlo.                                                                                       
                             </p>
                         </div>
 
@@ -54,7 +54,7 @@ class PortionCalculator extends HTMLElement {
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
                                         </svg>
                                     </div>
-                                    <span class="text-lg text-gray-700">Cumpleaños inolvidables</span>
+                                    <span class="text-lg text-gray-700">Cumpleaños y celebraciones</span>
                                 </li>
                                 <li class="flex items-center group">
                                     <div class="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center mr-4 shrink-0 transition-colors group-hover:bg-yellow-200">
@@ -62,7 +62,7 @@ class PortionCalculator extends HTMLElement {
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
                                         </svg>
                                     </div>
-                                    <span class="text-lg text-gray-700">Reuniones y momentos especiales</span>
+                                    <span class="text-lg text-gray-700">Reuniones especiales</span>
                                 </li>
                                 <li class="flex items-center group">
                                     <div class="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center mr-4 shrink-0 transition-colors group-hover:bg-yellow-200">
@@ -78,7 +78,7 @@ class PortionCalculator extends HTMLElement {
 
                     <!-- Right Column: Calculator Card -->
                     <div data-aos="fade-left" class="relative max-w-full z-10 bg-white/95 
-                    rounded-[3rem] shadow-[0_24px_60px_rgba(0,0,0,0.08)] border border-pink-300 p-4 md:p-8 overflow-hidden backdrop-blur-xl" 
+                    rounded-[3rem] shadow-[0_24px_60px_rgba(0,0,0,0.08)] border border-pink-400 p-4 md:p-8 overflow-hidden backdrop-blur-xl" 
                     style="-webkit-backdrop-filter: blur(20px);">                        
                         <!-- Step 1: Input Form -->
                         <div id="calc-step-1" class="p-6 md:p-8 transition-all duration-500 ease-in-out">                                
@@ -86,18 +86,18 @@ class PortionCalculator extends HTMLElement {
                             <div class="mb-12">
                                 <label class="flex items-center gap-3 mb-6">
                                     <img src="public/icons/person-team-icon.svg" class="w-8 h-8" alt="Invitados">
-                                    <span class="text-stone-900 font-[700] text-2xl tracking-tight">¿Cuántos invitados tienes?</span>
+                                    <span class="text-stone-900 font-[700] text-xl tracking-tight">¿Cuántos invitados tienes?</span>
                                 </label>
                                 
                                 <div class="grid grid-cols-4 gap-3 md:gap-4 p-3 bg-stone-50 rounded-lg border border-pink-200">
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-500 data-val="10">10</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-200 data-val="15">15</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-200 data-val="20">20</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-200 data-val="25">25</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-200 data-val="30">30</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-200 data-val="40">40</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="50">50</button>
-                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="100">100+</button>                                    
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-300 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-500 data-val="10">10</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-300 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-200 data-val="15">15</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-300 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-200 data-val="20">20</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-300 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-200 data-val="25">25</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-300 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-200 data-val="30">30</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-300 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" hover:bg-yellow-200 data-val="40">40</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-300 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="50">50</button>
+                                    <button type="button" class="guest-pill cursor-pointer py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-300 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1" data-val="100">100+</button>                                    
                                 </div>
                             </div>
                             <!-- Options Grid -->
@@ -108,8 +108,8 @@ class PortionCalculator extends HTMLElement {
                                         <img src="public/icons/celebration-icon.svg" class="w-7 h-7" alt="Evento"> Tipo de evento
                                     </label>
                                     <div class="flex gap-3 md:gap-4 p-1">
-                                        <button type="button" class="event-type-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="cumpleanos">Cumpleaños</button>
-                                        <button type="button" class="event-type-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="boda">Boda / Formal</button>
+                                        <button type="button" class="event-type-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-300 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="cumpleanos">Cumpleaños</button>
+                                        <button type="button" class="event-type-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-300 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="boda">Boda / Formal</button>
                                     </div>
                                 </div>                                    
 
@@ -119,8 +119,8 @@ class PortionCalculator extends HTMLElement {
                                         <img src="public/icons/cake-slice.svg" class="w-6 h-6" alt="Porción"> Tamaño de porciones
                                     </label>
                                     <div class="flex gap-3 md:gap-4 p-1">
-                                        <button type="button" class="portion-style-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="normal">Normal</button>
-                                        <button type="button" class="portion-style-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-200 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="generosa">Generoso</button>
+                                        <button type="button" class="portion-style-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-300 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="normal">Normal</button>
+                                        <button type="button" class="portion-style-pill cursor-pointer flex-1 py-3.5 px-2 rounded-2xl text-base font-bold transition-all duration-300 bg-white border border-pink-300 text-stone-800 shadow-[0_4px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex items-center justify-center" data-val="generosa">Generoso</button>
                                     </div>
                                 </div>
                             </div>

@@ -55,7 +55,7 @@ class SiteHero extends HTMLElement {
                         </a>
 
                         <a href="#calculadora-de-porciones"
-                           class="d-none inline-flex items-center justify-center gap-2 w-full sm:w-auto
+                           class="inline-flex items-center justify-center gap-2 w-full sm:w-auto
                                   bg-yellow-100 hover:bg-yellow-200 text-stone-800 font-bold
                                   py-4 px-8 rounded-2xl border-2 border-yellow-200/50
                                   transition-all duration-300 hover:scale-105 group">

@@ -6,7 +6,7 @@ class FloatingWhatsapp extends HTMLElement {
     connectedCallback() {
         const WHATSAPPURL = window.sendWhatsappMessage ? window.sendWhatsappMessage({ type: 'general' }) : 'https://wa.me/8296469680';
         this.innerHTML = `
-    <div id="floating-btn" class="fixed z-[90] flex flex-col items-end
+    <div id="floating-btn" class="hidden fixed z-[90] flex flex-col items-end
          bottom-6 right-6 md:bottom-8 md:right-8 lg:bottom-10 lg:right-10 pointer-events-auto">
         
         <!-- Globo de invitación Premium -->
