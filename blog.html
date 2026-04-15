@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Postres Perla | Secretos de Repostería</title>
+    <meta name="description"
+        content="Descubre inspiración, recetas, y la magia detrás de nuestros hornos en el blog de Postres Perla.">
+    <meta name="keywords"
+        content="blog pastelería, recetas dulces, tips repostería, postres artesanales, Postres Perla">
+    <meta name="author" content="Postres Perla">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blog - Postres Perla">
+    <meta property="og:description" content="Lee nuestros artículos sobre técnicas y recetas de repostería.">
+    <meta property="og:image" content="https://tusitio.com/public/images/og-image-blog.jpg">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" href="./public/favicon.png" type="image/png">
+    
+    <!-- Tailwind -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="src/assets/styles.css">
+    <link rel="stylesheet" href="src/assets/fonts.css">
+</head>
+<body class="bg-stone-50">
+    <site-navbar></site-navbar>
+    
+    <main>
+        <site-blog></site-blog>
+    </main>
+
+    <floating-whatsapp></floating-whatsapp>
+    <site-footer></site-footer>
+
+    <!-- Core Modular Logic -->
+    <script type="module" src="./src/scripts/main.js"></script>
+    <!-- Effects -->
+    <script src="src/scripts/effects.js"></script>
+</body>
+</html>

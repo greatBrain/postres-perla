@@ -3,28 +3,35 @@ class SiteNavbar extends HTMLElement {
         super();
     }
     connectedCallback() {
+        const isBlogPage = window.location.pathname.includes('blog.html');
+        // Si estamos en el blog, los links deben apuntar a index.html + hash
+        const homePrefix = isBlogPage ? 'index.html' : '';
+
         const links = [
-            { href: '#catalog', text: 'Productos', extraClass: '' },
-            { href: '#calculadora-de-porciones', text: 'Calculadora', extraClass: 'bg-yellow-200 text-stone-800 border border-yellow-200 shadow-sm hidden sm:block' },
-            { href: '#contact', text: 'Contáctanos', extraClass: '' },
-            { href: '#about-me', text: 'Conócenos', extraClass: '' },
-            { href: '#testimonials', text: 'Testimonios', extraClass: 'hidden md:block lg:block' }
+            { href: `${homePrefix}#catalog`, text: 'Productos', extraClass: '' },
+            { href: `${homePrefix}#calculadora-de-porciones`, text: 'Calculadora', extraClass: 'bg-yellow-200 text-stone-800 border border-yellow-200 shadow-sm hidden sm:block' },
+            { href: 'blog.html', text: 'Blog', extraClass: isBlogPage ? 'bg-pink-50 text-pink-600 font-bold border border-pink-100 shadow-sm' : '' },
+            { href: `${homePrefix}#contact`, text: 'Contáctanos', extraClass: '' },
+            { href: `${homePrefix}#about-me`, text: 'Conócenos', extraClass: '' },
+            { href: `${homePrefix}#testimonials`, text: 'Testimonios', extraClass: 'hidden md:block lg:block' }
         ];
+
         const linksHTML = links.map(link => `
             <a href="${link.href}" class="whitespace-nowrap px-4 py-2 transition-all duration-300 text-sm sm:text-base hover:bg-pink-50 hover:text-pink-600 rounded-full font-medium ${link.extraClass}">
                 ${link.text}
             </a>
         `).join('');
+
         this.innerHTML = `
-    <nav id="smart-navbar" class="fixed z-50 bg-white shadow-xl h-14 lg:h-16 
+    <nav id="smart-navbar" class="fixed z-50 bg-white/90 backdrop-blur-md shadow-lg shadow-pink-100/20 h-14 lg:h-16 
      flex items-center justify-between px-3 md:px-6 lg:px-6 transition-transform duration-300 transform-gpu
-     rounded-full mt-[4px] md:mt-4 w-[96%] max-w-6xl left-1/2 -translate-x-1/2">        
-        <a href="#" class="flex brand-logo flex-nowrap items-center shrink-0 py-2 lg:py-5">
+     rounded-full mt-[4px] md:mt-4 w-[96%] max-w-6xl left-1/2 -translate-x-1/2 border border-white/50">        
+        <a href="${isBlogPage ? 'index.html' : '#'}" class="flex brand-logo flex-nowrap items-center shrink-0 py-2 lg:py-5">
             <img src="./public/icons/P-perla-logo.png" alt="Logo de la pastelería Postres Perla" class="h-10 w-10 md:h-10 md:w-10
             lg:h-12 lg:w-12  rounded-full border-[3px] lg:border-4 border-pink-100" />
             <span class="hidden md:block text-pink-500 pl-1 text-2xl lg:text-2xl font-bold md:font-normal">Postres Perla</span>
         </a>        
-        <div class="flex justify-start items-center space-x-2 md:space-x-4 text-pink-600 capitalize font-semibold ubuntu-font scrollbar-hide overflow-x-auto
+        <div class="flex justify-start items-center space-x-2 md:space-x-4 text-stone-600 capitalize font-medium ubuntu-font scrollbar-hide overflow-x-auto
         md:overflow-x-hidden py-1 w-full pl-3 lg:pl-0 lg:w-auto lg:justify-end">
             ${linksHTML}
         </div>
