@@ -53,23 +53,22 @@ class SiteBlog extends HTMLElement {
         const gridArticles = this.articles.filter(a => !a.isFeatured);
 
         this.innerHTML = `
-        <div class="bg-stone-50 min-h-screen pb-16 font-['Lexend_Deca'] text-stone-800">
+        <div class="bg-stone-50 min-h-screen pb-16 ubuntu-font-medium text-stone-800">
             <!-- Full Width Hero -->
             <div class="w-full relative bg-[#FFF] mt-0 mb-12 min-h-[500px] lg:min-h-[700px] flex items-center justify-center overflow-hidden">
-                 <div class="absolute inset-0 w-full h-full flex flex-col md:flex-row">
-                      <div class="w-full md:w-[45%] h-full bg-[#FFF] z-10 hidden md:block"></div>
-                      <div class="w-full md:w-[55%] h-full relative z-0">
-                           <img src="https://images.unsplash.com/photo-1557308536-ee471ef2c390?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
-                           class="w-full h-full object-cover object-center lg:object-right opacity-90" alt="Ingredientes de pastelería">
+                 <div class="absolute inset-0 w-full h-full flex flex-col md:flex-row">                      
+                      <div class="w-full h-full relative z-0">
+                           <img src="public/images/blog/dess-blog.webp" 
+                           class="w-full h-full object-cover object-center lg:object-right bg-fixed" alt="Ingredientes de pastelería">
                       </div>
                  </div>                 
                  <!-- Content -->
-                 <div class="relative z-20 max-w-6xl w-full mx-auto px-6 lg:px-8 pt-32 pb-16 md:py-24 flex flex-col md:flex-row items-center mt-20">
+                 <div class="relative z-20 max-w-6xl w-full mx-auto px-6 lg:px-8 pt-32 pb-16 md:py-24 flex flex-col md:flex-row items-center">
                      <div class="md:w-1/2 md:pr-12 lg:pr-20">
-                         <div class="flex items-center gap-4 mb-6">
-                             <span class="text-sm font-bold uppercase tracking-widest text-[#6c8671]">Blog oficial</span>                             
-                         </div>
-                         <h1 class="text-5xl lg:text-7xl font-light text-gray-900 mb-6 tracking-tight leading-[1.1] font-serif">El rincón <br/>de Perla</span></h1>
+                         <!--<div class="flex items-center gap-4 mb-2">
+                             <span class="text-xs font-bold uppercase tracking-widest text-pink-500">Blog oficial</span>                             
+                         </div>-->
+                         <h1 class="text-5xl lg:text-7xl font-semibold text-gray-900 mb-6 tracking-tight leading-[1.1]">El blog de Postres Perla</span></h1>
                          <p class="text-stone-600 text-lg md:text-xl max-w-md md:mb-10 leading-relaxed font-light">Inspiración, tips y recomendaciones.</p>
                      </div>
                  </div>
