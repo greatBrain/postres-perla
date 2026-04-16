@@ -4,12 +4,11 @@ class SiteNavbar extends HTMLElement {
     }
     connectedCallback() {
         const isBlogPage = window.location.pathname.includes('blog.html');
-        // Si estamos en el blog, los links deben apuntar a index.html + hash
         const homePrefix = isBlogPage ? 'index.html' : '';
 
         const links = [
             { href: `${homePrefix}#catalog`, text: 'Productos', extraClass: '' },
-            { href: `${homePrefix}#calculadora-de-porciones`, text: 'Calculadora', extraClass: 'bg-yellow-200 text-stone-800 border border-yellow-200 shadow-sm hidden sm:block' },
+            { href: `${homePrefix}#calculadora-de-porciones`, text: 'Calculadora', extraClass: 'bg-yellow-200 text-gray-900 border border-yellow-200 shadow-sm hidden sm:block' },
             { href: 'blog.html', text: 'Blog', extraClass: isBlogPage ? 'bg-pink-50 text-pink-600 font-bold border border-pink-100 shadow-sm' : '' },
             { href: `${homePrefix}#contact`, text: 'Contáctanos', extraClass: '' },
             { href: `${homePrefix}#about-me`, text: 'Conócenos', extraClass: '' },
@@ -31,7 +30,7 @@ class SiteNavbar extends HTMLElement {
             lg:h-12 lg:w-12  rounded-full border-[3px] lg:border-4 border-pink-100" />
             <span class="hidden md:block text-pink-500 pl-1 text-2xl lg:text-2xl font-bold md:font-normal">Postres Perla</span>
         </a>        
-        <div class="flex justify-start items-center space-x-2 md:space-x-4 text-stone-600 capitalize font-medium ubuntu-font scrollbar-hide overflow-x-auto
+        <div class="flex justify-start items-center space-x-2 md:space-x-4 text-gray-900 capitalize font-medium ubuntu-font scrollbar-hide overflow-x-auto
         md:overflow-x-hidden py-1 w-full pl-3 lg:pl-0 lg:w-auto lg:justify-end">
             ${linksHTML}
         </div>
@@ -44,7 +43,6 @@ class SiteNavbar extends HTMLElement {
         window.addEventListener('scroll', () => {
             const currentScrollY = window.scrollY;
 
-            // Ocultar al hacer scroll hacia abajo y mostrar al subir en todos los dispositivos
             if (currentScrollY > lastScrollY && currentScrollY > 100) {
                 nav.classList.add('-translate-y-[150%]');
             } else {

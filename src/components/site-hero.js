@@ -1,7 +1,7 @@
 class SiteHero extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-    <section class="banner relative w-full h-[85vh] md:h-[85vh] lg:h-[95vh] overflow-hidden bg-[#fffbf4]" aria-label="Banner principal Postres Perla">
+    <section class="banner relative w-full h-[85vh] md:h-[85vh] lg:h-[95vh] overflow-hidden bg-pink-100" aria-label="Banner principal Postres Perla">
         <!-- Background layers for depth -->
         <div class="absolute inset-0 z-0 opacity-40">
             <div class="absolute top-[10%] left-[5%] w-32 h-32 bg-pink-200 rounded-full blur-3xl animate-float"></div>
@@ -25,14 +25,12 @@ class SiteHero extends HTMLElement {
                     <!-- Intro Eyebrow -->
                     <span class="inline-block py-1.5 px-4 rounded-full bg-white text-pink-600 font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] mb-6 border border-pink-100 shadow-sm">
                         ✨ Sabor en cada mordisco
-                    </span>
-                    
+                    </span>                    
                     <!-- Main Text (H1) -->
-                    <h1 class="font-bold leading-[1.1] tracking-tight text-[#2D1E1E]
+                    <h1 class="font-bold leading-[1.1] tracking-tight text-gray-900
                                text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-6">
                         Dulzura que <span class="text-pink-500 italic relative">abraza<svg class="absolute -bottom-2 left-0 w-full h-2 md:h-3 text-yellow-400 opacity-60" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 25 2, 50 5 T 100 5" stroke="currentColor" stroke-width="3" fill="transparent"/></svg></span> el alma
                     </h1>
-
                     <!-- Paragraph -->
                     <p class="mt-4 mb-10 text-gray-600 text-base md:text-xl lg:text-2xl leading-relaxed max-w-xl font-light">
                         Descubre el arte de la <span class="font-bold text-gray-700 decoration-pink-100 italic">repostería artesanal</span>.
@@ -60,7 +58,7 @@ class SiteHero extends HTMLElement {
                                   py-4 px-8 rounded-2xl border-2 border-yellow-200/50
                                   transition-all duration-300 hover:scale-105 group">
                             <img src="public/icons/cake-slice.svg" class="w-5 h-5 transition-transform group-hover:rotate-12" alt="Calcular">
-                            <span class="text-base md:text-lg">Calcular porciones</span>
+                            <span class="text-base md:text-lg">Calcula tus porciones</span>
                         </a>
                     </div>
                 </div>

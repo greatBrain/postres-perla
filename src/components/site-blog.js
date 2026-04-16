@@ -6,9 +6,9 @@ class SiteBlog extends HTMLElement {
             {
                 id: 1,
                 isFeatured: true,
-                title: "Postres Perfectos: Cómo lograr un merengue estable y brillante en casa",
-                summary: "El merengue puede ser intimidante, pero con nuestra guía paso a paso y entendiendo la química detrás del azúcar y las claras, lograrás resultados profesionales. Te revelamos nuestro mayor secreto.",
-                image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+                title: "Cómo mantener la suavidad de tus pasteles por más tiempo",
+                summary: "El calor puede ser el enemigo de tus pasteles, pero con nuestros consejos podrás mantenerlos suaves y deliciosos por más tiempo.",
+                image: "https://images.pexels.com/photos/34227787/pexels-photo-34227787.jpeg",
                 category: "Tips & Trucos",
                 date: "Nov 12, 2026",
                 readTime: "5 minutos"
@@ -44,6 +44,16 @@ class SiteBlog extends HTMLElement {
                 category: "Empaque",
                 date: "Sep 30, 2026",
                 readTime: "4 minutos"
+            },
+            {
+                id: 5,
+                isFeatured: false,
+                title: "Tips para elegir el bizcocho perfecto para tu boda",
+                summary: "Te enseñamos como elegir el bizcocho perfecto para tu boda.",
+                image: "https://images.pexels.com/photos/30350268/pexels-photo-30350268.jpeg",
+                category: "Bodas",
+                date: "Sep 30, 2026",
+                readTime: "4 minutos"
             }
         ];
     }
@@ -75,11 +85,12 @@ class SiteBlog extends HTMLElement {
             </div>
 
             <!-- Filters -->
-            <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-start gap-3 mb-10 overflow-x-auto scrollbar-hide py-2 lg:px-8">
+            <!--<div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-start gap-3 mb-10 overflow-x-auto scrollbar-hide py-2 lg:px-8">
                   <span class="px-6 py-2.5 rounded-full cursor-pointer text-sm font-semibold transition-colors bg-[#4A6458] text-white shadow-md">Todos</span>
                   <span class="px-6 py-2.5 rounded-full cursor-pointer text-sm font-medium transition-colors bg-white text-stone-600 hover:bg-[#EFECE5] hover:text-[#4A6458] border-none shadow-sm">Tips & Trucos</span>
                   <span class="px-6 py-2.5 rounded-full cursor-pointer text-sm font-medium transition-colors bg-white text-stone-600 hover:bg-[#EFECE5] hover:text-[#4A6458] border-none shadow-sm">Recetas</span>
-            </div>
+            </div>-->
+            <!--End Filters -->
             <!-- Newsletter CTA Banner at the top -->
             <!--<div class="bg-stone-900 text-stone-100 py-3 px-6 t-0 z-40 w-full flex flex-col md:flex-row items-center justify-between text-sm shadow-md mt-4 lg:mt-0 max-w-6xl mx-auto rounded-3xl md:rounded-full md:px-10 overflow-hidden relative">
                  <div class="absolute inset-0 bg-gradient-to-r from-stone-900 via-stone-800 to-pink-900 opacity-50"></div>
@@ -93,84 +104,101 @@ class SiteBlog extends HTMLElement {
                  </div>
             </div>-->
 
-            <div class="max-w-6xl mx-auto px-4 lg:px-8">
+            <div class="max-w-6xl mx-auto px-4 lg:px-8 pt-12">
+                <!-- Section Header -->
+                <div class="mb-8 md:mb-10 mt-4 md:mt-2">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-3 tracking-tight">Lectura más reciente</h2>
+                    <p class="text-gray-800/85 md:text-lg max-w-2xl leading-relaxed">
+                        Nuestra recomendación especial de la semana. Sumérgete en estos consejos y dale un toque extraordinario a tus próximas creaciones.
+                    </p>
+                </div>
+
                 <!-- Featured Article -->
-                <div class="mb-16 relative">
-                    <div class="w-full h-[500px] md:h-[600px] bg-stone-200 rounded-[2.5rem] overflow-hidden relative shadow-[0_20px_50px_rgba(0,0,0,0.06)] transform transition-transform duration-700 hover:scale-[1.01]">
-                        <img src="${featured.image}" alt="${featured.title}" class="w-full h-full object-cover">
-                        <!-- Gradient Overlay -->
-                        <div class="absolute inset-0 bg-gradient-to-r from-stone-900/60 via-stone-800/20 to-transparent"></div>
-                    </div>
-                    
-                    <!-- Glassmorphism Card -->
-                    <div class="absolute bottom-6 left-6 right-6 md:bottom-12 md:left-12 md:w-[500px] bg-white/70 backdrop-blur-xl border border-white/80 rounded-[2rem] p-8 md:p-10 shadow-2xl transition-all duration-300 hover:bg-white/80">
-                         <div class="flex items-center text-xs font-bold text-stone-500 tracking-wider mb-4 uppercase">
-                            <span class="text-pink-500">${featured.category}</span>
-                            <span class="mx-2">•</span>
-                            <span class="flex items-center gap-1">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <div class="mb-16 relative bg-white border border-pink-200 rounded-[0.8rem] md:rounded-[0.8rem] overflow-hidden shadow-sm group cursor-pointer flex flex-col" onclick="window.location.href='#article-${featured.id}'">
+                    <!-- Image -->
+                    <div class="w-full h-[350px] md:h-[500px] relative overflow-hidden bg-stone-100 flex-shrink-0">
+                        <img src="${featured.image}" alt="${featured.title}" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105">
+                    </div>                    
+                    <!-- Text Footer Sheet (Material Design style) -->
+                    <div class="w-full bg-white rounded-t-[0.9rem] md:rounded-t-[0.9rem] relative -mt-6 p-6 pt-8 md:p-6 z-10 flex flex-col transition-colors duration-300">
+                         <div class="flex items-center text-[11px] md:text-xs font-bold text-stone-500 tracking-wider mb-4 uppercase">
+                            <span class="text-pink-600">${featured.category}</span>
+                            <span class="mx-3 text-stone-300">•</span>
+                            <span class="flex items-center gap-1.5">
+                                <svg class="w-4 h-4" stroke="currentColor" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 ${featured.readTime}
                             </span>
                          </div>
-                         <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-4 leading-tight">${featured.title}</h2>
-                         <p class="text-stone-600 mb-6 leading-relaxed line-clamp-3">${featured.summary}</p>
-                         <div class="flex items-center justify-between border-t border-stone-200/60 pt-6">
+                         <h2 class="text-2xl md:text-2xl lg:text-2xl font-bold text-stone-800 mb-4 leading-tight group-hover:text-pink-600 transition-colors">${featured.title}</h2>
+                         <p class="text-gray-800/85 md:text-md mb-6 leading-relaxed line-clamp-2 md:line-clamp-3">${featured.summary}</p>
+                         
+                         <div class="flex items-center justify-between border-t border-stone-100 pt-6 mt-auto">
                             <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center text-pink-500 font-bold text-sm">PP</div>
-                                <div>
-                                    <p class="text-sm font-bold text-stone-800">Postres Perla</p>
-                                    <p class="text-xs text-stone-500">${featured.date}</p>
-                                </div>
+                                <p class="text-xs font-medium text-stone-400 tracking-widest uppercase">${featured.date}</p>
                             </div>
-                            <div class="flex gap-2">
-                                <button class="w-10 h-10 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-500 hover:text-pink-500 hover:border-pink-200 transition-colors shadow-sm">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            
+                            <!-- Social Icons -->
+                            <div class="flex gap-2" onclick="event.preventDefault(); /* Prevent anchor click */">
+                                <button onclick="window.open('https://www.instagram.com/', '_blank')" class="w-9 h-9 rounded-full bg-stone-50 border border-stone-100 flex items-center justify-center text-stone-400 hover:text-white hover:bg-[#E1306C] hover:border-[#E1306C] transition-all shadow-sm" title="Instagram">
+                                    <svg class="w-[16px] h-[16px]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                                 </button>
-                                <button class="w-10 h-10 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-500 hover:text-pink-500 hover:border-pink-200 transition-colors shadow-sm">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-5.368m0 5.368l5.662 3.775m-5.662-3.775l5.662-3.775m0 0a3 3 0 115.368 0m-5.368 0a3 3 0 105.368 0m-5.368 0l-5.662 3.775m0 0a3 3 0 105.368 0"></path></svg>
+                                <button onclick="window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent('${featured.title} ' + window.location.href), '_blank')" class="w-9 h-9 rounded-full bg-stone-50 border border-stone-100 flex items-center justify-center text-stone-400 hover:text-white hover:bg-[#25D366] hover:border-[#25D366] transition-all shadow-sm" title="WhatsApp">
+                                    <svg class="w-[16px] h-[16px]" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 .002 5.385.002 12.031c0 2.126.549 4.195 1.593 6.015L.002 24l6.103-1.597c1.761.944 3.754 1.443 5.926 1.443 6.643 0 12.026-5.385 12.026-12.029C24.057 5.385 18.674 0 12.031 0zm3.582 17.585c-.534.896c-1.42 1.393-2.73 1.385-3.351 1.332-2.222-.249-4.717-1.442-6.666-3.39-1.948-1.949-3.14-4.444-3.39-6.666-.054-.62-.062-1.931 1.332-3.352.896-.534 1.392-.534 1.637-.514.282.023.633.205.894.887.41 1.077.942 2.38 1.066 2.637.123.256.241.673.085 1.014-.156.341-.453.642-.803.992-.351.351-.31.579.083 1.258.986 1.7 2.052 2.502 2.766 2.915.65.378.895.32 1.24-.047.346-.367.653-.668.995-.806.34-.139.757-.038 1.014.084.256.124 1.56.656 2.637 1.066.683.26 .865.611.888.894.019.245.02.74-.514 1.637z"/></svg>
+                                </button>
+                                <button onclick="window.open('https://www.tiktok.com/', '_blank')" class="w-9 h-9 rounded-full bg-stone-50 border border-stone-100 flex items-center justify-center text-stone-400 hover:text-white hover:bg-black hover:border-black transition-all shadow-sm" title="TikTok">
+                                    <svg class="w-[16px] h-[16px]" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.23-.9 4.45-2.43 6.06-1.74 1.83-4.32 2.87-6.85 2.6-2.58-.28-4.99-1.73-6.26-3.95-1.27-2.22-1.37-5.06-.27-7.39 1.1-2.34 3.09-4.14 5.56-4.94 1.12-.36 2.31-.49 3.49-.41v4.06c-1.22-.05-2.45.2-3.48.81-1.03.62-1.78 1.63-2.06 2.78-.3 1.22-.04 2.54.67 3.53.71 1 1.91 1.54 3.1 1.57 1.19.03 2.37-.47 3.19-1.36.81-.88 1.24-2.12 1.2-3.32V.02z"/></svg>
                                 </button>
                             </div>
                          </div>
                     </div>
                 </div>
 
+                <div class="w-full flex flex-col justify-start items-start mt-10 mb-6">
+                    <div class="w-full h-px bg-gray-300 mb-6"></div>
+                    <h3 class="text-xl lg:text-[24px] font-bold text-gray-700 mb-1">Más artículos</h3>
+                </div>
+
                 <!-- Articles Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-12">
                     ${gridArticles.map(article => `
-                        <a href="#article-${article.id}" class="bg-transparent group hover:-translate-y-2 transition-transform duration-500 flex flex-col cursor-pointer block">
+                        <a href="#article-${article.id}" class="bg-transparent group transition-transform duration-200 flex flex-col cursor-pointer block">
                             <!-- Image container -->
-                            <div class="w-full h-64 md:h-72 relative overflow-hidden bg-stone-200 rounded-xl mb-5 shadow-md group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500">
-                                ${article.badge ? `<span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-stone-800 text-[10px] font-bold px-3 py-1.5 rounded-full z-10 shadow-sm uppercase tracking-widest flex items-center gap-1">${article.badge}</span>` : ''}
+                            <div class="w-full h-64 md:h-72 relative overflow-hidden bg-stone-200 rounded-t-lg mb-5 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500">
+                                ${article.badge ? `<span class="absolute top-4 left-4 bg-yellow-300/85 backdrop-blur-md text-stone-800 text-[10px] font-bold px-3 py-1.5 rounded-full z-10 shadow-sm uppercase tracking-widest flex items-center gap-1">${article.badge}</span>` : ''}
                                 <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out">
                             </div>
                             
                             <!-- Content (Transparent wrapper) -->
-                            <div class="px-2 flex flex-col flex-grow bg-transparent">
+                            <div class="flex flex-col flex-grow bg-transparent">
                                 <div class="flex items-center text-xs font-bold text-stone-400 tracking-wider mb-3 uppercase">
-                                    <span class="text-pink-500">${article.category}</span>
-                                    <span class="mx-2 text-stone-300">•</span>
+                                <!--<span class="text-pink-500">${article.category}</span>
+                                    <!--<span class="mx-2 text-stone-300">•</span>-->
                                     <span class="flex items-center gap-1">
                                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                        ${article.readTime}
+                                        ${article.readTime} de lectura
                                     </span>
                                 </div>
-                                <h3 class="text-xl lg:text-[22px] font-bold text-stone-800 mb-1 leading-snug group-hover:text-pink-600 transition-colors">${article.title}</h3>
+                                <h3 class="text-xl lg:text-[20px] font-bold text-gray-700 mb-1 leading-snug group-hover:text-pink-600 transition-colors">${article.title}</h3>
                                 
-                                <div class="flex items-center justify-between pt-4 mt-auto">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-7 h-7 rounded-full bg-pink-100 flex items-center justify-center text-pink-500 font-bold text-[10px] shrink-0">PP</div>
-                                        <div class="leading-tight">
-                                            <p class="text-[11px] font-bold text-stone-800 m-0">Postres Perla</p>
-                                            <p class="text-[10px] text-stone-400 m-0">${article.date}</p>
+                                <div class="flex items-center justify-between pt-2 mt-auto">
+                                    <div class="flex items-center gap-2">                                        
+                                        <div class="leading-tight">                                            
+                                            <p class="text-[12px] text-gray-600 m-0">${article.date}</p>
                                         </div>
                                     </div>
                                     <!-- Social Icons -->
-                                    <div class="flex gap-1" onclick="event.preventDefault(); /* Prevent anchor click */">
-                                        <button onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent('${article.title}'), '_blank')" class="text-stone-300 hover:text-[#1DA1F2] transition-colors p-1.5 hover:bg-[#1DA1F2]/10 rounded-full" title="Compartir en Twitter">
-                                            <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                                    <div class="flex gap-1" onclick="event.preventDefault();">
+                                        <button onclick="window.open('https://www.instagram.com/', '_blank')" class="text-[#E1306C] transition-colors p-1.5 hover:bg-[#E1306C]/10 rounded-full" title="Instagram">
+                                            <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                                         </button>
-                                        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank')" class="text-stone-300 hover:text-[#1877F2] transition-colors p-1.5 hover:bg-[#1877F2]/10 rounded-full" title="Compartir en Facebook">
+                                        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank')" class="text-[#1877F2] transition-colors p-1.5 hover:bg-[#1877F2]/10 rounded-full" title="Facebook">
                                             <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                        </button>
+                                        <button onclick="window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent('${article.title} ' + window.location.href), '_blank')" class="text-[#25D366] transition-colors p-1.5 hover:bg-[#25D366]/10 rounded-full" title="WhatsApp">
+                                            <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 .002 5.385.002 12.031c0 2.126.549 4.195 1.593 6.015L.002 24l6.103-1.597c1.761.944 3.754 1.443 5.926 1.443 6.643 0 12.026-5.385 12.026-12.029C24.057 5.385 18.674 0 12.031 0zm3.582 17.585c-.534.896c-1.42 1.393-2.73 1.385-3.351 1.332-2.222-.249-4.717-1.442-6.666-3.39-1.948-1.949-3.14-4.444-3.39-6.666-.054-.62-.062-1.931 1.332-3.352.896-.534 1.392-.534 1.637-.514.282.023.633.205.894.887.41 1.077.942 2.38 1.066 2.637.123.256.241.673.085 1.014-.156.341-.453.642-.803.992-.351.351-.31.579.083 1.258.986 1.7 2.052 2.502 2.766 2.915.65.378.895.32 1.24-.047.346-.367.653-.668.995-.806.34-.139.757-.038 1.014.084.256.124 1.56.656 2.637 1.066.683.26 .865.611.888.894.019.245.02.74-.514 1.637z"/></svg>
+                                        </button>
+                                        <button onclick="window.open('https://www.tiktok.com/', '_blank')" class="text-black transition-colors p-1.5 bg-black/5 rounded-full" title="TikTok">
+                                            <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.23-.9 4.45-2.43 6.06-1.74 1.83-4.32 2.87-6.85 2.6-2.58-.28-4.99-1.73-6.26-3.95-1.27-2.22-1.37-5.06-.27-7.39 1.1-2.34 3.09-4.14 5.56-4.94 1.12-.36 2.31-.49 3.49-.41v4.06c-1.22-.05-2.45.2-3.48.81-1.03.62-1.78 1.63-2.06 2.78-.3 1.22-.04 2.54.67 3.53.71 1 1.91 1.54 3.1 1.57 1.19.03 2.37-.47 3.19-1.36.81-.88 1.24-2.12 1.2-3.32V.02z"/></svg>
                                         </button>
                                     </div>
                                 </div>
