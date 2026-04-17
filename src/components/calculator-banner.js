@@ -2,7 +2,6 @@ class CalculatorBanner extends HTMLElement {
     constructor() {
         super();
     }
-
     connectedCallback() {
         this.innerHTML = `
         <!-- Calculator Promo Banner -->
@@ -31,5 +30,4 @@ class CalculatorBanner extends HTMLElement {
         `;
     }
 }
-
 customElements.define('calculator-banner', CalculatorBanner);

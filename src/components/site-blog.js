@@ -57,7 +57,6 @@ class SiteBlog extends HTMLElement {
             }
         ];
     }
-
     connectedCallback() {
         const featured = this.articles.find(a => a.isFeatured);
         const gridArticles = this.articles.filter(a => !a.isFeatured);
@@ -78,8 +77,10 @@ class SiteBlog extends HTMLElement {
                          <!--<div class="flex items-center gap-4 mb-2">
                              <span class="text-xs font-bold uppercase tracking-widest text-pink-500">Blog oficial</span>                             
                          </div>-->
-                         <h1 class="text-5xl lg:text-7xl font-semibold text-gray-900 mb-6 tracking-tight leading-[1.1]">El blog de Postres Perla</span></h1>
-                         <p class="text-stone-600 text-lg md:text-xl max-w-md md:mb-10 leading-relaxed font-light">Inspiración, tips y recomendaciones.</p>
+                         <h1 class="text-5xl lg:text-7xl font-semibold text-gray-900 mb-6 tracking-tight leading-[1.1]">El blog <span class="text-pink-500">de Perla</span></h1>
+                         <p class="text-gray-800 text-lg md:text-xl max-w-md md:mb-10 leading-relaxed">
+                            Inspiración, tips y recomendaciones.
+                         </p>
                      </div>
                  </div>
             </div>
@@ -105,51 +106,42 @@ class SiteBlog extends HTMLElement {
             </div>-->
 
             <div class="max-w-6xl mx-auto px-4 lg:px-8 pt-12">
-                <!-- Section Header -->
-                <div class="mb-8 md:mb-10 mt-4 md:mt-2">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-3 tracking-tight">Lectura más reciente</h2>
-                    <p class="text-gray-800/85 md:text-lg max-w-2xl leading-relaxed">
-                        Nuestra recomendación especial de la semana. Sumérgete en estos consejos y dale un toque extraordinario a tus próximas creaciones.
-                    </p>
-                </div>
-
-                <!-- Featured Article -->
-                <div class="mb-16 relative bg-white border border-pink-200 rounded-[0.8rem] md:rounded-[0.8rem] overflow-hidden shadow-sm group cursor-pointer flex flex-col" onclick="window.location.href='#article-${featured.id}'">
-                    <!-- Image -->
-                    <div class="w-full h-[350px] md:h-[500px] relative overflow-hidden bg-stone-100 flex-shrink-0">
-                        <img src="${featured.image}" alt="${featured.title}" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105">
-                    </div>                    
-                    <!-- Text Footer Sheet (Material Design style) -->
-                    <div class="w-full bg-white rounded-t-[0.9rem] md:rounded-t-[0.9rem] relative -mt-6 p-6 pt-8 md:p-6 z-10 flex flex-col transition-colors duration-300">
-                         <div class="flex items-center text-[11px] md:text-xs font-bold text-stone-500 tracking-wider mb-4 uppercase">
-                            <span class="text-pink-600">${featured.category}</span>
-                            <span class="mx-3 text-stone-300">•</span>
-                            <span class="flex items-center gap-1.5">
-                                <svg class="w-4 h-4" stroke="currentColor" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                ${featured.readTime}
-                            </span>
+                <!-- Featured Article Section -->
+                <div class="mb-24 flex flex-col md:flex-row items-center gap-10 lg:gap-20 group cursor-pointer" onclick="window.location.href='#article-${featured.id}'">
+                    <!-- Image Wrapper -->
+                    <div class="w-full md:w-1/2 relative flex-shrink-0">
+                         <!-- Featured Badge Overlay -->
+                         <div class="absolute top-6 left-6 z-20 bg-pink-500 px-4 py-1 rounded-full shadow-sm">
+                             <span class="text-[10px] font-bold uppercase tracking-widest text-white">Artículo Destacado</span>
                          </div>
-                         <h2 class="text-2xl md:text-2xl lg:text-2xl font-bold text-stone-800 mb-4 leading-tight group-hover:text-pink-600 transition-colors">${featured.title}</h2>
-                         <p class="text-gray-800/85 md:text-md mb-6 leading-relaxed line-clamp-2 md:line-clamp-3">${featured.summary}</p>
                          
-                         <div class="flex items-center justify-between border-t border-stone-100 pt-6 mt-auto">
-                            <div class="flex items-center gap-3">
-                                <p class="text-xs font-medium text-stone-400 tracking-widest uppercase">${featured.date}</p>
-                            </div>
-                            
-                            <!-- Social Icons -->
-                            <div class="flex gap-2" onclick="event.preventDefault(); /* Prevent anchor click */">
-                                <button onclick="window.open('https://www.instagram.com/', '_blank')" class="w-9 h-9 rounded-full bg-stone-50 border border-stone-100 flex items-center justify-center text-stone-400 hover:text-white hover:bg-[#E1306C] hover:border-[#E1306C] transition-all shadow-sm" title="Instagram">
-                                    <svg class="w-[16px] h-[16px]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                                </button>
-                                <button onclick="window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent('${featured.title} ' + window.location.href), '_blank')" class="w-9 h-9 rounded-full bg-stone-50 border border-stone-100 flex items-center justify-center text-stone-400 hover:text-white hover:bg-[#25D366] hover:border-[#25D366] transition-all shadow-sm" title="WhatsApp">
-                                    <svg class="w-[16px] h-[16px]" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 .002 5.385.002 12.031c0 2.126.549 4.195 1.593 6.015L.002 24l6.103-1.597c1.761.944 3.754 1.443 5.926 1.443 6.643 0 12.026-5.385 12.026-12.029C24.057 5.385 18.674 0 12.031 0zm3.582 17.585c-.534.896c-1.42 1.393-2.73 1.385-3.351 1.332-2.222-.249-4.717-1.442-6.666-3.39-1.948-1.949-3.14-4.444-3.39-6.666-.054-.62-.062-1.931 1.332-3.352.896-.534 1.392-.534 1.637-.514.282.023.633.205.894.887.41 1.077.942 2.38 1.066 2.637.123.256.241.673.085 1.014-.156.341-.453.642-.803.992-.351.351-.31.579.083 1.258.986 1.7 2.052 2.502 2.766 2.915.65.378.895.32 1.24-.047.346-.367.653-.668.995-.806.34-.139.757-.038 1.014.084.256.124 1.56.656 2.637 1.066.683.26 .865.611.888.894.019.245.02.74-.514 1.637z"/></svg>
-                                </button>
-                                <button onclick="window.open('https://www.tiktok.com/', '_blank')" class="w-9 h-9 rounded-full bg-stone-50 border border-stone-100 flex items-center justify-center text-stone-400 hover:text-white hover:bg-black hover:border-black transition-all shadow-sm" title="TikTok">
-                                    <svg class="w-[16px] h-[16px]" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.23-.9 4.45-2.43 6.06-1.74 1.83-4.32 2.87-6.85 2.6-2.58-.28-4.99-1.73-6.26-3.95-1.27-2.22-1.37-5.06-.27-7.39 1.1-2.34 3.09-4.14 5.56-4.94 1.12-.36 2.31-.49 3.49-.41v4.06c-1.22-.05-2.45.2-3.48.81-1.03.62-1.78 1.63-2.06 2.78-.3 1.22-.04 2.54.67 3.53.71 1 1.91 1.54 3.1 1.57 1.19.03 2.37-.47 3.19-1.36.81-.88 1.24-2.12 1.2-3.32V.02z"/></svg>
-                                </button>
-                            </div>
+                         <div class="aspect-[4/3] lg:aspect-[1.2/1] overflow-hidden rounded-[1.8rem] shadow-2xl transition-transform duration-500 group-hover:shadow-pink-100">
+                             <img src="${featured.image}" alt="${featured.title}" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105">
                          </div>
+                    </div>
+                    
+                    <!-- Content Wrapper -->
+                    <div class="w-full md:w-1/2 flex flex-col items-start">
+                         <div class="flex items-center gap-3 text-xs font-bold text-pink-500 tracking-[0.2em] uppercase mb-6">
+                             <span>${featured.category}</span>
+                             <span class="w-1.5 h-1.5 rounded-full bg-stone-200"></span>
+                             <span class="text-stone-400 font-semibold">${featured.readTime}</span>
+                         </div>
+                         
+                         <h2 class="text-4xl lg:text-5xl font-black text-stone-800 mb-6 leading-[1.1] tracking-tight group-hover:text-pink-600 transition-colors duration-300">
+                             ${featured.title}
+                         </h2>
+                         
+                         <p class="text-stone-500 text-lg lg:text-xl leading-relaxed mb-10 font-normal line-clamp-3 lg:line-clamp-4">
+                             ${featured.summary}
+                         </p>
+                         
+                         <button class="px-10 py-4 bg-white border border-stone-200 rounded-2xl text-stone-800 font-bold hover:bg-stone-900 hover:text-white hover:border-stone-900 transition-all duration-300 flex items-center gap-3 shadow-sm hover:shadow-xl group/btn">
+                             Leer artículo
+                             <svg class="w-5 h-5 transform group-hover/btn:translate-x-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                             </svg>
+                         </button>
                     </div>
                 </div>
 
@@ -161,9 +153,9 @@ class SiteBlog extends HTMLElement {
                 <!-- Articles Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-12">
                     ${gridArticles.map(article => `
-                        <a href="#article-${article.id}" class="bg-transparent group transition-transform duration-200 flex flex-col cursor-pointer block">
+                        <a href="#article-${article.id}" class="bg-gray-100 p-3 rounded-xl group transition-transform duration-200 flex flex-col cursor-pointer block">
                             <!-- Image container -->
-                            <div class="w-full h-64 md:h-72 relative overflow-hidden bg-stone-200 rounded-t-lg mb-5 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500">
+                            <div class="w-full h-64 md:h-72 relative overflow-hidden bg-stone-200 rounded-lg mb-5 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500">
                                 ${article.badge ? `<span class="absolute top-4 left-4 bg-yellow-300/85 backdrop-blur-md text-stone-800 text-[10px] font-bold px-3 py-1.5 rounded-full z-10 shadow-sm uppercase tracking-widest flex items-center gap-1">${article.badge}</span>` : ''}
                                 <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out">
                             </div>
@@ -186,7 +178,7 @@ class SiteBlog extends HTMLElement {
                                             <p class="text-[12px] text-gray-600 m-0">${article.date}</p>
                                         </div>
                                     </div>
-                                    <!-- Social Icons -->
+                                    <!-- Social Icons 
                                     <div class="flex gap-1" onclick="event.preventDefault();">
                                         <button onclick="window.open('https://www.instagram.com/', '_blank')" class="text-[#E1306C] transition-colors p-1.5 hover:bg-[#E1306C]/10 rounded-full" title="Instagram">
                                             <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
@@ -200,7 +192,7 @@ class SiteBlog extends HTMLElement {
                                         <button onclick="window.open('https://www.tiktok.com/', '_blank')" class="text-black transition-colors p-1.5 bg-black/5 rounded-full" title="TikTok">
                                             <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.23-.9 4.45-2.43 6.06-1.74 1.83-4.32 2.87-6.85 2.6-2.58-.28-4.99-1.73-6.26-3.95-1.27-2.22-1.37-5.06-.27-7.39 1.1-2.34 3.09-4.14 5.56-4.94 1.12-.36 2.31-.49 3.49-.41v4.06c-1.22-.05-2.45.2-3.48.81-1.03.62-1.78 1.63-2.06 2.78-.3 1.22-.04 2.54.67 3.53.71 1 1.91 1.54 3.1 1.57 1.19.03 2.37-.47 3.19-1.36.81-.88 1.24-2.12 1.2-3.32V.02z"/></svg>
                                         </button>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                         </a>
